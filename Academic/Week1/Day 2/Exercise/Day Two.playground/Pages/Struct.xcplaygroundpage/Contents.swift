@@ -10,7 +10,7 @@ struct Person {
     var friend: [Friends]
 }
 
-struct Friends{
+struct Friends {
     var name: String
     var age: Int
 }
@@ -18,8 +18,12 @@ struct Friends{
 var friendList = Friends(name: "Chris", age: 20)
 var personOne = Person(name: "John", age: 17, friend: [friendList])
 
+if let friend = personOne.friend.first {
+    print("Person's name is \(personOne.name), he's \(personOne.age) years old and has a friend named \(friend.name) who is \(friend.age) years old.")
+} else {
+    print("Person's name is \(personOne.name), he's \(personOne.age) years old and has no friends.")
+}
 
-print("Person's name is \(personOne.name), he's \(personOne.age) years old and has friend named \(friendList.name) and he's \(friendList.age) years old.")
 
 // Struct Example 2
 
