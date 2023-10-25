@@ -21,7 +21,6 @@ class ATMmachine: WelcomeMessage {
         case InvalidInput
     }
     
-    var originPass = 13579
     var depo: Int
     var balance: Int
     var wDraw: Int

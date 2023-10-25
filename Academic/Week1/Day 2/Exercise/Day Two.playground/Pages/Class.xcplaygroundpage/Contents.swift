@@ -16,6 +16,8 @@ class Man {
     func greet() {
         print("Hello, my name is \(name) and I am \(age) years old.")
     }
+    
+    
 }
 
 let person1 = Man(name: "John", age: 30)
@@ -46,7 +48,7 @@ class SuperBike: Dealer, Brake{
     
     var speed: Int
     
-    //Initializer to set value for speed's property
+    //Initializer to set value for speed property
     override init() {
         speed = 180
     }
@@ -55,6 +57,7 @@ class SuperBike: Dealer, Brake{
     override func motoType(){
         print("Yamaha XSR-900")
     }
+    
     
 }
 //New method extension for SuperBike Class
@@ -70,10 +73,23 @@ extension SuperBike{
     func stop(){
         print("Engine Stopped")
     }
+    func calculator(t: Int, y: Int, message: ()->())-> (Int, Int, Int){
+        let q = t * y
+        let w = t / y
+        let e = t + y
+        message()
+        return (q , w, e)
+    }
+    
 }
+
+
 
 let a = SuperBike()
 
+print(a.calculator(t: 2, y: 1){
+    print("Hello")
+})
 a.speed = 250
 a.motoType()
 print("Superbike at \(a.speed) km/h")
@@ -101,6 +117,11 @@ class Person: PersonProtocol {
     func sayHello() {
         print("Hello, my name is \(name)")
     }
+    
+    func num(number: Int) -> Int{
+        let add = number + number
+        return add
+    }
 }
 
 // Extension for Person class
@@ -124,6 +145,7 @@ class Student: Person {
     override func sayHello() {
         print("Hello, I'm a student. My name is \(name) and my student ID is \(studentID)")
     }
+    
 }
 
 let person = Person(name: "John")
@@ -132,6 +154,8 @@ print("Person's name: \(person.name)")
 
 person.sayHello()
 person.introduce()
+let result = person.num(number: 3)
+print(result)
 
 let student = Student(name: "Ali", studentID: "S12345")
 

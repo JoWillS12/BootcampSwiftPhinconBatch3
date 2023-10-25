@@ -16,7 +16,7 @@ class ATMmachine: WelcomeMessage {
     var originPass = 13579
     var depo: Int
     var balance: Int
-    private var _wDraw: Int = 0
+//    private var _wDraw: Int = 0
     var wDraw: Int
 //    {
 //        get {
