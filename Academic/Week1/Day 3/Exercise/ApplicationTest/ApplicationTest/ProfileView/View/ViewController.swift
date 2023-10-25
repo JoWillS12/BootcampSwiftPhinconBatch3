@@ -23,6 +23,14 @@ class ViewController: UIViewController {
         buttonEdit.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         userImage.layer.cornerRadius = userImage.bounds.size.width/2
         userImage.clipsToBounds = true
+        
+        if let customFont = loadCustomFont(withName: "28 Days Later", fontSize: 30) {
+                headName.font = customFont
+            }
+        
+//        printSystemFonts()
+        
+        
     }
 
     @IBAction func editButton(_ sender: UIButton) {
@@ -42,6 +50,27 @@ extension ViewController: PassingDataDelegate {
         birthLabel.text = data.birth
         phoneLabel.text = data.phone
     }
+    
+        func loadCustomFont(withName fontName: String, fontSize: CGFloat) -> UIFont? {
+            if let customFont = UIFont(name: fontName, size: fontSize) {
+                return customFont
+            } else {
+                print("Font not found. Make sure the font is added to your project and specified in Info.plist.")
+                return UIFont.systemFont(ofSize: fontSize) // Use a default font if the custom font can't be loaded
+            }
+        }
+    
+//    public func printSystemFonts() {
+//        // Use this identifier to filter out the system fonts in the logs.
+//        let identifier: String = "[SYSTEM FONTS]"
+//        // Here's the functionality that prints all the system fonts.
+//        for family in UIFont.familyNames as [String] {
+//            debugPrint("\(identifier) FONT FAMILY :  \(family)")
+//            for name in UIFont.fontNames(forFamilyName: family) {
+//                debugPrint("\(identifier) FONT NAME :  \(name)")
+//            }
+//        }
+//    }
     
 }
 
