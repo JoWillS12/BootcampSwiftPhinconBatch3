@@ -1,4 +1,3 @@
-jawablah pertanyaan berikut dan tulis di readme.md 
 1. Variabel dan Konstanta:
     Apa perbedaan antara variabel dan konstanta dalam Swift?
    Value variabel dapat diubah sedangkan value dari konstanta tidak.
