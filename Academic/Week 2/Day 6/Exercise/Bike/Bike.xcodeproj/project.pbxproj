@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170A99202AF09C9E00726127 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170A991E2AF09C9E00726127 /* CartTableViewCell.swift */; };
+		170A99212AF09C9E00726127 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170A991F2AF09C9E00726127 /* CartTableViewCell.xib */; };
+		170A992A2AF0B75D00726127 /* CustomSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170A99292AF0B75D00726127 /* CustomSlider.xib */; };
+		170A992C2AF0B76D00726127 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170A992B2AF0B76D00726127 /* CustomSlider.swift */; };
+		177D17222AF0DCD600E342A3 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D17202AF0DCD600E342A3 /* AuthViewController.swift */; };
+		177D17232AF0DCD600E342A3 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177D17212AF0DCD600E342A3 /* AuthViewController.xib */; };
+		177D17272AF0EE2300E342A3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D17262AF0EE2300E342A3 /* CustomTextField.swift */; };
+		177D172C2AF0F06C00E342A3 /* AuthSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177D172B2AF0F06C00E342A3 /* AuthSlider.xib */; };
+		177D172E2AF0F07A00E342A3 /* AuthSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D172D2AF0F07A00E342A3 /* AuthSlider.swift */; };
 		1795924B2AEF655F003D23EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1795924A2AEF655F003D23EE /* AppDelegate.swift */; };
 		1795924D2AEF655F003D23EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1795924C2AEF655F003D23EE /* SceneDelegate.swift */; };
 		1795924F2AEF655F003D23EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1795924E2AEF655F003D23EE /* ViewController.swift */; };
@@ -25,9 +34,23 @@
 		179592812AEF6F79003D23EE /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1795927F2AEF6F79003D23EE /* ItemCollectionViewCell.swift */; };
 		179592822AEF6F79003D23EE /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 179592802AEF6F79003D23EE /* ItemCollectionViewCell.xib */; };
 		179592852AEF9D50003D23EE /* ProductContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179592842AEF9D50003D23EE /* ProductContents.swift */; };
+		1795928B2AF08A20003D23EE /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179592892AF08A20003D23EE /* CartViewController.swift */; };
+		1795928C2AF08A20003D23EE /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1795928A2AF08A20003D23EE /* CartViewController.xib */; };
+		1795928F2AF09335003D23EE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1795928E2AF09335003D23EE /* TabBarController.swift */; };
+		179592942AF09869003D23EE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179592922AF09869003D23EE /* ProfileViewController.swift */; };
+		179592952AF09869003D23EE /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 179592932AF09869003D23EE /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		170A991E2AF09C9E00726127 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		170A991F2AF09C9E00726127 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
+		170A99292AF0B75D00726127 /* CustomSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSlider.xib; sourceTree = "<group>"; };
+		170A992B2AF0B76D00726127 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		177D17202AF0DCD600E342A3 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		177D17212AF0DCD600E342A3 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
+		177D17262AF0EE2300E342A3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		177D172B2AF0F06C00E342A3 /* AuthSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthSlider.xib; sourceTree = "<group>"; };
+		177D172D2AF0F07A00E342A3 /* AuthSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSlider.swift; sourceTree = "<group>"; };
 		179592472AEF655F003D23EE /* Bike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1795924A2AEF655F003D23EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1795924C2AEF655F003D23EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +71,11 @@
 		1795927F2AEF6F79003D23EE /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		179592802AEF6F79003D23EE /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		179592842AEF9D50003D23EE /* ProductContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductContents.swift; sourceTree = "<group>"; };
+		179592892AF08A20003D23EE /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		1795928A2AF08A20003D23EE /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
+		1795928E2AF09335003D23EE /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		179592922AF09869003D23EE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		179592932AF09869003D23EE /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +89,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		170A991B2AF09C6C00726127 /* CartTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				170A991E2AF09C9E00726127 /* CartTableViewCell.swift */,
+				170A991F2AF09C9E00726127 /* CartTableViewCell.xib */,
+			);
+			path = CartTableCell;
+			sourceTree = "<group>";
+		};
+		170A99222AF0A46300726127 /* CustomSlider */ = {
+			isa = PBXGroup;
+			children = (
+				170A992B2AF0B76D00726127 /* CustomSlider.swift */,
+				170A99292AF0B75D00726127 /* CustomSlider.xib */,
+			);
+			path = CustomSlider;
+			sourceTree = "<group>";
+		};
+		177D171E2AF0DA4A00E342A3 /* LoginRegister */ = {
+			isa = PBXGroup;
+			children = (
+				177D17292AF0F04A00E342A3 /* Components */,
+				177D171F2AF0DAB200E342A3 /* View */,
+			);
+			path = LoginRegister;
+			sourceTree = "<group>";
+		};
+		177D171F2AF0DAB200E342A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				177D17202AF0DCD600E342A3 /* AuthViewController.swift */,
+				177D17212AF0DCD600E342A3 /* AuthViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		177D17252AF0EE0900E342A3 /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				177D17262AF0EE2300E342A3 /* CustomTextField.swift */,
+			);
+			path = CustomTextField;
+			sourceTree = "<group>";
+		};
+		177D17292AF0F04A00E342A3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				177D172A2AF0F05800E342A3 /* AuthSlider */,
+				177D17252AF0EE0900E342A3 /* CustomTextField */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		177D172A2AF0F05800E342A3 /* AuthSlider */ = {
+			isa = PBXGroup;
+			children = (
+				177D172D2AF0F07A00E342A3 /* AuthSlider.swift */,
+				177D172B2AF0F06C00E342A3 /* AuthSlider.xib */,
+			);
+			path = AuthSlider;
+			sourceTree = "<group>";
+		};
 		1795923E2AEF655E003D23EE = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +171,10 @@
 			isa = PBXGroup;
 			children = (
 				1795925E2AEF65CE003D23EE /* App */,
+				177D171E2AF0DA4A00E342A3 /* LoginRegister */,
+				1795928D2AF0932A003D23EE /* TabBar */,
+				179592902AF09852003D23EE /* ProfileView */,
+				179592872AF089EA003D23EE /* CartView */,
 				1795925F2AEF65DA003D23EE /* HomeView */,
 				1795924E2AEF655F003D23EE /* ViewController.swift */,
 				179592532AEF655F003D23EE /* Assets.xcassets */,
@@ -191,6 +285,58 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		179592872AF089EA003D23EE /* CartView */ = {
+			isa = PBXGroup;
+			children = (
+				179592962AF09AB1003D23EE /* Components */,
+				179592882AF08A01003D23EE /* View */,
+			);
+			path = CartView;
+			sourceTree = "<group>";
+		};
+		179592882AF08A01003D23EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				179592892AF08A20003D23EE /* CartViewController.swift */,
+				1795928A2AF08A20003D23EE /* CartViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1795928D2AF0932A003D23EE /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1795928E2AF09335003D23EE /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		179592902AF09852003D23EE /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				179592912AF0985B003D23EE /* View */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		179592912AF0985B003D23EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				179592922AF09869003D23EE /* ProfileViewController.swift */,
+				179592932AF09869003D23EE /* ProfileViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		179592962AF09AB1003D23EE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				170A99222AF0A46300726127 /* CustomSlider */,
+				170A991B2AF09C6C00726127 /* CartTableCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -249,13 +395,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				170A992A2AF0B75D00726127 /* CustomSlider.xib in Resources */,
 				1795926D2AEF69AB003D23EE /* BikeTableViewCell.xib in Resources */,
+				1795928C2AF08A20003D23EE /* CartViewController.xib in Resources */,
 				179592822AEF6F79003D23EE /* ItemCollectionViewCell.xib in Resources */,
 				179592572AEF655F003D23EE /* LaunchScreen.storyboard in Resources */,
 				179592542AEF655F003D23EE /* Assets.xcassets in Resources */,
+				177D172C2AF0F06C00E342A3 /* AuthSlider.xib in Resources */,
 				1795927E2AEF6CEC003D23EE /* MenuCollectionViewCell.xib in Resources */,
 				179592712AEF69B8003D23EE /* MenuTableViewCell.xib in Resources */,
+				177D17232AF0DCD600E342A3 /* AuthViewController.xib in Resources */,
+				170A99212AF09C9E00726127 /* CartTableViewCell.xib in Resources */,
 				179592752AEF69C5003D23EE /* ItemTableViewCell.xib in Resources */,
+				179592952AF09869003D23EE /* ProfileViewController.xib in Resources */,
 				179592642AEF6681003D23EE /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,10 +423,18 @@
 				1795924B2AEF655F003D23EE /* AppDelegate.swift in Sources */,
 				179592702AEF69B8003D23EE /* MenuTableViewCell.swift in Sources */,
 				179592812AEF6F79003D23EE /* ItemCollectionViewCell.swift in Sources */,
+				177D17222AF0DCD600E342A3 /* AuthViewController.swift in Sources */,
 				1795926C2AEF69AB003D23EE /* BikeTableViewCell.swift in Sources */,
 				1795924D2AEF655F003D23EE /* SceneDelegate.swift in Sources */,
 				1795927D2AEF6CEC003D23EE /* MenuCollectionViewCell.swift in Sources */,
+				177D17272AF0EE2300E342A3 /* CustomTextField.swift in Sources */,
+				170A99202AF09C9E00726127 /* CartTableViewCell.swift in Sources */,
+				1795928B2AF08A20003D23EE /* CartViewController.swift in Sources */,
 				179592852AEF9D50003D23EE /* ProductContents.swift in Sources */,
+				1795928F2AF09335003D23EE /* TabBarController.swift in Sources */,
+				170A992C2AF0B76D00726127 /* CustomSlider.swift in Sources */,
+				177D172E2AF0F07A00E342A3 /* AuthSlider.swift in Sources */,
+				179592942AF09869003D23EE /* ProfileViewController.swift in Sources */,
 				179592742AEF69C5003D23EE /* ItemTableViewCell.swift in Sources */,
 				179592632AEF6681003D23EE /* HomeViewController.swift in Sources */,
 			);

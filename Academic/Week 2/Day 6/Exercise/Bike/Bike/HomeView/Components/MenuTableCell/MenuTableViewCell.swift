@@ -34,7 +34,6 @@ class MenuTableViewCell: UITableViewCell {
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 30  // Adjust this value as needed for spacing between cells
         layout.sectionInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 10)  // Adjust the section inset as needed
-        
         collectionView.collectionViewLayout = layout
     }
     

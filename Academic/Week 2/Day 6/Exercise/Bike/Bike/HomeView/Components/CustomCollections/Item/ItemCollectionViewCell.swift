@@ -15,7 +15,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        // Initialization codemainView.layer.cornerRadius = 10
     }
 
 }

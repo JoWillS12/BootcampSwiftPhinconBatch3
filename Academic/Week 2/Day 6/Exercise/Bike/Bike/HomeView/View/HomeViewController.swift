@@ -11,14 +11,14 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var tabBar: UITabBar!
-    var menu: String  = "BIKE"
+    var menu: String = "BIKE"
     
+    //
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        tabBar.delegate = self
+        //        tabBar.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,7 +32,6 @@ class HomeViewController: UIViewController {
             tableView.register(UINib(nibName: String(describing: ItemTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: ItemTableViewCell.self))
         }
     }
-    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -48,9 +47,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "BikeTableViewCell", for: indexPath) as? BikeTableViewCell {
                 // Configure BikeTableViewCell here
+                cell.layer.cornerRadius = 10
                 return cell
             }
-            
         case 1:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath) as? MenuTableViewCell {
                 cell.buttonAction = { [weak self] data in
@@ -71,19 +70,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
     
+    
+    
 }
 
-extension HomeViewController: UITabBarDelegate{
-    
-    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        let itemBike = UITabBarItem()
-        let itemCart = UITabBarItem()
-        
-        if item == itemBike {
-            handleTab1Selection()
-        } else if item == itemCart {
-            // Handle tab 2 selection
-        }
-    }
-    
-}
+

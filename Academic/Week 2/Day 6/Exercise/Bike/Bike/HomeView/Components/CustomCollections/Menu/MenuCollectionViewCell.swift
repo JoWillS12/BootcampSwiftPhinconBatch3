@@ -11,6 +11,7 @@ class MenuCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var menuName: UILabel!
     @IBOutlet weak var menuImage: UIImageView!
+
     
     var buttonAction: ((String) -> Void)?
     

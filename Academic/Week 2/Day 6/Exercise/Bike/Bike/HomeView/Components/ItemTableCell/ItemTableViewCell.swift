@@ -72,6 +72,7 @@ extension ItemTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
             cell.itemName.text = names
             cell.itemImage.image = UIImage(named: images)
             cell.itemPrice.text = prices
+            cell.layer.cornerRadius = 10
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell", for: indexPath) as! ItemCollectionViewCell
@@ -81,6 +82,7 @@ extension ItemTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
             cell.itemName.text = names
             cell.itemImage.image = UIImage(named: images)
             cell.itemPrice.text = prices
+            cell.layer.cornerRadius = 10
             return cell
         }
         
