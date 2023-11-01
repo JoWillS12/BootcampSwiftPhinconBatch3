@@ -22,6 +22,16 @@
             <rect key="frame" x="0.0" y="0.0" width="240" height="42"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checkout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dep-uz-H45">
+                    <rect key="frame" x="58" y="10" width="123" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="123" id="3sJ-Zm-Lpe"/>
+                        <constraint firstAttribute="height" constant="21" id="n9a-Ir-Bbv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LIa-OR-SUW">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="42"/>
                     <subviews>
@@ -55,30 +65,15 @@
                                 <constraint firstAttribute="width" constant="44" id="fK4-MH-g0e"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checkout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dep-uz-H45">
-                            <rect key="frame" x="59" y="11" width="123" height="21"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="21" id="4Pk-hG-6ai"/>
-                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="123" id="LSw-D1-qY5"/>
-                                <constraint firstAttribute="width" constant="123" id="NoU-Fu-7s0"/>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="jJP-I3-mpF"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.20784313730000001" green="0.2470588235" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <gestureRecognizers/>
                     <constraints>
-                        <constraint firstItem="dep-uz-H45" firstAttribute="top" secondItem="LIa-OR-SUW" secondAttribute="top" constant="11" id="2JX-wE-pSO"/>
-                        <constraint firstAttribute="trailing" secondItem="dep-uz-H45" secondAttribute="trailing" constant="58" id="64t-hP-Spa"/>
                         <constraint firstItem="2a1-6O-ceo" firstAttribute="top" secondItem="LIa-OR-SUW" secondAttribute="top" id="Ayq-yB-jAm"/>
                         <constraint firstAttribute="width" constant="240" id="CIP-4O-Hfj"/>
                         <constraint firstItem="2a1-6O-ceo" firstAttribute="leading" secondItem="LIa-OR-SUW" secondAttribute="leading" id="L8X-OL-Tm9"/>
                         <constraint firstAttribute="height" constant="42" id="OA7-K7-nvY"/>
                         <constraint firstItem="7uP-Pf-jGw" firstAttribute="top" secondItem="LIa-OR-SUW" secondAttribute="top" id="Wo2-xc-4EO"/>
-                        <constraint firstItem="dep-uz-H45" firstAttribute="leading" secondItem="2a1-6O-ceo" secondAttribute="trailing" constant="15" id="fkO-FX-VCk"/>
                         <constraint firstAttribute="bottom" secondItem="7uP-Pf-jGw" secondAttribute="bottom" id="iPM-vz-Wp4"/>
                         <constraint firstAttribute="trailing" secondItem="7uP-Pf-jGw" secondAttribute="trailing" id="pOl-on-Bht"/>
                         <constraint firstAttribute="bottom" secondItem="2a1-6O-ceo" secondAttribute="bottom" id="uUh-oM-gtB"/>
@@ -89,12 +84,15 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" red="0.20784313730000001" green="0.2470588235" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="LIa-OR-SUW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2X2-sf-lE2"/>
                 <constraint firstAttribute="trailing" secondItem="LIa-OR-SUW" secondAttribute="trailing" id="7Oi-jy-kPn"/>
                 <constraint firstItem="LIa-OR-SUW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Hfm-rD-PRR"/>
+                <constraint firstItem="dep-uz-H45" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Sk0-oM-xsH"/>
+                <constraint firstAttribute="trailing" secondItem="dep-uz-H45" secondAttribute="trailing" constant="59" id="Xpk-09-NWz"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="LIa-OR-SUW" secondAttribute="bottom" id="dym-Xo-Csd"/>
+                <constraint firstItem="dep-uz-H45" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="58" id="uW2-bG-6Di"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="83.969465648854964" y="20.422535211267608"/>

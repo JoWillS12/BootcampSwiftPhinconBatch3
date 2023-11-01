@@ -20,9 +20,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         window.frame = UIScreen.main.bounds
-        window.rootViewController = AuthViewController()
+        window.rootViewController = UINavigationController(rootViewController: SplashScreenViewController())
         self.window = window
         window.makeKeyAndVisible()
+        UINavigationBar.appearance().isHidden = true
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

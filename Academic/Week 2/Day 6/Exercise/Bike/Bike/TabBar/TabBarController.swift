@@ -6,23 +6,25 @@
 //
 
 import Foundation
-
 import UIKit
 
 class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated: true)
         
-        let homeViewController = HomeViewController() 
+        let homeViewController = HomeViewController()
+        let mapViewController = MapViewController()
         let cartViewController = CartViewController()
+        let activityViewController = ActivityViewController()
         let profileViewController = ProfileViewController()
         
-        self.setViewControllers([homeViewController, cartViewController, profileViewController], animated: false)
+        self.setViewControllers([homeViewController, mapViewController, cartViewController, activityViewController, profileViewController], animated: false)
         
         guard let items = self.tabBar.items else {return}
         
-        let images = ["bicycle", "cart", "person"]
-        for x in 0...2{
+        let images = ["bicycle", "map", "cart", "sparkles.tv", "person"]
+        for x in 0...4{
             items[x].image = UIImage(systemName: images[x])
         }
         

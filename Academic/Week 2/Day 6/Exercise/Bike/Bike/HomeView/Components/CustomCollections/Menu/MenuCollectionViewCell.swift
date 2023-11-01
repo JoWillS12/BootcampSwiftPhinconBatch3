@@ -9,7 +9,7 @@ import UIKit
 
 class MenuCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var menuName: UILabel!
+    @IBOutlet weak var menuLabel: UILabel!
     @IBOutlet weak var menuImage: UIImageView!
 
     
@@ -18,6 +18,7 @@ class MenuCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
     
 

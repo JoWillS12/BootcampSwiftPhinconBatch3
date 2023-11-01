@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashScreenViewController" customModule="Bike" customModuleProvider="target">
+            <connections>
+                <outlet property="animationView" destination="3ux-UB-hh0" id="XDU-Xm-mm8"/>
+                <outlet property="myLabel" destination="wYm-FU-W8c" id="hwn-Ih-ngX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ux-UB-hh0" customClass="LottieAnimationView" customModule="Lottie">
+                    <rect key="frame" x="0.0" y="362" width="393" height="130"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="393" id="aY7-2e-1Ah"/>
+                        <constraint firstAttribute="height" constant="130" id="xRv-Iq-pTH"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="bikeLogo"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bikeness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYm-FU-W8c">
+                    <rect key="frame" x="16" y="386" width="361" height="77"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="361" id="A4x-xQ-Buv"/>
+                        <constraint firstAttribute="height" constant="77" id="N42-yy-xUB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="54"/>
+                    <color key="textColor" red="0.0" green="0.69019607843137254" blue="0.7803921568627451" alpha="0.80142798013245031" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.20784313730000001" green="0.2470588235" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3ux-UB-hh0" secondAttribute="trailing" id="5Oz-x1-HU9"/>
+                <constraint firstItem="wYm-FU-W8c" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="327" id="DAb-vE-OcN"/>
+                <constraint firstItem="3ux-UB-hh0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="303" id="Ew5-Mx-EJi"/>
+                <constraint firstItem="wYm-FU-W8c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="mf7-ry-qd0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wYm-FU-W8c" secondAttribute="trailing" constant="16" id="zXB-PH-DFr"/>
+                <constraint firstItem="3ux-UB-hh0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="znW-M0-ubz"/>
+            </constraints>
+            <point key="canvasLocation" x="23.664122137404579" y="20.422535211267608"/>
+        </view>
+    </objects>
+</document>

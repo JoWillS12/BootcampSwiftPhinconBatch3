@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActivityViewController" customModule="Bike" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="Bm5-6S-0Gt" id="A4G-1c-3HX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Bm5-6S-0Gt">
+                    <rect key="frame" x="0.0" y="137" width="393" height="632"/>
+                    <color key="backgroundColor" red="0.23415053529999999" green="0.2817633303" blue="0.3978641457" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="632" id="82z-JF-FFu"/>
+                        <constraint firstAttribute="width" constant="393" id="zl7-zJ-hBz"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gwk-Yt-feP">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biketivities" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ve-6z-IUf">
+                    <rect key="frame" x="109" y="59" width="175" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="175" id="d5x-ax-1Xr"/>
+                        <constraint firstAttribute="height" constant="31" id="xg0-bN-cjS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="25"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUb-5j-AFS">
+                    <rect key="frame" x="176" y="98" width="40" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="0eD-QL-9KT"/>
+                        <constraint firstAttribute="width" constant="40" id="ghm-CY-Dm0"/>
+                    </constraints>
+                    <color key="tintColor" red="0.29411764709999999" green="0.29803921570000003" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <imageReference key="image" image="plus.circle" catalog="system" symbolScale="large"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="addActivity:" destination="-1" eventType="touchUpInside" id="Ro2-eR-0DU"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.20784313730000001" green="0.2470588235" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Bm5-6S-0Gt" firstAttribute="top" secondItem="NUb-5j-AFS" secondAttribute="bottom" constant="8" symbolic="YES" id="0Zv-Qr-Yus"/>
+                <constraint firstItem="NUb-5j-AFS" firstAttribute="top" secondItem="1ve-6z-IUf" secondAttribute="bottom" constant="8" symbolic="YES" id="SbF-ig-d9e"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NUb-5j-AFS" secondAttribute="trailing" constant="177" id="Wiu-XM-hUe"/>
+                <constraint firstItem="1ve-6z-IUf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="XwN-Db-0Pm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1ve-6z-IUf" secondAttribute="trailing" constant="109" id="YFd-uE-NNt"/>
+                <constraint firstItem="Bm5-6S-0Gt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YI8-y0-J7L"/>
+                <constraint firstItem="NUb-5j-AFS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="176" id="hVw-xP-g5K"/>
+                <constraint firstItem="1ve-6z-IUf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="109" id="p8y-OW-8jY"/>
+                <constraint firstItem="Bm5-6S-0Gt" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="zAv-nJ-A6J"/>
+            </constraints>
+            <point key="canvasLocation" x="64.885496183206101" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="plus.circle" catalog="system" width="128" height="123"/>
+    </resources>
+</document>

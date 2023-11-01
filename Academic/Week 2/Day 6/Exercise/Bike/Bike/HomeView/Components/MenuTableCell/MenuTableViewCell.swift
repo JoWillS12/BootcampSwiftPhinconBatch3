@@ -16,8 +16,8 @@ class MenuTableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let menuName = ["BIKE", "HELMET"]
-    let menuImage = [UIImage(systemName: "bicycle.circle"), UIImage(systemName: "bolt.shield.fill")]
+    let menuLabel = ["BICYCLE", "HELMET", "BIKE"]
+    let menuImage = [UIImage(systemName: "bicycle.circle"), UIImage(systemName: "bolt.shield.fill"), UIImage(named: "motorbike")]
     
     var buttonAction: ((String) -> Void)?
     var delegate: MenuTableViewCellDelegate?
@@ -48,35 +48,36 @@ class MenuTableViewCell: UITableViewCell {
 extension MenuTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return menuName.count
+        return menuLabel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCollectionViewCell", for: indexPath) as! MenuCollectionViewCell
-        let names = menuName[indexPath.row]
+        let names = menuLabel[indexPath.row]
         let images = menuImage[indexPath.row]
-        cell.menuName.text = names
+        cell.menuLabel.text = names
         cell.menuImage.image = images
+        cell.layer.cornerRadius = 10
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150, height: 400)
+        return CGSize(width: 150, height: 71)
     }
     
     func getSelectedMenu() -> String? {
         // Implement a method to get the selected menu from the collection view
         // You might need to keep track of the selected index and use it to fetch the menu
         let selectedMenuIndex = 0;
-        if selectedMenuIndex == 1 && selectedMenuIndex < menuName.count {
-            return menuName[selectedMenuIndex]
+        if selectedMenuIndex == 1 && selectedMenuIndex < menuLabel.count {
+            return menuLabel[selectedMenuIndex]
         }
         return nil
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // Handle the selection in the collection view
-        let selectedMenu = menuName[indexPath.item]
+        let selectedMenu = menuLabel[indexPath.item]
         self.buttonAction?(selectedMenu) // Call the button action closure with the selected menu
     }
     

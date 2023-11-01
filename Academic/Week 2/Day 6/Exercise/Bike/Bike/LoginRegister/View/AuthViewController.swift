@@ -7,17 +7,29 @@
 
 import UIKit
 
-class AuthViewController: UIViewController {
+class AuthViewController: UIViewController, AuthSliderDelegate {
     
-    
-    @IBOutlet weak var emailField: CustomEmailTextField!
-    @IBOutlet weak var passwordField: CustomPasswordTextField!
-    
+    @IBOutlet weak var authenticSlider: AuthSlider!
+    @IBOutlet weak var emailField: InputField!
+    @IBOutlet weak var passwordField: InputField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailField.placeholder = "Your Email"
-        passwordField.placeholder = "Your Password"
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        emailField.labelType.text = "Email"
+        passwordField.labelType.text = "Password"
+        authenticSlider.delegate = self
+    }
+}
+extension AuthViewController{
+    
+    func thumbReachedDestination() {
+        let vc = TabBarController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func thumbCurrentPosition(_ position: CGFloat) {
     }
     
 }

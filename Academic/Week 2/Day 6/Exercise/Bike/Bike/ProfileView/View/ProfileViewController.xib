@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="Bike" customModuleProvider="target">
             <connections>
+                <outlet property="profileImage" destination="7rU-lq-sQa" id="pns-os-G61"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,9 +17,113 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROFILE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3B-sn-wnX">
+                    <rect key="frame" x="133" y="73" width="127" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="127" id="bTc-dp-uaV"/>
+                        <constraint firstAttribute="height" constant="31" id="nZN-3j-0xY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="25"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chef1" translatesAutoresizingMaskIntoConstraints="NO" id="7rU-lq-sQa">
+                    <rect key="frame" x="76" y="154" width="240" height="240"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="91g-8O-UVB"/>
+                        <constraint firstAttribute="width" constant="240" id="RAV-u8-iHi"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Curry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDu-jh-akE">
+                    <rect key="frame" x="16" y="416" width="361" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="hg8-KN-Tds"/>
+                        <constraint firstAttribute="width" constant="361" id="iLH-h8-wOq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="25"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Tl-KM-QZw">
+                    <rect key="frame" x="16" y="499" width="361" height="60"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EpR-FA-Knc">
+                            <rect key="frame" x="0.0" y="1.6666666666666679" width="60" height="57.333333333333329"/>
+                            <color key="tintColor" red="0.29411764709999999" green="0.29803921570000003" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="Etj-Um-TVI"/>
+                                <constraint firstAttribute="width" constant="60" id="UPA-Ol-XLO"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="087281938471" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlK-F9-zlL">
+                            <rect key="frame" x="82" y="11" width="271" height="41"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.20784313730000001" green="0.2470588235" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="EpR-FA-Knc" secondAttribute="bottom" id="6e4-oX-gOS"/>
+                        <constraint firstAttribute="height" constant="60" id="N1w-gn-4rd"/>
+                        <constraint firstItem="EpR-FA-Knc" firstAttribute="top" secondItem="9Tl-KM-QZw" secondAttribute="top" id="OWA-k3-6Ou"/>
+                        <constraint firstAttribute="width" constant="361" id="Pzo-hw-ga3"/>
+                        <constraint firstItem="EpR-FA-Knc" firstAttribute="leading" secondItem="9Tl-KM-QZw" secondAttribute="leading" id="pA0-lR-vvP"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="06f-z3-eQc">
+                    <rect key="frame" x="16" y="591" width="361" height="60"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MgR-JQ-izc">
+                            <rect key="frame" x="0.0" y="1.6666666666666643" width="60" height="57"/>
+                            <color key="tintColor" red="0.29411764709999999" green="0.29803921570000003" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="Pe3-wB-cVW"/>
+                                <constraint firstAttribute="width" constant="60" id="XhD-uA-H43"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="john123@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76N-SN-CoF">
+                            <rect key="frame" x="82" y="10" width="271" height="41"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.20784313730000001" green="0.2470588235" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="MgR-JQ-izc" firstAttribute="leading" secondItem="06f-z3-eQc" secondAttribute="leading" id="4uz-EX-WPc"/>
+                        <constraint firstItem="MgR-JQ-izc" firstAttribute="top" secondItem="06f-z3-eQc" secondAttribute="top" id="4z2-3y-eC2"/>
+                        <constraint firstAttribute="height" constant="60" id="c77-gA-DY9"/>
+                        <constraint firstAttribute="bottom" secondItem="MgR-JQ-izc" secondAttribute="bottom" id="m1a-l5-fEn"/>
+                        <constraint firstAttribute="width" constant="361" id="oC4-Pv-gKG"/>
+                    </constraints>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.14117647059999999" green="0.17254901959999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="33" y="20"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="g3B-sn-wnX" secondAttribute="trailing" constant="133" id="1iS-Va-s2m"/>
+                <constraint firstItem="eDu-jh-akE" firstAttribute="top" secondItem="7rU-lq-sQa" secondAttribute="bottom" constant="22" id="GEq-uA-9bU"/>
+                <constraint firstItem="06f-z3-eQc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="GLV-oG-s0f"/>
+                <constraint firstItem="9Tl-KM-QZw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="K6r-AE-tea"/>
+                <constraint firstItem="7rU-lq-sQa" firstAttribute="top" secondItem="g3B-sn-wnX" secondAttribute="bottom" constant="50" id="KOc-Uh-A7h"/>
+                <constraint firstItem="06f-z3-eQc" firstAttribute="top" secondItem="9Tl-KM-QZw" secondAttribute="bottom" constant="32" id="Pdp-m0-zmo"/>
+                <constraint firstItem="9Tl-KM-QZw" firstAttribute="top" secondItem="eDu-jh-akE" secondAttribute="bottom" constant="37" id="Qrq-Kt-Ilx"/>
+                <constraint firstItem="eDu-jh-akE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="RR1-0J-B2W"/>
+                <constraint firstItem="7rU-lq-sQa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="76" id="U8J-zb-ZmE"/>
+                <constraint firstItem="g3B-sn-wnX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="133" id="XCr-Ve-uk3"/>
+                <constraint firstItem="g3B-sn-wnX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="14" id="dDg-Ti-19e"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eDu-jh-akE" secondAttribute="trailing" constant="16" id="dE2-tu-Xzw"/>
+            </constraints>
+            <point key="canvasLocation" x="32.824427480916029" y="19.718309859154932"/>
         </view>
     </objects>
+    <resources>
+        <image name="chef1" width="225" height="225"/>
+        <image name="mail.fill" catalog="system" width="128" height="93"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
+    </resources>
 </document>
