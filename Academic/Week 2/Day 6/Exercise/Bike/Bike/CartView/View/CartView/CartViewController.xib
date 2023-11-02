@@ -10,8 +10,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CartViewController" customModule="Bike" customModuleProvider="target">
             <connections>
+                <outlet property="couponCode" destination="65K-vm-t16" id="gHr-px-uVm"/>
                 <outlet property="customSlider" destination="gYE-dI-rF1" id="qjq-Lk-dYQ"/>
+                <outlet property="discTag" destination="grL-f4-nY1" id="IBE-FF-1Ub"/>
+                <outlet property="feeTag" destination="Zcz-pe-uZu" id="k4E-VD-iup"/>
+                <outlet property="priceTag" destination="r7U-ZP-3Cb" id="fcq-FN-urI"/>
                 <outlet property="tableView" destination="s7h-0S-vKr" id="Z6c-eM-H7e"/>
+                <outlet property="totalTag" destination="1EN-fb-bNF" id="KrJ-51-sSZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -64,6 +69,9 @@
                             <buttonConfiguration key="configuration" style="filled" title="APPLY">
                                 <color key="baseBackgroundColor" red="0.29411764709999999" green="0.29803921570000003" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="showPopUp:" destination="-1" eventType="touchUpInside" id="XPU-AF-02q"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to rock your bike ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObH-jM-uaZ">
                             <rect key="frame" x="60" y="50" width="272" height="30"/>
@@ -195,27 +203,54 @@
                         <constraint firstAttribute="width" constant="240" id="O2V-lB-D6h"/>
                     </constraints>
                 </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list.bullet.rectangle.portrait" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qMf-bX-MS8">
+                    <rect key="frame" x="336" y="59.333333333333329" width="41" height="27"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="27.333333333333329" id="4a6-p3-UBu"/>
+                        <constraint firstAttribute="width" constant="41" id="RRh-SV-Q8w"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hys-YC-eBG">
+                    <rect key="frame" x="336" y="65" width="41" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="T7n-Vd-P8f"/>
+                        <constraint firstAttribute="width" constant="41" id="ci8-4P-Y96"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                    <connections>
+                        <action selector="showHistory:" destination="-1" eventType="touchUpInside" id="c8o-Zv-eIy"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.14117647059999999" green="0.17254901959999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Hys-YC-eBG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="336" id="20O-XK-nsN"/>
+                <constraint firstItem="qMf-bX-MS8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="58.999999999999986" id="3Ja-0J-egG"/>
                 <constraint firstItem="TMk-XJ-FhD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4yU-oM-2V3"/>
                 <constraint firstItem="N1a-JF-ngD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5Lw-0l-gEh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TMk-XJ-FhD" secondAttribute="trailing" constant="16" id="7LW-kb-1O8"/>
                 <constraint firstItem="s7h-0S-vKr" firstAttribute="top" secondItem="TMk-XJ-FhD" secondAttribute="bottom" constant="8" symbolic="YES" id="8ce-tz-eO6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hys-YC-eBG" secondAttribute="trailing" constant="16" id="8n1-Ib-fvL"/>
                 <constraint firstItem="N1a-JF-ngD" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="GNu-m9-gDu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gYE-dI-rF1" secondAttribute="trailing" constant="77" id="Gvp-hg-PDT"/>
                 <constraint firstItem="gYE-dI-rF1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="76" id="Ky9-ru-BAD"/>
+                <constraint firstItem="Hys-YC-eBG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-3" id="NjL-Uu-aVl"/>
                 <constraint firstItem="TMk-XJ-FhD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="VuF-je-8AH"/>
                 <constraint firstItem="gYE-dI-rF1" firstAttribute="top" secondItem="s7h-0S-vKr" secondAttribute="bottom" constant="278" id="cfx-kK-MIK"/>
                 <constraint firstItem="s7h-0S-vKr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hEp-mn-RDi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qMf-bX-MS8" secondAttribute="trailing" constant="16" id="lKZ-g2-Bhs"/>
                 <constraint firstItem="N1a-JF-ngD" firstAttribute="top" secondItem="s7h-0S-vKr" secondAttribute="bottom" constant="8" symbolic="YES" id="nnh-eo-jmK"/>
+                <constraint firstItem="qMf-bX-MS8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="336" id="uLU-gN-Q6f"/>
                 <constraint firstAttribute="trailing" secondItem="s7h-0S-vKr" secondAttribute="trailing" id="vY9-cO-WLF"/>
             </constraints>
             <point key="canvasLocation" x="32.824427480916029" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -304,14 +304,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5D3F1F95-C893-4C75-8A42-E1B32143E401"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bike/CartView/View/CartView/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "thumbReachedDestination()"
             landmarkType = "7">
          </BreakpointContent>
@@ -319,16 +319,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B7D70A86-C1BC-4BF2-8C6B-7665E92465F2"
+            uuid = "F2AA40BE-634A-4565-95FD-52592C9602F1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Bike/CartView/View/PopUpPayment/PopUpViewController.swift"
+            filePath = "Bike/CartView/View/PaymentView/PaymentViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "viewDidAppear(_:)"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "dismissPopupAndTransition()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

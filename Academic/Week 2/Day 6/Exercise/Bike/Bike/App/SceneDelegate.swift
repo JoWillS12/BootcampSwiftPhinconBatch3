@@ -25,6 +25,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.makeKeyAndVisible()
         UINavigationBar.appearance().isHidden = true
     }
+    
+    func navigateToHomeViewController() {
+            if let rootViewController = self.window?.rootViewController as? UITabBarController {
+                rootViewController.selectedIndex = 0 // Assuming 0 is the index of the HomeViewController in the tab bar
+            }
+        }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

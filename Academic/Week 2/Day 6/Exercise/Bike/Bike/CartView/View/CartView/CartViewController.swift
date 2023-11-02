@@ -12,6 +12,13 @@ class CartViewController: UIViewController {
     
     @IBOutlet weak var customSlider: CustomSlider!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var couponCode: UITextField!
+    @IBOutlet weak var priceTag: UILabel!
+    @IBOutlet weak var feeTag: UILabel!
+    @IBOutlet weak var discTag: UILabel!
+    @IBOutlet weak var totalTag: UILabel!
+    
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +29,22 @@ class CartViewController: UIViewController {
         tableView.register(UINib(nibName: String(describing: CartTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: CartTableViewCell.self))
         customSlider.delegate = self
     }
+    
+    @IBAction func showHistory(_ sender: Any) {
+        let vc = HistoryViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func showPopUp(_ sender: Any) {
+        let vc = PopUpViewController()
+        vc.popupTitle = "Your Code"
+        vc.popupStatus = "Successful Added"
+        vc.popupDesc = "Discount: 10%"
+        vc.modalTransitionStyle = .coverVertical
+        vc.modalPresentationStyle = .overCurrentContext
+        self.navigationController?.present(vc, animated: true)
+    }
+    
 
 }
 

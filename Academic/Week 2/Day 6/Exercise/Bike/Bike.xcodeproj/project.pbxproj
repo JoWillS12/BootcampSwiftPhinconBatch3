@@ -21,6 +21,27 @@
 		172380EC2AF2529A00A3892B /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 172380EB2AF2529A00A3892B /* success.json */; };
 		172380EF2AF255BA00A3892B /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172380ED2AF255BA00A3892B /* PopUpViewController.swift */; };
 		172380F02AF255BA00A3892B /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 172380EE2AF255BA00A3892B /* PopUpViewController.xib */; };
+		172380F52AF3353A00A3892B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 172380F42AF3353A00A3892B /* FirebaseAnalytics */; };
+		172380F72AF3353A00A3892B /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 172380F62AF3353A00A3892B /* FirebaseAnalyticsSwift */; };
+		172380F92AF3353A00A3892B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 172380F82AF3353A00A3892B /* FirebaseAuth */; };
+		172380FB2AF3353A00A3892B /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 172380FA2AF3353A00A3892B /* FirebaseDatabase */; };
+		172380FD2AF3353A00A3892B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 172380FC2AF3353A00A3892B /* FirebaseFirestore */; };
+		172380FF2AF3353A00A3892B /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 172380FE2AF3353A00A3892B /* FirebaseFirestoreSwift */; };
+		172381012AF3353A00A3892B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 172381002AF3353A00A3892B /* FirebaseStorage */; };
+		172381032AF3374800A3892B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 172381022AF3374800A3892B /* GoogleService-Info.plist */; };
+		172381082AF3463600A3892B /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172381062AF3463600A3892B /* EditProfileViewController.swift */; };
+		172381092AF3463600A3892B /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 172381072AF3463600A3892B /* EditProfileViewController.xib */; };
+		1723810D2AF35A6B00A3892B /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1723810B2AF35A6B00A3892B /* HistoryViewController.swift */; };
+		1723810E2AF35A6B00A3892B /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1723810C2AF35A6B00A3892B /* HistoryViewController.xib */; };
+		172381132AF378DE00A3892B /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172381112AF378DE00A3892B /* LoadingViewController.swift */; };
+		172381142AF378DE00A3892B /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 172381122AF378DE00A3892B /* LoadingViewController.xib */; };
+		172381182AF382F700A3892B /* bikeLoad.json in Resources */ = {isa = PBXBuildFile; fileRef = 172381172AF382F700A3892B /* bikeLoad.json */; };
+		1723811C2AF3841000A3892B /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1723811A2AF3841000A3892B /* ErrorViewController.swift */; };
+		1723811D2AF3841000A3892B /* ErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1723811B2AF3841000A3892B /* ErrorViewController.xib */; };
+		1723811F2AF3863C00A3892B /* wrong.json in Resources */ = {isa = PBXBuildFile; fileRef = 1723811E2AF3863C00A3892B /* wrong.json */; };
+		172381232AF391E100A3892B /* PAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172381212AF391E100A3892B /* PAViewController.swift */; };
+		172381242AF391E100A3892B /* PAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 172381222AF391E100A3892B /* PAViewController.xib */; };
+		1723812A2AF398F000A3892B /* assist.json in Resources */ = {isa = PBXBuildFile; fileRef = 172381292AF398F000A3892B /* assist.json */; };
 		177D17222AF0DCD600E342A3 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D17202AF0DCD600E342A3 /* AuthViewController.swift */; };
 		177D17232AF0DCD600E342A3 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177D17212AF0DCD600E342A3 /* AuthViewController.xib */; };
 		177D17272AF0EE2300E342A3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D17262AF0EE2300E342A3 /* CustomTextField.swift */; };
@@ -28,7 +49,6 @@
 		177D172E2AF0F07A00E342A3 /* AuthSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D172D2AF0F07A00E342A3 /* AuthSlider.swift */; };
 		177D17312AF1DDA000E342A3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 177D17302AF1DDA000E342A3 /* Lottie */; };
 		177D17382AF1DE3A00E342A3 /* bikeLogo.json in Resources */ = {isa = PBXBuildFile; fileRef = 177D17362AF1DE3A00E342A3 /* bikeLogo.json */; };
-		177D17392AF1DE3A00E342A3 /* bikeLoading.json in Resources */ = {isa = PBXBuildFile; fileRef = 177D17372AF1DE3A00E342A3 /* bikeLoading.json */; };
 		177D17442AF1DF8300E342A3 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D17422AF1DF8300E342A3 /* SplashScreenViewController.swift */; };
 		177D17452AF1DF8300E342A3 /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177D17432AF1DF8300E342A3 /* SplashScreenViewController.xib */; };
 		177D17482AF1EAAC00E342A3 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D17472AF1EAAC00E342A3 /* InputField.swift */; };
@@ -79,13 +99,26 @@
 		172380EB2AF2529A00A3892B /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
 		172380ED2AF255BA00A3892B /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		172380EE2AF255BA00A3892B /* PopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
+		172381022AF3374800A3892B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		172381062AF3463600A3892B /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		172381072AF3463600A3892B /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
+		1723810B2AF35A6B00A3892B /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		1723810C2AF35A6B00A3892B /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
+		172381112AF378DE00A3892B /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		172381122AF378DE00A3892B /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
+		172381172AF382F700A3892B /* bikeLoad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bikeLoad.json; sourceTree = "<group>"; };
+		1723811A2AF3841000A3892B /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		1723811B2AF3841000A3892B /* ErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorViewController.xib; sourceTree = "<group>"; };
+		1723811E2AF3863C00A3892B /* wrong.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wrong.json; sourceTree = "<group>"; };
+		172381212AF391E100A3892B /* PAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAViewController.swift; sourceTree = "<group>"; };
+		172381222AF391E100A3892B /* PAViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PAViewController.xib; sourceTree = "<group>"; };
+		172381292AF398F000A3892B /* assist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = assist.json; sourceTree = "<group>"; };
 		177D17202AF0DCD600E342A3 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		177D17212AF0DCD600E342A3 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		177D17262AF0EE2300E342A3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		177D172B2AF0F06C00E342A3 /* AuthSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthSlider.xib; sourceTree = "<group>"; };
 		177D172D2AF0F07A00E342A3 /* AuthSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSlider.swift; sourceTree = "<group>"; };
 		177D17362AF1DE3A00E342A3 /* bikeLogo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bikeLogo.json; sourceTree = "<group>"; };
-		177D17372AF1DE3A00E342A3 /* bikeLoading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bikeLoading.json; sourceTree = "<group>"; };
 		177D17422AF1DF8300E342A3 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		177D17432AF1DF8300E342A3 /* SplashScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreenViewController.xib; sourceTree = "<group>"; };
 		177D17472AF1EAAC00E342A3 /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
@@ -128,7 +161,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				172380FB2AF3353A00A3892B /* FirebaseDatabase in Frameworks */,
+				172380F72AF3353A00A3892B /* FirebaseAnalyticsSwift in Frameworks */,
+				172380F52AF3353A00A3892B /* FirebaseAnalytics in Frameworks */,
+				172380FF2AF3353A00A3892B /* FirebaseFirestoreSwift in Frameworks */,
 				177D17312AF1DDA000E342A3 /* Lottie in Frameworks */,
+				172381012AF3353A00A3892B /* FirebaseStorage in Frameworks */,
+				172380F92AF3353A00A3892B /* FirebaseAuth in Frameworks */,
+				172380FD2AF3353A00A3892B /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +263,69 @@
 			path = PopUpPayment;
 			sourceTree = "<group>";
 		};
+		172381042AF3461600A3892B /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				179592922AF09869003D23EE /* ProfileViewController.swift */,
+				179592932AF09869003D23EE /* ProfileViewController.xib */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		172381052AF3462000A3892B /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				172381062AF3463600A3892B /* EditProfileViewController.swift */,
+				172381072AF3463600A3892B /* EditProfileViewController.xib */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		1723810A2AF35A1500A3892B /* HistoryView */ = {
+			isa = PBXGroup;
+			children = (
+				1723810B2AF35A6B00A3892B /* HistoryViewController.swift */,
+				1723810C2AF35A6B00A3892B /* HistoryViewController.xib */,
+			);
+			path = HistoryView;
+			sourceTree = "<group>";
+		};
+		1723810F2AF378C200A3892B /* AuthView */ = {
+			isa = PBXGroup;
+			children = (
+				177D17202AF0DCD600E342A3 /* AuthViewController.swift */,
+				177D17212AF0DCD600E342A3 /* AuthViewController.xib */,
+			);
+			path = AuthView;
+			sourceTree = "<group>";
+		};
+		172381102AF378CD00A3892B /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				172381112AF378DE00A3892B /* LoadingViewController.swift */,
+				172381122AF378DE00A3892B /* LoadingViewController.xib */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		172381192AF383F700A3892B /* ErrorPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				1723811A2AF3841000A3892B /* ErrorViewController.swift */,
+				1723811B2AF3841000A3892B /* ErrorViewController.xib */,
+			);
+			path = ErrorPopUp;
+			sourceTree = "<group>";
+		};
+		172381202AF391B300A3892B /* PersonalAssistant */ = {
+			isa = PBXGroup;
+			children = (
+				172381212AF391E100A3892B /* PAViewController.swift */,
+				172381222AF391E100A3892B /* PAViewController.xib */,
+			);
+			path = PersonalAssistant;
+			sourceTree = "<group>";
+		};
 		177D171E2AF0DA4A00E342A3 /* LoginRegister */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,8 +338,9 @@
 		177D171F2AF0DAB200E342A3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				177D17202AF0DCD600E342A3 /* AuthViewController.swift */,
-				177D17212AF0DCD600E342A3 /* AuthViewController.xib */,
+				172381192AF383F700A3892B /* ErrorPopUp */,
+				172381102AF378CD00A3892B /* LoadingView */,
+				1723810F2AF378C200A3892B /* AuthView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,8 +400,10 @@
 		177D17352AF1DE0E00E342A3 /* LottieAssets */ = {
 			isa = PBXGroup;
 			children = (
+				172381292AF398F000A3892B /* assist.json */,
+				1723811E2AF3863C00A3892B /* wrong.json */,
 				177D17362AF1DE3A00E342A3 /* bikeLogo.json */,
-				177D17372AF1DE3A00E342A3 /* bikeLoading.json */,
+				172381172AF382F700A3892B /* bikeLoad.json */,
 				172380EB2AF2529A00A3892B /* success.json */,
 			);
 			path = LottieAssets;
@@ -403,9 +509,11 @@
 				179592872AF089EA003D23EE /* CartView */,
 				177D174B2AF1F77000E342A3 /* MapView */,
 				1795925F2AEF65DA003D23EE /* HomeView */,
+				172381202AF391B300A3892B /* PersonalAssistant */,
 				1795924E2AEF655F003D23EE /* ViewController.swift */,
 				179592532AEF655F003D23EE /* Assets.xcassets */,
 				179592582AEF655F003D23EE /* Info.plist */,
+				172381022AF3374800A3892B /* GoogleService-Info.plist */,
 			);
 			path = Bike;
 			sourceTree = "<group>";
@@ -523,6 +631,7 @@
 		179592882AF08A01003D23EE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1723810A2AF35A1500A3892B /* HistoryView */,
 				172380E62AF2513100A3892B /* PopUpPayment */,
 				172380DC2AF22CC800A3892B /* PaymentView */,
 				172380DB2AF22CBE00A3892B /* CartView */,
@@ -549,8 +658,8 @@
 		179592912AF0985B003D23EE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				179592922AF09869003D23EE /* ProfileViewController.swift */,
-				179592932AF09869003D23EE /* ProfileViewController.xib */,
+				172381052AF3462000A3892B /* EditProfile */,
+				172381042AF3461600A3892B /* ProfileView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -583,6 +692,13 @@
 			name = Bike;
 			packageProductDependencies = (
 				177D17302AF1DDA000E342A3 /* Lottie */,
+				172380F42AF3353A00A3892B /* FirebaseAnalytics */,
+				172380F62AF3353A00A3892B /* FirebaseAnalyticsSwift */,
+				172380F82AF3353A00A3892B /* FirebaseAuth */,
+				172380FA2AF3353A00A3892B /* FirebaseDatabase */,
+				172380FC2AF3353A00A3892B /* FirebaseFirestore */,
+				172380FE2AF3353A00A3892B /* FirebaseFirestoreSwift */,
+				172381002AF3353A00A3892B /* FirebaseStorage */,
 			);
 			productName = Bike;
 			productReference = 179592472AEF655F003D23EE /* Bike.app */;
@@ -614,6 +730,7 @@
 			mainGroup = 1795923E2AEF655E003D23EE;
 			packageReferences = (
 				177D172F2AF1DDA000E342A3 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				172380F32AF3353A00A3892B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 179592482AEF655F003D23EE /* Products */;
 			projectDirPath = "";
@@ -630,7 +747,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				170A992A2AF0B75D00726127 /* CustomSlider.xib in Resources */,
-				177D17392AF1DE3A00E342A3 /* bikeLoading.json in Resources */,
+				172381032AF3374800A3892B /* GoogleService-Info.plist in Resources */,
+				1723812A2AF398F000A3892B /* assist.json in Resources */,
+				172381142AF378DE00A3892B /* LoadingViewController.xib in Resources */,
 				1795926D2AEF69AB003D23EE /* BikeTableViewCell.xib in Resources */,
 				172380EC2AF2529A00A3892B /* success.json in Resources */,
 				177D17562AF1FA1A00E342A3 /* ActivityViewController.xib in Resources */,
@@ -638,6 +757,7 @@
 				172380D62AF2098D00A3892B /* AddActivityViewController.xib in Resources */,
 				179592822AEF6F79003D23EE /* ItemCollectionViewCell.xib in Resources */,
 				179592572AEF655F003D23EE /* LaunchScreen.storyboard in Resources */,
+				1723811D2AF3841000A3892B /* ErrorViewController.xib in Resources */,
 				177D17502AF1F79500E342A3 /* MapViewController.xib in Resources */,
 				179592542AEF655F003D23EE /* Assets.xcassets in Resources */,
 				177D174A2AF1EAB700E342A3 /* InputField.xib in Resources */,
@@ -650,11 +770,16 @@
 				170A99212AF09C9E00726127 /* CartTableViewCell.xib in Resources */,
 				179592752AEF69C5003D23EE /* ItemTableViewCell.xib in Resources */,
 				179592952AF09869003D23EE /* ProfileViewController.xib in Resources */,
+				172381182AF382F700A3892B /* bikeLoad.json in Resources */,
 				179592642AEF6681003D23EE /* HomeViewController.xib in Resources */,
 				177D17382AF1DE3A00E342A3 /* bikeLogo.json in Resources */,
+				172381092AF3463600A3892B /* EditProfileViewController.xib in Resources */,
 				177D175E2AF1FC4C00E342A3 /* ActivityCollectionViewCell.xib in Resources */,
 				172380E02AF22CD800A3892B /* PaymentViewController.xib in Resources */,
+				172381242AF391E100A3892B /* PAViewController.xib in Resources */,
+				1723810E2AF35A6B00A3892B /* HistoryViewController.xib in Resources */,
 				172380F02AF255BA00A3892B /* PopUpViewController.xib in Resources */,
+				1723811F2AF3863C00A3892B /* wrong.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,8 +790,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				172381082AF3463600A3892B /* EditProfileViewController.swift in Sources */,
 				1795924F2AEF655F003D23EE /* ViewController.swift in Sources */,
 				172380DF2AF22CD800A3892B /* PaymentViewController.swift in Sources */,
+				1723810D2AF35A6B00A3892B /* HistoryViewController.swift in Sources */,
 				1795924B2AEF655F003D23EE /* AppDelegate.swift in Sources */,
 				179592702AEF69B8003D23EE /* MenuTableViewCell.swift in Sources */,
 				177D17482AF1EAAC00E342A3 /* InputField.swift in Sources */,
@@ -684,13 +811,16 @@
 				179592852AEF9D50003D23EE /* ProductContents.swift in Sources */,
 				172380D52AF2098D00A3892B /* AddActivityViewController.swift in Sources */,
 				1795928F2AF09335003D23EE /* TabBarController.swift in Sources */,
+				172381232AF391E100A3892B /* PAViewController.swift in Sources */,
 				170A992C2AF0B76D00726127 /* CustomSlider.swift in Sources */,
 				177D175D2AF1FC4C00E342A3 /* ActivityCollectionViewCell.swift in Sources */,
 				177D172E2AF0F07A00E342A3 /* AuthSlider.swift in Sources */,
 				179592942AF09869003D23EE /* ProfileViewController.swift in Sources */,
+				172381132AF378DE00A3892B /* LoadingViewController.swift in Sources */,
 				172380EF2AF255BA00A3892B /* PopUpViewController.swift in Sources */,
 				179592742AEF69C5003D23EE /* ItemTableViewCell.swift in Sources */,
 				172380DA2AF2218500A3892B /* CustomAnnotation.swift in Sources */,
+				1723811C2AF3841000A3892B /* ErrorViewController.swift in Sources */,
 				179592632AEF6681003D23EE /* HomeViewController.swift in Sources */,
 				177D17552AF1FA1A00E342A3 /* ActivityViewController.swift in Sources */,
 			);
@@ -902,6 +1032,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		172380F32AF3353A00A3892B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		177D172F2AF1DDA000E342A3 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -913,6 +1051,41 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		172380F42AF3353A00A3892B /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 172380F32AF3353A00A3892B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		172380F62AF3353A00A3892B /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 172380F32AF3353A00A3892B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		172380F82AF3353A00A3892B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 172380F32AF3353A00A3892B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		172380FA2AF3353A00A3892B /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 172380F32AF3353A00A3892B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		172380FC2AF3353A00A3892B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 172380F32AF3353A00A3892B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		172380FE2AF3353A00A3892B /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 172380F32AF3353A00A3892B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		172381002AF3353A00A3892B /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 172380F32AF3353A00A3892B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		177D17302AF1DDA000E342A3 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 177D172F2AF1DDA000E342A3 /* XCRemoteSwiftPackageReference "lottie-ios" */;

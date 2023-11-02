@@ -16,8 +16,8 @@ class MenuTableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let menuLabel = ["BICYCLE", "HELMET", "BIKE"]
-    let menuImage = [UIImage(systemName: "bicycle.circle"), UIImage(systemName: "bolt.shield.fill"), UIImage(named: "motorbike")]
+    let menuLabel = ["BICYCLE", "HELMET"]
+    let menuImage = [UIImage(systemName: "bicycle.circle"), UIImage(systemName: "bolt.shield.fill")]
     
     var buttonAction: ((String) -> Void)?
     var delegate: MenuTableViewCellDelegate?

@@ -10,7 +10,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopUpViewController" customModule="Bike" customModuleProvider="target">
             <connections>
                 <outlet property="animationView" destination="KtH-Ny-8v4" id="CNm-R6-O2b"/>
+                <outlet property="descLabel" destination="xUq-8T-F9y" id="JEd-d1-52E"/>
                 <outlet property="popUpBox" destination="b9F-Tz-9GK" id="Yc0-ZV-LUj"/>
+                <outlet property="statusLabel" destination="usy-Vp-V94" id="88D-hy-68f"/>
+                <outlet property="titleLabel" destination="pDw-QL-Ya0" id="h6T-Uv-sHo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -37,7 +40,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Successful" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usy-Vp-V94">
-                            <rect key="frame" x="8" y="212" width="294" height="30"/>
+                            <rect key="frame" x="8" y="224" width="294" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="RXG-L2-mJq"/>
                                 <constraint firstAttribute="width" constant="294" id="TJr-ab-P0R"/>
@@ -47,7 +50,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount Paid: $12000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUq-8T-F9y">
-                            <rect key="frame" x="8" y="260" width="294" height="30"/>
+                            <rect key="frame" x="8" y="272" width="294" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="DF6-fM-Id8"/>
                                 <constraint firstAttribute="width" constant="294" id="YTd-yg-QXU"/>
@@ -57,11 +60,11 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KtH-Ny-8v4" customClass="LottieAnimationView" customModule="Lottie">
-                            <rect key="frame" x="81" y="56" width="148" height="148"/>
+                            <rect key="frame" x="81" y="56" width="160" height="160"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="148" id="ExO-eK-WcP"/>
-                                <constraint firstAttribute="height" constant="148" id="LMu-SC-cKu"/>
+                                <constraint firstAttribute="width" constant="160" id="ExO-eK-WcP"/>
+                                <constraint firstAttribute="height" constant="160" id="LMu-SC-cKu"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="success"/>
@@ -71,14 +74,13 @@
                     <color key="backgroundColor" red="0.20784313730000001" green="0.2470588235" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="usy-Vp-V94" secondAttribute="trailing" constant="8" id="0w5-dg-ghS"/>
-                        <constraint firstItem="KtH-Ny-8v4" firstAttribute="leading" secondItem="b9F-Tz-9GK" secondAttribute="leading" constant="81" id="9Vr-VP-Yfe"/>
-                        <constraint firstAttribute="trailing" secondItem="KtH-Ny-8v4" secondAttribute="trailing" constant="81" id="Adz-5a-gSC"/>
                         <constraint firstItem="xUq-8T-F9y" firstAttribute="leading" secondItem="b9F-Tz-9GK" secondAttribute="leading" constant="8" id="ClG-Ux-PLr"/>
                         <constraint firstAttribute="trailing" secondItem="xUq-8T-F9y" secondAttribute="trailing" constant="8" id="DEW-VW-F2D"/>
                         <constraint firstItem="xUq-8T-F9y" firstAttribute="top" secondItem="usy-Vp-V94" secondAttribute="bottom" constant="18" id="PaU-TL-tuP"/>
                         <constraint firstItem="usy-Vp-V94" firstAttribute="leading" secondItem="b9F-Tz-9GK" secondAttribute="leading" constant="8" id="PqM-72-RXW"/>
                         <constraint firstItem="pDw-QL-Ya0" firstAttribute="leading" secondItem="b9F-Tz-9GK" secondAttribute="leading" constant="8" id="TdV-dJ-hPT"/>
                         <constraint firstAttribute="trailing" secondItem="pDw-QL-Ya0" secondAttribute="trailing" constant="8" id="WfM-5k-GCL"/>
+                        <constraint firstItem="KtH-Ny-8v4" firstAttribute="leading" secondItem="b9F-Tz-9GK" secondAttribute="leading" constant="81" id="aTN-xK-MY8"/>
                         <constraint firstItem="pDw-QL-Ya0" firstAttribute="top" secondItem="b9F-Tz-9GK" secondAttribute="top" constant="18" id="fRM-Jg-DIc"/>
                         <constraint firstItem="usy-Vp-V94" firstAttribute="top" secondItem="KtH-Ny-8v4" secondAttribute="bottom" constant="8" symbolic="YES" id="v9A-6o-HWy"/>
                         <constraint firstItem="KtH-Ny-8v4" firstAttribute="top" secondItem="pDw-QL-Ya0" secondAttribute="bottom" constant="8" symbolic="YES" id="wy5-xt-4bJ"/>
