@@ -47,7 +47,7 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource{
     
     func fetchDataFromAPI() {
         let apiURL = "http://localhost:3001/api/gethistory"
-        NetworkManager.shared.makeAPICall(urlString: apiURL, method: .get, completion: { (response: Result<[History], Error>) in
+        NetworkManager.shared.makeAPICall(endpoint: .getHistory, completion: { (response: Result<[History], Error>) in
             switch response {
             case .success(let history):
                 self.historyData = history

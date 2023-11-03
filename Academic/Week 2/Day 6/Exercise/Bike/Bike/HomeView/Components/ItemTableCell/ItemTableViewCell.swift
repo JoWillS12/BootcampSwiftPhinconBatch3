@@ -32,11 +32,7 @@ class ItemTableViewCell: UITableViewCell {
                                           .init(nama: "PUBG", image: "helm2", price: "$900"),
                                           .init(nama: "HALO", image: "helm3", price: "$7000")]
     
-//    var productMotorType: [ProductType] = [.init(nama: "Harley Davidson", image: "moto1", price: "$25000"),
-//                                          .init(nama: "R1", image: "moto2", price: "$20000"),
-//                                          .init(nama: "CBR-250RR", image: "moto3", price: "$21000"), .init(nama: "Harley Davidson", image: "moto1", price: "$25000"),
-//                                           .init(nama: "R1", image: "moto2", price: "$20000"),
-//                                           .init(nama: "CBR-250RR", image: "moto3", price: "$21000")]
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
