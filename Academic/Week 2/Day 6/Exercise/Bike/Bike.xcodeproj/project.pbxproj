@@ -42,6 +42,12 @@
 		172381232AF391E100A3892B /* PAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172381212AF391E100A3892B /* PAViewController.swift */; };
 		172381242AF391E100A3892B /* PAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 172381222AF391E100A3892B /* PAViewController.xib */; };
 		1723812A2AF398F000A3892B /* assist.json in Resources */ = {isa = PBXBuildFile; fileRef = 172381292AF398F000A3892B /* assist.json */; };
+		1723812D2AF47CE300A3892B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1723812C2AF47CE300A3892B /* Alamofire */; };
+		172381312AF49BB300A3892B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172381302AF49BB300A3892B /* NetworkManager.swift */; };
+		172381352AF49DE900A3892B /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172381332AF49DE900A3892B /* HistoryTableViewCell.swift */; };
+		172381362AF49DE900A3892B /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 172381342AF49DE900A3892B /* HistoryTableViewCell.xib */; };
+		172381392AF49FF600A3892B /* HistoryContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172381382AF49FF600A3892B /* HistoryContents.swift */; };
+		1723813B2AF4AEFE00A3892B /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1723813A2AF4AEFE00A3892B /* EndPoint.swift */; };
 		177D17222AF0DCD600E342A3 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D17202AF0DCD600E342A3 /* AuthViewController.swift */; };
 		177D17232AF0DCD600E342A3 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177D17212AF0DCD600E342A3 /* AuthViewController.xib */; };
 		177D17272AF0EE2300E342A3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D17262AF0EE2300E342A3 /* CustomTextField.swift */; };
@@ -113,6 +119,11 @@
 		172381212AF391E100A3892B /* PAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAViewController.swift; sourceTree = "<group>"; };
 		172381222AF391E100A3892B /* PAViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PAViewController.xib; sourceTree = "<group>"; };
 		172381292AF398F000A3892B /* assist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = assist.json; sourceTree = "<group>"; };
+		172381302AF49BB300A3892B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		172381332AF49DE900A3892B /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		172381342AF49DE900A3892B /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		172381382AF49FF600A3892B /* HistoryContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryContents.swift; sourceTree = "<group>"; };
+		1723813A2AF4AEFE00A3892B /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		177D17202AF0DCD600E342A3 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		177D17212AF0DCD600E342A3 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		177D17262AF0EE2300E342A3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -161,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1723812D2AF47CE300A3892B /* Alamofire in Frameworks */,
 				172380FB2AF3353A00A3892B /* FirebaseDatabase in Frameworks */,
 				172380F72AF3353A00A3892B /* FirebaseAnalyticsSwift in Frameworks */,
 				172380F52AF3353A00A3892B /* FirebaseAnalytics in Frameworks */,
@@ -324,6 +336,32 @@
 				172381222AF391E100A3892B /* PAViewController.xib */,
 			);
 			path = PersonalAssistant;
+			sourceTree = "<group>";
+		};
+		1723812E2AF49B8F00A3892B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				172381302AF49BB300A3892B /* NetworkManager.swift */,
+				1723813A2AF4AEFE00A3892B /* EndPoint.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		172381322AF49DD300A3892B /* HistoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				172381332AF49DE900A3892B /* HistoryTableViewCell.swift */,
+				172381342AF49DE900A3892B /* HistoryTableViewCell.xib */,
+			);
+			path = HistoryCell;
+			sourceTree = "<group>";
+		};
+		172381372AF49FE100A3892B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				172381382AF49FF600A3892B /* HistoryContents.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		177D171E2AF0DA4A00E342A3 /* LoginRegister */ = {
@@ -500,6 +538,7 @@
 			isa = PBXGroup;
 			children = (
 				1795925E2AEF65CE003D23EE /* App */,
+				1723812E2AF49B8F00A3892B /* API */,
 				177D17352AF1DE0E00E342A3 /* LottieAssets */,
 				177D17322AF1DDAE00E342A3 /* SplashScreen */,
 				177D171E2AF0DA4A00E342A3 /* LoginRegister */,
@@ -622,6 +661,7 @@
 		179592872AF089EA003D23EE /* CartView */ = {
 			isa = PBXGroup;
 			children = (
+				172381372AF49FE100A3892B /* Model */,
 				179592962AF09AB1003D23EE /* Components */,
 				179592882AF08A01003D23EE /* View */,
 			);
@@ -667,6 +707,7 @@
 		179592962AF09AB1003D23EE /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				172381322AF49DD300A3892B /* HistoryCell */,
 				172380E12AF242F900A3892B /* CheckoutCoupon */,
 				170A99222AF0A46300726127 /* CustomSlider */,
 				170A991B2AF09C6C00726127 /* CartTableCell */,
@@ -699,6 +740,7 @@
 				172380FC2AF3353A00A3892B /* FirebaseFirestore */,
 				172380FE2AF3353A00A3892B /* FirebaseFirestoreSwift */,
 				172381002AF3353A00A3892B /* FirebaseStorage */,
+				1723812C2AF47CE300A3892B /* Alamofire */,
 			);
 			productName = Bike;
 			productReference = 179592472AEF655F003D23EE /* Bike.app */;
@@ -731,6 +773,7 @@
 			packageReferences = (
 				177D172F2AF1DDA000E342A3 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				172380F32AF3353A00A3892B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				1723812B2AF47CE300A3892B /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 179592482AEF655F003D23EE /* Products */;
 			projectDirPath = "";
@@ -772,6 +815,7 @@
 				179592952AF09869003D23EE /* ProfileViewController.xib in Resources */,
 				172381182AF382F700A3892B /* bikeLoad.json in Resources */,
 				179592642AEF6681003D23EE /* HomeViewController.xib in Resources */,
+				172381362AF49DE900A3892B /* HistoryTableViewCell.xib in Resources */,
 				177D17382AF1DE3A00E342A3 /* bikeLogo.json in Resources */,
 				172381092AF3463600A3892B /* EditProfileViewController.xib in Resources */,
 				177D175E2AF1FC4C00E342A3 /* ActivityCollectionViewCell.xib in Resources */,
@@ -799,7 +843,9 @@
 				177D17482AF1EAAC00E342A3 /* InputField.swift in Sources */,
 				179592812AEF6F79003D23EE /* ItemCollectionViewCell.swift in Sources */,
 				177D17222AF0DCD600E342A3 /* AuthViewController.swift in Sources */,
+				172381352AF49DE900A3892B /* HistoryTableViewCell.swift in Sources */,
 				1795926C2AEF69AB003D23EE /* BikeTableViewCell.swift in Sources */,
+				172381312AF49BB300A3892B /* NetworkManager.swift in Sources */,
 				1795924D2AEF655F003D23EE /* SceneDelegate.swift in Sources */,
 				1795927D2AEF6CEC003D23EE /* MenuCollectionViewCell.swift in Sources */,
 				177D17272AF0EE2300E342A3 /* CustomTextField.swift in Sources */,
@@ -812,6 +858,7 @@
 				172380D52AF2098D00A3892B /* AddActivityViewController.swift in Sources */,
 				1795928F2AF09335003D23EE /* TabBarController.swift in Sources */,
 				172381232AF391E100A3892B /* PAViewController.swift in Sources */,
+				1723813B2AF4AEFE00A3892B /* EndPoint.swift in Sources */,
 				170A992C2AF0B76D00726127 /* CustomSlider.swift in Sources */,
 				177D175D2AF1FC4C00E342A3 /* ActivityCollectionViewCell.swift in Sources */,
 				177D172E2AF0F07A00E342A3 /* AuthSlider.swift in Sources */,
@@ -820,6 +867,7 @@
 				172380EF2AF255BA00A3892B /* PopUpViewController.swift in Sources */,
 				179592742AEF69C5003D23EE /* ItemTableViewCell.swift in Sources */,
 				172380DA2AF2218500A3892B /* CustomAnnotation.swift in Sources */,
+				172381392AF49FF600A3892B /* HistoryContents.swift in Sources */,
 				1723811C2AF3841000A3892B /* ErrorViewController.swift in Sources */,
 				179592632AEF6681003D23EE /* HomeViewController.swift in Sources */,
 				177D17552AF1FA1A00E342A3 /* ActivityViewController.swift in Sources */,
@@ -1040,6 +1088,14 @@
 				kind = branch;
 			};
 		};
+		1723812B2AF47CE300A3892B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		177D172F2AF1DDA000E342A3 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -1085,6 +1141,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 172380F32AF3353A00A3892B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		1723812C2AF47CE300A3892B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1723812B2AF47CE300A3892B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 		177D17302AF1DDA000E342A3 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
