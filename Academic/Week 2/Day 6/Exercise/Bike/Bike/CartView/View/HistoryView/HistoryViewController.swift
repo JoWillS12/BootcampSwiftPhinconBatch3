@@ -21,8 +21,8 @@ class HistoryViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: String(describing: HistoryTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: HistoryTableViewCell.self))
-        
-        fetchDataFromAPI()
+        self.navigationItem.setHidesBackButton(true, animated: true)
+    
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -39,23 +39,7 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HistoryTableViewCell.self), for: indexPath) as! HistoryTableViewCell
-        let historyItem = historyData[indexPath.row]
-        cell.titleLabel.text = historyItem.title
-        cell.priceLabel.text = historyItem.tags
         return cell
-    }
-    
-    func fetchDataFromAPI() {
-        let apiURL = "http://localhost:3001/api/gethistory"
-        NetworkManager.shared.makeAPICall(endpoint: .getHistory, completion: { (response: Result<[History], Error>) in
-            switch response {
-            case .success(let history):
-                self.historyData = history
-                self.tableView.reloadData()
-            case .failure(let error):
-                print("API Request Error: \(error.localizedDescription)")
-            }
-        })
     }
 
 }

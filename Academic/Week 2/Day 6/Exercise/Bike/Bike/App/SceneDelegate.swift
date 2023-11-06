@@ -20,10 +20,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         window.frame = UIScreen.main.bounds
-        window.rootViewController = UINavigationController(rootViewController: HistoryViewController())
+        window.rootViewController = UINavigationController(rootViewController: TabBarController())
         self.window = window
         window.makeKeyAndVisible()
-        UINavigationBar.appearance().isHidden = true
+//        UINavigationBar.appearance().isHidden = true
     }
     
     func navigateToHomeViewController() {

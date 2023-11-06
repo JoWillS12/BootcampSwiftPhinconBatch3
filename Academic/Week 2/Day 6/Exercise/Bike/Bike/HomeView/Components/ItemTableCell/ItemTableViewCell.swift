@@ -7,32 +7,24 @@
 
 import UIKit
 
+protocol ItemTableViewCellDelegate: class {
+    func didSelectProduct(_ product: ProductType)
+}
+
 class ItemTableViewCell: UITableViewCell {
-    
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var currentData: (names: [String], images: [String], prices: [String]) = ([], [], [])
+    weak var delegate: ItemTableViewCellDelegate?
     
-    var isBike: Bool =  false {
+    var isBicycle: Bool =  false {
         didSet{
             collectionView.reloadData()
         }
     }
     
-    var productBikeType: [ProductType] = [.init(nama: "PG-102", image: "bike2", price: "$14000"),
-                                          .init(nama: "PAS-122", image: "bike3", price: "$20000"),
-                                          .init(nama: "JWX-89", image: "bike4", price: "$25000"),.init(nama: "PG-102", image: "bike2", price: "$14000"),
-                                          .init(nama: "PAS-122", image: "bike3", price: "$20000"),
-                                          .init(nama: "JWX-89", image: "bike4", price: "$25000")]
-    
-    var productHelmType: [ProductType] = [.init(nama: "Iron-man", image: "helm1", price: "$1000"),
-                                          .init(nama: "PUBG", image: "helm2", price: "$900"),
-                                          .init(nama: "HALO", image: "helm3", price: "$7000"), .init(nama: "Iron-man", image: "helm1", price: "$1000"),
-                                          .init(nama: "PUBG", image: "helm2", price: "$900"),
-                                          .init(nama: "HALO", image: "helm3", price: "$7000")]
-    
-
+    var bikeData: [ProductType] = []
+    var helmData: [ProductType] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,6 +40,9 @@ class ItemTableViewCell: UITableViewCell {
         layout.sectionInset = UIEdgeInsets(top: 30, left: 30, bottom: 0, right: 30)  // Adjust the section inset as needed
         
         collectionView.collectionViewLayout = layout
+        
+        fetchBikeData()
+        fetchHelmData()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -59,35 +54,35 @@ class ItemTableViewCell: UITableViewCell {
 }
 
 extension ItemTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedData = isBicycle ? bikeData[indexPath.row] : helmData[indexPath.row]
+        delegate?.didSelectProduct(selectedData)
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return isBike ?  productBikeType.count : productHelmType.count
+        return isBicycle ? bikeData.count : helmData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        if isBike {
+        if isBicycle{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell", for: indexPath) as! ItemCollectionViewCell
-            let names = productBikeType[indexPath.row].nama
-            let images = productBikeType[indexPath.row].image
-            let prices = productBikeType[indexPath.row].price
-            cell.itemName.text = names
-            cell.itemImage.image = UIImage(named: images)
-            cell.itemPrice.text = prices
+            let bike = bikeData[indexPath.row]
+            // If isBicycle is true, display bicycle image
+            cell.itemImage.image = UIImage(named: bike.image)
+            cell.itemName.text = bike.name
+            cell.itemPrice.text = "$\(String(bike.price))"
             cell.layer.cornerRadius = 10
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell", for: indexPath) as! ItemCollectionViewCell
-            let names = productHelmType[indexPath.row].nama
-            let images = productHelmType[indexPath.row].image
-            let prices = productHelmType[indexPath.row].price
-            cell.itemName.text = names
-            cell.itemImage.image = UIImage(named: images)
-            cell.itemPrice.text = prices
+            let helm = helmData[indexPath.row]
+            // If isBicycle is false, display helmet image
+            cell.itemImage.image = UIImage(named: helm.image)
+            cell.itemName.text = helm.name
+            cell.itemPrice.text = "$\(String(helm.price))"
             cell.layer.cornerRadius = 10
             return cell
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -96,9 +91,33 @@ extension ItemTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func updateData(forMenu menu: String) {
         if menu == "BICYCLE" {
-            isBike = true
+            isBicycle = true
         } else {
-            isBike = false
+            isBicycle = false
+        }
+    }
+    
+    func fetchBikeData() {
+        NetworkManager.shared.makeAPICall(endpoint: .getBike) { (response: Result<[ProductType], Error>) in
+            switch response {
+            case .success(let products):
+                self.bikeData = products
+                self.collectionView.reloadData()
+            case .failure(let error):
+                print("API Request Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func fetchHelmData() {
+        NetworkManager.shared.makeAPICall(endpoint: .getHelmet) { (response: Result<[ProductType], Error>) in
+            switch response {
+            case .success(let products):
+                self.helmData = products
+                self.collectionView.reloadData()
+            case .failure(let error):
+                print("API Request Error: \(error.localizedDescription)")
+            }
         }
     }
     

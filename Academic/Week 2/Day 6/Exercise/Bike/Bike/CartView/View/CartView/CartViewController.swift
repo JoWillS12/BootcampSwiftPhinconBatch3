@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import Alamofire
 
 class CartViewController: UIViewController {
-
+    
     
     @IBOutlet weak var customSlider: CustomSlider!
     @IBOutlet weak var tableView: UITableView!
@@ -18,12 +19,19 @@ class CartViewController: UIViewController {
     @IBOutlet weak var discTag: UILabel!
     @IBOutlet weak var totalTag: UILabel!
     
-  
+    var selectedProduct: [ProductType] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadData()
+    }
+    
+    func setup() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: String(describing: CartTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: CartTableViewCell.self))
@@ -45,11 +53,27 @@ class CartViewController: UIViewController {
         self.navigationController?.present(vc, animated: true)
     }
     
-
+    
 }
 
-extension CartViewController: UITableViewDelegate, UITableViewDataSource, CustomSliderDelegate{
+extension CartViewController: UITableViewDelegate, UITableViewDataSource, CustomSliderDelegate, PassingProduct{
     
+    func passData(data: ProductType) {
+        selectedProduct.append(data)
+    }
+    
+    func loadData() {
+        if let encodeData = UserDefaults.standard.data(forKey: "Products") {
+            do {
+                var product = try JSONDecoder().decode([ProductType].self, from: encodeData)
+                print("YOUR DATA is HERE \(product)")
+                self.selectedProduct = product
+            } catch {
+                print("Error")
+            }
+        }
+        tableView.reloadData()        
+    }
     func thumbReachedDestination() {
         let vc = PaymentViewController()
         self.navigationController?.pushViewController(vc, animated: true)
@@ -59,15 +83,17 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource, Custom
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return selectedProduct.count
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as! CartTableViewCell
+        let product = selectedProduct[indexPath.row]
+        cell.selectedProduct = product
+        cell.productName.text = product.name
+        cell.productPrice.text = "$\(product.price)"
+        cell.productImage.image = UIImage(named: product.image)
         cell.layer.cornerRadius = 10
         return cell
     }
-    
-    
 }

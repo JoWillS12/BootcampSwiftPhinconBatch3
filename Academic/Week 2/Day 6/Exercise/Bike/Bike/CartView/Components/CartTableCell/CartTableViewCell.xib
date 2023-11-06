@@ -122,6 +122,7 @@
             <connections>
                 <outlet property="decreaseButton" destination="oGS-1m-d3z" id="5W3-vv-r0Q"/>
                 <outlet property="increaseButton" destination="IfK-hg-gJL" id="1l0-pO-Rfm"/>
+                <outlet property="productImage" destination="TDu-t4-VhY" id="YZG-1S-mhr"/>
                 <outlet property="productName" destination="9mf-Fc-gwW" id="C3n-8f-GTb"/>
                 <outlet property="productPrice" destination="wzR-Em-g4j" id="0iy-QK-tRY"/>
                 <outlet property="productQuantity" destination="1dY-vG-T9Y" id="sHG-VE-wwz"/>

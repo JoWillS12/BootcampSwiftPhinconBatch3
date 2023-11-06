@@ -7,8 +7,16 @@
 
 import Foundation
 
-struct ProductType {
-    var nama: String
+struct ProductType: Codable {
+    var name: String
     var image: String
-    var price: String
+    var price: Double
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case image
+        case price
+    }
 }
+
+

@@ -10,6 +10,7 @@ import UIKit
 class CartTableViewCell: UITableViewCell {
     
     
+    @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productView: UIView!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productPrice: UILabel!
@@ -17,14 +18,15 @@ class CartTableViewCell: UITableViewCell {
     @IBOutlet weak var increaseButton: UIButton!
     @IBOutlet weak var productQuantity: UILabel!
     
-    var quantity: Int = 0 {
+    var quantity: Int = 1 {
         didSet {
             productQuantity.text = "\(quantity)"
+            updateProductPrice()
         }
     }
-    var price: Int = 14000{
-        didSet{
-            productPrice.text = "$\(price)"
+    var selectedProduct: ProductType? {
+        didSet {
+            updateProductPrice()
         }
     }
     
@@ -41,16 +43,22 @@ class CartTableViewCell: UITableViewCell {
     }
     
     @IBAction func decreaseQuantity(_ sender: Any) {
-        if quantity > 0 {
+        if quantity > 1 {
             quantity -= 1
-            price = 14000 * quantity
         }
         
     }
     
     @IBAction func increaseQuantity(_ sender: Any) {
         quantity += 1
-        price = 14000 * quantity
     }
     
+}
+extension CartTableViewCell{
+    func updateProductPrice() {
+        if let product = selectedProduct {
+            let newPrice = Double(product.price) * Double(quantity)
+            productPrice.text = "$\(newPrice)"
+        }
+    }
 }

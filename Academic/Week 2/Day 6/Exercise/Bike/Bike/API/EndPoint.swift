@@ -9,35 +9,35 @@ import Foundation
 import Alamofire
 
 enum Endpoint {
-    case getbike
-    case getHistory
+    case getBike
+    case getHelmet
     
     func path() -> String {
         switch self {
-        case .getbike:
+        case .getBike:
             return "api/bike"
-        case .getHistory:
-            return "api/gethistory"
+        case .getHelmet:
+            return "api/helmet"
         }
     }
     
     func methode() -> HTTPMethod {
         switch self {
-        case .getbike, .getHistory :
+        case .getBike,.getHelmet:
             return .get
         }
     }
     
     var parameters: [String: Any]? {
         switch self {
-        case .getbike, .getHistory:
+        case .getBike, .getHelmet:
             return nil
         }
     }
     
     var headers: HTTPHeaders {
         switch self {
-        case .getbike, .getHistory:
+        case .getBike, .getHelmet:
             let params: HTTPHeaders = [
                 "Content-Type": "Application/json"]
             return params
@@ -52,6 +52,5 @@ enum Endpoint {
 }
 
 class BaseConstant {
-    static var host = "http://localhost:3001/"
-    static var hostasli = "https://localhost:3001/"
+    static var host = "http://localhost:3002/"
 }

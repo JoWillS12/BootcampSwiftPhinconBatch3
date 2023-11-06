@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var menu: String = "BIKE"
+    var menu: String = "BICYCLE"
     
     //
     override func viewDidLoad() {
@@ -38,7 +38,13 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource, ItemTableViewCellDelegate {
+    
+    func didSelectProduct(_ product: ProductType) {
+        let vc = DetailViewController()
+        vc.selectedProduct = product
+        navigationController?.pushViewController(vc, animated: false)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -66,6 +72,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case 2:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "ItemTableViewCell", for: indexPath) as? ItemTableViewCell {
                 cell.updateData(forMenu: self.menu)
+                cell.delegate = self
                 return cell
             }
         default:
