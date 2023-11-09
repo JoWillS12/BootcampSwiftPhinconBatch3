@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         window.frame = UIScreen.main.bounds
-        window.rootViewController = UINavigationController(rootViewController: TabBarController())
+        window.rootViewController = UINavigationController(rootViewController: SplashScreenViewController())
         self.window = window
         window.makeKeyAndVisible()
 //        UINavigationBar.appearance().isHidden = true

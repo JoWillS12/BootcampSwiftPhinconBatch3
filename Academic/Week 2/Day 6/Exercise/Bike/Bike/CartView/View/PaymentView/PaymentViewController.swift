@@ -8,23 +8,29 @@
 import UIKit
 
 class PaymentViewController: UIViewController {
-
+    
+    var totalAmount: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.navigationItem.setHidesBackButton(true, animated: true)
     }
     
     @IBAction func payNow(_ sender: Any) {
-        let vc = PopUpViewController()
-        vc.delegate = self
-        vc.popupTitle = "Booking Confirmation"
-        vc.popupStatus = "Payment Successful"
-        vc.popupDesc = "Amount Paid: $12000"
-        vc.modalTransitionStyle = .coverVertical
-        vc.modalPresentationStyle = .overCurrentContext
-        self.navigationController?.present(vc, animated: true)
+        if let total = totalAmount {
+            let vc = PopUpViewController()
+            vc.delegate = self
+            vc.popupTitle = "Booking Confirmation"
+            vc.popupStatus = "Payment Successful"
+            vc.popupDesc = "Amount Paid: \(total)" // Use the totalAmount property
+            vc.modalTransitionStyle = .coverVertical
+            vc.modalPresentationStyle = .overCurrentContext
+            saveData()
+            BaseConstant.userDef.removeObject(forKey: "Products")
+            self.navigationController?.present(vc, animated: true)
+        }
     }
     
     @IBAction func cancelPay(_ sender: Any) {
@@ -40,5 +46,12 @@ extension PaymentViewController: PopUpDelegate{
     func transitionToHomeViewController() {
         let vc = TabBarController()
         self.navigationController?.setViewControllers([vc], animated: true)
+    }
+    
+    func saveData(){
+        if let totalValue = Double((totalAmount?.replacingOccurrences(of: "$", with: ""))!) {
+            AppSetting.shared.paid = totalValue
+            print(totalValue)
+        }
     }
 }

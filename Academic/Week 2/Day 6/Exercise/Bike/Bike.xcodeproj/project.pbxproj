@@ -51,6 +51,9 @@
 		172381402AF88C2200A3892B /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = 1723813F2AF88C2100A3892B /* netfox */; };
 		172381432AF88C9700A3892B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172381412AF88C9700A3892B /* DetailViewController.swift */; };
 		172381442AF88C9700A3892B /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 172381422AF88C9700A3892B /* DetailViewController.xib */; };
+		172381642AFB5C9D00A3892B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 172381632AFB5C9D00A3892B /* RxCocoa */; };
+		172381662AFB5C9D00A3892B /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 172381652AFB5C9D00A3892B /* RxRelay */; };
+		172381682AFB5C9D00A3892B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 172381672AFB5C9D00A3892B /* RxSwift */; };
 		177D17222AF0DCD600E342A3 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D17202AF0DCD600E342A3 /* AuthViewController.swift */; };
 		177D17232AF0DCD600E342A3 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177D17212AF0DCD600E342A3 /* AuthViewController.xib */; };
 		177D17272AF0EE2300E342A3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D17262AF0EE2300E342A3 /* CustomTextField.swift */; };
@@ -91,6 +94,8 @@
 		1795928F2AF09335003D23EE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1795928E2AF09335003D23EE /* TabBarController.swift */; };
 		179592942AF09869003D23EE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179592922AF09869003D23EE /* ProfileViewController.swift */; };
 		179592952AF09869003D23EE /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 179592932AF09869003D23EE /* ProfileViewController.xib */; };
+		17A4B6D42AFB79EA00B6F8F8 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 17A4B6D32AFB79EA00B6F8F8 /* FloatingPanel */; };
+		17A4B6D72AFC62CA00B6F8F8 /* ActivityContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A4B6D62AFC62CA00B6F8F8 /* ActivityContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -170,6 +175,7 @@
 		1795928E2AF09335003D23EE /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		179592922AF09869003D23EE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		179592932AF09869003D23EE /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		17A4B6D62AFC62CA00B6F8F8 /* ActivityContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,9 +185,13 @@
 			files = (
 				172381402AF88C2200A3892B /* netfox in Frameworks */,
 				1723812D2AF47CE300A3892B /* Alamofire in Frameworks */,
+				172381642AFB5C9D00A3892B /* RxCocoa in Frameworks */,
 				172380FB2AF3353A00A3892B /* FirebaseDatabase in Frameworks */,
 				172380F72AF3353A00A3892B /* FirebaseAnalyticsSwift in Frameworks */,
+				17A4B6D42AFB79EA00B6F8F8 /* FloatingPanel in Frameworks */,
 				172380F52AF3353A00A3892B /* FirebaseAnalytics in Frameworks */,
+				172381682AFB5C9D00A3892B /* RxSwift in Frameworks */,
+				172381662AFB5C9D00A3892B /* RxRelay in Frameworks */,
 				172380FF2AF3353A00A3892B /* FirebaseFirestoreSwift in Frameworks */,
 				177D17312AF1DDA000E342A3 /* Lottie in Frameworks */,
 				172381012AF3353A00A3892B /* FirebaseStorage in Frameworks */,
@@ -386,6 +396,20 @@
 			path = DetailView;
 			sourceTree = "<group>";
 		};
+		1723815B2AFB1B9F00A3892B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		172381692AFB6AF100A3892B /* FloatingPanel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FloatingPanel;
+			sourceTree = "<group>";
+		};
 		177D171E2AF0DA4A00E342A3 /* LoginRegister */ = {
 			isa = PBXGroup;
 			children = (
@@ -500,6 +524,7 @@
 		177D17512AF1F9B800E342A3 /* ActivityView */ = {
 			isa = PBXGroup;
 			children = (
+				17A4B6D52AFC62BD00B6F8F8 /* Model */,
 				177D17572AF1FBFD00E342A3 /* Components */,
 				177D17522AF1F9EF00E342A3 /* View */,
 			);
@@ -537,6 +562,7 @@
 			children = (
 				179592492AEF655F003D23EE /* Bike */,
 				179592482AEF655F003D23EE /* Products */,
+				1723815B2AFB1B9F00A3892B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -604,6 +630,7 @@
 		179592652AEF6939003D23EE /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				172381692AFB6AF100A3892B /* FloatingPanel */,
 				179592692AEF6987003D23EE /* CustomCollections */,
 				179592682AEF6965003D23EE /* ItemTableCell */,
 				179592672AEF6958003D23EE /* MenuTableCell */,
@@ -731,6 +758,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		17A4B6D52AFC62BD00B6F8F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				17A4B6D62AFC62CA00B6F8F8 /* ActivityContent.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -758,6 +793,10 @@
 				172381002AF3353A00A3892B /* FirebaseStorage */,
 				1723812C2AF47CE300A3892B /* Alamofire */,
 				1723813F2AF88C2100A3892B /* netfox */,
+				172381632AFB5C9D00A3892B /* RxCocoa */,
+				172381652AFB5C9D00A3892B /* RxRelay */,
+				172381672AFB5C9D00A3892B /* RxSwift */,
+				17A4B6D32AFB79EA00B6F8F8 /* FloatingPanel */,
 			);
 			productName = Bike;
 			productReference = 179592472AEF655F003D23EE /* Bike.app */;
@@ -792,6 +831,8 @@
 				172380F32AF3353A00A3892B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				1723812B2AF47CE300A3892B /* XCRemoteSwiftPackageReference "Alamofire" */,
 				1723813E2AF88C2100A3892B /* XCRemoteSwiftPackageReference "netfox" */,
+				172381622AFB5C9D00A3892B /* XCRemoteSwiftPackageReference "RxSwift" */,
+				17A4B6D22AFB79EA00B6F8F8 /* XCRemoteSwiftPackageReference "FloatingPanel" */,
 			);
 			productRefGroup = 179592482AEF655F003D23EE /* Products */;
 			projectDirPath = "";
@@ -890,6 +931,7 @@
 				172381392AF49FF600A3892B /* HistoryContents.swift in Sources */,
 				1723811C2AF3841000A3892B /* ErrorViewController.swift in Sources */,
 				179592632AEF6681003D23EE /* HomeViewController.swift in Sources */,
+				17A4B6D72AFC62CA00B6F8F8 /* ActivityContent.swift in Sources */,
 				177D17552AF1FA1A00E342A3 /* ActivityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1124,12 +1166,28 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		172381622AFB5C9D00A3892B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		177D172F2AF1DDA000E342A3 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.0.0;
+			};
+		};
+		17A4B6D22AFB79EA00B6F8F8 /* XCRemoteSwiftPackageReference "FloatingPanel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scenee/FloatingPanel";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1180,10 +1238,30 @@
 			package = 1723813E2AF88C2100A3892B /* XCRemoteSwiftPackageReference "netfox" */;
 			productName = netfox;
 		};
+		172381632AFB5C9D00A3892B /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 172381622AFB5C9D00A3892B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		172381652AFB5C9D00A3892B /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 172381622AFB5C9D00A3892B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		172381672AFB5C9D00A3892B /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 172381622AFB5C9D00A3892B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
 		177D17302AF1DDA000E342A3 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 177D172F2AF1DDA000E342A3 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		17A4B6D32AFB79EA00B6F8F8 /* FloatingPanel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17A4B6D22AFB79EA00B6F8F8 /* XCRemoteSwiftPackageReference "FloatingPanel" */;
+			productName = FloatingPanel;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

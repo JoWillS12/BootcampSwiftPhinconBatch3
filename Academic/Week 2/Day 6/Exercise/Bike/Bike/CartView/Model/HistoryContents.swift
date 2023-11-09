@@ -8,11 +8,9 @@
 import Foundation
 
 struct History: Codable{
-    var title: String
-    var tags: String
+    var total: String
     
     enum CodingKeys: String, CodingKey {
-        case title
-        case tags
+        case total
     }
 }

@@ -8,9 +8,7 @@
 import UIKit
 
 protocol PassingProduct: AnyObject{
-    
     func passData(data: ProductType)
-    
 }
 
 class DetailViewController: UIViewController {
@@ -65,7 +63,7 @@ extension DetailViewController{
     }
     
     func getSavedProduct() -> [ProductType] {
-        if let data = UserDefaults.standard.data(forKey: "Products"),
+        if let data = BaseConstant.userDef.data(forKey: "Products"),
            let savedProducts = try? JSONDecoder().decode([ProductType].self, from: data) {
             print("YOUR DATA is HERE \(savedProducts)")
             return savedProducts
@@ -78,7 +76,7 @@ extension DetailViewController{
         var savedProducts = getSavedProduct()
         savedProducts.append(product)
         if let data = try? JSONEncoder().encode(savedProducts) {
-            UserDefaults.standard.set(data, forKey: "Products")
+            BaseConstant.userDef.set(data, forKey: "Products")
             print("Data Saved \(savedProducts)")
             return true // Return true to indicate a successful save
         } else {

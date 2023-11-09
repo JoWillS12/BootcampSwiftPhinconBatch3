@@ -9,7 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddActivityViewController" customModule="Bike" customModuleProvider="target">
             <connections>
-                <outlet property="cancelButton" destination="PIO-Gy-QXY" id="H1Q-dI-QQC"/>
+                <outlet property="cameraButton" destination="21b-Ob-XQe" id="xiu-lV-Ufi"/>
+                <outlet property="cancelButton" destination="PIO-Gy-QXY" id="rqV-7U-Eyl"/>
+                <outlet property="galleryButton" destination="TeJ-DT-ywS" id="2sV-jn-43k"/>
                 <outlet property="postButton" destination="tTg-uZ-I9E" id="CdD-YJ-mua"/>
                 <outlet property="previewImage" destination="gY3-3W-dkS" id="8m4-nj-bM5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -21,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gY3-3W-dkS">
-                    <rect key="frame" x="0.0" y="140.66666666666663" width="393" height="390"/>
+                    <rect key="frame" x="0.0" y="81.666666666666629" width="393" height="390"/>
                     <color key="tintColor" white="0.73174426020000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="393" id="Clc-et-dQ6"/>
@@ -29,7 +31,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Biketivities" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4X7-tL-Vw1">
-                    <rect key="frame" x="91" y="77" width="211" height="31"/>
+                    <rect key="frame" x="91" y="18" width="211" height="31"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="211" id="GaD-HS-PvG"/>
                         <constraint firstAttribute="height" constant="31" id="I1e-2X-4JI"/>
@@ -39,7 +41,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill.on.rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Yuk-cf-lOC">
-                    <rect key="frame" x="57" y="540" width="100" height="98.666666666666629"/>
+                    <rect key="frame" x="57" y="481.00000000000006" width="100" height="98.666666666666686"/>
                     <color key="tintColor" red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="Sf0-he-H12"/>
@@ -47,7 +49,7 @@
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3s4-oq-d8H">
-                    <rect key="frame" x="236" y="541" width="100" height="97.666666666666742"/>
+                    <rect key="frame" x="236" y="482.00000000000006" width="100" height="97.666666666666686"/>
                     <color key="tintColor" red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="DNN-Tt-DHc"/>
@@ -55,7 +57,7 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeJ-DT-ywS">
-                    <rect key="frame" x="57" y="540" width="100" height="100"/>
+                    <rect key="frame" x="57" y="481" width="100" height="100"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="73u-HE-vT5"/>
                         <constraint firstAttribute="width" constant="100" id="E1F-Rh-5yy"/>
@@ -63,12 +65,9 @@
                     <color key="tintColor" red="0.29411764709999999" green="0.29803921570000003" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain"/>
-                    <connections>
-                        <action selector="openGallery:" destination="-1" eventType="touchUpInside" id="ktM-eZ-jeo"/>
-                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21b-Ob-XQe">
-                    <rect key="frame" x="236" y="540" width="100" height="100"/>
+                    <rect key="frame" x="236" y="481" width="100" height="100"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="Zs5-Qx-iCS"/>
                         <constraint firstAttribute="height" constant="100" id="gMK-5G-kEb"/>
@@ -76,12 +75,9 @@
                     <color key="tintColor" red="0.29411764709999999" green="0.29803921570000003" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain"/>
-                    <connections>
-                        <action selector="openCamera:" destination="-1" eventType="touchUpInside" id="6nL-EB-wxH"/>
-                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyc-4I-xlT">
-                    <rect key="frame" x="16" y="673" width="141" height="47"/>
+                    <rect key="frame" x="16" y="614" width="141" height="47"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="141" id="Cza-hS-1qd"/>
                         <constraint firstAttribute="height" constant="47" id="Jfq-fv-vMf"/>
@@ -91,7 +87,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wSN-9a-3Ai">
-                    <rect key="frame" x="16" y="741" width="361" height="34"/>
+                    <rect key="frame" x="16" y="682" width="361" height="34"/>
                     <color key="backgroundColor" red="0.31863839290000001" green="0.35186324530000002" blue="0.3978641457" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -103,7 +99,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIO-Gy-QXY">
-                    <rect key="frame" x="16" y="75" width="56" height="35"/>
+                    <rect key="frame" x="16" y="16" width="56" height="35"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="47L-YN-JyR"/>
                         <constraint firstAttribute="width" constant="56" id="SP6-7k-msT"/>
@@ -112,12 +108,9 @@
                     <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system">
                         <color key="baseForegroundColor" red="0.2156862745" green="0.71372549019999998" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                     </buttonConfiguration>
-                    <connections>
-                        <action selector="cancelPost:" destination="-1" eventType="touchUpInside" id="1Mn-hi-mGH"/>
-                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTg-uZ-I9E">
-                    <rect key="frame" x="321" y="75" width="56" height="35"/>
+                    <rect key="frame" x="321" y="16" width="56" height="35"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="Vqf-6x-xVC"/>
                         <constraint firstAttribute="width" constant="56" id="Wfm-ac-Miw"/>

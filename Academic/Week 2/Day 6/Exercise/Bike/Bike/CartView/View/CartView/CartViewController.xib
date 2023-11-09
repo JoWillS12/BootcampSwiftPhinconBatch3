@@ -114,7 +114,7 @@
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$14000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7U-ZP-3Cb">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7U-ZP-3Cb">
                             <rect key="frame" x="298" y="99.666666666666629" width="87" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="87" id="02E-3f-hh4"/>
@@ -144,7 +144,7 @@
                             <color key="textColor" red="0.20784313730000001" green="0.2470588235" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$12690" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EN-fb-bNF">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EN-fb-bNF">
                             <rect key="frame" x="298" y="226.66666666666663" width="87" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="87" id="2im-wg-Hya"/>
@@ -228,7 +228,6 @@
             <color key="backgroundColor" red="0.14117647059999999" green="0.17254901959999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Hys-YC-eBG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="336" id="20O-XK-nsN"/>
-                <constraint firstItem="qMf-bX-MS8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="58.999999999999986" id="3Ja-0J-egG"/>
                 <constraint firstItem="TMk-XJ-FhD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4yU-oM-2V3"/>
                 <constraint firstItem="N1a-JF-ngD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5Lw-0l-gEh"/>
                 <constraint firstItem="TMk-XJ-FhD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="5ro-F3-kFV"/>

@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class AuthViewController: UIViewController, AuthSliderDelegate {
     
@@ -72,6 +73,7 @@ extension AuthViewController: LoadingDelegate{
             if let email = emailField.fieldType.text, let password = passwordField.fieldType.text {
                 Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                     if let error = error {
+                        // Handle registration error
                         let vc = ErrorViewController()
                         vc.modalTransitionStyle = .coverVertical
                         vc.modalPresentationStyle = .overCurrentContext
@@ -79,6 +81,13 @@ extension AuthViewController: LoadingDelegate{
                         print("Registration error: \(error.localizedDescription)")
                         self.authenticSlider.returnInitialLocationAnimated(true)
                     } else {
+                        // Registration successful; store email in the Realtime Database
+                        if let userID = Auth.auth().currentUser?.uid {
+                            let userEmail = Auth.auth().currentUser?.email
+                            let databaseRef = Database.database().reference().child("users").child(userID)
+                            databaseRef.child("email").setValue(userEmail)
+                        }
+
                         let vc = LoadingViewController()
                         vc.delegate = self
                         vc.modalTransitionStyle = .coverVertical
@@ -91,6 +100,7 @@ extension AuthViewController: LoadingDelegate{
             if let email = emailField.fieldType.text, let password = passwordField.fieldType.text {
                 Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                     if let error = error {
+                        // Handle login error
                         let vc = ErrorViewController()
                         vc.modalTransitionStyle = .coverVertical
                         vc.modalPresentationStyle = .overCurrentContext
@@ -98,6 +108,7 @@ extension AuthViewController: LoadingDelegate{
                         print("Login error: \(error.localizedDescription)")
                         self.authenticSlider.returnInitialLocationAnimated(true)
                     } else {
+                        // Login successful
                         let vc = LoadingViewController()
                         vc.delegate = self
                         vc.modalTransitionStyle = .coverVertical
@@ -108,6 +119,7 @@ extension AuthViewController: LoadingDelegate{
             }
         }
     }
+
     
     func thumbCurrentPosition(_ position: CGFloat) {
     }

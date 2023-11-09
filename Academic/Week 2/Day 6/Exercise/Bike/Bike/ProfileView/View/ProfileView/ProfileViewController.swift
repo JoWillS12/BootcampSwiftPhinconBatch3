@@ -21,14 +21,16 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         profileImage.layer.cornerRadius = 240 / 2
         profileImage.layer.borderWidth = 2
         profileImage.layer.borderColor = UIColor.white.cgColor
         profileImage.clipsToBounds = true
+        
+        fetchEmail()
     }
-
+    
     @IBAction func openEdit(_ sender: Any) {
         let vc = EditProfileViewController()
         self.navigationController?.present(vc, animated: true)
@@ -63,6 +65,22 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
             profileImage.image = image
         }
         
+    }
+    
+    func fetchEmail(){
+        if let currentUser = Auth.auth().currentUser {
+            // Get the user's email from Firebase Authentication
+            if let emailUser = currentUser.email {
+                // Display the email in the label
+                userEmail.text = "\(emailUser)"
+            } else {
+                // Handle the case where the user's email is not available
+                userEmail.text = "Email not found"
+            }
+        } else {
+            // Handle the case where no user is logged in
+            userEmail.text = "No user logged in"
+        }
     }
     
 }

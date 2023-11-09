@@ -7,8 +7,11 @@
 
 import UIKit
 
+protocol CartTableViewCellDelegate: AnyObject {
+    func updatePrice(newPrice: Double)
+}
+
 class CartTableViewCell: UITableViewCell {
-    
     
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productView: UIView!
@@ -21,14 +24,10 @@ class CartTableViewCell: UITableViewCell {
     var quantity: Int = 1 {
         didSet {
             productQuantity.text = "\(quantity)"
-            updateProductPrice()
         }
     }
-    var selectedProduct: ProductType? {
-        didSet {
-            updateProductPrice()
-        }
-    }
+    weak var delegate: CartTableViewCellDelegate?
+    var selectedProduct: ProductType?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,27 +37,29 @@ class CartTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
         // Configure the view for the selected state
     }
     
     @IBAction func decreaseQuantity(_ sender: Any) {
         if quantity > 1 {
             quantity -= 1
-        }
-        
+            updateProductPrice()
+        } 
     }
     
     @IBAction func increaseQuantity(_ sender: Any) {
         quantity += 1
+        updateProductPrice()
     }
     
 }
+
 extension CartTableViewCell{
     func updateProductPrice() {
         if let product = selectedProduct {
             let newPrice = Double(product.price) * Double(quantity)
-            productPrice.text = "$\(newPrice)"
+            delegate?.updatePrice(newPrice: newPrice)
         }
     }
+    
 }

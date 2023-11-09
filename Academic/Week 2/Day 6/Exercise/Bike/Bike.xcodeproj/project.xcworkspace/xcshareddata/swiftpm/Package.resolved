@@ -28,6 +28,15 @@
       }
     },
     {
+      "identity" : "floatingpanel",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/scenee/FloatingPanel",
+      "state" : {
+        "revision" : "dd238884bf85e96a4c6c2703fc2fc1ff0f5c7494",
+        "version" : "2.8.0"
+      }
+    },
+    {
       "identity" : "googleappmeasurement",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleAppMeasurement.git",
@@ -124,6 +133,15 @@
       "state" : {
         "revision" : "e70e889c0196c76d22759eb50d6a0270ca9f1d9e",
         "version" : "2.3.1"
+      }
+    },
+    {
+      "identity" : "rxswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveX/RxSwift.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "214f7ffced20dc780bf38f192a26a890c1b9045e"
       }
     },
     {

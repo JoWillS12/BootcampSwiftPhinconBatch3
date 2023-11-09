@@ -11,11 +11,13 @@ struct ProductType: Codable {
     var name: String
     var image: String
     var price: Double
+    var quantity: Int
     
     enum CodingKeys: String, CodingKey {
         case name
         case image
         case price
+        case quantity
     }
 }
 

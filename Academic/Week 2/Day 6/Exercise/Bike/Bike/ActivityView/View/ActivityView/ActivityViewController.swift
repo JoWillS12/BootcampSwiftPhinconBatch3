@@ -6,17 +6,30 @@
 //
 
 import UIKit
+import RxCocoa
+import RxRelay
+import RxSwift
 
 class ActivityViewController: UIViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    let itemsRelay = BehaviorRelay<[Activities]>(value: [Activities(actImage: "bike1", actUser: "Arthur", actCaption: "My New RIDE BROO !!", actStatus: true)])
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
         collectionView.register(UINib.init(nibName: "ActivityCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ActivityCollectionViewCell")
+        
+        // Bind the data source to the collection view
+        itemsRelay
+            .bind(to: collectionView.rx.items(cellIdentifier: "ActivityCollectionViewCell", cellType: ActivityCollectionViewCell.self)) { row, item, cell in
+                cell.actImage.image = UIImage(named: item.actImage)
+                cell.actUser.text = item.actUser
+                cell.actCaption.text = item.actCaption
+            }
+            .disposed(by: disposeBag)
     }
     
     @IBAction func addActivity(_ sender: Any){
@@ -26,21 +39,9 @@ class ActivityViewController: UIViewController {
     
 }
 
-extension ActivityViewController: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActivityCollectionViewCell", for: indexPath) as! ActivityCollectionViewCell
-        cell.actImage.image = UIImage(named: "bike1")
-        cell.actUser.text = "Arthur"
-        cell.actCaption.text = "My New RIDE BROO !!"
-        return cell
-    }
+extension ActivityViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         return CGSize(width: collectionView.bounds.width, height: 456 )
     }
     

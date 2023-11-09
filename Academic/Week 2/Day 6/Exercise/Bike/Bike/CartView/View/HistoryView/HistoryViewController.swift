@@ -22,7 +22,11 @@ class HistoryViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: String(describing: HistoryTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: HistoryTableViewCell.self))
         self.navigationItem.setHidesBackButton(true, animated: true)
+    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadData()
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -39,7 +43,16 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HistoryTableViewCell.self), for: indexPath) as! HistoryTableViewCell
+        let history = historyData[indexPath.row]
+        cell.priceLabel.text = "\(history.total)"
         return cell
     }
-
+    
+    func loadData(){
+        let paid = AppSetting.shared.paid
+        print("$\(paid)")
+        historyData.append(History(total: String(paid)))
+        tableView.reloadData()
+    }
+    
 }

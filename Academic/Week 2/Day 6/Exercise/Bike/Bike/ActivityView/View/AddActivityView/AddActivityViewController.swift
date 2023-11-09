@@ -6,41 +6,53 @@
 //
 
 import UIKit
+import RxCocoa
+import RxRelay
+import RxSwift
 
 class AddActivityViewController: UIViewController {
     
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var previewImage: UIImageView!
+    @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet weak var galleryButton: UIButton!
     
     let imagePickerVC = UIImagePickerController()
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-    
-    
-    @IBAction func cancelPost(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func postActivity(_ sender: Any) {
+        cancelButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.navigationController?.popViewController(animated: true)
+            })
+            .disposed(by: disposeBag)
+        
+        postButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                // Implement your postActivity logic here
+            })
+            .disposed(by: disposeBag)
+        
+        galleryButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.imagePickerVC.sourceType = .photoLibrary
+                self?.imagePickerVC.delegate = self
+                self?.present(self!.imagePickerVC, animated: true)
+            })
+            .disposed(by: disposeBag)
+        
+        cameraButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.imagePickerVC.sourceType = .camera
+                self?.imagePickerVC.delegate = self
+                self?.present(self!.imagePickerVC, animated: true)
+            })
+            .disposed(by: disposeBag)
         
     }
-    
-    @IBAction func openGallery(_ sender: Any) {
-        imagePickerVC.sourceType = .photoLibrary
-        imagePickerVC.delegate = self
-        present(imagePickerVC, animated: true)
-    }
-    
-    @IBAction func openCamera(_ sender: Any) {
-        imagePickerVC.sourceType = .camera
-        imagePickerVC.delegate = self
-        present(imagePickerVC, animated: true)
-    }
-    
 }
 
 extension AddActivityViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
@@ -51,6 +63,8 @@ extension AddActivityViewController: UIImagePickerControllerDelegate, UINavigati
             previewImage.image = image
         }
         
+        picker.dismiss(animated: true, completion: nil)
     }
     
 }
+
