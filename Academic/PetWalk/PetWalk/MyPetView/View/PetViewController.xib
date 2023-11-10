@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PetViewController" customModule="PetWalk" customModuleProvider="target">
+            <connections>
+                <outlet property="circleButton" destination="bZN-ZW-odZ" id="Tk6-0d-DGy"/>
+                <outlet property="tableView" destination="xgq-xA-XQn" id="Nfh-X4-per"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY PETS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyb-aN-nXl">
+                    <rect key="frame" x="16" y="59" width="295" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="Fm1-MZ-exh"/>
+                        <constraint firstAttribute="width" constant="295" id="OtQ-ct-2tZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="39"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xgq-xA-XQn">
+                    <rect key="frame" x="16" y="114" width="361" height="521"/>
+                    <color key="backgroundColor" name="PrimaryColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="361" id="Dat-Nq-zfQ"/>
+                        <constraint firstAttribute="height" constant="521" id="aRU-fx-oqy"/>
+                    </constraints>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZN-ZW-odZ" customClass="CircleButtonView" customModule="PetWalk" customModuleProvider="target">
+                    <rect key="frame" x="164" y="676" width="64" height="64"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="Xn8-qe-ICX"/>
+                        <constraint firstAttribute="width" constant="64" id="dwy-Ez-WOD"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="PrimaryColor"/>
+            <constraints>
+                <constraint firstItem="jyb-aN-nXl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="0OX-8p-j4D"/>
+                <constraint firstItem="bZN-ZW-odZ" firstAttribute="top" secondItem="xgq-xA-XQn" secondAttribute="bottom" constant="41" id="5cU-uW-eQq"/>
+                <constraint firstItem="xgq-xA-XQn" firstAttribute="top" secondItem="jyb-aN-nXl" secondAttribute="bottom" constant="8" symbolic="YES" id="JuF-po-CSr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jyb-aN-nXl" secondAttribute="trailing" constant="82" id="eAM-tL-j5i"/>
+                <constraint firstItem="bZN-ZW-odZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="164" id="gwp-0g-jpa"/>
+                <constraint firstItem="xgq-xA-XQn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="lbn-TC-OAm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bZN-ZW-odZ" secondAttribute="trailing" constant="165" id="qgm-SB-nBS"/>
+                <constraint firstItem="jyb-aN-nXl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="sGc-PQ-Nxu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xgq-xA-XQn" secondAttribute="trailing" constant="16" id="vrm-JJ-Ink"/>
+            </constraints>
+            <point key="canvasLocation" x="46.564885496183201" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="PrimaryColor">
+            <color red="0.94509803921568625" green="0.95294117647058818" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
