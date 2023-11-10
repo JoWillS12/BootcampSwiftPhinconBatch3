@@ -6,16 +6,21 @@
 //
 
 import UIKit
+import Firebase
 
 class PaymentViewController: UIViewController {
     
     var totalAmount: String?
+    @IBOutlet weak var labelAddress: UILabel!
+    @IBOutlet weak var couponView: CouponView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         self.navigationItem.setHidesBackButton(true, animated: true)
+        fetchUserData()
+        couponView.totalLabel.text = "\(totalAmount ?? String())"
     }
     
     @IBAction func payNow(_ sender: Any) {
@@ -53,5 +58,28 @@ extension PaymentViewController: PopUpDelegate{
             AppSetting.shared.paid = totalValue
             print(totalValue)
         }
+    }
+    
+    func fetchUserData() {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            return
+        }
+        
+        // Reference to the user's data in the Firebase Realtime Database
+        let userRef = Database.database().reference().child("users").child(uid)
+        
+        userRef.observeSingleEvent(of: .value, with: { snapshot in
+            if let userData = snapshot.value as? [String: Any] {
+                if let address = userData["address"] as? String {
+                    self.labelAddress.text = "\(address)"
+                }
+                if let cardNumber = userData["card"] as? String {
+                    self.couponView.cardLabel.text = "\(cardNumber)"
+                }
+                if let userName = userData["username"] as? String{
+                    self.couponView.nameLabel.text = "\(userName)"
+                }
+            }
+        })
     }
 }

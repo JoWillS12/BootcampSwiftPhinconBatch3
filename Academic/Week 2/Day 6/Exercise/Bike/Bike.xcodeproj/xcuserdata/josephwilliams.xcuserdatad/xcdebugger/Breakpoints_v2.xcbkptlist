@@ -278,8 +278,8 @@
             filePath = "Bike/CartView/View/PaymentView/PaymentViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "dismissPopupAndTransition()"
             landmarkType = "7">
          </BreakpointContent>
@@ -594,8 +594,8 @@
             filePath = "Bike/ActivityView/View/AddActivityView/AddActivityViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "AddActivityViewController"
             landmarkType = "3">
          </BreakpointContent>

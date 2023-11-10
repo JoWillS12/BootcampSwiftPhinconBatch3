@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="cameraButton" destination="21b-Ob-XQe" id="xiu-lV-Ufi"/>
                 <outlet property="cancelButton" destination="PIO-Gy-QXY" id="rqV-7U-Eyl"/>
+                <outlet property="caption" destination="wSN-9a-3Ai" id="h6x-IK-dgT"/>
                 <outlet property="galleryButton" destination="TeJ-DT-ywS" id="2sV-jn-43k"/>
                 <outlet property="postButton" destination="tTg-uZ-I9E" id="CdD-YJ-mua"/>
                 <outlet property="previewImage" destination="gY3-3W-dkS" id="8m4-nj-bM5"/>
@@ -119,9 +120,6 @@
                     <buttonConfiguration key="configuration" style="plain" image="arrowshape.right.fill" catalog="system">
                         <color key="baseForegroundColor" red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </buttonConfiguration>
-                    <connections>
-                        <action selector="postActivity:" destination="-1" eventType="touchUpInside" id="WQL-XP-JZ9"/>
-                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

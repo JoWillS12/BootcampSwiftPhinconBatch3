@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class ProfileViewController: UIViewController {
     
@@ -29,6 +30,7 @@ class ProfileViewController: UIViewController {
         profileImage.clipsToBounds = true
         
         fetchEmail()
+        fetchUserData()
     }
     
     @IBAction func openEdit(_ sender: Any) {
@@ -83,4 +85,23 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
         }
     }
     
+    func fetchUserData() {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            return
+        }
+        
+        // Reference to the user's data in the Firebase Realtime Database
+        let userRef = Database.database().reference().child("users").child(uid)
+        
+        userRef.observeSingleEvent(of: .value, with: { snapshot in
+            if let userData = snapshot.value as? [String: Any] {
+                if let username = userData["username"] as? String {
+                    self.userName.text = "\(username)"
+                }
+                if let userPhone = userData["phone"] as? String {
+                    self.userPhone.text = "\(userPhone)"
+                }
+            }
+        })
+    }
 }

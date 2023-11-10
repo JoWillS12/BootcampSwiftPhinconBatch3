@@ -9,6 +9,7 @@ import UIKit
 import RxCocoa
 import RxRelay
 import RxSwift
+import CoreData
 
 class AddActivityViewController: UIViewController {
     
@@ -17,9 +18,12 @@ class AddActivityViewController: UIViewController {
     @IBOutlet weak var previewImage: UIImageView!
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var galleryButton: UIButton!
+    @IBOutlet weak var caption: UITextField!
     
     let imagePickerVC = UIImagePickerController()
     private let disposeBag = DisposeBag()
+    private let coreDataManager = CoreDataManager()
+    let userName = "User"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +36,17 @@ class AddActivityViewController: UIViewController {
         
         postButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                // Implement your postActivity logic here
+                guard let actUser = self?.userName,
+                      let actImage = self?.previewImage.image, // Change this to your image source
+                      let actCaption = self?.caption.text else {
+                    return
+                }
+                
+                self?.coreDataManager.saveFeed(actUser: actUser, actImage: actImage, actCaption: actCaption, actStatus: false)
+                self?.navigationController?.popViewController(animated: true)
             })
             .disposed(by: disposeBag)
+        
         
         galleryButton.rx.tap
             .subscribe(onNext: { [weak self] in

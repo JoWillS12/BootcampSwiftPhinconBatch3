@@ -8,7 +8,11 @@
 import UIKit
 
 class CouponView: UIView {
-
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var cardLabel: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }

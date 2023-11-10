@@ -111,6 +111,9 @@
                     <buttonConfiguration key="configuration" style="filled" title="SAVE">
                         <color key="baseBackgroundColor" red="0.31863839290000001" green="0.35186324530000002" blue="0.3978641457" alpha="1" colorSpace="calibratedRGB"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="saveChanges:" destination="-1" eventType="touchUpInside" id="Bgt-fh-bRC"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
