@@ -47,6 +47,14 @@
 		176D72F12B01F33A00835916 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 176D72F02B01F33A00835916 /* Lottie */; };
 		176D72F62B01F37F00835916 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72F42B01F37F00835916 /* AuthViewController.swift */; };
 		176D72F72B01F37F00835916 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72F52B01F37F00835916 /* AuthViewController.xib */; };
+		176D72FA2B01F7E200835916 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 176D72F92B01F7E200835916 /* Alamofire */; };
+		176D72FD2B01F85B00835916 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = 176D72FC2B01F85B00835916 /* netfox */; };
+		176D73002B01F8B900835916 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72FF2B01F8B900835916 /* NetworkManager.swift */; };
+		176D73032B01F8EC00835916 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D73022B01F8EC00835916 /* EndPoint.swift */; };
+		176D73062B01FD5C00835916 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 176D73052B01FD5C00835916 /* KeychainAccess */; };
+		176D73092B01FE8600835916 /* AuthContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D73082B01FE8600835916 /* AuthContents.swift */; };
+		176D730B2B020E9400835916 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D730A2B020E9400835916 /* KeychainManager.swift */; };
+		176D730E2B020F1700835916 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D730D2B020F1700835916 /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +99,11 @@
 		176D72EC2B01F2DE00835916 /* SplashScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SplashScreenViewController.xib; path = ../../../../PetApp/PetApp/SplashScreen/View/SplashScreenViewController.xib; sourceTree = "<group>"; };
 		176D72F42B01F37F00835916 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = ../../../../../PetApp/PetApp/AuthView/View/AuthViewController.swift; sourceTree = "<group>"; };
 		176D72F52B01F37F00835916 /* AuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AuthViewController.xib; path = ../../../../../PetApp/PetApp/AuthView/View/AuthViewController.xib; sourceTree = "<group>"; };
+		176D72FF2B01F8B900835916 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		176D73022B01F8EC00835916 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		176D73082B01FE8600835916 /* AuthContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthContents.swift; sourceTree = "<group>"; };
+		176D730A2B020E9400835916 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		176D730D2B020F1700835916 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +111,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				176D73062B01FD5C00835916 /* KeychainAccess in Frameworks */,
 				176D72F12B01F33A00835916 /* Lottie in Frameworks */,
+				176D72FA2B01F7E200835916 /* Alamofire in Frameworks */,
+				176D72FD2B01F85B00835916 /* netfox in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +212,9 @@
 			isa = PBXGroup;
 			children = (
 				176D729E2B01F0D500835916 /* CodeHelper.swift */,
+				176D72FF2B01F8B900835916 /* NetworkManager.swift */,
+				176D73022B01F8EC00835916 /* EndPoint.swift */,
+				176D730A2B020E9400835916 /* KeychainManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -386,6 +405,8 @@
 		176D72F22B01F35700835916 /* AuthView */ = {
 			isa = PBXGroup;
 			children = (
+				176D73072B01FE7C00835916 /* Model */,
+				176D730C2B020F0300835916 /* ViewModel */,
 				176D72F32B01F36300835916 /* View */,
 			);
 			path = AuthView;
@@ -398,6 +419,22 @@
 				176D72F52B01F37F00835916 /* AuthViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		176D73072B01FE7C00835916 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				176D73082B01FE8600835916 /* AuthContents.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		176D730C2B020F0300835916 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				176D730D2B020F1700835916 /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +455,9 @@
 			name = DogApp;
 			packageProductDependencies = (
 				176D72F02B01F33A00835916 /* Lottie */,
+				176D72F92B01F7E200835916 /* Alamofire */,
+				176D72FC2B01F85B00835916 /* netfox */,
+				176D73052B01FD5C00835916 /* KeychainAccess */,
 			);
 			productName = DogApp;
 			productReference = 176D727A2B01F02600835916 /* DogApp.app */;
@@ -449,6 +489,9 @@
 			mainGroup = 176D72712B01F02600835916;
 			packageReferences = (
 				176D72EF2B01F33A00835916 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				176D72F82B01F7E200835916 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				176D72FB2B01F85B00835916 /* XCRemoteSwiftPackageReference "netfox" */,
+				176D73042B01FD5C00835916 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = 176D727B2B01F02600835916 /* Products */;
 			projectDirPath = "";
@@ -491,6 +534,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				176D73002B01F8B900835916 /* NetworkManager.swift in Sources */,
+				176D73092B01FE8600835916 /* AuthContents.swift in Sources */,
 				176D72F62B01F37F00835916 /* AuthViewController.swift in Sources */,
 				176D72B42B01F19F00835916 /* CircleView.swift in Sources */,
 				176D72CF2B01F21600835916 /* StatsTableViewCell.swift in Sources */,
@@ -502,12 +547,15 @@
 				176D72822B01F02700835916 /* ViewController.swift in Sources */,
 				176D72DF2B01F27C00835916 /* ProfileViewController.swift in Sources */,
 				176D72E92B01F2C600835916 /* TabBarViewController.swift in Sources */,
+				176D730B2B020E9400835916 /* KeychainManager.swift in Sources */,
 				176D72CC2B01F20F00835916 /* HomePetCollectionViewCell.swift in Sources */,
 				176D72B02B01F19600835916 /* CircleButtonView.swift in Sources */,
 				176D729C2B01F0BC00835916 /* Fonts.swift in Sources */,
+				176D730E2B020F1700835916 /* AuthViewModel.swift in Sources */,
 				176D727E2B01F02700835916 /* AppDelegate.swift in Sources */,
 				176D72882B01F02700835916 /* DogApp.xcdatamodeld in Sources */,
 				176D72D42B01F22100835916 /* HomeViewController.swift in Sources */,
+				176D73032B01F8EC00835916 /* EndPoint.swift in Sources */,
 				176D72BB2B01F1AF00835916 /* CustomButton.swift in Sources */,
 				176D72D92B01F26400835916 /* PetViewController.swift in Sources */,
 				176D729F2B01F0D500835916 /* CodeHelper.swift in Sources */,
@@ -719,6 +767,30 @@
 				kind = branch;
 			};
 		};
+		176D72F82B01F7E200835916 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		176D72FB2B01F85B00835916 /* XCRemoteSwiftPackageReference "netfox" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kasketis/netfox";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		176D73042B01FD5C00835916 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -726,6 +798,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 176D72EF2B01F33A00835916 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		176D72F92B01F7E200835916 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 176D72F82B01F7E200835916 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		176D72FC2B01F85B00835916 /* netfox */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 176D72FB2B01F85B00835916 /* XCRemoteSwiftPackageReference "netfox" */;
+			productName = netfox;
+		};
+		176D73052B01FD5C00835916 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 176D73042B01FD5C00835916 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
 		};
 /* End XCSwiftPackageProductDependency section */
 
