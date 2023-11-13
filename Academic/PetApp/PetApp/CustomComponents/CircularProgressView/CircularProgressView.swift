@@ -24,13 +24,13 @@ class CircularProgressView: UIView {
     }
 
     override func draw(_ rect: CGRect) {
-        clipsToBounds = false
+        clipsToBounds = true
         
         let center = CGPoint(x: rect.width / 2, y: rect.height / 2)
         let radius = min(rect.width, rect.height) / 2
 
         let startAngle: CGFloat = -CGFloat.pi / 2
-        let endAngle = startAngle + 2 * CGFloat.pi
+        let endAngle = startAngle + 2 * CGFloat.pi * progress
 
         let path = UIBezierPath(arcCenter: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
 

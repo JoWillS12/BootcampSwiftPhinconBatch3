@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import Lottie
 
 class StatsTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var checkMark: LottieAnimationView!
     @IBOutlet weak var circleProgress: CircularProgressView!
     @IBOutlet weak var view: UIView!
     
@@ -18,7 +20,9 @@ class StatsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         circleProgress.progress = progressNum
+        checkMark.isHidden = true
         cellSetup()
+        checkTrigger()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -39,5 +43,22 @@ extension StatsTableViewCell{
         view.layer.cornerRadius = 10
         view.layer.borderWidth = 1
         view.layer.borderColor = UIColor.white.cgColor // Change color as needed
+        circleProgress.layer.cornerRadius = 16
+    }
+    
+    func checkTrigger(){
+        if progressNum == 1.0{
+            checkMark.isHidden = false
+            animatedCheck()
+        } else{
+            checkMark.isHidden = true
+        }
+    }
+    
+    func animatedCheck(){
+        checkMark.contentMode = .scaleAspectFit
+        checkMark.loopMode = .playOnce
+        checkMark.animationSpeed = 1
+        checkMark.play()
     }
 }

@@ -17,6 +17,7 @@ class CommunityViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        searchView.layer.cornerRadius = 20
     }
 
 }

@@ -45,22 +45,37 @@
                             <constraint firstAttribute="height" constant="32" id="y9q-hd-jkk"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ry9-XH-Ljg" customClass="LottieAnimationView" customModule="Lottie">
+                        <rect key="frame" x="272" y="24" width="32" height="32"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="Rji-Dx-MBK"/>
+                            <constraint firstAttribute="height" constant="32" id="WKs-fK-ec9"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="checkMark"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" name="PrimaryColor"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="qLg-zk-78q" secondAttribute="bottom" constant="39" id="1mg-1Z-ef3"/>
+                    <constraint firstAttribute="trailing" secondItem="ry9-XH-Ljg" secondAttribute="trailing" constant="16" id="2hp-oe-tWE"/>
                     <constraint firstItem="nqM-c4-jsz" firstAttribute="leading" secondItem="qLg-zk-78q" secondAttribute="trailing" constant="67" id="5xQ-fR-7hK"/>
+                    <constraint firstItem="ry9-XH-Ljg" firstAttribute="leading" secondItem="qLg-zk-78q" secondAttribute="trailing" constant="67" id="7nL-zU-NtZ"/>
                     <constraint firstAttribute="trailing" secondItem="nqM-c4-jsz" secondAttribute="trailing" constant="16" id="9fP-aF-kKg"/>
                     <constraint firstItem="r21-r8-K3n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Fph-LW-MnP"/>
                     <constraint firstAttribute="bottom" secondItem="r21-r8-K3n" secondAttribute="bottom" constant="17" id="MlD-po-2ld"/>
                     <constraint firstItem="nqM-c4-jsz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="e1g-dU-LTw"/>
                     <constraint firstItem="qLg-zk-78q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="eSr-ut-4li"/>
+                    <constraint firstItem="ry9-XH-Ljg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="hWf-1U-99Y"/>
                     <constraint firstItem="qLg-zk-78q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="wsj-eF-PKO"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" name="PrimaryColor"/>
             <connections>
+                <outlet property="checkMark" destination="ry9-XH-Ljg" id="t65-1Q-BH4"/>
                 <outlet property="circleProgress" destination="nqM-c4-jsz" id="eFF-ql-Iwf"/>
                 <outlet property="view" destination="H2p-sc-9uM" id="jro-59-mjU"/>
             </connections>

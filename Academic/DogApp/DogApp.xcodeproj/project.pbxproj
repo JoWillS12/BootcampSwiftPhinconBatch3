@@ -55,6 +55,7 @@
 		176D73092B01FE8600835916 /* AuthContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D73082B01FE8600835916 /* AuthContents.swift */; };
 		176D730B2B020E9400835916 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D730A2B020E9400835916 /* KeychainManager.swift */; };
 		176D730E2B020F1700835916 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D730D2B020F1700835916 /* AuthViewModel.swift */; };
+		176D73102B021B9E00835916 /* checkMark.json in Resources */ = {isa = PBXBuildFile; fileRef = 176D730F2B021B9E00835916 /* checkMark.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		176D73082B01FE8600835916 /* AuthContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthContents.swift; sourceTree = "<group>"; };
 		176D730A2B020E9400835916 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		176D730D2B020F1700835916 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		176D730F2B021B9E00835916 /* checkMark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = checkMark.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				176D72A12B01F0EE00835916 /* WalkingDog.json */,
+				176D730F2B021B9E00835916 /* checkMark.json */,
 			);
 			path = LottieFiles;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				176D72A72B01F11B00835916 /* BlueView.xib in Resources */,
 				176D728A2B01F02700835916 /* Assets.xcassets in Resources */,
 				176D72D02B01F21600835916 /* StatsTableViewCell.xib in Resources */,
+				176D73102B021B9E00835916 /* checkMark.json in Resources */,
 				176D729B2B01F0BC00835916 /* Proxima Nova Font.otf in Resources */,
 				176D72BA2B01F1AF00835916 /* CustomButton.xib in Resources */,
 				176D72C32B01F1BD00835916 /* ProfileView.xib in Resources */,
