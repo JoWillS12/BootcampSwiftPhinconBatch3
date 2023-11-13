@@ -1,0 +1,746 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		176D727E2B01F02700835916 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D727D2B01F02700835916 /* AppDelegate.swift */; };
+		176D72802B01F02700835916 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D727F2B01F02700835916 /* SceneDelegate.swift */; };
+		176D72822B01F02700835916 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72812B01F02700835916 /* ViewController.swift */; };
+		176D72882B01F02700835916 /* DogApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 176D72862B01F02700835916 /* DogApp.xcdatamodeld */; };
+		176D728A2B01F02700835916 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 176D72892B01F02700835916 /* Assets.xcassets */; };
+		176D729B2B01F0BC00835916 /* Proxima Nova Font.otf in Resources */ = {isa = PBXBuildFile; fileRef = 176D72992B01F0BC00835916 /* Proxima Nova Font.otf */; };
+		176D729C2B01F0BC00835916 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D729A2B01F0BC00835916 /* Fonts.swift */; };
+		176D729F2B01F0D500835916 /* CodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D729E2B01F0D500835916 /* CodeHelper.swift */; };
+		176D72A22B01F0EE00835916 /* WalkingDog.json in Resources */ = {isa = PBXBuildFile; fileRef = 176D72A12B01F0EE00835916 /* WalkingDog.json */; };
+		176D72A62B01F11B00835916 /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72A42B01F11B00835916 /* BlueView.swift */; };
+		176D72A72B01F11B00835916 /* BlueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72A52B01F11B00835916 /* BlueView.xib */; };
+		176D72B02B01F19600835916 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72AE2B01F19600835916 /* CircleButtonView.swift */; };
+		176D72B12B01F19600835916 /* CircleButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72AF2B01F19600835916 /* CircleButtonView.xib */; };
+		176D72B42B01F19F00835916 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72B22B01F19E00835916 /* CircleView.swift */; };
+		176D72B52B01F19F00835916 /* CircleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72B32B01F19F00835916 /* CircleView.xib */; };
+		176D72B72B01F1A700835916 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72B62B01F1A700835916 /* CircularProgressView.swift */; };
+		176D72BA2B01F1AF00835916 /* CustomButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72B82B01F1AF00835916 /* CustomButton.xib */; };
+		176D72BB2B01F1AF00835916 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72B92B01F1AF00835916 /* CustomButton.swift */; };
+		176D72BE2B01F1B600835916 /* FieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72BC2B01F1B600835916 /* FieldView.swift */; };
+		176D72BF2B01F1B600835916 /* FieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72BD2B01F1B600835916 /* FieldView.xib */; };
+		176D72C22B01F1BD00835916 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72C02B01F1BD00835916 /* ProfileView.swift */; };
+		176D72C32B01F1BD00835916 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72C12B01F1BD00835916 /* ProfileView.xib */; };
+		176D72CB2B01F20F00835916 /* HomePetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72C92B01F20F00835916 /* HomePetCollectionViewCell.xib */; };
+		176D72CC2B01F20F00835916 /* HomePetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72CA2B01F20F00835916 /* HomePetCollectionViewCell.swift */; };
+		176D72CF2B01F21600835916 /* StatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72CD2B01F21600835916 /* StatsTableViewCell.swift */; };
+		176D72D02B01F21600835916 /* StatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72CE2B01F21600835916 /* StatsTableViewCell.xib */; };
+		176D72D32B01F22100835916 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72D12B01F22100835916 /* HomeViewController.xib */; };
+		176D72D42B01F22100835916 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72D22B01F22100835916 /* HomeViewController.swift */; };
+		176D72D92B01F26400835916 /* PetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72D72B01F26400835916 /* PetViewController.swift */; };
+		176D72DA2B01F26400835916 /* PetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72D82B01F26400835916 /* PetViewController.xib */; };
+		176D72DF2B01F27C00835916 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72DD2B01F27C00835916 /* ProfileViewController.swift */; };
+		176D72E02B01F27C00835916 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72DE2B01F27C00835916 /* ProfileViewController.xib */; };
+		176D72E52B01F2A900835916 /* CommunityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72E32B01F2A900835916 /* CommunityViewController.xib */; };
+		176D72E62B01F2A900835916 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72E42B01F2A900835916 /* CommunityViewController.swift */; };
+		176D72E92B01F2C600835916 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72E82B01F2C600835916 /* TabBarViewController.swift */; };
+		176D72ED2B01F2DE00835916 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72EB2B01F2DE00835916 /* SplashScreenViewController.swift */; };
+		176D72EE2B01F2DE00835916 /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72EC2B01F2DE00835916 /* SplashScreenViewController.xib */; };
+		176D72F12B01F33A00835916 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 176D72F02B01F33A00835916 /* Lottie */; };
+		176D72F62B01F37F00835916 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72F42B01F37F00835916 /* AuthViewController.swift */; };
+		176D72F72B01F37F00835916 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72F52B01F37F00835916 /* AuthViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		176D727A2B01F02600835916 /* DogApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		176D727D2B01F02700835916 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		176D727F2B01F02700835916 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		176D72812B01F02700835916 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		176D72872B01F02700835916 /* DogApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DogApp.xcdatamodel; sourceTree = "<group>"; };
+		176D72892B01F02700835916 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		176D728E2B01F02700835916 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		176D72992B01F0BC00835916 /* Proxima Nova Font.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Font.otf"; path = "../../../../PetApp/PetApp/Resources/Fonts/Proxima Nova Font.otf"; sourceTree = "<group>"; };
+		176D729A2B01F0BC00835916 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fonts.swift; path = ../../../../PetApp/PetApp/Resources/Fonts/Fonts.swift; sourceTree = "<group>"; };
+		176D729E2B01F0D500835916 /* CodeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CodeHelper.swift; path = ../../../../PetApp/PetApp/Resources/Helper/CodeHelper.swift; sourceTree = "<group>"; };
+		176D72A12B01F0EE00835916 /* WalkingDog.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = WalkingDog.json; path = ../../../../PetApp/PetApp/Resources/LottieFiles/WalkingDog.json; sourceTree = "<group>"; };
+		176D72A42B01F11B00835916 /* BlueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlueView.swift; path = ../../../../PetApp/PetApp/CustomComponents/BlueButton/BlueView.swift; sourceTree = "<group>"; };
+		176D72A52B01F11B00835916 /* BlueView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BlueView.xib; path = ../../../../PetApp/PetApp/CustomComponents/BlueButton/BlueView.xib; sourceTree = "<group>"; };
+		176D72AE2B01F19600835916 /* CircleButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleButtonView.swift; path = ../../../../PetApp/PetApp/CustomComponents/CircleButton/CircleButtonView.swift; sourceTree = "<group>"; };
+		176D72AF2B01F19600835916 /* CircleButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CircleButtonView.xib; path = ../../../../PetApp/PetApp/CustomComponents/CircleButton/CircleButtonView.xib; sourceTree = "<group>"; };
+		176D72B22B01F19E00835916 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleView.swift; path = ../../../../PetApp/PetApp/CustomComponents/CircleProfile/CircleView.swift; sourceTree = "<group>"; };
+		176D72B32B01F19F00835916 /* CircleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CircleView.xib; path = ../../../../PetApp/PetApp/CustomComponents/CircleProfile/CircleView.xib; sourceTree = "<group>"; };
+		176D72B62B01F1A700835916 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularProgressView.swift; path = ../../../../PetApp/PetApp/CustomComponents/CircularProgressView/CircularProgressView.swift; sourceTree = "<group>"; };
+		176D72B82B01F1AF00835916 /* CustomButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomButton.xib; path = ../../../../PetApp/PetApp/CustomComponents/CustomButton/CustomButton.xib; sourceTree = "<group>"; };
+		176D72B92B01F1AF00835916 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomButton.swift; path = ../../../../PetApp/PetApp/CustomComponents/CustomButton/CustomButton.swift; sourceTree = "<group>"; };
+		176D72BC2B01F1B600835916 /* FieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FieldView.swift; path = ../../../../PetApp/PetApp/CustomComponents/CustomTextfield/FieldView.swift; sourceTree = "<group>"; };
+		176D72BD2B01F1B600835916 /* FieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FieldView.xib; path = ../../../../PetApp/PetApp/CustomComponents/CustomTextfield/FieldView.xib; sourceTree = "<group>"; };
+		176D72C02B01F1BD00835916 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = ../../../../PetApp/PetApp/CustomComponents/ProfileBox/ProfileView.swift; sourceTree = "<group>"; };
+		176D72C12B01F1BD00835916 /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileView.xib; path = ../../../../PetApp/PetApp/CustomComponents/ProfileBox/ProfileView.xib; sourceTree = "<group>"; };
+		176D72C92B01F20F00835916 /* HomePetCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomePetCollectionViewCell.xib; path = ../../../../../../PetApp/PetApp/HomePage/Components/HomePetCell/HomePetCollectionViewCell.xib; sourceTree = "<group>"; };
+		176D72CA2B01F20F00835916 /* HomePetCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePetCollectionViewCell.swift; path = ../../../../../../PetApp/PetApp/HomePage/Components/HomePetCell/HomePetCollectionViewCell.swift; sourceTree = "<group>"; };
+		176D72CD2B01F21600835916 /* StatsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatsTableViewCell.swift; path = ../../../../../../PetApp/PetApp/HomePage/Components/StatsCell/StatsTableViewCell.swift; sourceTree = "<group>"; };
+		176D72CE2B01F21600835916 /* StatsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StatsTableViewCell.xib; path = ../../../../../../PetApp/PetApp/HomePage/Components/StatsCell/StatsTableViewCell.xib; sourceTree = "<group>"; };
+		176D72D12B01F22100835916 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = ../../../../../PetApp/PetApp/HomePage/View/HomeViewController.xib; sourceTree = "<group>"; };
+		176D72D22B01F22100835916 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../../../../../PetApp/PetApp/HomePage/View/HomeViewController.swift; sourceTree = "<group>"; };
+		176D72D72B01F26400835916 /* PetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PetViewController.swift; path = ../../../../../PetApp/PetApp/MyPetPage/View/PetViewController.swift; sourceTree = "<group>"; };
+		176D72D82B01F26400835916 /* PetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PetViewController.xib; path = ../../../../../PetApp/PetApp/MyPetPage/View/PetViewController.xib; sourceTree = "<group>"; };
+		176D72DD2B01F27C00835916 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ../../../../../PetApp/PetApp/ProfilePage/View/ProfileViewController.swift; sourceTree = "<group>"; };
+		176D72DE2B01F27C00835916 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileViewController.xib; path = ../../../../../PetApp/PetApp/ProfilePage/View/ProfileViewController.xib; sourceTree = "<group>"; };
+		176D72E32B01F2A900835916 /* CommunityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommunityViewController.xib; path = ../../../../../PetApp/PetApp/CommunityPage/View/CommunityViewController.xib; sourceTree = "<group>"; };
+		176D72E42B01F2A900835916 /* CommunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommunityViewController.swift; path = ../../../../../PetApp/PetApp/CommunityPage/View/CommunityViewController.swift; sourceTree = "<group>"; };
+		176D72E82B01F2C600835916 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = ../../../../PetApp/PetApp/TabBarView/TabBarViewController.swift; sourceTree = "<group>"; };
+		176D72EB2B01F2DE00835916 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashScreenViewController.swift; path = ../../../../PetApp/PetApp/SplashScreen/View/SplashScreenViewController.swift; sourceTree = "<group>"; };
+		176D72EC2B01F2DE00835916 /* SplashScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SplashScreenViewController.xib; path = ../../../../PetApp/PetApp/SplashScreen/View/SplashScreenViewController.xib; sourceTree = "<group>"; };
+		176D72F42B01F37F00835916 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = ../../../../../PetApp/PetApp/AuthView/View/AuthViewController.swift; sourceTree = "<group>"; };
+		176D72F52B01F37F00835916 /* AuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AuthViewController.xib; path = ../../../../../PetApp/PetApp/AuthView/View/AuthViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		176D72772B01F02600835916 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				176D72F12B01F33A00835916 /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		176D72712B01F02600835916 = {
+			isa = PBXGroup;
+			children = (
+				176D727C2B01F02700835916 /* DogApp */,
+				176D727B2B01F02600835916 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		176D727B2B01F02600835916 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				176D727A2B01F02600835916 /* DogApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		176D727C2B01F02700835916 /* DogApp */ = {
+			isa = PBXGroup;
+			children = (
+				176D72942B01F04A00835916 /* App */,
+				176D72972B01F06E00835916 /* Resources */,
+				176D72962B01F05E00835916 /* CustomComponents */,
+				176D72952B01F05600835916 /* Module */,
+				176D72812B01F02700835916 /* ViewController.swift */,
+				176D72892B01F02700835916 /* Assets.xcassets */,
+				176D728E2B01F02700835916 /* Info.plist */,
+				176D72862B01F02700835916 /* DogApp.xcdatamodeld */,
+			);
+			path = DogApp;
+			sourceTree = "<group>";
+		};
+		176D72942B01F04A00835916 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				176D727D2B01F02700835916 /* AppDelegate.swift */,
+				176D727F2B01F02700835916 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		176D72952B01F05600835916 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				176D72EA2B01F2C900835916 /* SplashScreen */,
+				176D72E72B01F2BB00835916 /* TabBarView */,
+				176D72F22B01F35700835916 /* AuthView */,
+				176D72E12B01F29400835916 /* CommunityPage */,
+				176D72DB2B01F26F00835916 /* ProfilePage */,
+				176D72D52B01F25300835916 /* MyPetPage */,
+				176D72C42B01F1D100835916 /* HomePage */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		176D72962B01F05E00835916 /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				176D72AD2B01F18700835916 /* ProfileBox */,
+				176D72AC2B01F17B00835916 /* CustomTextField */,
+				176D72AB2B01F17200835916 /* CustomButton */,
+				176D72AA2B01F16500835916 /* CircleProgressBar */,
+				176D72A92B01F15E00835916 /* CircleProfile */,
+				176D72A82B01F15400835916 /* CircleButton */,
+				176D72A32B01F10D00835916 /* BlueButton */,
+			);
+			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		176D72972B01F06E00835916 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				176D72A02B01F0E100835916 /* LottieFiles */,
+				176D729D2B01F0CE00835916 /* Helper */,
+				176D72982B01F0A400835916 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		176D72982B01F0A400835916 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				176D729A2B01F0BC00835916 /* Fonts.swift */,
+				176D72992B01F0BC00835916 /* Proxima Nova Font.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		176D729D2B01F0CE00835916 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				176D729E2B01F0D500835916 /* CodeHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		176D72A02B01F0E100835916 /* LottieFiles */ = {
+			isa = PBXGroup;
+			children = (
+				176D72A12B01F0EE00835916 /* WalkingDog.json */,
+			);
+			path = LottieFiles;
+			sourceTree = "<group>";
+		};
+		176D72A32B01F10D00835916 /* BlueButton */ = {
+			isa = PBXGroup;
+			children = (
+				176D72A42B01F11B00835916 /* BlueView.swift */,
+				176D72A52B01F11B00835916 /* BlueView.xib */,
+			);
+			path = BlueButton;
+			sourceTree = "<group>";
+		};
+		176D72A82B01F15400835916 /* CircleButton */ = {
+			isa = PBXGroup;
+			children = (
+				176D72AE2B01F19600835916 /* CircleButtonView.swift */,
+				176D72AF2B01F19600835916 /* CircleButtonView.xib */,
+			);
+			path = CircleButton;
+			sourceTree = "<group>";
+		};
+		176D72A92B01F15E00835916 /* CircleProfile */ = {
+			isa = PBXGroup;
+			children = (
+				176D72B22B01F19E00835916 /* CircleView.swift */,
+				176D72B32B01F19F00835916 /* CircleView.xib */,
+			);
+			path = CircleProfile;
+			sourceTree = "<group>";
+		};
+		176D72AA2B01F16500835916 /* CircleProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				176D72B62B01F1A700835916 /* CircularProgressView.swift */,
+			);
+			path = CircleProgressBar;
+			sourceTree = "<group>";
+		};
+		176D72AB2B01F17200835916 /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				176D72B92B01F1AF00835916 /* CustomButton.swift */,
+				176D72B82B01F1AF00835916 /* CustomButton.xib */,
+			);
+			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		176D72AC2B01F17B00835916 /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				176D72BC2B01F1B600835916 /* FieldView.swift */,
+				176D72BD2B01F1B600835916 /* FieldView.xib */,
+			);
+			path = CustomTextField;
+			sourceTree = "<group>";
+		};
+		176D72AD2B01F18700835916 /* ProfileBox */ = {
+			isa = PBXGroup;
+			children = (
+				176D72C02B01F1BD00835916 /* ProfileView.swift */,
+				176D72C12B01F1BD00835916 /* ProfileView.xib */,
+			);
+			path = ProfileBox;
+			sourceTree = "<group>";
+		};
+		176D72C42B01F1D100835916 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				176D72C52B01F1E200835916 /* Components */,
+				176D72C62B01F1E800835916 /* View */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		176D72C52B01F1E200835916 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				176D72C82B01F20200835916 /* StatsCell */,
+				176D72C72B01F1FC00835916 /* HomePetCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		176D72C62B01F1E800835916 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				176D72D22B01F22100835916 /* HomeViewController.swift */,
+				176D72D12B01F22100835916 /* HomeViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		176D72C72B01F1FC00835916 /* HomePetCell */ = {
+			isa = PBXGroup;
+			children = (
+				176D72CA2B01F20F00835916 /* HomePetCollectionViewCell.swift */,
+				176D72C92B01F20F00835916 /* HomePetCollectionViewCell.xib */,
+			);
+			path = HomePetCell;
+			sourceTree = "<group>";
+		};
+		176D72C82B01F20200835916 /* StatsCell */ = {
+			isa = PBXGroup;
+			children = (
+				176D72CD2B01F21600835916 /* StatsTableViewCell.swift */,
+				176D72CE2B01F21600835916 /* StatsTableViewCell.xib */,
+			);
+			path = StatsCell;
+			sourceTree = "<group>";
+		};
+		176D72D52B01F25300835916 /* MyPetPage */ = {
+			isa = PBXGroup;
+			children = (
+				176D72D62B01F25900835916 /* View */,
+			);
+			path = MyPetPage;
+			sourceTree = "<group>";
+		};
+		176D72D62B01F25900835916 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				176D72D72B01F26400835916 /* PetViewController.swift */,
+				176D72D82B01F26400835916 /* PetViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		176D72DB2B01F26F00835916 /* ProfilePage */ = {
+			isa = PBXGroup;
+			children = (
+				176D72DC2B01F27400835916 /* View */,
+			);
+			path = ProfilePage;
+			sourceTree = "<group>";
+		};
+		176D72DC2B01F27400835916 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				176D72DD2B01F27C00835916 /* ProfileViewController.swift */,
+				176D72DE2B01F27C00835916 /* ProfileViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		176D72E12B01F29400835916 /* CommunityPage */ = {
+			isa = PBXGroup;
+			children = (
+				176D72E22B01F29F00835916 /* View */,
+			);
+			path = CommunityPage;
+			sourceTree = "<group>";
+		};
+		176D72E22B01F29F00835916 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				176D72E42B01F2A900835916 /* CommunityViewController.swift */,
+				176D72E32B01F2A900835916 /* CommunityViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		176D72E72B01F2BB00835916 /* TabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				176D72E82B01F2C600835916 /* TabBarViewController.swift */,
+			);
+			path = TabBarView;
+			sourceTree = "<group>";
+		};
+		176D72EA2B01F2C900835916 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				176D72EB2B01F2DE00835916 /* SplashScreenViewController.swift */,
+				176D72EC2B01F2DE00835916 /* SplashScreenViewController.xib */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		176D72F22B01F35700835916 /* AuthView */ = {
+			isa = PBXGroup;
+			children = (
+				176D72F32B01F36300835916 /* View */,
+			);
+			path = AuthView;
+			sourceTree = "<group>";
+		};
+		176D72F32B01F36300835916 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				176D72F42B01F37F00835916 /* AuthViewController.swift */,
+				176D72F52B01F37F00835916 /* AuthViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		176D72792B01F02600835916 /* DogApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 176D72912B01F02700835916 /* Build configuration list for PBXNativeTarget "DogApp" */;
+			buildPhases = (
+				176D72762B01F02600835916 /* Sources */,
+				176D72772B01F02600835916 /* Frameworks */,
+				176D72782B01F02600835916 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DogApp;
+			packageProductDependencies = (
+				176D72F02B01F33A00835916 /* Lottie */,
+			);
+			productName = DogApp;
+			productReference = 176D727A2B01F02600835916 /* DogApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		176D72722B01F02600835916 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					176D72792B01F02600835916 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 176D72752B01F02600835916 /* Build configuration list for PBXProject "DogApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 176D72712B01F02600835916;
+			packageReferences = (
+				176D72EF2B01F33A00835916 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
+			productRefGroup = 176D727B2B01F02600835916 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				176D72792B01F02600835916 /* DogApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		176D72782B01F02600835916 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				176D72E02B01F27C00835916 /* ProfileViewController.xib in Resources */,
+				176D72B12B01F19600835916 /* CircleButtonView.xib in Resources */,
+				176D72A72B01F11B00835916 /* BlueView.xib in Resources */,
+				176D728A2B01F02700835916 /* Assets.xcassets in Resources */,
+				176D72D02B01F21600835916 /* StatsTableViewCell.xib in Resources */,
+				176D729B2B01F0BC00835916 /* Proxima Nova Font.otf in Resources */,
+				176D72BA2B01F1AF00835916 /* CustomButton.xib in Resources */,
+				176D72C32B01F1BD00835916 /* ProfileView.xib in Resources */,
+				176D72BF2B01F1B600835916 /* FieldView.xib in Resources */,
+				176D72EE2B01F2DE00835916 /* SplashScreenViewController.xib in Resources */,
+				176D72DA2B01F26400835916 /* PetViewController.xib in Resources */,
+				176D72E52B01F2A900835916 /* CommunityViewController.xib in Resources */,
+				176D72CB2B01F20F00835916 /* HomePetCollectionViewCell.xib in Resources */,
+				176D72B52B01F19F00835916 /* CircleView.xib in Resources */,
+				176D72F72B01F37F00835916 /* AuthViewController.xib in Resources */,
+				176D72A22B01F0EE00835916 /* WalkingDog.json in Resources */,
+				176D72D32B01F22100835916 /* HomeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		176D72762B01F02600835916 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				176D72F62B01F37F00835916 /* AuthViewController.swift in Sources */,
+				176D72B42B01F19F00835916 /* CircleView.swift in Sources */,
+				176D72CF2B01F21600835916 /* StatsTableViewCell.swift in Sources */,
+				176D72ED2B01F2DE00835916 /* SplashScreenViewController.swift in Sources */,
+				176D72C22B01F1BD00835916 /* ProfileView.swift in Sources */,
+				176D72BE2B01F1B600835916 /* FieldView.swift in Sources */,
+				176D72A62B01F11B00835916 /* BlueView.swift in Sources */,
+				176D72E62B01F2A900835916 /* CommunityViewController.swift in Sources */,
+				176D72822B01F02700835916 /* ViewController.swift in Sources */,
+				176D72DF2B01F27C00835916 /* ProfileViewController.swift in Sources */,
+				176D72E92B01F2C600835916 /* TabBarViewController.swift in Sources */,
+				176D72CC2B01F20F00835916 /* HomePetCollectionViewCell.swift in Sources */,
+				176D72B02B01F19600835916 /* CircleButtonView.swift in Sources */,
+				176D729C2B01F0BC00835916 /* Fonts.swift in Sources */,
+				176D727E2B01F02700835916 /* AppDelegate.swift in Sources */,
+				176D72882B01F02700835916 /* DogApp.xcdatamodeld in Sources */,
+				176D72D42B01F22100835916 /* HomeViewController.swift in Sources */,
+				176D72BB2B01F1AF00835916 /* CustomButton.swift in Sources */,
+				176D72D92B01F26400835916 /* PetViewController.swift in Sources */,
+				176D729F2B01F0D500835916 /* CodeHelper.swift in Sources */,
+				176D72B72B01F1A700835916 /* CircularProgressView.swift in Sources */,
+				176D72802B01F02700835916 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		176D728F2B01F02700835916 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		176D72902B01F02700835916 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		176D72922B01F02700835916 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D98G8X42P8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DogApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iplayallday.DogApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		176D72932B01F02700835916 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D98G8X42P8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DogApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iplayallday.DogApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		176D72752B01F02600835916 /* Build configuration list for PBXProject "DogApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				176D728F2B01F02700835916 /* Debug */,
+				176D72902B01F02700835916 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		176D72912B01F02700835916 /* Build configuration list for PBXNativeTarget "DogApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				176D72922B01F02700835916 /* Debug */,
+				176D72932B01F02700835916 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		176D72EF2B01F33A00835916 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		176D72F02B01F33A00835916 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 176D72EF2B01F33A00835916 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		176D72862B01F02700835916 /* DogApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				176D72872B01F02700835916 /* DogApp.xcdatamodel */,
+			);
+			currentVersion = 176D72872B01F02700835916 /* DogApp.xcdatamodel */;
+			path = DogApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 176D72722B01F02600835916 /* Project object */;
+}

@@ -393,6 +393,8 @@
 		1723813C2AF887A500A3892B /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
+				179592612AEF6681003D23EE /* HomeViewController.swift */,
+				179592622AEF6681003D23EE /* HomeViewController.xib */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -632,8 +634,6 @@
 			children = (
 				1723813D2AF887A800A3892B /* DetailView */,
 				1723813C2AF887A500A3892B /* HomeView */,
-				179592612AEF6681003D23EE /* HomeViewController.swift */,
-				179592622AEF6681003D23EE /* HomeViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";

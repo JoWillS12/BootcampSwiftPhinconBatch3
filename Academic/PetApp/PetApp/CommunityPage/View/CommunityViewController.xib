@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommunityViewController" customModule="PetWalk" customModuleProvider="target">
+            <connections>
+                <outlet property="searchBar" destination="H8G-KP-WCP" id="fZ4-Wa-FR8"/>
+                <outlet property="searchView" destination="WBD-Ob-ppF" id="SMF-TG-1nt"/>
+                <outlet property="tableView" destination="ivB-2a-oVv" id="bZt-Lf-41c"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Community" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ci-yd-OgE">
+                    <rect key="frame" x="16" y="59" width="361" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="4oD-XJ-JME"/>
+                        <constraint firstAttribute="width" constant="361" id="UVd-qI-Ypo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="39"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBD-Ob-ppF">
+                    <rect key="frame" x="16" y="114" width="361" height="34"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H8G-KP-WCP">
+                            <rect key="frame" x="21" y="0.0" width="319" height="34"/>
+                            <color key="backgroundColor" name="SearchColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="Ha1-v3-LtZ"/>
+                                <constraint firstAttribute="width" constant="319" id="v98-nU-pGq"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" name="SearchColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="H8G-KP-WCP" secondAttribute="trailing" constant="21" id="F36-SL-5D4"/>
+                        <constraint firstAttribute="width" constant="361" id="QxI-6g-FXt"/>
+                        <constraint firstAttribute="height" constant="34" id="R5C-2p-9KF"/>
+                        <constraint firstItem="H8G-KP-WCP" firstAttribute="top" secondItem="WBD-Ob-ppF" secondAttribute="top" id="Ud8-uO-y5a"/>
+                        <constraint firstItem="H8G-KP-WCP" firstAttribute="leading" secondItem="WBD-Ob-ppF" secondAttribute="leading" constant="21" id="ZJB-c9-7eh"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ivB-2a-oVv">
+                    <rect key="frame" x="16" y="156" width="361" height="613"/>
+                    <color key="backgroundColor" name="PrimaryColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="361" id="0Fc-5C-ooU"/>
+                        <constraint firstAttribute="height" constant="613" id="wkh-MT-Vdy"/>
+                    </constraints>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="PrimaryColor"/>
+            <constraints>
+                <constraint firstItem="3Ci-yd-OgE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0mR-Co-MG2"/>
+                <constraint firstItem="WBD-Ob-ppF" firstAttribute="top" secondItem="3Ci-yd-OgE" secondAttribute="bottom" constant="8" symbolic="YES" id="6gM-YC-ZCc"/>
+                <constraint firstItem="ivB-2a-oVv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="6l4-Ig-iTC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WBD-Ob-ppF" secondAttribute="trailing" constant="16" id="7Rd-JY-AOZ"/>
+                <constraint firstItem="WBD-Ob-ppF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ITw-zZ-4X4"/>
+                <constraint firstItem="3Ci-yd-OgE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="QVu-Bj-PtP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ivB-2a-oVv" secondAttribute="trailing" constant="16" id="k6f-Y4-vNS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3Ci-yd-OgE" secondAttribute="trailing" constant="16" id="nud-pD-v3J"/>
+                <constraint firstItem="ivB-2a-oVv" firstAttribute="top" secondItem="WBD-Ob-ppF" secondAttribute="bottom" constant="8" symbolic="YES" id="sPf-bU-Q3I"/>
+            </constraints>
+            <point key="canvasLocation" x="101.5267175572519" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="PrimaryColor">
+            <color red="0.94509803921568625" green="0.95294117647058818" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SearchColor">
+            <color red="0.89803921568627454" green="0.90196078431372551" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
