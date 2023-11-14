@@ -77,6 +77,8 @@
             <connections>
                 <outlet property="checkMark" destination="ry9-XH-Ljg" id="t65-1Q-BH4"/>
                 <outlet property="circleProgress" destination="nqM-c4-jsz" id="eFF-ql-Iwf"/>
+                <outlet property="statsDesc" destination="r21-r8-K3n" id="EAN-GZ-Eag"/>
+                <outlet property="statsTitle" destination="qLg-zk-78q" id="lxk-TQ-sIQ"/>
                 <outlet property="view" destination="H2p-sc-9uM" id="jro-59-mjU"/>
             </connections>
             <point key="canvasLocation" x="62.595419847328245" y="6.3380281690140849"/>

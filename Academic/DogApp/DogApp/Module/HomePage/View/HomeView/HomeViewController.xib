@@ -85,9 +85,9 @@
                     </constraints>
                 </view>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="If4-Xk-BKo">
-                    <rect key="frame" x="138" y="229" width="116" height="26"/>
+                    <rect key="frame" x="82" y="225" width="228" height="26"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="116" id="Ear-kK-1xF"/>
+                        <constraint firstAttribute="width" constant="228" id="Ear-kK-1xF"/>
                         <constraint firstAttribute="height" constant="26" id="vIC-ae-VVV"/>
                     </constraints>
                     <connections>
@@ -106,12 +106,12 @@
                 <constraint firstItem="32S-Jy-Cpo" firstAttribute="top" secondItem="1Cz-5z-tKF" secondAttribute="bottom" constant="8" symbolic="YES" id="P04-Nr-ltA"/>
                 <constraint firstItem="0DL-7N-ZAN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="SMs-9A-9EG"/>
                 <constraint firstItem="1Cz-5z-tKF" firstAttribute="top" secondItem="uES-25-cBZ" secondAttribute="bottom" constant="-1" id="a8E-2M-ZLD"/>
-                <constraint firstItem="If4-Xk-BKo" firstAttribute="top" secondItem="1Cz-5z-tKF" secondAttribute="bottom" constant="84" id="erM-Lg-aJn"/>
-                <constraint firstItem="If4-Xk-BKo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="138" id="fa4-HN-pAM"/>
+                <constraint firstItem="If4-Xk-BKo" firstAttribute="top" secondItem="1Cz-5z-tKF" secondAttribute="bottom" constant="80" id="erM-Lg-aJn"/>
+                <constraint firstItem="If4-Xk-BKo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="82" id="fa4-HN-pAM"/>
                 <constraint firstItem="DGD-eD-wxZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="41" id="fc8-wO-jKW"/>
                 <constraint firstItem="EBD-im-JrO" firstAttribute="top" secondItem="0DL-7N-ZAN" secondAttribute="bottom" constant="8" symbolic="YES" id="fhI-eB-YyT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1Cz-5z-tKF" secondAttribute="trailing" constant="181" id="iLF-c3-2X4"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="If4-Xk-BKo" secondAttribute="trailing" constant="139" id="jMr-Kj-4Re"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="If4-Xk-BKo" secondAttribute="trailing" constant="83" id="jMr-Kj-4Re"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uES-25-cBZ" secondAttribute="trailing" constant="181" id="jcS-CI-WKT"/>
                 <constraint firstItem="0DL-7N-ZAN" firstAttribute="top" secondItem="32S-Jy-Cpo" secondAttribute="bottom" constant="8" id="lyC-zJ-Wv8"/>
                 <constraint firstItem="EBD-im-JrO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="mxy-qM-bBj"/>

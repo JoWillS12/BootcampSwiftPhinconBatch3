@@ -26,7 +26,10 @@ class CircleButtonView: UIView {
         configureView()
     }
     
-
+    @IBAction func buttonClicked(_ sender: Any) {
+        tapAction?()
+    }
+    
 }
 extension CircleButtonView{
     func configureView() {

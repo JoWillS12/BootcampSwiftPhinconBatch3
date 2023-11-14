@@ -32,7 +32,10 @@ class BlueView: UIView {
         configureView()
     }
     
-
+    @IBAction func buttonClicked(_ sender: Any) {
+        tapAction?()
+    }
+    
 }
 extension BlueView{
     func configureView() {

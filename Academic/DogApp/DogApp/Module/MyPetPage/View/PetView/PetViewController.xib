@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PetViewController" customModule="PetWalk" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PetViewController" customModule="DogApp" customModuleProvider="target">
             <connections>
                 <outlet property="circleButton" destination="bZN-ZW-odZ" id="Tk6-0d-DGy"/>
                 <outlet property="tableView" destination="xgq-xA-XQn" id="Nfh-X4-per"/>
@@ -37,8 +37,10 @@
                         <constraint firstAttribute="width" constant="361" id="Dat-Nq-zfQ"/>
                         <constraint firstAttribute="height" constant="521" id="aRU-fx-oqy"/>
                     </constraints>
+                    <color key="separatorColor" name="PrimaryColor"/>
+                    <color key="sectionIndexBackgroundColor" name="PrimaryColor"/>
                 </tableView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZN-ZW-odZ" customClass="CircleButtonView" customModule="PetWalk" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZN-ZW-odZ" customClass="CircleButtonView" customModule="DogApp" customModuleProvider="target">
                     <rect key="frame" x="164" y="676" width="64" height="64"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -65,7 +67,7 @@
     </objects>
     <resources>
         <namedColor name="PrimaryColor">
-            <color red="0.94509803921568625" green="0.95294117647058818" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94499999284744263" green="0.95300000905990601" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

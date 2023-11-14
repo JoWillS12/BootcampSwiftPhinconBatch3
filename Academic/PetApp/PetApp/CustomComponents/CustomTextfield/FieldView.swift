@@ -8,9 +8,11 @@
 import UIKit
 
 class FieldView: UIView {
-
+    
     @IBOutlet weak var fieldName: UILabel!
     @IBOutlet weak var inputType: UITextField!
+    
+    var datePicker: UIDatePicker?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +26,7 @@ class FieldView: UIView {
         if let customFont = CodeHelper.loadCustomFont(withName: "Proxima Nova Font", fontSize: 20) {
             fieldName.font = customFont
         }
+        setupDatePicker()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -37,5 +40,11 @@ extension FieldView{
         view.frame = view.bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(view)
+    }
+    
+    func setupDatePicker() {
+        datePicker = UIDatePicker()
+        datePicker?.datePickerMode = .date
+        inputType.inputView = datePicker
     }
 }

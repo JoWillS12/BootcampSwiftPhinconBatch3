@@ -13,13 +13,15 @@ class StatsTableViewCell: UITableViewCell {
     @IBOutlet weak var checkMark: LottieAnimationView!
     @IBOutlet weak var circleProgress: CircularProgressView!
     @IBOutlet weak var view: UIView!
+    @IBOutlet weak var statsTitle: UILabel!
+    @IBOutlet weak var statsDesc: UILabel!
     
-    var progressNum = 1.0
+    var progressNum = 0.0
+    var progressColor = UIColor.white
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        circleProgress.progress = progressNum
         checkMark.isHidden = true
         cellSetup()
         checkTrigger()
@@ -33,7 +35,7 @@ class StatsTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-
+        
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 5, bottom: 15, right: 5))
     }
 }
@@ -60,5 +62,13 @@ extension StatsTableViewCell{
         checkMark.loopMode = .playOnce
         checkMark.animationSpeed = 1
         checkMark.play()
+    }
+    
+    func updateProgress(_ progress: CGFloat, progs: UIColor) {
+        progressNum = progress
+        progressColor = progs
+        circleProgress.progress = progressNum
+        circleProgress.progressColor = progressColor
+        checkTrigger()
     }
 }

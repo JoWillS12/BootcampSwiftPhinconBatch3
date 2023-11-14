@@ -11,6 +11,9 @@ import Alamofire
 enum Endpoint {
     case register(param: RegisterParam)
     case login(param: LoginParam)
+    case myPet
+    case myPost
+    case getUser
     
     func path() -> String {
         switch self {
@@ -18,6 +21,12 @@ enum Endpoint {
             return "api/register"
         case .login:
             return "api/login"
+        case .myPet:
+            return "api/getDog"
+        case .myPost:
+            return "api/getPosted"
+        case .getUser:
+            return "api/getUser"
         }
     }
     
@@ -25,6 +34,8 @@ enum Endpoint {
         switch self {
         case .register, .login:
             return .post
+        case .myPet, .myPost, .getUser:
+            return .get
         }
     }
     
@@ -42,12 +53,14 @@ enum Endpoint {
                 "email": param.email,
                 "password": param.password,
             ]
+        case .myPet, .myPost, .getUser:
+            return nil
         }
     }
     
     var headers: HTTPHeaders {
         switch self {
-        case .register, .login:
+        case .register, .login, .myPet, .myPost, .getUser:
             let params: HTTPHeaders = [
                 "Content-Type": "application/json"]
             return params

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProfileCollectionViewCell" customModule="DogApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kom-P5-5xR">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fnj-z3-MGC">
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="4d3-Mu-cjo"/>
+                                    <constraint firstAttribute="width" constant="120" id="keb-Ff-9Gl"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fnj-z3-MGC" secondAttribute="bottom" id="1C5-Ch-61A"/>
+                            <constraint firstItem="fnj-z3-MGC" firstAttribute="top" secondItem="Kom-P5-5xR" secondAttribute="top" id="2ZQ-oL-xE7"/>
+                            <constraint firstAttribute="height" constant="120" id="bbL-ad-01y"/>
+                            <constraint firstItem="fnj-z3-MGC" firstAttribute="leading" secondItem="Kom-P5-5xR" secondAttribute="leading" id="l3M-GG-h3W"/>
+                            <constraint firstAttribute="trailing" secondItem="fnj-z3-MGC" secondAttribute="trailing" id="v6L-FA-5JU"/>
+                            <constraint firstAttribute="width" constant="120" id="wFo-V7-IHF"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" name="PrimaryColor"/>
+            <constraints>
+                <constraint firstItem="Kom-P5-5xR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9w8-i9-ylJ"/>
+                <constraint firstItem="Kom-P5-5xR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="AEA-3A-6fb"/>
+                <constraint firstAttribute="bottom" secondItem="Kom-P5-5xR" secondAttribute="bottom" id="Bcc-Nh-rYV"/>
+                <constraint firstAttribute="trailing" secondItem="Kom-P5-5xR" secondAttribute="trailing" id="Cwa-jo-16f"/>
+                <constraint firstAttribute="bottom" secondItem="Kom-P5-5xR" secondAttribute="bottom" id="Khj-xk-XzH"/>
+                <constraint firstAttribute="trailing" secondItem="Kom-P5-5xR" secondAttribute="trailing" id="QNL-5y-hQX"/>
+                <constraint firstItem="Kom-P5-5xR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fRO-cY-bLb"/>
+                <constraint firstItem="Kom-P5-5xR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="te0-8X-5DD"/>
+            </constraints>
+            <size key="customSize" width="162" height="149"/>
+            <connections>
+                <outlet property="postImage" destination="fnj-z3-MGC" id="kN4-KC-zcF"/>
+                <outlet property="view" destination="Kom-P5-5xR" id="Tr4-iR-9ry"/>
+            </connections>
+            <point key="canvasLocation" x="189.31297709923663" y="54.225352112676056"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="PrimaryColor">
+            <color red="0.94499999284744263" green="0.95300000905990601" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

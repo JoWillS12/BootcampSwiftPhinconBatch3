@@ -56,6 +56,23 @@
 		176D730B2B020E9400835916 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D730A2B020E9400835916 /* KeychainManager.swift */; };
 		176D730E2B020F1700835916 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D730D2B020F1700835916 /* AuthViewModel.swift */; };
 		176D73102B021B9E00835916 /* checkMark.json in Resources */ = {isa = PBXBuildFile; fileRef = 176D730F2B021B9E00835916 /* checkMark.json */; };
+		176D73152B0301A700835916 /* AddPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D73132B0301A700835916 /* AddPetViewController.swift */; };
+		176D73162B0301A700835916 /* AddPetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D73142B0301A700835916 /* AddPetViewController.xib */; };
+		176D73192B030AD900835916 /* PetContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D73182B030AD900835916 /* PetContents.swift */; };
+		176D731E2B0312C100835916 /* PetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D731C2B0312C100835916 /* PetTableViewCell.swift */; };
+		176D731F2B0312C100835916 /* PetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D731D2B0312C100835916 /* PetTableViewCell.xib */; };
+		176D73242B0320DA00835916 /* CommunityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D73222B0320DA00835916 /* CommunityTableViewCell.swift */; };
+		176D73252B0320DA00835916 /* CommunityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D73232B0320DA00835916 /* CommunityTableViewCell.xib */; };
+		176D73282B0325BD00835916 /* PostContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D73272B0325BD00835916 /* PostContents.swift */; };
+		176D732D2B032BBF00835916 /* PetSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D732B2B032BBF00835916 /* PetSelectionViewController.swift */; };
+		176D732E2B032BBF00835916 /* PetSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D732C2B032BBF00835916 /* PetSelectionViewController.xib */; };
+		176D73312B032E5C00835916 /* MethodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D73302B032E5C00835916 /* MethodView.xib */; };
+		176D73332B032E6D00835916 /* MethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D73322B032E6D00835916 /* MethodView.swift */; };
+		176D73362B034D4C00835916 /* HomeContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D73352B034D4C00835916 /* HomeContents.swift */; };
+		176D733A2B03586100835916 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D73382B03586100835916 /* ProfileCollectionViewCell.swift */; };
+		176D733B2B03586100835916 /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D73392B03586100835916 /* ProfileCollectionViewCell.xib */; };
+		176D733E2B035FE300835916 /* ProfileContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D733D2B035FE300835916 /* ProfileContents.swift */; };
+		176D73412B03653800835916 /* ButtonEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D73402B03653800835916 /* ButtonEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,10 +104,10 @@
 		176D72CA2B01F20F00835916 /* HomePetCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePetCollectionViewCell.swift; path = ../../../../../../PetApp/PetApp/HomePage/Components/HomePetCell/HomePetCollectionViewCell.swift; sourceTree = "<group>"; };
 		176D72CD2B01F21600835916 /* StatsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatsTableViewCell.swift; path = ../../../../../../PetApp/PetApp/HomePage/Components/StatsCell/StatsTableViewCell.swift; sourceTree = "<group>"; };
 		176D72CE2B01F21600835916 /* StatsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StatsTableViewCell.xib; path = ../../../../../../PetApp/PetApp/HomePage/Components/StatsCell/StatsTableViewCell.xib; sourceTree = "<group>"; };
-		176D72D12B01F22100835916 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = ../../../../../PetApp/PetApp/HomePage/View/HomeViewController.xib; sourceTree = "<group>"; };
-		176D72D22B01F22100835916 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../../../../../PetApp/PetApp/HomePage/View/HomeViewController.swift; sourceTree = "<group>"; };
-		176D72D72B01F26400835916 /* PetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PetViewController.swift; path = ../../../../../PetApp/PetApp/MyPetPage/View/PetViewController.swift; sourceTree = "<group>"; };
-		176D72D82B01F26400835916 /* PetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PetViewController.xib; path = ../../../../../PetApp/PetApp/MyPetPage/View/PetViewController.xib; sourceTree = "<group>"; };
+		176D72D12B01F22100835916 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		176D72D22B01F22100835916 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		176D72D72B01F26400835916 /* PetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetViewController.swift; sourceTree = "<group>"; };
+		176D72D82B01F26400835916 /* PetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PetViewController.xib; sourceTree = "<group>"; };
 		176D72DD2B01F27C00835916 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ../../../../../PetApp/PetApp/ProfilePage/View/ProfileViewController.swift; sourceTree = "<group>"; };
 		176D72DE2B01F27C00835916 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileViewController.xib; path = ../../../../../PetApp/PetApp/ProfilePage/View/ProfileViewController.xib; sourceTree = "<group>"; };
 		176D72E32B01F2A900835916 /* CommunityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommunityViewController.xib; path = ../../../../../PetApp/PetApp/CommunityPage/View/CommunityViewController.xib; sourceTree = "<group>"; };
@@ -106,6 +123,23 @@
 		176D730A2B020E9400835916 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		176D730D2B020F1700835916 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		176D730F2B021B9E00835916 /* checkMark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = checkMark.json; sourceTree = "<group>"; };
+		176D73132B0301A700835916 /* AddPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetViewController.swift; sourceTree = "<group>"; };
+		176D73142B0301A700835916 /* AddPetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPetViewController.xib; sourceTree = "<group>"; };
+		176D73182B030AD900835916 /* PetContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetContents.swift; sourceTree = "<group>"; };
+		176D731C2B0312C100835916 /* PetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetTableViewCell.swift; sourceTree = "<group>"; };
+		176D731D2B0312C100835916 /* PetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetTableViewCell.xib; sourceTree = "<group>"; };
+		176D73222B0320DA00835916 /* CommunityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityTableViewCell.swift; sourceTree = "<group>"; };
+		176D73232B0320DA00835916 /* CommunityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityTableViewCell.xib; sourceTree = "<group>"; };
+		176D73272B0325BD00835916 /* PostContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContents.swift; sourceTree = "<group>"; };
+		176D732B2B032BBF00835916 /* PetSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetSelectionViewController.swift; sourceTree = "<group>"; };
+		176D732C2B032BBF00835916 /* PetSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetSelectionViewController.xib; sourceTree = "<group>"; };
+		176D73302B032E5C00835916 /* MethodView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MethodView.xib; sourceTree = "<group>"; };
+		176D73322B032E6D00835916 /* MethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodView.swift; sourceTree = "<group>"; };
+		176D73352B034D4C00835916 /* HomeContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContents.swift; sourceTree = "<group>"; };
+		176D73382B03586100835916 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		176D73392B03586100835916 /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
+		176D733D2B035FE300835916 /* ProfileContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContents.swift; sourceTree = "<group>"; };
+		176D73402B03653800835916 /* ButtonEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +214,7 @@
 		176D72962B01F05E00835916 /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
+				176D732F2B032E5100835916 /* MethodBox */,
 				176D72AD2B01F18700835916 /* ProfileBox */,
 				176D72AC2B01F17B00835916 /* CustomTextField */,
 				176D72AB2B01F17200835916 /* CustomButton */,
@@ -295,6 +330,8 @@
 		176D72C42B01F1D100835916 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				176D733F2B03653100835916 /* Enum */,
+				176D73342B034D3700835916 /* Model */,
 				176D72C52B01F1E200835916 /* Components */,
 				176D72C62B01F1E800835916 /* View */,
 			);
@@ -313,8 +350,8 @@
 		176D72C62B01F1E800835916 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				176D72D22B01F22100835916 /* HomeViewController.swift */,
-				176D72D12B01F22100835916 /* HomeViewController.xib */,
+				176D732A2B032BA900835916 /* PetSelectionView */,
+				176D73292B032BA000835916 /* HomeView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -340,6 +377,8 @@
 		176D72D52B01F25300835916 /* MyPetPage */ = {
 			isa = PBXGroup;
 			children = (
+				176D73172B030ACE00835916 /* Model */,
+				176D731A2B0312A400835916 /* Components */,
 				176D72D62B01F25900835916 /* View */,
 			);
 			path = MyPetPage;
@@ -348,8 +387,8 @@
 		176D72D62B01F25900835916 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				176D72D72B01F26400835916 /* PetViewController.swift */,
-				176D72D82B01F26400835916 /* PetViewController.xib */,
+				176D73122B03018F00835916 /* AddPetView */,
+				176D73112B03018400835916 /* PetView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,6 +396,8 @@
 		176D72DB2B01F26F00835916 /* ProfilePage */ = {
 			isa = PBXGroup;
 			children = (
+				176D733C2B035FD700835916 /* Model */,
+				176D73372B03584800835916 /* Components */,
 				176D72DC2B01F27400835916 /* View */,
 			);
 			path = ProfilePage;
@@ -374,6 +415,8 @@
 		176D72E12B01F29400835916 /* CommunityPage */ = {
 			isa = PBXGroup;
 			children = (
+				176D73262B0325B400835916 /* Model */,
+				176D73202B0320C100835916 /* Components */,
 				176D72E22B01F29F00835916 /* View */,
 			);
 			path = CommunityPage;
@@ -438,6 +481,134 @@
 				176D730D2B020F1700835916 /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		176D73112B03018400835916 /* PetView */ = {
+			isa = PBXGroup;
+			children = (
+				176D72D72B01F26400835916 /* PetViewController.swift */,
+				176D72D82B01F26400835916 /* PetViewController.xib */,
+			);
+			path = PetView;
+			sourceTree = "<group>";
+		};
+		176D73122B03018F00835916 /* AddPetView */ = {
+			isa = PBXGroup;
+			children = (
+				176D73132B0301A700835916 /* AddPetViewController.swift */,
+				176D73142B0301A700835916 /* AddPetViewController.xib */,
+			);
+			path = AddPetView;
+			sourceTree = "<group>";
+		};
+		176D73172B030ACE00835916 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				176D73182B030AD900835916 /* PetContents.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		176D731A2B0312A400835916 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				176D731B2B0312AB00835916 /* PetCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		176D731B2B0312AB00835916 /* PetCell */ = {
+			isa = PBXGroup;
+			children = (
+				176D731C2B0312C100835916 /* PetTableViewCell.swift */,
+				176D731D2B0312C100835916 /* PetTableViewCell.xib */,
+			);
+			path = PetCell;
+			sourceTree = "<group>";
+		};
+		176D73202B0320C100835916 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				176D73212B0320CA00835916 /* CommunityCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		176D73212B0320CA00835916 /* CommunityCell */ = {
+			isa = PBXGroup;
+			children = (
+				176D73222B0320DA00835916 /* CommunityTableViewCell.swift */,
+				176D73232B0320DA00835916 /* CommunityTableViewCell.xib */,
+			);
+			path = CommunityCell;
+			sourceTree = "<group>";
+		};
+		176D73262B0325B400835916 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				176D73272B0325BD00835916 /* PostContents.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		176D73292B032BA000835916 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				176D72D22B01F22100835916 /* HomeViewController.swift */,
+				176D72D12B01F22100835916 /* HomeViewController.xib */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		176D732A2B032BA900835916 /* PetSelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				176D732B2B032BBF00835916 /* PetSelectionViewController.swift */,
+				176D732C2B032BBF00835916 /* PetSelectionViewController.xib */,
+			);
+			path = PetSelectionView;
+			sourceTree = "<group>";
+		};
+		176D732F2B032E5100835916 /* MethodBox */ = {
+			isa = PBXGroup;
+			children = (
+				176D73322B032E6D00835916 /* MethodView.swift */,
+				176D73302B032E5C00835916 /* MethodView.xib */,
+			);
+			path = MethodBox;
+			sourceTree = "<group>";
+		};
+		176D73342B034D3700835916 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				176D73352B034D4C00835916 /* HomeContents.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		176D73372B03584800835916 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				176D73382B03586100835916 /* ProfileCollectionViewCell.swift */,
+				176D73392B03586100835916 /* ProfileCollectionViewCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		176D733C2B035FD700835916 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				176D733D2B035FE300835916 /* ProfileContents.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		176D733F2B03653100835916 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				176D73402B03653800835916 /* ButtonEnum.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -510,7 +681,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				176D73312B032E5C00835916 /* MethodView.xib in Resources */,
 				176D72E02B01F27C00835916 /* ProfileViewController.xib in Resources */,
+				176D731F2B0312C100835916 /* PetTableViewCell.xib in Resources */,
 				176D72B12B01F19600835916 /* CircleButtonView.xib in Resources */,
 				176D72A72B01F11B00835916 /* BlueView.xib in Resources */,
 				176D728A2B01F02700835916 /* Assets.xcassets in Resources */,
@@ -518,16 +691,20 @@
 				176D73102B021B9E00835916 /* checkMark.json in Resources */,
 				176D729B2B01F0BC00835916 /* Proxima Nova Font.otf in Resources */,
 				176D72BA2B01F1AF00835916 /* CustomButton.xib in Resources */,
+				176D73252B0320DA00835916 /* CommunityTableViewCell.xib in Resources */,
 				176D72C32B01F1BD00835916 /* ProfileView.xib in Resources */,
 				176D72BF2B01F1B600835916 /* FieldView.xib in Resources */,
 				176D72EE2B01F2DE00835916 /* SplashScreenViewController.xib in Resources */,
+				176D733B2B03586100835916 /* ProfileCollectionViewCell.xib in Resources */,
 				176D72DA2B01F26400835916 /* PetViewController.xib in Resources */,
 				176D72E52B01F2A900835916 /* CommunityViewController.xib in Resources */,
 				176D72CB2B01F20F00835916 /* HomePetCollectionViewCell.xib in Resources */,
 				176D72B52B01F19F00835916 /* CircleView.xib in Resources */,
+				176D732E2B032BBF00835916 /* PetSelectionViewController.xib in Resources */,
 				176D72F72B01F37F00835916 /* AuthViewController.xib in Resources */,
 				176D72A22B01F0EE00835916 /* WalkingDog.json in Resources */,
 				176D72D32B01F22100835916 /* HomeViewController.xib in Resources */,
+				176D73162B0301A700835916 /* AddPetViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,20 +716,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				176D73002B01F8B900835916 /* NetworkManager.swift in Sources */,
+				176D73282B0325BD00835916 /* PostContents.swift in Sources */,
 				176D73092B01FE8600835916 /* AuthContents.swift in Sources */,
 				176D72F62B01F37F00835916 /* AuthViewController.swift in Sources */,
 				176D72B42B01F19F00835916 /* CircleView.swift in Sources */,
 				176D72CF2B01F21600835916 /* StatsTableViewCell.swift in Sources */,
 				176D72ED2B01F2DE00835916 /* SplashScreenViewController.swift in Sources */,
+				176D73332B032E6D00835916 /* MethodView.swift in Sources */,
 				176D72C22B01F1BD00835916 /* ProfileView.swift in Sources */,
 				176D72BE2B01F1B600835916 /* FieldView.swift in Sources */,
+				176D733E2B035FE300835916 /* ProfileContents.swift in Sources */,
+				176D733A2B03586100835916 /* ProfileCollectionViewCell.swift in Sources */,
 				176D72A62B01F11B00835916 /* BlueView.swift in Sources */,
 				176D72E62B01F2A900835916 /* CommunityViewController.swift in Sources */,
+				176D73242B0320DA00835916 /* CommunityTableViewCell.swift in Sources */,
+				176D73152B0301A700835916 /* AddPetViewController.swift in Sources */,
+				176D73362B034D4C00835916 /* HomeContents.swift in Sources */,
+				176D73412B03653800835916 /* ButtonEnum.swift in Sources */,
 				176D72822B01F02700835916 /* ViewController.swift in Sources */,
 				176D72DF2B01F27C00835916 /* ProfileViewController.swift in Sources */,
+				176D731E2B0312C100835916 /* PetTableViewCell.swift in Sources */,
 				176D72E92B01F2C600835916 /* TabBarViewController.swift in Sources */,
 				176D730B2B020E9400835916 /* KeychainManager.swift in Sources */,
 				176D72CC2B01F20F00835916 /* HomePetCollectionViewCell.swift in Sources */,
+				176D73192B030AD900835916 /* PetContents.swift in Sources */,
+				176D732D2B032BBF00835916 /* PetSelectionViewController.swift in Sources */,
 				176D72B02B01F19600835916 /* CircleButtonView.swift in Sources */,
 				176D729C2B01F0BC00835916 /* Fonts.swift in Sources */,
 				176D730E2B020F1700835916 /* AuthViewModel.swift in Sources */,
