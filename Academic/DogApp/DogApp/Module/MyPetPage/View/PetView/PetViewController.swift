@@ -8,7 +8,7 @@
 import UIKit
 
 class PetViewController: UIViewController {
-
+    
     @IBOutlet weak var circleButton: CircleButtonView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -16,7 +16,7 @@ class PetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         circleButton.tapAction = { [weak self] in
             self?.navigateToAddPet()
@@ -24,6 +24,7 @@ class PetViewController: UIViewController {
         registerTableCell()
         fetchDogData()
     }
+    
     func registerTableCell() {
         tableView.register(UINib(nibName: String(describing: PetTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: PetTableViewCell.self))
         tableView.delegate = self
@@ -55,17 +56,30 @@ extension PetViewController: UITableViewDelegate, UITableViewDataSource{
         return 120 // Adjust the spacing height as needed
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: nil) { (_, _, completionHandler) in
             // Handle the deletion here
-            dogData.remove(at: indexPath.row)
+            self.dogData.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             
             // Update the total price and save to UserDefaults after deletion
-//            deletedData()
-//            saveProductsToUserDefaults()
+            // deletedData()
+            // saveProductsToUserDefaults()
+            
+            // Call the completion handler to indicate that the action was performed
+            completionHandler(true)
         }
+        
+        // Customize the appearance of the delete button
+        deleteAction.image = UIImage(systemName: "trash.fill")?.withTintColor(.red, renderingMode: .alwaysOriginal)
+        deleteAction.backgroundColor = UIColor(named: "PrimaryColor")
+        
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        configuration.performsFirstActionWithFullSwipe = false // Optional: Set to true if you want the action to be performed without tapping
+        
+        return configuration
     }
+    
     
     func fetchDogData() {
         NetworkManager.shared.makeAPICall(endpoint: .myPet) { (response: Result<[MyPet], Error>) in

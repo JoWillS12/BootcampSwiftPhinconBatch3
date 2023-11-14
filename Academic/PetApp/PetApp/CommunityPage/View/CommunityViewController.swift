@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import SkeletonView
 
 class CommunityViewController: UIViewController {
-
+    
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var searchBar: UITextField!
     @IBOutlet weak var tableView: UITableView!
@@ -17,7 +18,7 @@ class CommunityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         searchView.layer.cornerRadius = 20
         registerTableCell()
@@ -30,7 +31,7 @@ class CommunityViewController: UIViewController {
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false
     }
-
+    
 }
 extension CommunityViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,6 +55,9 @@ extension CommunityViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func fetchData() {
+        // Show skeleton view while data is being fetched
+        tableView.showAnimatedSkeleton()
+        
         NetworkManager.shared.makeAPICall(endpoint: .myPost) { (response: Result<[CommunityPost], Error>) in
             switch response {
             case .success(let datas):
@@ -61,6 +65,12 @@ extension CommunityViewController: UITableViewDelegate, UITableViewDataSource{
                 self.tableView.reloadData()
             case .failure(let error):
                 print("API Request Error: \(error.localizedDescription)")
+            }
+            
+            // Introduce a delay before hiding the skeleton view
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                // Hide skeleton view after a delay
+                self.tableView.hideSkeleton()
             }
         }
     }

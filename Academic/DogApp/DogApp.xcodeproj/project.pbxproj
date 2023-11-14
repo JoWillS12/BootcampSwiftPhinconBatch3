@@ -73,6 +73,7 @@
 		176D733B2B03586100835916 /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D73392B03586100835916 /* ProfileCollectionViewCell.xib */; };
 		176D733E2B035FE300835916 /* ProfileContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D733D2B035FE300835916 /* ProfileContents.swift */; };
 		176D73412B03653800835916 /* ButtonEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D73402B03653800835916 /* ButtonEnum.swift */; };
+		176D73442B036F8500835916 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 176D73432B036F8500835916 /* SkeletonView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -151,6 +152,7 @@
 				176D72F12B01F33A00835916 /* Lottie in Frameworks */,
 				176D72FA2B01F7E200835916 /* Alamofire in Frameworks */,
 				176D72FD2B01F85B00835916 /* netfox in Frameworks */,
+				176D73442B036F8500835916 /* SkeletonView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +634,7 @@
 				176D72F92B01F7E200835916 /* Alamofire */,
 				176D72FC2B01F85B00835916 /* netfox */,
 				176D73052B01FD5C00835916 /* KeychainAccess */,
+				176D73432B036F8500835916 /* SkeletonView */,
 			);
 			productName = DogApp;
 			productReference = 176D727A2B01F02600835916 /* DogApp.app */;
@@ -666,6 +669,7 @@
 				176D72F82B01F7E200835916 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				176D72FB2B01F85B00835916 /* XCRemoteSwiftPackageReference "netfox" */,
 				176D73042B01FD5C00835916 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				176D73422B036F8500835916 /* XCRemoteSwiftPackageReference "SkeletonView" */,
 			);
 			productRefGroup = 176D727B2B01F02600835916 /* Products */;
 			projectDirPath = "";
@@ -983,6 +987,14 @@
 				kind = branch;
 			};
 		};
+		176D73422B036F8500835916 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1005,6 +1017,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 176D73042B01FD5C00835916 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
+		};
+		176D73432B036F8500835916 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 176D73422B036F8500835916 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
 		};
 /* End XCSwiftPackageProductDependency section */
 

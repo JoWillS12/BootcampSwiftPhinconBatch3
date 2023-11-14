@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class CommunityTableViewCell: UITableViewCell {
 
@@ -21,6 +22,7 @@ class CommunityTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        isSkeletonable = true
         cellSetup()
     }
 
