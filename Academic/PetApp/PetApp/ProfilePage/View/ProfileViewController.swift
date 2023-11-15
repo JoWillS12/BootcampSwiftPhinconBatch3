@@ -52,7 +52,7 @@ extension ProfileViewController: UICollectionViewDataSource, UICollectionViewDel
     
     // Adjust the size of each cell to display three items per row
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let padding: CGFloat = 10
+        let padding: CGFloat = 5
         let collectionViewSize = collectionView.frame.size.width - padding
         let cellSize = collectionViewSize / 3 - padding
         return CGSize(width: cellSize, height: cellSize)

@@ -14,13 +14,16 @@ class AddPetViewController: UIViewController {
     @IBOutlet weak var petName: FieldView!
     @IBOutlet weak var petRace: FieldView!
     @IBOutlet weak var petBirth: FieldView!
-    @IBOutlet weak var saveButton: UIView!
+    @IBOutlet weak var saveButton: BlueView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUp()
         setupDatePickerToolbar()
+        saveButton.tapAction = {[weak self] in
+            self?.navigationController?.popViewController(animated: false)
+        }
     }
     
     @IBAction func backToPage(_ sender: Any) {
@@ -44,6 +47,7 @@ extension AddPetViewController: UITextFieldDelegate{
         petRace.fieldName.text = "Race"
         petBirth.fieldName.text = "Birthday"
         petBirth.inputType.delegate = self
+        saveButton.buttonTitle.text = "Save"
     }
     
     func setupDatePickerToolbar() {

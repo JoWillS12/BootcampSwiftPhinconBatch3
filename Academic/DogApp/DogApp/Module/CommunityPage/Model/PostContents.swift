@@ -11,3 +11,11 @@ struct CommunityPost: Codable {
     let userName, userProfile, postDate, postImage: String
     let chatNumber: String
 }
+
+struct Users: Codable {
+    let name: String
+}
+
+struct Places: Codable{
+    let city, country: String
+}

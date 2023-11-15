@@ -25,6 +25,10 @@ class CommunityViewController: UIViewController {
         fetchData()
     }
     
+    @IBAction private func searchClicked(_sender: Any){
+        self.navigationController?.pushViewController(SearchProfileViewController(), animated: true)
+    }
+    
     func registerTableCell() {
         tableView.register(UINib(nibName: String(describing: CommunityTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: CommunityTableViewCell.self))
         tableView.delegate = self

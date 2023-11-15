@@ -74,6 +74,15 @@
 		176D733E2B035FE300835916 /* ProfileContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D733D2B035FE300835916 /* ProfileContents.swift */; };
 		176D73412B03653800835916 /* ButtonEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D73402B03653800835916 /* ButtonEnum.swift */; };
 		176D73442B036F8500835916 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 176D73432B036F8500835916 /* SkeletonView */; };
+		176D73482B04502E00835916 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D73462B04502E00835916 /* StartViewController.swift */; };
+		176D73492B04502E00835916 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D73472B04502E00835916 /* StartViewController.xib */; };
+		176D734C2B04540800835916 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D734B2B04540800835916 /* CustomAnnotation.swift */; };
+		176D73502B0462E100835916 /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D734E2B0462E100835916 /* EndViewController.swift */; };
+		176D73512B0462E100835916 /* EndViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D734F2B0462E100835916 /* EndViewController.xib */; };
+		176D73562B046EA500835916 /* SearchProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D73542B046EA500835916 /* SearchProfileViewController.swift */; };
+		176D73572B046EA500835916 /* SearchProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D73552B046EA500835916 /* SearchProfileViewController.xib */; };
+		176D735B2B04715300835916 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D73592B04715300835916 /* SearchTableViewCell.swift */; };
+		176D735C2B04715300835916 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D735A2B04715300835916 /* SearchTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,8 +120,8 @@
 		176D72D82B01F26400835916 /* PetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PetViewController.xib; sourceTree = "<group>"; };
 		176D72DD2B01F27C00835916 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ../../../../../PetApp/PetApp/ProfilePage/View/ProfileViewController.swift; sourceTree = "<group>"; };
 		176D72DE2B01F27C00835916 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileViewController.xib; path = ../../../../../PetApp/PetApp/ProfilePage/View/ProfileViewController.xib; sourceTree = "<group>"; };
-		176D72E32B01F2A900835916 /* CommunityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommunityViewController.xib; path = ../../../../../PetApp/PetApp/CommunityPage/View/CommunityViewController.xib; sourceTree = "<group>"; };
-		176D72E42B01F2A900835916 /* CommunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommunityViewController.swift; path = ../../../../../PetApp/PetApp/CommunityPage/View/CommunityViewController.swift; sourceTree = "<group>"; };
+		176D72E32B01F2A900835916 /* CommunityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommunityViewController.xib; sourceTree = "<group>"; };
+		176D72E42B01F2A900835916 /* CommunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		176D72E82B01F2C600835916 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = ../../../../PetApp/PetApp/TabBarView/TabBarViewController.swift; sourceTree = "<group>"; };
 		176D72EB2B01F2DE00835916 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashScreenViewController.swift; path = ../../../../PetApp/PetApp/SplashScreen/View/SplashScreenViewController.swift; sourceTree = "<group>"; };
 		176D72EC2B01F2DE00835916 /* SplashScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SplashScreenViewController.xib; path = ../../../../PetApp/PetApp/SplashScreen/View/SplashScreenViewController.xib; sourceTree = "<group>"; };
@@ -141,6 +150,15 @@
 		176D73392B03586100835916 /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 		176D733D2B035FE300835916 /* ProfileContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContents.swift; sourceTree = "<group>"; };
 		176D73402B03653800835916 /* ButtonEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonEnum.swift; sourceTree = "<group>"; };
+		176D73462B04502E00835916 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		176D73472B04502E00835916 /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
+		176D734B2B04540800835916 /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
+		176D734E2B0462E100835916 /* EndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
+		176D734F2B0462E100835916 /* EndViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EndViewController.xib; sourceTree = "<group>"; };
+		176D73542B046EA500835916 /* SearchProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProfileViewController.swift; sourceTree = "<group>"; };
+		176D73552B046EA500835916 /* SearchProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchProfileViewController.xib; sourceTree = "<group>"; };
+		176D73592B04715300835916 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		176D735A2B04715300835916 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +361,7 @@
 		176D72C52B01F1E200835916 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				176D734A2B0453F400835916 /* Annotations */,
 				176D72C82B01F20200835916 /* StatsCell */,
 				176D72C72B01F1FC00835916 /* HomePetCell */,
 			);
@@ -352,6 +371,8 @@
 		176D72C62B01F1E800835916 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				176D734D2B0462D000835916 /* EndView */,
+				176D73452B044EEF00835916 /* StartView */,
 				176D732A2B032BA900835916 /* PetSelectionView */,
 				176D73292B032BA000835916 /* HomeView */,
 			);
@@ -427,8 +448,8 @@
 		176D72E22B01F29F00835916 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				176D72E42B01F2A900835916 /* CommunityViewController.swift */,
-				176D72E32B01F2A900835916 /* CommunityViewController.xib */,
+				176D73532B046E8C00835916 /* SearchProfileView */,
+				176D73522B046E8100835916 /* CommunityView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -531,6 +552,7 @@
 		176D73202B0320C100835916 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				176D73582B04713900835916 /* SearchCell */,
 				176D73212B0320CA00835916 /* CommunityCell */,
 			);
 			path = Components;
@@ -611,6 +633,59 @@
 				176D73402B03653800835916 /* ButtonEnum.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		176D73452B044EEF00835916 /* StartView */ = {
+			isa = PBXGroup;
+			children = (
+				176D73462B04502E00835916 /* StartViewController.swift */,
+				176D73472B04502E00835916 /* StartViewController.xib */,
+			);
+			path = StartView;
+			sourceTree = "<group>";
+		};
+		176D734A2B0453F400835916 /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				176D734B2B04540800835916 /* CustomAnnotation.swift */,
+			);
+			path = Annotations;
+			sourceTree = "<group>";
+		};
+		176D734D2B0462D000835916 /* EndView */ = {
+			isa = PBXGroup;
+			children = (
+				176D734E2B0462E100835916 /* EndViewController.swift */,
+				176D734F2B0462E100835916 /* EndViewController.xib */,
+			);
+			path = EndView;
+			sourceTree = "<group>";
+		};
+		176D73522B046E8100835916 /* CommunityView */ = {
+			isa = PBXGroup;
+			children = (
+				176D72E42B01F2A900835916 /* CommunityViewController.swift */,
+				176D72E32B01F2A900835916 /* CommunityViewController.xib */,
+			);
+			path = CommunityView;
+			sourceTree = "<group>";
+		};
+		176D73532B046E8C00835916 /* SearchProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				176D73542B046EA500835916 /* SearchProfileViewController.swift */,
+				176D73552B046EA500835916 /* SearchProfileViewController.xib */,
+			);
+			path = SearchProfileView;
+			sourceTree = "<group>";
+		};
+		176D73582B04713900835916 /* SearchCell */ = {
+			isa = PBXGroup;
+			children = (
+				176D73592B04715300835916 /* SearchTableViewCell.swift */,
+				176D735A2B04715300835916 /* SearchTableViewCell.xib */,
+			);
+			path = SearchCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -705,10 +780,14 @@
 				176D72CB2B01F20F00835916 /* HomePetCollectionViewCell.xib in Resources */,
 				176D72B52B01F19F00835916 /* CircleView.xib in Resources */,
 				176D732E2B032BBF00835916 /* PetSelectionViewController.xib in Resources */,
+				176D73512B0462E100835916 /* EndViewController.xib in Resources */,
 				176D72F72B01F37F00835916 /* AuthViewController.xib in Resources */,
 				176D72A22B01F0EE00835916 /* WalkingDog.json in Resources */,
 				176D72D32B01F22100835916 /* HomeViewController.xib in Resources */,
 				176D73162B0301A700835916 /* AddPetViewController.xib in Resources */,
+				176D735C2B04715300835916 /* SearchTableViewCell.xib in Resources */,
+				176D73492B04502E00835916 /* StartViewController.xib in Resources */,
+				176D73572B046EA500835916 /* SearchProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,9 +806,11 @@
 				176D72CF2B01F21600835916 /* StatsTableViewCell.swift in Sources */,
 				176D72ED2B01F2DE00835916 /* SplashScreenViewController.swift in Sources */,
 				176D73332B032E6D00835916 /* MethodView.swift in Sources */,
+				176D73482B04502E00835916 /* StartViewController.swift in Sources */,
 				176D72C22B01F1BD00835916 /* ProfileView.swift in Sources */,
 				176D72BE2B01F1B600835916 /* FieldView.swift in Sources */,
 				176D733E2B035FE300835916 /* ProfileContents.swift in Sources */,
+				176D734C2B04540800835916 /* CustomAnnotation.swift in Sources */,
 				176D733A2B03586100835916 /* ProfileCollectionViewCell.swift in Sources */,
 				176D72A62B01F11B00835916 /* BlueView.swift in Sources */,
 				176D72E62B01F2A900835916 /* CommunityViewController.swift in Sources */,
@@ -739,7 +820,9 @@
 				176D73412B03653800835916 /* ButtonEnum.swift in Sources */,
 				176D72822B01F02700835916 /* ViewController.swift in Sources */,
 				176D72DF2B01F27C00835916 /* ProfileViewController.swift in Sources */,
+				176D73502B0462E100835916 /* EndViewController.swift in Sources */,
 				176D731E2B0312C100835916 /* PetTableViewCell.swift in Sources */,
+				176D73562B046EA500835916 /* SearchProfileViewController.swift in Sources */,
 				176D72E92B01F2C600835916 /* TabBarViewController.swift in Sources */,
 				176D730B2B020E9400835916 /* KeychainManager.swift in Sources */,
 				176D72CC2B01F20F00835916 /* HomePetCollectionViewCell.swift in Sources */,
@@ -747,6 +830,7 @@
 				176D732D2B032BBF00835916 /* PetSelectionViewController.swift in Sources */,
 				176D72B02B01F19600835916 /* CircleButtonView.swift in Sources */,
 				176D729C2B01F0BC00835916 /* Fonts.swift in Sources */,
+				176D735B2B04715300835916 /* SearchTableViewCell.swift in Sources */,
 				176D730E2B020F1700835916 /* AuthViewModel.swift in Sources */,
 				176D727E2B01F02700835916 /* AppDelegate.swift in Sources */,
 				176D72882B01F02700835916 /* DogApp.xcdatamodeld in Sources */,

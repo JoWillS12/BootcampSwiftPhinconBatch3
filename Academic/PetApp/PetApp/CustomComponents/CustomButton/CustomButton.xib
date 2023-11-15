@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomButton" customModule="PetWalk" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomButton" customModule="DogApp" customModuleProvider="target">
             <connections>
                 <outlet property="buttonLabel" destination="WpM-kJ-3JU" id="Bt5-28-70i"/>
                 <outlet property="navigationButton" destination="OR0-Ar-vw4" id="pVz-bJ-Ghf"/>
@@ -20,10 +20,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpM-kJ-3JU">
-                    <rect key="frame" x="95" y="12" width="121" height="28"/>
+                    <rect key="frame" x="16" y="12" width="279" height="28"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="28" id="HaO-q6-VgC"/>
-                        <constraint firstAttribute="width" constant="121" id="Q19-io-UCe"/>
+                        <constraint firstAttribute="width" constant="279" id="Q19-io-UCe"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
@@ -46,20 +46,20 @@
             <color key="backgroundColor" name="PrimaryColor"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="OR0-Ar-vw4" secondAttribute="bottom" id="0hT-9x-DVJ"/>
-                <constraint firstItem="WpM-kJ-3JU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="95" id="Hqt-Nv-hXs"/>
+                <constraint firstItem="WpM-kJ-3JU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Hqt-Nv-hXs"/>
                 <constraint firstItem="OR0-Ar-vw4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LpH-Vf-TSQ"/>
-                <constraint firstAttribute="trailing" secondItem="WpM-kJ-3JU" secondAttribute="trailing" constant="95" id="Wpy-wb-2Ve"/>
+                <constraint firstAttribute="trailing" secondItem="WpM-kJ-3JU" secondAttribute="trailing" constant="16" id="Wpy-wb-2Ve"/>
                 <constraint firstItem="OR0-Ar-vw4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fzq-RH-fvA"/>
                 <constraint firstAttribute="trailing" secondItem="OR0-Ar-vw4" secondAttribute="trailing" id="lHe-9t-mpg"/>
                 <constraint firstItem="WpM-kJ-3JU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="sJP-y7-Ji2"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="101.5267175572519" y="19.366197183098592"/>
+            <point key="canvasLocation" x="100.72463768115942" y="19.084821428571427"/>
         </view>
     </objects>
     <resources>
         <namedColor name="PrimaryColor">
-            <color red="0.94509803921568625" green="0.95294117647058818" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94499999284744263" green="0.95300000905990601" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

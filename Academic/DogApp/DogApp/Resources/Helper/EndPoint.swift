@@ -14,6 +14,8 @@ enum Endpoint {
     case myPet
     case myPost
     case getUser
+    case getProfile
+    case getPlace
     
     func path() -> String {
         switch self {
@@ -27,6 +29,10 @@ enum Endpoint {
             return "api/getPosted"
         case .getUser:
             return "api/getUser"
+        case .getProfile:
+            return "api/getProfile"
+        case .getPlace:
+            return "api/getPlace"
         }
     }
     
@@ -34,7 +40,7 @@ enum Endpoint {
         switch self {
         case .register, .login:
             return .post
-        case .myPet, .myPost, .getUser:
+        case .myPet, .myPost, .getUser, .getProfile, .getPlace:
             return .get
         }
     }
@@ -53,14 +59,14 @@ enum Endpoint {
                 "email": param.email,
                 "password": param.password,
             ]
-        case .myPet, .myPost, .getUser:
+        case .myPet, .myPost, .getUser, .getProfile, .getPlace:
             return nil
         }
     }
     
     var headers: HTTPHeaders {
         switch self {
-        case .register, .login, .myPet, .myPost, .getUser:
+        case .register, .login, .myPet, .myPost, .getUser, .getProfile, .getPlace:
             let params: HTTPHeaders = [
                 "Content-Type": "application/json"]
             return params

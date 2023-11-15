@@ -36,6 +36,10 @@ class PetSelectionViewController: UIViewController {
         other.tapAction = { [weak self] in
             self?.selectedMethod(method: .other)
         }
+        blueButton.tapAction = { [weak self] in
+            let vc = StartViewController()
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func backButton(_ sender: Any) {
