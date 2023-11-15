@@ -10,7 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchProfileViewController" customModule="DogApp" customModuleProvider="target">
             <connections>
+                <outlet property="accountLine" destination="4Jj-Ec-ffo" id="qyK-tA-dMZ"/>
                 <outlet property="accountsLabel" destination="MCi-6t-VXz" id="43m-r5-VKj"/>
+                <outlet property="placeLine" destination="BJk-bh-cBs" id="a3i-Vu-KEV"/>
                 <outlet property="placesLabel" destination="0AC-ZG-jZC" id="zRs-sr-EMP"/>
                 <outlet property="searchField" destination="Yk6-e6-DV2" id="wl9-t7-o0q"/>
                 <outlet property="searchView" destination="VzK-E4-eTv" id="4bc-Wt-MZq"/>
@@ -85,10 +87,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Jj-Ec-ffo">
-                    <rect key="frame" x="0.0" y="209" width="393" height="2"/>
+                    <rect key="frame" x="0.0" y="209" width="196.66666666666666" height="2"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="393" id="GRS-k4-K4c"/>
+                        <constraint firstAttribute="width" constant="196.66666666666666" id="GRS-k4-K4c"/>
                         <constraint firstAttribute="height" constant="2" id="zna-p6-a0h"/>
                     </constraints>
                 </view>
@@ -146,18 +148,29 @@
                         <action selector="placesLabelTapped:" destination="-1" eventType="touchUpInside" id="5WN-jY-rTP"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJk-bh-cBs">
+                    <rect key="frame" x="196" y="209" width="197" height="2"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="197" id="Qsc-e9-Xtb"/>
+                        <constraint firstAttribute="height" constant="2" id="eCP-lt-UGa"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="PrimaryColor"/>
             <constraints>
                 <constraint firstItem="VzK-E4-eTv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="17f-N9-Kyb"/>
+                <constraint firstAttribute="trailing" secondItem="BJk-bh-cBs" secondAttribute="trailing" id="34m-Sc-di3"/>
                 <constraint firstItem="4Jj-Ec-ffo" firstAttribute="top" secondItem="MCi-6t-VXz" secondAttribute="bottom" constant="8" symbolic="YES" id="8ba-4I-Xyw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0AC-ZG-jZC" secondAttribute="trailing" constant="38" id="9nd-Lp-eT1"/>
                 <constraint firstItem="zXe-pU-k0E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="39" id="AKl-nY-LPI"/>
                 <constraint firstItem="cI6-eB-bi4" firstAttribute="leading" secondItem="MCi-6t-VXz" secondAttribute="trailing" constant="126" id="BPP-6T-ZqB"/>
                 <constraint firstItem="4Jj-Ec-ffo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="G8t-mz-szQ"/>
+                <constraint firstItem="BJk-bh-cBs" firstAttribute="top" secondItem="0AC-ZG-jZC" secondAttribute="bottom" constant="8" symbolic="YES" id="KUv-Ae-V2X"/>
                 <constraint firstItem="6Av-gy-I70" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="KgI-p3-rkx"/>
                 <constraint firstItem="MCi-6t-VXz" firstAttribute="top" secondItem="VzK-E4-eTv" secondAttribute="bottom" constant="12" id="RjJ-bO-mSD"/>
+                <constraint firstItem="ZdO-9q-tBZ" firstAttribute="top" secondItem="BJk-bh-cBs" secondAttribute="bottom" constant="8" symbolic="YES" id="RxG-tF-wuT"/>
                 <constraint firstItem="zXe-pU-k0E" firstAttribute="top" secondItem="VzK-E4-eTv" secondAttribute="bottom" constant="12" id="T2D-ZN-4Wq"/>
                 <constraint firstItem="6Av-gy-I70" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="V7Z-w3-rOg"/>
                 <constraint firstItem="0AC-ZG-jZC" firstAttribute="top" secondItem="VzK-E4-eTv" secondAttribute="bottom" constant="12" id="XcN-DS-1BB"/>
@@ -171,7 +184,7 @@
                 <constraint firstItem="0AC-ZG-jZC" firstAttribute="leading" secondItem="MCi-6t-VXz" secondAttribute="trailing" constant="126" id="uR8-Gk-dnQ"/>
                 <constraint firstItem="VzK-E4-eTv" firstAttribute="top" secondItem="6Av-gy-I70" secondAttribute="bottom" constant="18" id="udG-fK-svZ"/>
                 <constraint firstItem="ZdO-9q-tBZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="zUC-sp-VXl"/>
-                <constraint firstAttribute="trailing" secondItem="4Jj-Ec-ffo" secondAttribute="trailing" id="zmu-5x-oTG"/>
+                <constraint firstAttribute="trailing" secondItem="4Jj-Ec-ffo" secondAttribute="trailing" constant="196.33333333333334" id="zmu-5x-oTG"/>
             </constraints>
             <point key="canvasLocation" x="104.58015267175573" y="19.718309859154932"/>
         </view>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileViewController" customModule="DogApp" customModuleProvider="target">
+            <connections>
+                <outlet property="customButton" destination="u6k-ur-W1n" id="qDf-f6-otf"/>
+                <outlet property="profileImage" destination="BFP-yF-FK0" id="Sei-1I-him"/>
+                <outlet property="userAddress" destination="4ab-XF-VYa" id="ma7-Sf-FNH"/>
+                <outlet property="userName" destination="qlo-0Q-RLZ" id="Lda-Kl-o6U"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFP-yF-FK0" customClass="CircleView" customModule="DogApp" customModuleProvider="target">
+                    <rect key="frame" x="132" y="170" width="128" height="128"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="9Oq-Yu-0qq"/>
+                        <constraint firstAttribute="width" constant="128" id="as3-hk-l64"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dpt-QQ-46F">
+                    <rect key="frame" x="16" y="59" width="361" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="361" id="9qX-a0-Xkd"/>
+                        <constraint firstAttribute="height" constant="47" id="u05-XG-G93"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6k-ur-W1n" customClass="CustomButton" customModule="DogApp" customModuleProvider="target">
+                    <rect key="frame" x="41" y="632" width="311" height="53"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="311" id="U5j-xu-gHA"/>
+                        <constraint firstAttribute="height" constant="53" id="jSR-tU-ouF"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qlo-0Q-RLZ" customClass="FieldView" customModule="DogApp" customModuleProvider="target">
+                    <rect key="frame" x="33" y="341" width="327" height="63"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="327" id="4oe-cK-Mbr"/>
+                        <constraint firstAttribute="height" constant="63" id="mY0-W2-OkB"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ab-XF-VYa" customClass="FieldView" customModule="DogApp" customModuleProvider="target">
+                    <rect key="frame" x="33" y="448" width="327" height="63"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="327" id="fuw-Mp-iUP"/>
+                        <constraint firstAttribute="height" constant="63" id="p4K-dJ-oDV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="PrimaryColor"/>
+            <constraints>
+                <constraint firstItem="u6k-ur-W1n" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="41" id="10y-nV-oyf"/>
+                <constraint firstItem="4ab-XF-VYa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="33" id="1SB-XA-2df"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BFP-yF-FK0" secondAttribute="trailing" constant="133" id="1uF-Hk-ip8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="u6k-ur-W1n" secondAttribute="trailing" constant="41" id="76c-aX-nHb"/>
+                <constraint firstItem="qlo-0Q-RLZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="33" id="CTJ-ra-jDR"/>
+                <constraint firstItem="BFP-yF-FK0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="132" id="QU8-AY-rmA"/>
+                <constraint firstItem="qlo-0Q-RLZ" firstAttribute="top" secondItem="BFP-yF-FK0" secondAttribute="bottom" constant="43" id="VU7-sd-grI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dpt-QQ-46F" secondAttribute="trailing" constant="16" id="cRJ-fo-5nA"/>
+                <constraint firstItem="Dpt-QQ-46F" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="eGf-1b-WDz"/>
+                <constraint firstItem="u6k-ur-W1n" firstAttribute="top" secondItem="4ab-XF-VYa" secondAttribute="bottom" constant="121" id="eRY-qs-SLU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qlo-0Q-RLZ" secondAttribute="trailing" constant="33" id="eou-sc-xVI"/>
+                <constraint firstItem="Dpt-QQ-46F" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="j0w-oS-sXe"/>
+                <constraint firstItem="4ab-XF-VYa" firstAttribute="top" secondItem="qlo-0Q-RLZ" secondAttribute="bottom" constant="44" id="o4g-E4-r0f"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4ab-XF-VYa" secondAttribute="trailing" constant="33" id="syP-nv-BZt"/>
+                <constraint firstItem="BFP-yF-FK0" firstAttribute="top" secondItem="Dpt-QQ-46F" secondAttribute="bottom" constant="64" id="zDo-av-OXr"/>
+            </constraints>
+            <point key="canvasLocation" x="104.58015267175573" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="PrimaryColor">
+            <color red="0.94499999284744263" green="0.95300000905990601" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

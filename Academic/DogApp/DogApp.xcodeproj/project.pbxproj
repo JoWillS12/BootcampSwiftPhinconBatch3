@@ -83,6 +83,18 @@
 		176D73572B046EA500835916 /* SearchProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D73552B046EA500835916 /* SearchProfileViewController.xib */; };
 		176D735B2B04715300835916 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D73592B04715300835916 /* SearchTableViewCell.swift */; };
 		176D735C2B04715300835916 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D735A2B04715300835916 /* SearchTableViewCell.xib */; };
+		176D735F2B047FD800835916 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 176D735E2B047FD800835916 /* RxCocoa */; };
+		176D73612B047FD800835916 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 176D73602B047FD800835916 /* RxRelay */; };
+		176D73632B047FD800835916 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 176D73622B047FD800835916 /* RxSwift */; };
+		176D73682B04840300835916 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D73662B04840300835916 /* EditProfileViewController.swift */; };
+		176D73692B04840300835916 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D73672B04840300835916 /* EditProfileViewController.xib */; };
+		176D736F2B049EBB00835916 /* FindFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D736D2B049EBB00835916 /* FindFriendViewController.swift */; };
+		176D73702B049EBB00835916 /* FindFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D736E2B049EBB00835916 /* FindFriendViewController.xib */; };
+		176D73722B049FE800835916 /* radar.json in Resources */ = {isa = PBXBuildFile; fileRef = 176D73712B049FE800835916 /* radar.json */; };
+		176D73762B04A35D00835916 /* FindTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D73742B04A35D00835916 /* FindTableViewCell.swift */; };
+		176D73772B04A35D00835916 /* FindTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D73752B04A35D00835916 /* FindTableViewCell.xib */; };
+		176D737A2B04A67500835916 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 176D73792B04A67500835916 /* FloatingPanel */; };
+		176D737D2B04B07900835916 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D737C2B04B07900835916 /* NotificationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,8 +130,8 @@
 		176D72D22B01F22100835916 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		176D72D72B01F26400835916 /* PetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetViewController.swift; sourceTree = "<group>"; };
 		176D72D82B01F26400835916 /* PetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PetViewController.xib; sourceTree = "<group>"; };
-		176D72DD2B01F27C00835916 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ../../../../../PetApp/PetApp/ProfilePage/View/ProfileViewController.swift; sourceTree = "<group>"; };
-		176D72DE2B01F27C00835916 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileViewController.xib; path = ../../../../../PetApp/PetApp/ProfilePage/View/ProfileViewController.xib; sourceTree = "<group>"; };
+		176D72DD2B01F27C00835916 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		176D72DE2B01F27C00835916 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		176D72E32B01F2A900835916 /* CommunityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommunityViewController.xib; sourceTree = "<group>"; };
 		176D72E42B01F2A900835916 /* CommunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		176D72E82B01F2C600835916 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = ../../../../PetApp/PetApp/TabBarView/TabBarViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +171,14 @@
 		176D73552B046EA500835916 /* SearchProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchProfileViewController.xib; sourceTree = "<group>"; };
 		176D73592B04715300835916 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		176D735A2B04715300835916 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		176D73662B04840300835916 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		176D73672B04840300835916 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
+		176D736D2B049EBB00835916 /* FindFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendViewController.swift; sourceTree = "<group>"; };
+		176D736E2B049EBB00835916 /* FindFriendViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindFriendViewController.xib; sourceTree = "<group>"; };
+		176D73712B049FE800835916 /* radar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = radar.json; sourceTree = "<group>"; };
+		176D73742B04A35D00835916 /* FindTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTableViewCell.swift; sourceTree = "<group>"; };
+		176D73752B04A35D00835916 /* FindTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindTableViewCell.xib; sourceTree = "<group>"; };
+		176D737C2B04B07900835916 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,10 +186,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				176D737A2B04A67500835916 /* FloatingPanel in Frameworks */,
+				176D735F2B047FD800835916 /* RxCocoa in Frameworks */,
 				176D73062B01FD5C00835916 /* KeychainAccess in Frameworks */,
+				176D73612B047FD800835916 /* RxRelay in Frameworks */,
 				176D72F12B01F33A00835916 /* Lottie in Frameworks */,
 				176D72FA2B01F7E200835916 /* Alamofire in Frameworks */,
 				176D72FD2B01F85B00835916 /* netfox in Frameworks */,
+				176D73632B047FD800835916 /* RxSwift in Frameworks */,
 				176D73442B036F8500835916 /* SkeletonView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +244,7 @@
 		176D72952B01F05600835916 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				176D737B2B04B06800835916 /* Notification */,
 				176D72EA2B01F2C900835916 /* SplashScreen */,
 				176D72E72B01F2BB00835916 /* TabBarView */,
 				176D72F22B01F35700835916 /* AuthView */,
@@ -279,6 +304,7 @@
 		176D72A02B01F0E100835916 /* LottieFiles */ = {
 			isa = PBXGroup;
 			children = (
+				176D73712B049FE800835916 /* radar.json */,
 				176D72A12B01F0EE00835916 /* WalkingDog.json */,
 				176D730F2B021B9E00835916 /* checkMark.json */,
 			);
@@ -429,8 +455,9 @@
 		176D72DC2B01F27400835916 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				176D72DD2B01F27C00835916 /* ProfileViewController.swift */,
-				176D72DE2B01F27C00835916 /* ProfileViewController.xib */,
+				176D736C2B049EA000835916 /* FindFriendView */,
+				176D73652B0483E100835916 /* EditProfileView */,
+				176D73642B0483D600835916 /* ProfileView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -613,8 +640,8 @@
 		176D73372B03584800835916 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				176D73382B03586100835916 /* ProfileCollectionViewCell.swift */,
-				176D73392B03586100835916 /* ProfileCollectionViewCell.xib */,
+				176D73732B04A34A00835916 /* FindCell */,
+				176D736A2B049E6C00835916 /* ProfileCell */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -688,6 +715,59 @@
 			path = SearchCell;
 			sourceTree = "<group>";
 		};
+		176D73642B0483D600835916 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				176D72DD2B01F27C00835916 /* ProfileViewController.swift */,
+				176D72DE2B01F27C00835916 /* ProfileViewController.xib */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		176D73652B0483E100835916 /* EditProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				176D73662B04840300835916 /* EditProfileViewController.swift */,
+				176D73672B04840300835916 /* EditProfileViewController.xib */,
+			);
+			path = EditProfileView;
+			sourceTree = "<group>";
+		};
+		176D736A2B049E6C00835916 /* ProfileCell */ = {
+			isa = PBXGroup;
+			children = (
+				176D73382B03586100835916 /* ProfileCollectionViewCell.swift */,
+				176D73392B03586100835916 /* ProfileCollectionViewCell.xib */,
+			);
+			path = ProfileCell;
+			sourceTree = "<group>";
+		};
+		176D736C2B049EA000835916 /* FindFriendView */ = {
+			isa = PBXGroup;
+			children = (
+				176D736D2B049EBB00835916 /* FindFriendViewController.swift */,
+				176D736E2B049EBB00835916 /* FindFriendViewController.xib */,
+			);
+			path = FindFriendView;
+			sourceTree = "<group>";
+		};
+		176D73732B04A34A00835916 /* FindCell */ = {
+			isa = PBXGroup;
+			children = (
+				176D73742B04A35D00835916 /* FindTableViewCell.swift */,
+				176D73752B04A35D00835916 /* FindTableViewCell.xib */,
+			);
+			path = FindCell;
+			sourceTree = "<group>";
+		};
+		176D737B2B04B06800835916 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				176D737C2B04B07900835916 /* NotificationViewController.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -710,6 +790,10 @@
 				176D72FC2B01F85B00835916 /* netfox */,
 				176D73052B01FD5C00835916 /* KeychainAccess */,
 				176D73432B036F8500835916 /* SkeletonView */,
+				176D735E2B047FD800835916 /* RxCocoa */,
+				176D73602B047FD800835916 /* RxRelay */,
+				176D73622B047FD800835916 /* RxSwift */,
+				176D73792B04A67500835916 /* FloatingPanel */,
 			);
 			productName = DogApp;
 			productReference = 176D727A2B01F02600835916 /* DogApp.app */;
@@ -745,6 +829,8 @@
 				176D72FB2B01F85B00835916 /* XCRemoteSwiftPackageReference "netfox" */,
 				176D73042B01FD5C00835916 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				176D73422B036F8500835916 /* XCRemoteSwiftPackageReference "SkeletonView" */,
+				176D735D2B047FD800835916 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				176D73782B04A67500835916 /* XCRemoteSwiftPackageReference "FloatingPanel" */,
 			);
 			productRefGroup = 176D727B2B01F02600835916 /* Products */;
 			projectDirPath = "";
@@ -760,7 +846,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				176D73692B04840300835916 /* EditProfileViewController.xib in Resources */,
 				176D73312B032E5C00835916 /* MethodView.xib in Resources */,
+				176D73722B049FE800835916 /* radar.json in Resources */,
 				176D72E02B01F27C00835916 /* ProfileViewController.xib in Resources */,
 				176D731F2B0312C100835916 /* PetTableViewCell.xib in Resources */,
 				176D72B12B01F19600835916 /* CircleButtonView.xib in Resources */,
@@ -768,6 +856,7 @@
 				176D728A2B01F02700835916 /* Assets.xcassets in Resources */,
 				176D72D02B01F21600835916 /* StatsTableViewCell.xib in Resources */,
 				176D73102B021B9E00835916 /* checkMark.json in Resources */,
+				176D73772B04A35D00835916 /* FindTableViewCell.xib in Resources */,
 				176D729B2B01F0BC00835916 /* Proxima Nova Font.otf in Resources */,
 				176D72BA2B01F1AF00835916 /* CustomButton.xib in Resources */,
 				176D73252B0320DA00835916 /* CommunityTableViewCell.xib in Resources */,
@@ -788,6 +877,7 @@
 				176D735C2B04715300835916 /* SearchTableViewCell.xib in Resources */,
 				176D73492B04502E00835916 /* StartViewController.xib in Resources */,
 				176D73572B046EA500835916 /* SearchProfileViewController.xib in Resources */,
+				176D73702B049EBB00835916 /* FindFriendViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,10 +888,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				176D73682B04840300835916 /* EditProfileViewController.swift in Sources */,
 				176D73002B01F8B900835916 /* NetworkManager.swift in Sources */,
 				176D73282B0325BD00835916 /* PostContents.swift in Sources */,
 				176D73092B01FE8600835916 /* AuthContents.swift in Sources */,
 				176D72F62B01F37F00835916 /* AuthViewController.swift in Sources */,
+				176D737D2B04B07900835916 /* NotificationViewController.swift in Sources */,
 				176D72B42B01F19F00835916 /* CircleView.swift in Sources */,
 				176D72CF2B01F21600835916 /* StatsTableViewCell.swift in Sources */,
 				176D72ED2B01F2DE00835916 /* SplashScreenViewController.swift in Sources */,
@@ -813,6 +905,7 @@
 				176D734C2B04540800835916 /* CustomAnnotation.swift in Sources */,
 				176D733A2B03586100835916 /* ProfileCollectionViewCell.swift in Sources */,
 				176D72A62B01F11B00835916 /* BlueView.swift in Sources */,
+				176D73762B04A35D00835916 /* FindTableViewCell.swift in Sources */,
 				176D72E62B01F2A900835916 /* CommunityViewController.swift in Sources */,
 				176D73242B0320DA00835916 /* CommunityTableViewCell.swift in Sources */,
 				176D73152B0301A700835916 /* AddPetViewController.swift in Sources */,
@@ -822,6 +915,7 @@
 				176D72DF2B01F27C00835916 /* ProfileViewController.swift in Sources */,
 				176D73502B0462E100835916 /* EndViewController.swift in Sources */,
 				176D731E2B0312C100835916 /* PetTableViewCell.swift in Sources */,
+				176D736F2B049EBB00835916 /* FindFriendViewController.swift in Sources */,
 				176D73562B046EA500835916 /* SearchProfileViewController.swift in Sources */,
 				176D72E92B01F2C600835916 /* TabBarViewController.swift in Sources */,
 				176D730B2B020E9400835916 /* KeychainManager.swift in Sources */,
@@ -1079,6 +1173,22 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		176D735D2B047FD800835916 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		176D73782B04A67500835916 /* XCRemoteSwiftPackageReference "FloatingPanel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scenee/FloatingPanel";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1106,6 +1216,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 176D73422B036F8500835916 /* XCRemoteSwiftPackageReference "SkeletonView" */;
 			productName = SkeletonView;
+		};
+		176D735E2B047FD800835916 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 176D735D2B047FD800835916 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		176D73602B047FD800835916 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 176D735D2B047FD800835916 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		176D73622B047FD800835916 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 176D735D2B047FD800835916 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		176D73792B04A67500835916 /* FloatingPanel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 176D73782B04A67500835916 /* XCRemoteSwiftPackageReference "FloatingPanel" */;
+			productName = FloatingPanel;
 		};
 /* End XCSwiftPackageProductDependency section */
 

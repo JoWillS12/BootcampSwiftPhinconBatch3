@@ -48,6 +48,10 @@ extension PetViewController: UITableViewDelegate, UITableViewDataSource{
         cell.petRace.text = dog.petRace
         cell.petImage.image = UIImage(named: dog.petImage)
         cell.petBirth.text = calculateAge(from: dog.petBirth)
+//        cell.layer.shadowColor = UIColor.black.cgColor
+//        cell.layer.shadowOpacity = 0.1
+//        cell.layer.shadowOffset = CGSize(width: 5, height: 5)
+//        cell.layer.shadowRadius = 2
         cell.selectionStyle = .none
         return cell
     }

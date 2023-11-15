@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FloatingPanel
 
 class ProfileViewController: UIViewController {
     
@@ -20,6 +21,10 @@ class ProfileViewController: UIViewController {
         registerCollectionCell()
         fetchData()
         updateProfile()
+        floatSetUp()
+        profileView.tapAction = {[weak self] in
+            self?.navigationController?.pushViewController(EditProfileViewController(), animated: true)
+        }
     }
     
     func registerCollectionCell() {
@@ -82,6 +87,21 @@ extension ProfileViewController: UICollectionViewDataSource, UICollectionViewDel
             case .failure(let error):
                 print("API Request Error: \(error.localizedDescription)")
             }
+        }
+    }
+}
+
+extension ProfileViewController: FloatingPanelControllerDelegate{
+    func floatSetUp(){
+        let fpc = FloatingPanelController()
+        fpc.delegate = self
+        
+        let contentVc = FindFriendViewController(nibName: "FindFriendViewController", bundle: nil)
+        
+        fpc.set(contentViewController: contentVc)
+        fpc.addPanel(toParent: self)
+        fpc.show(animated: false) {
+            fpc.move(to: .tip, animated: false)
         }
     }
 }

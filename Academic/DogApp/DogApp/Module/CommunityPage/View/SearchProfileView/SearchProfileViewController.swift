@@ -14,6 +14,8 @@ class SearchProfileViewController: UIViewController {
     @IBOutlet weak var accountsLabel: UILabel!
     @IBOutlet weak var placesLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var accountLine: UIView!
+    @IBOutlet weak var placeLine: UIView!
     
     var userData: [Users] = []
     var placeData: [Places] = []
@@ -37,11 +39,15 @@ class SearchProfileViewController: UIViewController {
     
     @IBAction func accountsLabelTapped(_ sender: Any) {
         selectLabel(accountsLabel)
+        accountLine.backgroundColor = UIColor(named: "SelectedItem")
+        placeLine.backgroundColor = .gray
         filterData()
     }
     
     @IBAction func placesLabelTapped(_ sender: Any) {
         selectLabel(placesLabel)
+        placeLine.backgroundColor = UIColor(named: "SelectedItem")
+        accountLine.backgroundColor = .gray
         filterData()
     }
     

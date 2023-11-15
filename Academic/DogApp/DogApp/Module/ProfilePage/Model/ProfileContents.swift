@@ -10,3 +10,7 @@ import Foundation
 struct Profile: Codable{
     let name, image, city: String
 }
+
+struct Nearby: Codable{
+    let image, name, distance : String
+}

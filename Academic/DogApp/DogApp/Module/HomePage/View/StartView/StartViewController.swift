@@ -94,7 +94,7 @@ class StartViewController: UIViewController {
 extension StartViewController: MKMapViewDelegate {
     private func centerMapOnLocation(_ coordinate: CLLocationCoordinate2D?) {
         if let coordinate = coordinate {
-            let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 100, longitudinalMeters: 100)
+            let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 200, longitudinalMeters: 200)
             mapView.setRegion(region, animated: true)
         }
     }
