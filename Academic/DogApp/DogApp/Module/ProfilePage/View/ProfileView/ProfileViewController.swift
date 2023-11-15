@@ -94,11 +94,15 @@ extension ProfileViewController: UICollectionViewDataSource, UICollectionViewDel
 extension ProfileViewController: FloatingPanelControllerDelegate{
     func floatSetUp(){
         let fpc = FloatingPanelController()
+        let appearance = SurfaceAppearance()
+        
         fpc.delegate = self
+        appearance.cornerRadius = 20.0
         
         let contentVc = FindFriendViewController(nibName: "FindFriendViewController", bundle: nil)
         
         fpc.set(contentViewController: contentVc)
+        fpc.surfaceView.appearance = appearance
         fpc.addPanel(toParent: self)
         fpc.show(animated: false) {
             fpc.move(to: .tip, animated: false)

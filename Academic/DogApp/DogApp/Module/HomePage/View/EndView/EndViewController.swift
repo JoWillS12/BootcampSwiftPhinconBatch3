@@ -8,21 +8,30 @@
 import UIKit
 
 class EndViewController: UIViewController {
-
+    
     @IBOutlet weak var petImage: UIImageView!
     @IBOutlet weak var petMessage: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var customButton: CustomButton!
     
+    var selectedPet: MyPet?
     var stats: [Home] = [Home(statsType: "Today's plan", statsPercent: "50% accomplished", statsColor: "TodayColor", statsProg: 0.5),
                          Home(statsType: "Energy available", statsPercent: "50% energy", statsColor: "EnergyColor", statsProg: 0.5),
                          Home(statsType: "Weekly's objectives", statsPercent: "3 walks left", statsColor: "WeekColor", statsProg: 0.8)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         setUp()
+        // Check if there's a selected pet
+        if let selectedPet = selectedPet {
+            // Update UI based on the selected pet
+            petImage.image = UIImage(named: selectedPet.petImage)
+            petMessage.text = "It’s done for today, \(selectedPet.petName) thanks you!"
+            // Add more updates if needed
+        }
+        
         registerTableCell()
         customButton.tapAction = {[weak self] in
             let vc = TabBarViewController()

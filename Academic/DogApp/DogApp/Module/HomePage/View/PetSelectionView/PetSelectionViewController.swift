@@ -37,8 +37,14 @@ class PetSelectionViewController: UIViewController {
             self?.selectedMethod(method: .other)
         }
         blueButton.tapAction = { [weak self] in
+            guard let self = self else { return }
+
+            // Check if there's a selected pet
+            let selectedPet = self.dogData[self.currentIndex] 
+
             let vc = StartViewController()
-            self?.navigationController?.pushViewController(vc, animated: true)
+            vc.selectedPet = selectedPet
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

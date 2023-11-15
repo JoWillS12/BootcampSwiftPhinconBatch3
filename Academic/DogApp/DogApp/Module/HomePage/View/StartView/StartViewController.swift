@@ -26,6 +26,7 @@ class StartViewController: UIViewController {
     private var locations: [CLLocation] = []
     private var startTime: Date?
     private var timer: Timer?
+    var selectedPet: MyPet?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +34,27 @@ class StartViewController: UIViewController {
         setupMapView()
         requestLocationPermission()
         
-        customButton.tapAction = {[weak self] in
-            let vc = EndViewController()
-            self?.navigationController?.pushViewController(vc, animated: true)
+        // Check if there's a selected pet
+        if let selectedPet = selectedPet {
+            // Update UI based on the selected pet
+            petImage.image = UIImage(named: selectedPet.petImage)
+            // Add more updates if needed
         }
+        
+        customButton.tapAction = { [weak self] in
+            guard let self = self else { return }
+            
+            // Check if there's a selected pet
+            guard let selectedPet = self.selectedPet else {
+                // Handle the case where selectedPet is nil
+                return
+            }
+            
+            let vc = EndViewController()
+            vc.selectedPet = selectedPet
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -63,6 +81,8 @@ class StartViewController: UIViewController {
         mapView.layer.borderColor = UIColor.white.cgColor
         locImage.layer.cornerRadius = locImage.frame.width / 2
         petImage.layer.cornerRadius = petImage.frame.width / 2
+        petImage.layer.borderWidth = 2
+        petImage.layer.borderColor = UIColor.white.cgColor
         customButton.buttonLabel.text = "End the walk"
     }
     
