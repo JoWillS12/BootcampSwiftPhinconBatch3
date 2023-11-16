@@ -10,10 +10,23 @@
 		175ACC172B05E0B900DC3522 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175ACC162B05E0B900DC3522 /* AppDelegate.swift */; };
 		175ACC192B05E0B900DC3522 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175ACC182B05E0B900DC3522 /* SceneDelegate.swift */; };
 		175ACC1B2B05E0B900DC3522 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175ACC1A2B05E0B900DC3522 /* ViewController.swift */; };
-		175ACC1E2B05E0B900DC3522 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175ACC1C2B05E0B900DC3522 /* Main.storyboard */; };
 		175ACC212B05E0B900DC3522 /* NBAApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 175ACC1F2B05E0B900DC3522 /* NBAApp.xcdatamodeld */; };
 		175ACC232B05E0BA00DC3522 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 175ACC222B05E0BA00DC3522 /* Assets.xcassets */; };
-		175ACC262B05E0BA00DC3522 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175ACC242B05E0BA00DC3522 /* LaunchScreen.storyboard */; };
+		175ACC312B05F12C00DC3522 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = 175ACC302B05F12C00DC3522 /* Secret.plist */; };
+		175ACC362B05F29C00DC3522 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175ACC352B05F29C00DC3522 /* NetworkManager.swift */; };
+		175ACC382B05F2A500DC3522 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175ACC372B05F2A500DC3522 /* Endpoints.swift */; };
+		175ACC3C2B05F97F00DC3522 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175ACC3A2B05F97F00DC3522 /* SplashScreenViewController.swift */; };
+		175ACC3D2B05F97F00DC3522 /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175ACC3B2B05F97F00DC3522 /* SplashScreenViewController.xib */; };
+		175ACC412B06000400DC3522 /* CustomButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175ACC402B06000400DC3522 /* CustomButton.xib */; };
+		175ACC432B0600CD00DC3522 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175ACC422B0600CD00DC3522 /* CustomButton.swift */; };
+		175ACC452B06011B00DC3522 /* CodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175ACC442B06011B00DC3522 /* CodeHelper.swift */; };
+		17D708512B0614E20031C682 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D7084F2B0614E20031C682 /* AuthViewController.swift */; };
+		17D708522B0614E20031C682 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17D708502B0614E20031C682 /* AuthViewController.xib */; };
+		17D708552B0615410031C682 /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17D708542B0615410031C682 /* CustomTextField.xib */; };
+		17D708572B0615510031C682 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D708562B0615510031C682 /* CustomTextField.swift */; };
+		17D7085A2B06196D0031C682 /* CheckBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17D708592B06196D0031C682 /* CheckBox.xib */; };
+		17D7085E2B061A710031C682 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D7085D2B061A710031C682 /* CheckBox.swift */; };
+		17D708612B061D460031C682 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 17D708602B061D460031C682 /* FloatingPanel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +34,23 @@
 		175ACC162B05E0B900DC3522 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		175ACC182B05E0B900DC3522 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		175ACC1A2B05E0B900DC3522 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		175ACC1D2B05E0B900DC3522 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		175ACC202B05E0B900DC3522 /* NBAApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NBAApp.xcdatamodel; sourceTree = "<group>"; };
 		175ACC222B05E0BA00DC3522 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		175ACC252B05E0BA00DC3522 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		175ACC272B05E0BA00DC3522 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		175ACC302B05F12C00DC3522 /* Secret.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secret.plist; sourceTree = "<group>"; };
+		175ACC352B05F29C00DC3522 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		175ACC372B05F2A500DC3522 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		175ACC3A2B05F97F00DC3522 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		175ACC3B2B05F97F00DC3522 /* SplashScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreenViewController.xib; sourceTree = "<group>"; };
+		175ACC402B06000400DC3522 /* CustomButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButton.xib; sourceTree = "<group>"; };
+		175ACC422B0600CD00DC3522 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		175ACC442B06011B00DC3522 /* CodeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeHelper.swift; sourceTree = "<group>"; };
+		17D7084F2B0614E20031C682 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		17D708502B0614E20031C682 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
+		17D708542B0615410031C682 /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
+		17D708562B0615510031C682 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		17D708592B06196D0031C682 /* CheckBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckBox.xib; sourceTree = "<group>"; };
+		17D7085D2B061A710031C682 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17D708612B061D460031C682 /* FloatingPanel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,16 +84,108 @@
 		175ACC152B05E0B900DC3522 /* NBAApp */ = {
 			isa = PBXGroup;
 			children = (
-				175ACC162B05E0B900DC3522 /* AppDelegate.swift */,
-				175ACC182B05E0B900DC3522 /* SceneDelegate.swift */,
+				175ACC2D2B05E6FC00DC3522 /* App */,
+				175ACC332B05F27400DC3522 /* Resources */,
+				175ACC3E2B05FFC000DC3522 /* CustomComponents */,
+				175ACC322B05F26700DC3522 /* Module */,
 				175ACC1A2B05E0B900DC3522 /* ViewController.swift */,
-				175ACC1C2B05E0B900DC3522 /* Main.storyboard */,
 				175ACC222B05E0BA00DC3522 /* Assets.xcassets */,
-				175ACC242B05E0BA00DC3522 /* LaunchScreen.storyboard */,
 				175ACC272B05E0BA00DC3522 /* Info.plist */,
+				175ACC302B05F12C00DC3522 /* Secret.plist */,
 				175ACC1F2B05E0B900DC3522 /* NBAApp.xcdatamodeld */,
 			);
 			path = NBAApp;
+			sourceTree = "<group>";
+		};
+		175ACC2D2B05E6FC00DC3522 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				175ACC162B05E0B900DC3522 /* AppDelegate.swift */,
+				175ACC182B05E0B900DC3522 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		175ACC322B05F26700DC3522 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				175ACC392B05F96000DC3522 /* SplashScreen */,
+				17D7084E2B0613B60031C682 /* Authentication */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		175ACC332B05F27400DC3522 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				175ACC342B05F28700DC3522 /* Helper */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		175ACC342B05F28700DC3522 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				175ACC352B05F29C00DC3522 /* NetworkManager.swift */,
+				175ACC372B05F2A500DC3522 /* Endpoints.swift */,
+				175ACC442B06011B00DC3522 /* CodeHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		175ACC392B05F96000DC3522 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				175ACC3A2B05F97F00DC3522 /* SplashScreenViewController.swift */,
+				175ACC3B2B05F97F00DC3522 /* SplashScreenViewController.xib */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		175ACC3E2B05FFC000DC3522 /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				17D708582B0619590031C682 /* CustomCheckBox */,
+				17D708532B06152C0031C682 /* CustomTextField */,
+				175ACC3F2B05FFCC00DC3522 /* CustomButton */,
+			);
+			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		175ACC3F2B05FFCC00DC3522 /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				175ACC422B0600CD00DC3522 /* CustomButton.swift */,
+				175ACC402B06000400DC3522 /* CustomButton.xib */,
+			);
+			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		17D7084E2B0613B60031C682 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				17D7084F2B0614E20031C682 /* AuthViewController.swift */,
+				17D708502B0614E20031C682 /* AuthViewController.xib */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		17D708532B06152C0031C682 /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				17D708562B0615510031C682 /* CustomTextField.swift */,
+				17D708542B0615410031C682 /* CustomTextField.xib */,
+			);
+			path = CustomTextField;
+			sourceTree = "<group>";
+		};
+		17D708582B0619590031C682 /* CustomCheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				17D7085D2B061A710031C682 /* CheckBox.swift */,
+				17D708592B06196D0031C682 /* CheckBox.xib */,
+			);
+			path = CustomCheckBox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +204,9 @@
 			dependencies = (
 			);
 			name = NBAApp;
+			packageProductDependencies = (
+				17D708602B061D460031C682 /* FloatingPanel */,
+			);
 			productName = NBAApp;
 			productReference = 175ACC132B05E0B900DC3522 /* NBAApp.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +235,9 @@
 				Base,
 			);
 			mainGroup = 175ACC0A2B05E0B900DC3522;
+			packageReferences = (
+				17D7085F2B061D460031C682 /* XCRemoteSwiftPackageReference "FloatingPanel" */,
+			);
 			productRefGroup = 175ACC142B05E0B900DC3522 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,9 +252,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				175ACC262B05E0BA00DC3522 /* LaunchScreen.storyboard in Resources */,
+				175ACC412B06000400DC3522 /* CustomButton.xib in Resources */,
+				175ACC3D2B05F97F00DC3522 /* SplashScreenViewController.xib in Resources */,
+				17D708552B0615410031C682 /* CustomTextField.xib in Resources */,
+				17D708522B0614E20031C682 /* AuthViewController.xib in Resources */,
+				175ACC312B05F12C00DC3522 /* Secret.plist in Resources */,
+				17D7085A2B06196D0031C682 /* CheckBox.xib in Resources */,
 				175ACC232B05E0BA00DC3522 /* Assets.xcassets in Resources */,
-				175ACC1E2B05E0B900DC3522 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,32 +270,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				175ACC1B2B05E0B900DC3522 /* ViewController.swift in Sources */,
+				17D708572B0615510031C682 /* CustomTextField.swift in Sources */,
 				175ACC212B05E0B900DC3522 /* NBAApp.xcdatamodeld in Sources */,
+				17D708512B0614E20031C682 /* AuthViewController.swift in Sources */,
+				175ACC3C2B05F97F00DC3522 /* SplashScreenViewController.swift in Sources */,
+				175ACC362B05F29C00DC3522 /* NetworkManager.swift in Sources */,
+				175ACC452B06011B00DC3522 /* CodeHelper.swift in Sources */,
+				175ACC432B0600CD00DC3522 /* CustomButton.swift in Sources */,
+				17D7085E2B061A710031C682 /* CheckBox.swift in Sources */,
 				175ACC172B05E0B900DC3522 /* AppDelegate.swift in Sources */,
+				175ACC382B05F2A500DC3522 /* Endpoints.swift in Sources */,
 				175ACC192B05E0B900DC3522 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		175ACC1C2B05E0B900DC3522 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				175ACC1D2B05E0B900DC3522 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		175ACC242B05E0BA00DC3522 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				175ACC252B05E0BA00DC3522 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		175ACC282B05E0BA00DC3522 /* Debug */ = {
@@ -296,7 +413,6 @@
 				INFOPLIST_FILE = NBAApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -324,7 +440,6 @@
 				INFOPLIST_FILE = NBAApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -362,6 +477,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		17D7085F2B061D460031C682 /* XCRemoteSwiftPackageReference "FloatingPanel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scenee/FloatingPanel";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		17D708602B061D460031C682 /* FloatingPanel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17D7085F2B061D460031C682 /* XCRemoteSwiftPackageReference "FloatingPanel" */;
+			productName = FloatingPanel;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		175ACC1F2B05E0B900DC3522 /* NBAApp.xcdatamodeld */ = {
