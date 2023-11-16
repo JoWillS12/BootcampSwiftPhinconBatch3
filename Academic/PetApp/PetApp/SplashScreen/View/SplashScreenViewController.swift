@@ -10,44 +10,65 @@ import Lottie
 import UserNotifications
 
 class SplashScreenViewController: UIViewController {
+    // MARK: - Outlets
     @IBOutlet weak var splashLabel: UILabel!
     @IBOutlet weak var animationView: LottieAnimationView!
     @IBOutlet weak var customButton: CustomButton!
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadLotti()
-        loadButton()
+        
+        // Setup Lottie animation
+        setupLottie()
+        
+        // Setup custom button
+        setupButton()
+        
+        // Apply custom font to labels
+        applyCustomFont()
+        
+        // Schedule notification after 5 seconds
+        scheduleNotification()
+    }
+    
+    // MARK: - Private Functions
+    
+    /// Apply custom font to labels
+    private func applyCustomFont() {
         if let customFont = CodeHelper.loadCustomFont(withName: "Proxima Nova Font", fontSize: 20) {
             splashLabel.font = customFont
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            self.sendNotification()
+            customButton.buttonLabel?.font = customFont
         }
     }
-}
-
-extension SplashScreenViewController {
-    func loadLotti(){
+    
+    /// Setup Lottie animation view
+    private func setupLottie() {
         animationView.contentMode = .scaleToFill
         animationView.loopMode = .loop
         animationView.animationSpeed = 1.5
         animationView.play()
     }
     
-    func loadButton(){
+    /// Setup custom button
+    private func setupButton() {
         customButton.buttonLabel?.text = "Let's Start"
-        if let customFont = CodeHelper.loadCustomFont(withName: "Proxima Nova Font", fontSize: 20) {
-            self.customButton.buttonLabel?.font = customFont
-        }
-        customButton.tapAction = {
-            let vc = AuthViewController()
-            self.navigationController?.pushViewController(vc, animated: true)
-            print("Button tapped in SplashScreenViewController!")
+        
+        // Handle button tap
+        customButton.tapAction = { [weak self] in
+            self?.handleButtonTap()
         }
     }
     
-    func sendNotification() {
+    /// Handle button tap action
+    private func handleButtonTap() {
+        let vc = AuthViewController()
+        navigationController?.pushViewController(vc, animated: true)
+        print("Button tapped in SplashScreenViewController!")
+    }
+    
+    /// Schedule a local notification after 5 seconds
+    private func scheduleNotification() {
         // Create the notification content
         let content = UNMutableNotificationContent()
         content.title = "Welcome, Pawrent"

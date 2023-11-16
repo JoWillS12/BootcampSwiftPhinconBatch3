@@ -7,10 +7,13 @@
 
 import Foundation
 
-struct Profile: Codable{
+// MARK: - Profile Model
+struct Profile: Codable {
     let name, image, city: String
 }
 
-struct Nearby: Codable{
-    let image, name, distance : String
+// MARK: - Nearby Model
+struct Nearby: Codable {
+    let image, name, distance: String
 }
+

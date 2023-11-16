@@ -9,21 +9,30 @@ import UIKit
 import Lottie
 
 class FindFriendViewController: UIViewController {
-
+    
+    // MARK: - Outlets
+    
     @IBOutlet weak var animationView: LottieAnimationView!
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Data
+    
     var nearData: [Nearby] = []
+    
+    // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // Register table cell, fetch data, and load Lottie animation
         registerTableCell()
         fetchData()
         loadLotti()
     }
     
+    // MARK: - Setup Functions
+    
+    /// Register custom table cell for the table view.
     func registerTableCell() {
         tableView.register(UINib(nibName: String(describing: FindTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: FindTableViewCell.self))
         tableView.delegate = self
@@ -31,7 +40,8 @@ class FindFriendViewController: UIViewController {
         tableView.isScrollEnabled = false
     }
     
-    func loadLotti(){
+    /// Load and configure Lottie animation view.
+    func loadLotti() {
         animationView.contentMode = .scaleToFill
         animationView.loopMode = .loop
         animationView.animationSpeed = 1.5
@@ -39,7 +49,10 @@ class FindFriendViewController: UIViewController {
     }
 }
 
-extension FindFriendViewController: UITableViewDelegate, UITableViewDataSource{
+// MARK: - UITableViewDelegate, UITableViewDataSource
+
+extension FindFriendViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return nearData.count
     }
@@ -53,6 +66,9 @@ extension FindFriendViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
+    // MARK: - Data Fetching
+    
+    /// Fetch nearby data from the network.
     func fetchData() {
         NetworkManager.shared.makeAPICall(endpoint: .getNearby) { [weak self] (response: Result<[Nearby], Error>) in
             switch response {

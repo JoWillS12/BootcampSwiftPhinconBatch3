@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 
-struct Home: Codable{
-    var statsType, statsPercent, statsColor : String
-    var statsProg : CGFloat
+// Model for Home screen statistics
+struct Home: Codable {
+    var statsType, statsPercent, statsColor: String
+    var statsProg: CGFloat
 }
+

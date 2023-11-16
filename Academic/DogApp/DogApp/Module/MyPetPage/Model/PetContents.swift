@@ -7,6 +7,17 @@
 
 import Foundation
 
+// MARK: - MyPet Model
+
+/// Represents a structure for pet data.
 struct MyPet: Codable {
-    var petImage, petName, petRace, petBirth, status: String
+    
+    // MARK: - Properties
+    
+    var petImage: String
+    var petName: String
+    var petRace: String
+    var petBirth: String
+    var status: String
 }
+

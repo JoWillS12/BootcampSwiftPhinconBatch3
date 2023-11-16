@@ -8,7 +8,9 @@
 import UIKit
 
 class HomePetCollectionViewCell: UICollectionViewCell {
-
+    
+    // MARK: - Outlets
+    
     @IBOutlet weak var petImage: UIImageView!
     @IBOutlet weak var petKind: UILabel!
     @IBOutlet weak var petName: UILabel!
@@ -19,15 +21,18 @@ class HomePetCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var petStatus: UILabel!
     @IBOutlet weak var view: UIView!
     
+    // MARK: - Initialization
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        itemSetup()
+        setupItem()
     }
-
-}
-extension HomePetCollectionViewCell{
-    func itemSetup(){
+    
+    // MARK: - Item Setup
+    
+    // Configure the appearance of the cell
+    func setupItem() {
         view.layer.borderWidth = 1
         view.layer.borderColor = UIColor.white.cgColor
         view.layer.cornerRadius = 10

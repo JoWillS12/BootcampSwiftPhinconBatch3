@@ -9,21 +9,28 @@ import UIKit
 
 class EndViewController: UIViewController {
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var petImage: UIImageView!
     @IBOutlet weak var petMessage: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var customButton: CustomButton!
     
+    // MARK: - Properties
+    
     var selectedPet: MyPet?
-    var stats: [Home] = [Home(statsType: "Today's plan", statsPercent: "50% accomplished", statsColor: "TodayColor", statsProg: 0.5),
-                         Home(statsType: "Energy available", statsPercent: "50% energy", statsColor: "EnergyColor", statsProg: 0.5),
-                         Home(statsType: "Weekly's objectives", statsPercent: "3 walks left", statsColor: "WeekColor", statsProg: 0.8)]
+    var stats: [Home] = [
+        Home(statsType: "Today's plan", statsPercent: "50% accomplished", statsColor: "TodayColor", statsProg: 0.5),
+        Home(statsType: "Energy available", statsPercent: "50% energy", statsColor: "EnergyColor", statsProg: 0.5),
+        Home(statsType: "Weekly's objectives", statsPercent: "3 walks left", statsColor: "WeekColor", statsProg: 0.8)
+    ]
+    
+    // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
-        setUp()
+        setUpUI()
         // Check if there's a selected pet
         if let selectedPet = selectedPet {
             // Update UI based on the selected pet
@@ -33,18 +40,22 @@ class EndViewController: UIViewController {
         }
         
         registerTableCell()
-        customButton.tapAction = {[weak self] in
+        customButton.tapAction = { [weak self] in
             let vc = TabBarViewController()
             self?.navigationController?.setViewControllers([vc], animated: true)
         }
     }
     
-    func setUp(){
+    // MARK: - UI Setup
+    
+    func setUpUI() {
         petImage.layer.cornerRadius = petImage.frame.width / 2
         petImage.layer.borderWidth = 2
         petImage.layer.borderColor = UIColor.white.cgColor
         customButton.buttonLabel.text = "Go back to dashboard"
     }
+    
+    // MARK: - TableView Registration
     
     func registerTableCell() {
         tableView.register(UINib(nibName: String(describing: StatsTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: StatsTableViewCell.self))
@@ -53,6 +64,9 @@ class EndViewController: UIViewController {
         tableView.isScrollEnabled = false
     }
 }
+
+// MARK: - TableView DataSource and Delegate
+
 extension EndViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stats.count

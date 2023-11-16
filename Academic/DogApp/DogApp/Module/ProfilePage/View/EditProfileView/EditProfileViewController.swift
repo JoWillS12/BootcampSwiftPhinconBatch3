@@ -8,28 +8,33 @@
 import UIKit
 
 class EditProfileViewController: UIViewController {
-
+    
+    // MARK: - Outlets
+    
     @IBOutlet weak var profileImage: CircleView!
     @IBOutlet weak var userName: FieldView!
     @IBOutlet weak var userAddress: FieldView!
     @IBOutlet weak var customButton: CustomButton!
     
+    // MARK: - Data
+    
     var profileData: [Profile] = []
+    
+    // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // Update profile UI, fetch data, and configure save button
         updateProfile()
         fetchData()
-        customButton.buttonLabel.text = "Save"
-        customButton.tapAction = {[weak self] in
-            self?.navigationController?.popViewController(animated: false)
-        }
+        configureSaveButton()
     }
     
+    // MARK: - Profile Functions
+    
+    /// Update UI with the first profile data from the array.
     func updateProfile() {
-        // Assuming profileView has name and profileImage properties
         if let profile = profileData.first {
             userName.inputType.text = profile.name
             userName.fieldName.text = "Name"
@@ -39,7 +44,10 @@ class EditProfileViewController: UIViewController {
         }
     }
     
-    func fetchData(){
+    // MARK: - Data Fetching
+    
+    /// Fetch user profile data from the network.
+    func fetchData() {
         NetworkManager.shared.makeAPICall(endpoint: .getUser) { [weak self] (response: Result<[Profile], Error>) in
             switch response {
             case .success(let datas):
@@ -48,6 +56,16 @@ class EditProfileViewController: UIViewController {
             case .failure(let error):
                 print("API Request Error: \(error.localizedDescription)")
             }
+        }
+    }
+    
+    // MARK: - Save Button Configuration
+    
+    /// Configure the save button with tap action.
+    func configureSaveButton() {
+        customButton.buttonLabel.text = "Save"
+        customButton.tapAction = { [weak self] in
+            self?.navigationController?.popViewController(animated: false)
         }
     }
 }

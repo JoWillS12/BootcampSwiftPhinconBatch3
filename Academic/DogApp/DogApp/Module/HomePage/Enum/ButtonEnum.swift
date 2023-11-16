@@ -7,8 +7,11 @@
 
 import Foundation
 
+// Enumeration to represent different selected methods.
 enum SelectedMethod {
     case onFoot
     case onBike
     case other
 }
+
+

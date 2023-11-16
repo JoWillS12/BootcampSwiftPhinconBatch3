@@ -9,24 +9,41 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Create view controllers for each tab
         let homeViewController = HomeViewController()
         let petViewController = PetViewController()
-        let comViewController = CommunityViewController()
+        let communityViewController = CommunityViewController()
         let profileViewController = ProfileViewController()
         
-        self.setViewControllers([homeViewController, petViewController, comViewController, profileViewController], animated: false)
+        // Set view controllers for the tab bar
+        self.setViewControllers([homeViewController, petViewController, communityViewController, profileViewController], animated: false)
         
-        guard let items = self.tabBar.items else {return}
-        
-        let images = ["house.fill", "pawprint.fill", "globe", "person.fill"]
-        for x in 0...3{
-            items[x].image = UIImage(systemName: images[x])
-        }
+        // Set tab bar item images
+        setTabBarImages()
         
         // Customize tabBar appearance
+        customizeTabBarAppearance()
+    }
+    
+    // MARK: - Private Functions
+    
+    /// Set tab bar item images
+    private func setTabBarImages() {
+        guard let items = self.tabBar.items else { return }
+        
+        let images = ["house.fill", "pawprint.fill", "globe", "person.fill"]
+        for (index, imageName) in images.enumerated() {
+            items[index].image = UIImage(systemName: imageName)
+        }
+    }
+    
+    /// Customize tabBar appearance
+    private func customizeTabBarAppearance() {
         self.tabBar.barTintColor = UIColor(named: "NormalItem")
         self.tabBar.backgroundColor = UIColor(named: "TabBarColor")
         self.tabBar.tintColor = UIColor(named: "SelectedItem")
@@ -35,3 +52,4 @@ class TabBarViewController: UITabBarController {
         self.tabBar.layer.cornerRadius = 30
     }
 }
+

@@ -502,7 +502,6 @@
 			isa = PBXGroup;
 			children = (
 				176D73072B01FE7C00835916 /* Model */,
-				176D730C2B020F0300835916 /* ViewModel */,
 				176D72F32B01F36300835916 /* View */,
 			);
 			path = AuthView;
@@ -511,6 +510,7 @@
 		176D72F32B01F36300835916 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				176D730C2B020F0300835916 /* ViewModel */,
 				176D72F42B01F37F00835916 /* AuthViewController.swift */,
 				176D72F52B01F37F00835916 /* AuthViewController.xib */,
 			);

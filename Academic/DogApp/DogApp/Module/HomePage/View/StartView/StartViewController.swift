@@ -11,6 +11,8 @@ import CoreLocation
 
 class StartViewController: UIViewController {
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var methodType: UILabel!
     @IBOutlet weak var containView: UIView!
     @IBOutlet weak var distance: UILabel!
@@ -22,11 +24,15 @@ class StartViewController: UIViewController {
     @IBOutlet weak var locImage: UIImageView!
     @IBOutlet weak var petImage: UIImageView!
     
+    // MARK: - Properties
+    
     private let locationManager = CLLocationManager()
     private var locations: [CLLocation] = []
     private var startTime: Date?
     private var timer: Timer?
     var selectedPet: MyPet?
+    
+    // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +60,6 @@ class StartViewController: UIViewController {
             vc.selectedPet = selectedPet
             self.navigationController?.pushViewController(vc, animated: true)
         }
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -68,7 +73,9 @@ class StartViewController: UIViewController {
         stopTimer()
     }
     
-    func setUp(){
+    // MARK: - Setup
+    
+    func setUp() {
         containView.layer.cornerRadius = 10
         containView.layer.borderWidth = 2
         containView.layer.borderColor = UIColor.white.cgColor
@@ -86,12 +93,13 @@ class StartViewController: UIViewController {
         customButton.buttonLabel.text = "End the walk"
     }
     
+    // MARK: - Actions
+    
     @IBAction private func myLocButtonTapped() {
         centerMapOnLocation(mapView.userLocation.coordinate)
-        //        if let userLocation = locationManager.location?.coordinate {
-        //            centerMapOnLocation(userLocation)
-        //        }
     }
+    
+    // MARK: - Timer
     
     private func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
@@ -111,7 +119,10 @@ class StartViewController: UIViewController {
     }
 }
 
+// MARK: - MapView Delegate
+
 extension StartViewController: MKMapViewDelegate {
+    
     private func centerMapOnLocation(_ coordinate: CLLocationCoordinate2D?) {
         if let coordinate = coordinate {
             let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 200, longitudinalMeters: 200)
@@ -135,6 +146,8 @@ extension StartViewController: MKMapViewDelegate {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
     }
+    
+    // MARK: - Map Overlay
     
     private func generateExamplePoints(_ pointsCount: Int) -> [CustomAnnotation] {
         var points: [CustomAnnotation] = []
@@ -160,7 +173,10 @@ extension StartViewController: MKMapViewDelegate {
     }
 }
 
+// MARK: - Location Manager Delegate
+
 extension StartViewController: CLLocationManagerDelegate {
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let userLocation = locations.last?.coordinate else { return }
         
@@ -199,7 +215,6 @@ extension StartViewController: CLLocationManagerDelegate {
             minute.text = "\(formattedTime)"
         }
     }
-    
     
     private func formatTime(timeInterval: TimeInterval) -> String {
         let formatter = DateComponentsFormatter()

@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - User Model
+
 struct User: Codable {
     let id: Int
     let username: String
@@ -23,6 +25,8 @@ struct User: Codable {
     }
 }
 
+// MARK: - Registration Parameters
+
 struct RegisterParam {
     var name: String
     var email: String
@@ -30,12 +34,17 @@ struct RegisterParam {
     var image: String
 }
 
+// MARK: - Login Parameters
+
 struct LoginParam {
     var email: String
     var password: String
 }
 
+// MARK: - Login Response Data Model
+
 struct LoginData: Codable {
     let token: String
 }
+
 

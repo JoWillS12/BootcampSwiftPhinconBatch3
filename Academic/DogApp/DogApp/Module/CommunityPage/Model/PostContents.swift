@@ -7,15 +7,26 @@
 
 import Foundation
 
+// MARK: - CommunityPost
+
 struct CommunityPost: Codable {
-    let userName, userProfile, postDate, postImage: String
+    let userName: String
+    let userProfile: String
+    let postDate: String
+    let postImage: String
     let chatNumber: String
 }
+
+// MARK: - Users
 
 struct Users: Codable {
     let name: String
 }
 
-struct Places: Codable{
-    let city, country: String
+// MARK: - Places
+
+struct Places: Codable {
+    let city: String
+    let country: String
 }
+

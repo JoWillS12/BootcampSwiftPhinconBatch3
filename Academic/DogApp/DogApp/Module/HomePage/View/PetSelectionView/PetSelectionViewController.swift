@@ -8,6 +8,9 @@
 import UIKit
 
 class PetSelectionViewController: UIViewController {
+    
+    // MARK: - Outlets
+    
     @IBOutlet weak var petImage: UIImageView!
     @IBOutlet weak var petName: UILabel!
     @IBOutlet weak var onFoot: MethodView!
@@ -17,16 +20,20 @@ class PetSelectionViewController: UIViewController {
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var leftButton: UIButton!
     
+    // MARK: - Properties
+    
     var dogData: [MyPet] = []
     var currentIndex: Int = 0
     
+    // MARK: - View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
         fetchDogData()
         updateUI()
         setUp()
+        
+        // Set up tap actions for different methods
         onFoot.tapAction = { [weak self] in
             self?.selectedMethod(method: .onFoot)
         }
@@ -36,17 +43,18 @@ class PetSelectionViewController: UIViewController {
         other.tapAction = { [weak self] in
             self?.selectedMethod(method: .other)
         }
+        
+        // Set up tap action for the start button
         blueButton.tapAction = { [weak self] in
             guard let self = self else { return }
-
-            // Check if there's a selected pet
-            let selectedPet = self.dogData[self.currentIndex] 
-
+            let selectedPet = self.dogData[self.currentIndex]
             let vc = StartViewController()
             vc.selectedPet = selectedPet
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
+    
+    // MARK: - Button Actions
     
     @IBAction func backButton(_ sender: Any) {
         navigationController?.popViewController(animated: false)
@@ -62,7 +70,10 @@ class PetSelectionViewController: UIViewController {
         updateUI()
     }
     
+    // MARK: - UI Updates
+    
     func selectedMethod(method: SelectedMethod) {
+        // Update UI based on the selected method
         switch method {
         case .onFoot:
             onFoot.methodType.textColor = UIColor.blue
@@ -88,7 +99,8 @@ class PetSelectionViewController: UIViewController {
         }
     }
     
-    func setUp(){
+    func setUp() {
+        // Set up appearance and content for different UI elements
         onFoot.methodImage.image = UIImage(systemName: "shoeprints.fill")
         onFoot.methodType.text = "On Foot"
         onFoot.layer.cornerRadius = 10
@@ -108,10 +120,10 @@ class PetSelectionViewController: UIViewController {
         petImage.layer.cornerRadius = petImage.frame.width / 2
         petImage.layer.borderWidth = 2
         petImage.layer.borderColor = UIColor.white.cgColor
-        
     }
     
     func updateUI() {
+        // Update UI based on the current index
         guard currentIndex >= 0 && currentIndex < dogData.count else {
             return
         }
@@ -125,12 +137,15 @@ class PetSelectionViewController: UIViewController {
         rightButton.isEnabled = currentIndex < dogData.count - 1
     }
     
+    // MARK: - Data Fetching
+    
     func fetchDogData() {
-        NetworkManager.shared.makeAPICall(endpoint: .myPet) { (response: Result<[MyPet], Error>) in
+        // Fetch dog data from the API
+        NetworkManager.shared.makeAPICall(endpoint: .myPet) { [weak self] (response: Result<[MyPet], Error>) in
             switch response {
             case .success(let dogs):
-                self.dogData = dogs
-                self.updateUI()
+                self?.dogData = dogs
+                self?.updateUI()
             case .failure(let error):
                 print("API Request Error: \(error.localizedDescription)")
             }
