@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomButton" customModule="NBAApp" customModuleProvider="target">
             <connections>
+                <outlet property="blueButton" destination="JKd-dd-n1A" id="4eM-Ex-tlV"/>
                 <outlet property="buttonLabel" destination="lRb-Th-NIG" id="e8p-1K-PIQ"/>
             </connections>
         </placeholder>
@@ -24,22 +25,21 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKd-dd-n1A">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKd-dd-n1A">
                     <rect key="frame" x="0.0" y="0.0" width="327" height="63"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain"/>
-                    <connections>
-                        <action selector="buttonClicked:" destination="-1" eventType="touchUpInside" id="TYO-21-AVi"/>
-                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="ButtonColor"/>
             <constraints>
+                <constraint firstItem="JKd-dd-n1A" firstAttribute="centerX" secondItem="lRb-Th-NIG" secondAttribute="centerX" id="0WC-ll-iDk"/>
                 <constraint firstItem="lRb-Th-NIG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="MuS-i4-lIp"/>
-                <constraint firstItem="JKd-dd-n1A" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Rrg-dp-ZML"/>
-                <constraint firstItem="JKd-dd-n1A" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ZBU-DD-lQU"/>
+                <constraint firstItem="JKd-dd-n1A" firstAttribute="centerY" secondItem="lRb-Th-NIG" secondAttribute="centerY" id="ZEd-qa-wig"/>
                 <constraint firstItem="lRb-Th-NIG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fiA-Xe-glh"/>
+                <constraint firstItem="JKd-dd-n1A" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="vQ5-Hd-Odn"/>
+                <constraint firstItem="JKd-dd-n1A" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="y0t-wE-20z"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="26.717557251908396" y="19.366197183098592"/>

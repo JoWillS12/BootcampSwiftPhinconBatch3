@@ -6,17 +6,22 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class CheckBox: UIView {
-
+    
     @IBOutlet weak var rememberButton: UIButton!
     @IBOutlet weak var forgotButton: UIButton!
     
     var tapAction: (() -> Void)?
+    private let disposeBag = DisposeBag()
+    private var isRectangleFilled = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
         configureView()
+        configureButton()
     }
     
     required init?(coder: NSCoder) {
@@ -24,13 +29,33 @@ class CheckBox: UIView {
         configureView()
     }
     
-    
-    @IBAction func rememberButton(_ sender: Any) {
-        tapAction?()
+    func configureButton() {
+        rememberButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.tapAction?()
+                self?.toggleButtonImage()
+            })
+            .disposed(by: disposeBag)
+        updateButtonImage()
+        forgotButton.rx.tap
+            .subscribe(onNext: {
+                [weak self] in
+                self?.tapAction?()
+            })
+            .disposed(by: disposeBag)
     }
     
-    @IBAction func forgotButton(_ sender: Any) {
-        tapAction?()
+    func toggleButtonImage() {
+        isRectangleFilled.toggle()
+        updateButtonImage()
+    }
+    
+    func updateButtonImage() {
+        let imageName = isRectangleFilled ? "rectangle.fill" : "rectangle"
+        let configuration = UIImage.SymbolConfiguration(pointSize: 12, weight: .regular, scale: .medium)
+        let image = UIImage(systemName: imageName, withConfiguration: configuration)
+        rememberButton.setImage(image, for: .normal)
+
     }
     
     func configureView() {
@@ -40,7 +65,6 @@ class CheckBox: UIView {
         view.layer.masksToBounds = false
         
         rememberButton.titleLabel?.font = UIFont.systemFont(ofSize: 11.0)
-        forgotButton.titleLabel?.font = UIFont.systemFont(ofSize: 11.0)
         
         addSubview(view)
     }

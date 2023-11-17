@@ -27,6 +27,10 @@
 		17D7085A2B06196D0031C682 /* CheckBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17D708592B06196D0031C682 /* CheckBox.xib */; };
 		17D7085E2B061A710031C682 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D7085D2B061A710031C682 /* CheckBox.swift */; };
 		17D708612B061D460031C682 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 17D708602B061D460031C682 /* FloatingPanel */; };
+		17D708642B06ECD70031C682 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 17D708632B06ECD70031C682 /* RxCocoa */; };
+		17D708662B06ECD70031C682 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 17D708652B06ECD70031C682 /* RxRelay */; };
+		17D708682B06ECD70031C682 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 17D708672B06ECD70031C682 /* RxSwift */; };
+		17D7086B2B07304E0031C682 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 17D7086A2B07304E0031C682 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +62,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17D7086B2B07304E0031C682 /* Alamofire in Frameworks */,
+				17D708662B06ECD70031C682 /* RxRelay in Frameworks */,
+				17D708642B06ECD70031C682 /* RxCocoa in Frameworks */,
+				17D708682B06ECD70031C682 /* RxSwift in Frameworks */,
 				17D708612B061D460031C682 /* FloatingPanel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +214,10 @@
 			name = NBAApp;
 			packageProductDependencies = (
 				17D708602B061D460031C682 /* FloatingPanel */,
+				17D708632B06ECD70031C682 /* RxCocoa */,
+				17D708652B06ECD70031C682 /* RxRelay */,
+				17D708672B06ECD70031C682 /* RxSwift */,
+				17D7086A2B07304E0031C682 /* Alamofire */,
 			);
 			productName = NBAApp;
 			productReference = 175ACC132B05E0B900DC3522 /* NBAApp.app */;
@@ -237,6 +249,8 @@
 			mainGroup = 175ACC0A2B05E0B900DC3522;
 			packageReferences = (
 				17D7085F2B061D460031C682 /* XCRemoteSwiftPackageReference "FloatingPanel" */,
+				17D708622B06ECD70031C682 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				17D708692B07304E0031C682 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 175ACC142B05E0B900DC3522 /* Products */;
 			projectDirPath = "";
@@ -487,6 +501,22 @@
 				kind = branch;
 			};
 		};
+		17D708622B06ECD70031C682 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		17D708692B07304E0031C682 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -494,6 +524,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 17D7085F2B061D460031C682 /* XCRemoteSwiftPackageReference "FloatingPanel" */;
 			productName = FloatingPanel;
+		};
+		17D708632B06ECD70031C682 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17D708622B06ECD70031C682 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		17D708652B06ECD70031C682 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17D708622B06ECD70031C682 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		17D708672B06ECD70031C682 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17D708622B06ECD70031C682 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		17D7086A2B07304E0031C682 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17D708692B07304E0031C682 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 
