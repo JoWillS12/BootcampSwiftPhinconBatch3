@@ -17,12 +17,15 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var customButton: CustomButton!
     @IBOutlet weak var newAccountButton: UIButton!
     
+    private var disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         setUp()
         loadButton()
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     func loadButton(){
@@ -31,11 +34,24 @@ class AuthViewController: UIViewController {
                 [weak self] in
                 self?.buttonDidTap()
             })
+            .disposed(by: disposeBag)
+        
+        customButton.tapAction = { [weak self] in
+            // Post a notification with the data
+            let data = true
+            NotificationCenter.default.post(
+                name: NSNotification.Name("DataNotification"),
+                object: nil,
+                userInfo: ["data": data]
+            )
+            self?.dismiss(animated: false)
+            print("tapped!")
+        }
     }
     
     func setUp(){
         checkBox.forgotButton.isHidden = true
-
+        
         emailBox.textTypeImage.image = UIImage(systemName: "mail")
         emailBox.textTypeImage.tintColor = UIColor(named: "TextColor")
         emailBox.authType.placeholder = "Email"

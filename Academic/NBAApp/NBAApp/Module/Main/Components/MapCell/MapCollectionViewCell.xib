@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MapCollectionViewCell" customModule="NBAApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="304"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="374" height="304"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l1z-FW-JUG">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="304"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="l1z-FW-JUG" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="C6C-PW-dfm"/>
+                <constraint firstAttribute="trailing" secondItem="l1z-FW-JUG" secondAttribute="trailing" id="Cm2-U9-eJA"/>
+                <constraint firstItem="l1z-FW-JUG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Fnq-ye-nwT"/>
+                <constraint firstItem="l1z-FW-JUG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Mdz-k4-ZXM"/>
+                <constraint firstAttribute="bottom" secondItem="l1z-FW-JUG" secondAttribute="bottom" id="U9V-6e-pJG"/>
+                <constraint firstItem="l1z-FW-JUG" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="V6Z-ie-fUF"/>
+            </constraints>
+            <connections>
+                <outlet property="mapImage" destination="l1z-FW-JUG" id="70J-my-eKy"/>
+            </connections>
+            <point key="canvasLocation" x="27.480916030534349" y="19.718309859154932"/>
+        </collectionViewCell>
+    </objects>
+</document>

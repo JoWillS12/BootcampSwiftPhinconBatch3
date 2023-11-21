@@ -31,8 +31,7 @@ class CustomButton: UIView {
     
     func loadButton(){
         blueButton.rx.tap
-            .subscribe(onNext: {
-                [weak self] in
+            .subscribe(onNext: { [weak self] in
                 self?.tapAction?()
             })
             .disposed(by: disposeBag)

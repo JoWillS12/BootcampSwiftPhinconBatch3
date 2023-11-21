@@ -19,6 +19,15 @@ class CodeHelper {
         }
         return view
     }
+    
+    static func loadCustomFont(withName fontName: String, fontSize: CGFloat) -> UIFont? {
+        if let customFont = UIFont(name: fontName, size: fontSize) {
+            return customFont
+        } else {
+            print("Font not found. Make sure the font is added to your project and specified in Info.plist.")
+            return UIFont.systemFont(ofSize: fontSize) // Use a default font if the custom font can't be loaded
+        }
+    }
 }
 
 class HalfModalPresentationController: UIPresentationController {
@@ -45,7 +54,8 @@ class HalfModalPresentationController: UIPresentationController {
         presentingViewController.view.addSubview(customBlurView)
         blurView = customBlurView
         
-        presentedViewController.view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:))))
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        blurView.addGestureRecognizer(tapGestureRecognizer)
         presentedViewController.view.layer.cornerRadius = 40 // Adjust the corner radius as needed
         presentedViewController.view.clipsToBounds = true
         
@@ -53,26 +63,8 @@ class HalfModalPresentationController: UIPresentationController {
         presentedViewController.view.frame.origin.y = presentingViewController.view.frame.height - presentedViewController.view.frame.height
     }
     
-    @objc func handlePan(_ gestureRecognizer: UIPanGestureRecognizer) {
-        let translation = gestureRecognizer.translation(in: presentedViewController.view)
-        
-        switch gestureRecognizer.state {
-        case .began:
-            initialY = presentedViewController.view.frame.origin.y
-        case .changed:
-            // Allow only downward pan
-            guard translation.y > 0 else {
-                return
-            }
-            
-            let newY = max(initialY + translation.y, 0)
-            presentedViewController.view.frame.origin.y = newY
-        case .ended:
-            let shouldDismiss = translation.y > presentedViewController.view.frame.height / 3
-            dismissWithAnimation(shouldDismiss)
-        default:
-            break
-        }
+    @objc func handleTap(_ gestureRecognizer: UITapGestureRecognizer) {
+        dismissWithAnimation(true)
     }
     
     override func dismissalTransitionWillBegin() {
@@ -90,6 +82,55 @@ class HalfModalPresentationController: UIPresentationController {
         }) { _ in
             if shouldDismiss {
                 self.presentingViewController.dismiss(animated: false, completion: nil)
+            }
+        }
+    }
+}
+
+class NavigationHelper {
+    static func navigateToViewController(for index: Int, from navigationController: UINavigationController?) {
+        // Instantiate and set the view controller based on the selected index
+        let selectedViewController: UIViewController
+        
+        switch index {
+        case 0:
+            selectedViewController = MainMenuViewController()
+        case 1:
+            selectedViewController = AgentViewController()
+        case 2:
+            selectedViewController = TiersViewController()
+        case 3:
+            selectedViewController = MainMenuViewController()
+        case 4:
+            selectedViewController = WeaponViewController()
+        case 5:
+            selectedViewController = SprayViewController()
+        default:
+            selectedViewController = MainMenuViewController()
+        }
+        
+        // Check if the selected view controller is already the current top view controller
+        if let topViewController = navigationController?.topViewController, topViewController.isKind(of: type(of: selectedViewController)) {
+            // The selected view controller is already on top, no need to navigate again
+            return
+        }
+        
+        // Push the selected view controller onto the navigation stack
+        navigationController?.pushViewController(selectedViewController, animated: false)
+    }
+    
+    static func handleButtonCondition(for sidebarMenu: SideViewController?, in parentViewController: UIViewController) {
+        if let sidebarMenu = sidebarMenu {
+            if sidebarMenu.parent == nil {
+                // If the sidebar is not added, add it to the parent
+                parentViewController.addChild(sidebarMenu)
+                parentViewController.view.addSubview(sidebarMenu.view)
+                sidebarMenu.didMove(toParent: parentViewController)
+            } else {
+                // If the sidebar is added, remove it from the parent
+                sidebarMenu.willMove(toParent: nil)
+                sidebarMenu.view.removeFromSuperview()
+                sidebarMenu.removeFromParent()
             }
         }
     }

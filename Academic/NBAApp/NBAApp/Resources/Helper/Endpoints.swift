@@ -9,35 +9,50 @@ import Foundation
 import Alamofire
 
 enum Endpoint {
-    case getBike
-    case getHelmet
+    case getAgents
+    case getBuddies
+    case getMaps
+    case getTier
+    case getGear
+    case getWeapon
+    case getSpray
     
     func path() -> String {
         switch self {
-        case .getBike:
-            return "api/bike"
-        case .getHelmet:
-            return "api/helmet"
+        case .getAgents:
+            return "agents"
+        case .getBuddies:
+            return "buddies"
+        case .getMaps:
+            return "maps"
+        case .getTier:
+            return "competitivetiers"
+        case .getGear:
+            return "gear"
+        case .getWeapon:
+            return "weapons"
+        case .getSpray:
+            return "sprays"
         }
     }
     
     func methode() -> HTTPMethod {
         switch self {
-        case .getBike,.getHelmet:
+        case .getAgents,.getBuddies, .getMaps, .getTier, .getWeapon, .getGear, .getSpray:
             return .get
         }
     }
     
     var parameters: [String: Any]? {
         switch self {
-        case .getBike, .getHelmet:
+        case .getAgents, .getBuddies, .getMaps, .getTier, .getWeapon, .getGear, .getSpray:
             return nil
         }
     }
     
     var headers: HTTPHeaders {
         switch self {
-        case .getBike, .getHelmet:
+        case .getAgents, .getBuddies, .getMaps, .getTier, .getWeapon, .getGear, .getSpray:
             let params: HTTPHeaders = [
                 "Content-Type": "Application/json"]
             return params
@@ -47,10 +62,8 @@ enum Endpoint {
     func urlString() -> String {
         return BaseConstant.host + self.path()
     }
-    
-    
 }
 
 class BaseConstant {
-    static var host = "http://localhost:3002/"
+    static var host = "https://valorant-api.com/v1/"
 }
