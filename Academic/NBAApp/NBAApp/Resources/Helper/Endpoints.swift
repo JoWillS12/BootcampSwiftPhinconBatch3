@@ -16,6 +16,7 @@ enum Endpoint {
     case getGear
     case getWeapon
     case getSpray
+    case getBundles
     
     func path() -> String {
         switch self {
@@ -33,26 +34,28 @@ enum Endpoint {
             return "weapons"
         case .getSpray:
             return "sprays"
+        case .getBundles:
+            return "bundles"
         }
     }
     
     func methode() -> HTTPMethod {
         switch self {
-        case .getAgents,.getBuddies, .getMaps, .getTier, .getWeapon, .getGear, .getSpray:
+        case .getAgents,.getBuddies, .getMaps, .getTier, .getWeapon, .getGear, .getBundles, .getSpray:
             return .get
         }
     }
     
     var parameters: [String: Any]? {
         switch self {
-        case .getAgents, .getBuddies, .getMaps, .getTier, .getWeapon, .getGear, .getSpray:
+        case .getAgents, .getBuddies, .getMaps, .getTier, .getWeapon, .getGear, .getSpray, .getBundles:
             return nil
         }
     }
     
     var headers: HTTPHeaders {
         switch self {
-        case .getAgents, .getBuddies, .getMaps, .getTier, .getWeapon, .getGear, .getSpray:
+        case .getAgents, .getBuddies, .getMaps, .getTier, .getWeapon, .getGear, .getSpray, .getBundles:
             let params: HTTPHeaders = [
                 "Content-Type": "Application/json"]
             return params

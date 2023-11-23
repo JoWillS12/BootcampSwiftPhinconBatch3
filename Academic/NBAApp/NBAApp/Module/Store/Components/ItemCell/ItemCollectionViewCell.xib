@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ItemCollectionViewCell" customModule="NBAApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="211"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="361" height="211"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TnX-jt-i2H">
+                        <rect key="frame" x="0.0" y="0.0" width="361" height="211"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="een-4u-d74">
+                                <rect key="frame" x="0.0" y="0.0" width="361" height="145"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFT-3r-mgJ">
+                                <rect key="frame" x="8" y="153" width="345" height="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6E-kH-BiV">
+                                <rect key="frame" x="290" y="104" width="54" height="35"/>
+                                <color key="tintColor" name="SelectedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="cart.fill.badge.plus" catalog="system"/>
+                                <connections>
+                                    <action selector="addToCart:" destination="gTV-IL-0wX" eventType="touchUpInside" id="p1n-DH-E48"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="SecondaryColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="r6E-kH-BiV" secondAttribute="trailing" constant="17" id="60x-wy-2M3"/>
+                            <constraint firstAttribute="trailing" secondItem="een-4u-d74" secondAttribute="trailing" id="AZ0-UL-Szf"/>
+                            <constraint firstItem="r6E-kH-BiV" firstAttribute="top" secondItem="TnX-jt-i2H" secondAttribute="top" constant="104" id="CB9-nq-ZDM"/>
+                            <constraint firstItem="een-4u-d74" firstAttribute="top" secondItem="TnX-jt-i2H" secondAttribute="top" id="LLa-vr-OSJ"/>
+                            <constraint firstItem="een-4u-d74" firstAttribute="centerY" secondItem="TnX-jt-i2H" secondAttribute="centerY" constant="-33" id="Lxr-su-weV"/>
+                            <constraint firstItem="aFT-3r-mgJ" firstAttribute="leading" secondItem="TnX-jt-i2H" secondAttribute="leading" constant="8" id="Nxx-T8-rth"/>
+                            <constraint firstItem="aFT-3r-mgJ" firstAttribute="top" secondItem="r6E-kH-BiV" secondAttribute="bottom" constant="14" id="QcD-aU-hNj"/>
+                            <constraint firstAttribute="trailing" secondItem="aFT-3r-mgJ" secondAttribute="trailing" constant="8" id="TNY-x8-q7G"/>
+                            <constraint firstItem="aFT-3r-mgJ" firstAttribute="centerX" secondItem="TnX-jt-i2H" secondAttribute="centerX" id="Vh8-cU-ohX"/>
+                            <constraint firstItem="aFT-3r-mgJ" firstAttribute="top" secondItem="een-4u-d74" secondAttribute="bottom" constant="8" symbolic="YES" id="Xt1-TB-A1n"/>
+                            <constraint firstItem="een-4u-d74" firstAttribute="centerX" secondItem="TnX-jt-i2H" secondAttribute="centerX" id="qFq-n8-0Ks"/>
+                            <constraint firstItem="r6E-kH-BiV" firstAttribute="leading" secondItem="TnX-jt-i2H" secondAttribute="leading" constant="290" id="ryC-OM-BmJ"/>
+                            <constraint firstItem="een-4u-d74" firstAttribute="leading" secondItem="TnX-jt-i2H" secondAttribute="leading" id="s8E-3b-Wvt"/>
+                            <constraint firstAttribute="bottom" secondItem="aFT-3r-mgJ" secondAttribute="bottom" constant="8" id="u4S-fo-MNu"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="TnX-jt-i2H" secondAttribute="trailing" id="76Y-xx-Qxs"/>
+                <constraint firstItem="TnX-jt-i2H" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="CQg-11-hnN"/>
+                <constraint firstItem="TnX-jt-i2H" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Dwe-BN-a2T"/>
+                <constraint firstItem="TnX-jt-i2H" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Nna-vK-CK2"/>
+                <constraint firstItem="TnX-jt-i2H" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="zns-o1-Vcj"/>
+            </constraints>
+            <size key="customSize" width="192" height="50"/>
+            <connections>
+                <outlet property="bundleImage" destination="een-4u-d74" id="USw-jb-5v4"/>
+                <outlet property="bundleName" destination="aFT-3r-mgJ" id="ekd-xq-vR8"/>
+                <outlet property="viewBundle" destination="TnX-jt-i2H" id="VCd-xL-oQx"/>
+            </connections>
+            <point key="canvasLocation" x="142.74809160305344" y="19.366197183098592"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cart.fill.badge.plus" catalog="system" width="128" height="105"/>
+        <namedColor name="SecondaryColor">
+            <color red="0.13333333333333333" green="0.13333333333333333" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SelectedColor">
+            <color red="0.95686274509803926" green="0.6470588235294118" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

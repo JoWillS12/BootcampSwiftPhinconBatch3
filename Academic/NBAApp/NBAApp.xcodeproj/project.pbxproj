@@ -50,6 +50,32 @@
 		175ACC412B06000400DC3522 /* CustomButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175ACC402B06000400DC3522 /* CustomButton.xib */; };
 		175ACC432B0600CD00DC3522 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175ACC422B0600CD00DC3522 /* CustomButton.swift */; };
 		175ACC452B06011B00DC3522 /* CodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175ACC442B06011B00DC3522 /* CodeHelper.swift */; };
+		1763163E2B0D9C81004664F5 /* AuthContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1763163D2B0D9C81004664F5 /* AuthContents.swift */; };
+		176316432B0DAAA5004664F5 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176316412B0DAAA5004664F5 /* StoreViewController.swift */; };
+		176316442B0DAAA5004664F5 /* StoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176316422B0DAAA5004664F5 /* StoreViewController.xib */; };
+		176316472B0EE2B5004664F5 /* StoreContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176316462B0EE2B5004664F5 /* StoreContents.swift */; };
+		1763164E2B0EE518004664F5 /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1763164C2B0EE518004664F5 /* FirstTableViewCell.swift */; };
+		1763164F2B0EE518004664F5 /* FirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1763164D2B0EE518004664F5 /* FirstTableViewCell.xib */; };
+		176316522B0EE552004664F5 /* SecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176316502B0EE552004664F5 /* SecondTableViewCell.swift */; };
+		176316532B0EE552004664F5 /* SecondTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176316512B0EE552004664F5 /* SecondTableViewCell.xib */; };
+		176316572B0EE57E004664F5 /* ThirdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176316552B0EE57E004664F5 /* ThirdTableViewCell.swift */; };
+		176316582B0EE57E004664F5 /* ThirdTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176316562B0EE57E004664F5 /* ThirdTableViewCell.xib */; };
+		1763165C2B0EEAC9004664F5 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1763165A2B0EEAC9004664F5 /* ItemCollectionViewCell.swift */; };
+		1763165D2B0EEAC9004664F5 /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1763165B2B0EEAC9004664F5 /* ItemCollectionViewCell.xib */; };
+		176316612B0EEC37004664F5 /* Item2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1763165F2B0EEC37004664F5 /* Item2CollectionViewCell.swift */; };
+		176316622B0EEC37004664F5 /* Item2CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176316602B0EEC37004664F5 /* Item2CollectionViewCell.xib */; };
+		1763166C2B0F26CB004664F5 /* TopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1763166A2B0F26CB004664F5 /* TopUpViewController.swift */; };
+		1763166D2B0F26CB004664F5 /* TopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1763166B2B0F26CB004664F5 /* TopUpViewController.xib */; };
+		176316712B0F281D004664F5 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1763166F2B0F281D004664F5 /* CustomSlider.swift */; };
+		176316722B0F281D004664F5 /* CustomSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176316702B0F281D004664F5 /* CustomSlider.xib */; };
+		1763167A2B0F2895004664F5 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176316782B0F2895004664F5 /* CartTableViewCell.swift */; };
+		1763167B2B0F2895004664F5 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176316792B0F2895004664F5 /* CartTableViewCell.xib */; };
+		176316802B0F31AF004664F5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1763167F2B0F31AF004664F5 /* GameScene.swift */; };
+		176316832B0F31CB004664F5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176316812B0F31CB004664F5 /* GameViewController.swift */; };
+		176316842B0F31CB004664F5 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176316822B0F31CB004664F5 /* GameViewController.xib */; };
+		176316872B0F38D7004664F5 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176316852B0F38D7004664F5 /* CartViewController.swift */; };
+		176316882B0F38D7004664F5 /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176316862B0F38D7004664F5 /* CartViewController.xib */; };
+		1763168A2B0F3E6E004664F5 /* CatchScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176316892B0F3E6E004664F5 /* CatchScene.swift */; };
 		17B6A73B2B0CAA380033C67A /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B6A7392B0CAA380033C67A /* PopUpViewController.swift */; };
 		17B6A73C2B0CAA380033C67A /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17B6A73A2B0CAA380033C67A /* PopUpViewController.xib */; };
 		17D708512B0614E20031C682 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D7084F2B0614E20031C682 /* AuthViewController.swift */; };
@@ -72,8 +98,6 @@
 		17D7089C2B074AAA0031C682 /* AgentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17D7089A2B074AAA0031C682 /* AgentViewController.xib */; };
 		17D708A12B074DBE0031C682 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D7089F2B074DBE0031C682 /* MainMenuViewController.swift */; };
 		17D708A22B074DBE0031C682 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17D708A02B074DBE0031C682 /* MainMenuViewController.xib */; };
-		17D708A92B0AEB990031C682 /* BuddiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D708A72B0AEB990031C682 /* BuddiesViewController.swift */; };
-		17D708AA2B0AEB990031C682 /* BuddiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17D708A82B0AEB990031C682 /* BuddiesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +145,32 @@
 		175ACC402B06000400DC3522 /* CustomButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButton.xib; sourceTree = "<group>"; };
 		175ACC422B0600CD00DC3522 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		175ACC442B06011B00DC3522 /* CodeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeHelper.swift; sourceTree = "<group>"; };
+		1763163D2B0D9C81004664F5 /* AuthContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthContents.swift; sourceTree = "<group>"; };
+		176316412B0DAAA5004664F5 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		176316422B0DAAA5004664F5 /* StoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreViewController.xib; sourceTree = "<group>"; };
+		176316462B0EE2B5004664F5 /* StoreContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreContents.swift; sourceTree = "<group>"; };
+		1763164C2B0EE518004664F5 /* FirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
+		1763164D2B0EE518004664F5 /* FirstTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstTableViewCell.xib; sourceTree = "<group>"; };
+		176316502B0EE552004664F5 /* SecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewCell.swift; sourceTree = "<group>"; };
+		176316512B0EE552004664F5 /* SecondTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondTableViewCell.xib; sourceTree = "<group>"; };
+		176316552B0EE57E004664F5 /* ThirdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdTableViewCell.swift; sourceTree = "<group>"; };
+		176316562B0EE57E004664F5 /* ThirdTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdTableViewCell.xib; sourceTree = "<group>"; };
+		1763165A2B0EEAC9004664F5 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		1763165B2B0EEAC9004664F5 /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		1763165F2B0EEC37004664F5 /* Item2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item2CollectionViewCell.swift; sourceTree = "<group>"; };
+		176316602B0EEC37004664F5 /* Item2CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Item2CollectionViewCell.xib; sourceTree = "<group>"; };
+		1763166A2B0F26CB004664F5 /* TopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpViewController.swift; sourceTree = "<group>"; };
+		1763166B2B0F26CB004664F5 /* TopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopUpViewController.xib; sourceTree = "<group>"; };
+		1763166F2B0F281D004664F5 /* CustomSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		176316702B0F281D004664F5 /* CustomSlider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomSlider.xib; sourceTree = "<group>"; };
+		176316782B0F2895004664F5 /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		176316792B0F2895004664F5 /* CartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
+		1763167F2B0F31AF004664F5 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		176316812B0F31CB004664F5 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		176316822B0F31CB004664F5 /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		176316852B0F38D7004664F5 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		176316862B0F38D7004664F5 /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
+		176316892B0F3E6E004664F5 /* CatchScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchScene.swift; sourceTree = "<group>"; };
 		17B6A7392B0CAA380033C67A /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		17B6A73A2B0CAA380033C67A /* PopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
 		17D7084F2B0614E20031C682 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -138,8 +188,6 @@
 		17D7089A2B074AAA0031C682 /* AgentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AgentViewController.xib; sourceTree = "<group>"; };
 		17D7089F2B074DBE0031C682 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		17D708A02B074DBE0031C682 /* MainMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
-		17D708A72B0AEB990031C682 /* BuddiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuddiesViewController.swift; sourceTree = "<group>"; };
-		17D708A82B0AEB990031C682 /* BuddiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuddiesViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,12 +474,13 @@
 		175ACC322B05F26700DC3522 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				1763167C2B0F3193004664F5 /* GameScene */,
 				175ACC392B05F96000DC3522 /* SplashScreen */,
 				17D7084E2B0613B60031C682 /* Authentication */,
 				17D708A32B0AE7BC0031C682 /* SideMenu */,
 				17D708932B07492D0031C682 /* Main */,
 				17D7086C2B07357F0031C682 /* Agents */,
-				17D708A52B0AEB7D0031C682 /* Buddies */,
+				1763163F2B0DAA84004664F5 /* Store */,
 				1706B8BB2B0C5298004EA55E /* Tiers */,
 				1706B8CA2B0C6AEF004EA55E /* Weaponary */,
 				1706B8E12B0C9BE6004EA55E /* Spray */,
@@ -469,6 +518,7 @@
 		175ACC3E2B05FFC000DC3522 /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
+				1763166E2B0F27B9004664F5 /* CustomSlider */,
 				1706B8DE2B0C8FA9004EA55E /* CustomToolTip */,
 				173E9B962B0B44B300C37C48 /* CustomClass */,
 				17D708582B0619590031C682 /* CustomCheckBox */,
@@ -487,6 +537,181 @@
 			path = CustomButton;
 			sourceTree = "<group>";
 		};
+		1763163B2B0D9C5F004664F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1763163D2B0D9C81004664F5 /* AuthContents.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1763163C2B0D9C6A004664F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				17D7084F2B0614E20031C682 /* AuthViewController.swift */,
+				173E9B7A2B0AF1A000C37C48 /* AuthViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1763163F2B0DAA84004664F5 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				176316452B0DAAAB004664F5 /* Model */,
+				176316482B0EE492004664F5 /* Components */,
+				176316402B0DAA97004664F5 /* View */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		176316402B0DAA97004664F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				176316692B0F26BA004664F5 /* TopUpView */,
+				176316642B0F01D4004664F5 /* StoreView */,
+				176316632B0F01BF004664F5 /* CartView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		176316452B0DAAAB004664F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				176316462B0EE2B5004664F5 /* StoreContents.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		176316482B0EE492004664F5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				176316772B0F2874004664F5 /* CartCell */,
+				1763165E2B0EEC22004664F5 /* Item2Cell */,
+				176316592B0EEAB2004664F5 /* ItemCell */,
+				1763164B2B0EE4B5004664F5 /* ThirdCell */,
+				1763164A2B0EE4AF004664F5 /* SecondCell */,
+				176316492B0EE49C004664F5 /* FirstCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		176316492B0EE49C004664F5 /* FirstCell */ = {
+			isa = PBXGroup;
+			children = (
+				1763164C2B0EE518004664F5 /* FirstTableViewCell.swift */,
+				1763164D2B0EE518004664F5 /* FirstTableViewCell.xib */,
+			);
+			path = FirstCell;
+			sourceTree = "<group>";
+		};
+		1763164A2B0EE4AF004664F5 /* SecondCell */ = {
+			isa = PBXGroup;
+			children = (
+				176316502B0EE552004664F5 /* SecondTableViewCell.swift */,
+				176316512B0EE552004664F5 /* SecondTableViewCell.xib */,
+			);
+			path = SecondCell;
+			sourceTree = "<group>";
+		};
+		1763164B2B0EE4B5004664F5 /* ThirdCell */ = {
+			isa = PBXGroup;
+			children = (
+				176316552B0EE57E004664F5 /* ThirdTableViewCell.swift */,
+				176316562B0EE57E004664F5 /* ThirdTableViewCell.xib */,
+			);
+			path = ThirdCell;
+			sourceTree = "<group>";
+		};
+		176316592B0EEAB2004664F5 /* ItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				1763165A2B0EEAC9004664F5 /* ItemCollectionViewCell.swift */,
+				1763165B2B0EEAC9004664F5 /* ItemCollectionViewCell.xib */,
+			);
+			path = ItemCell;
+			sourceTree = "<group>";
+		};
+		1763165E2B0EEC22004664F5 /* Item2Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1763165F2B0EEC37004664F5 /* Item2CollectionViewCell.swift */,
+				176316602B0EEC37004664F5 /* Item2CollectionViewCell.xib */,
+			);
+			path = Item2Cell;
+			sourceTree = "<group>";
+		};
+		176316632B0F01BF004664F5 /* CartView */ = {
+			isa = PBXGroup;
+			children = (
+				176316852B0F38D7004664F5 /* CartViewController.swift */,
+				176316862B0F38D7004664F5 /* CartViewController.xib */,
+			);
+			path = CartView;
+			sourceTree = "<group>";
+		};
+		176316642B0F01D4004664F5 /* StoreView */ = {
+			isa = PBXGroup;
+			children = (
+				176316412B0DAAA5004664F5 /* StoreViewController.swift */,
+				176316422B0DAAA5004664F5 /* StoreViewController.xib */,
+			);
+			path = StoreView;
+			sourceTree = "<group>";
+		};
+		176316692B0F26BA004664F5 /* TopUpView */ = {
+			isa = PBXGroup;
+			children = (
+				1763166A2B0F26CB004664F5 /* TopUpViewController.swift */,
+				1763166B2B0F26CB004664F5 /* TopUpViewController.xib */,
+			);
+			path = TopUpView;
+			sourceTree = "<group>";
+		};
+		1763166E2B0F27B9004664F5 /* CustomSlider */ = {
+			isa = PBXGroup;
+			children = (
+				1763166F2B0F281D004664F5 /* CustomSlider.swift */,
+				176316702B0F281D004664F5 /* CustomSlider.xib */,
+			);
+			path = CustomSlider;
+			sourceTree = "<group>";
+		};
+		176316772B0F2874004664F5 /* CartCell */ = {
+			isa = PBXGroup;
+			children = (
+				176316782B0F2895004664F5 /* CartTableViewCell.swift */,
+				176316792B0F2895004664F5 /* CartTableViewCell.xib */,
+			);
+			path = CartCell;
+			sourceTree = "<group>";
+		};
+		1763167C2B0F3193004664F5 /* GameScene */ = {
+			isa = PBXGroup;
+			children = (
+				1763167E2B0F319F004664F5 /* File */,
+				1763167D2B0F319B004664F5 /* View */,
+			);
+			path = GameScene;
+			sourceTree = "<group>";
+		};
+		1763167D2B0F319B004664F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				176316812B0F31CB004664F5 /* GameViewController.swift */,
+				176316822B0F31CB004664F5 /* GameViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1763167E2B0F319F004664F5 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				1763167F2B0F31AF004664F5 /* GameScene.swift */,
+				176316892B0F3E6E004664F5 /* CatchScene.swift */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
 		17B6A7382B0CAA170033C67A /* SprayPop */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,8 +724,8 @@
 		17D7084E2B0613B60031C682 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				17D7084F2B0614E20031C682 /* AuthViewController.swift */,
-				173E9B7A2B0AF1A000C37C48 /* AuthViewController.xib */,
+				1763163B2B0D9C5F004664F5 /* Model */,
+				1763163C2B0D9C6A004664F5 /* View */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -627,23 +852,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		17D708A52B0AEB7D0031C682 /* Buddies */ = {
-			isa = PBXGroup;
-			children = (
-				17D708A62B0AEB890031C682 /* View */,
-			);
-			path = Buddies;
-			sourceTree = "<group>";
-		};
-		17D708A62B0AEB890031C682 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				17D708A72B0AEB990031C682 /* BuddiesViewController.swift */,
-				17D708A82B0AEB990031C682 /* BuddiesViewController.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -717,14 +925,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				1706B8CF2B0C6B0E004EA55E /* WeaponViewController.xib in Resources */,
+				1763164F2B0EE518004664F5 /* FirstTableViewCell.xib in Resources */,
 				173E9BA02B0C44FC00C37C48 /* MapCollectionViewCell.xib in Resources */,
 				17D7088A2B0741D10031C682 /* SideTableViewCell.xib in Resources */,
 				173E9B862B0AF53F00C37C48 /* AgentCellTableViewCell.xib in Resources */,
-				17D708AA2B0AEB990031C682 /* BuddiesViewController.xib in Resources */,
+				176316622B0EEC37004664F5 /* Item2CollectionViewCell.xib in Resources */,
+				1763167B2B0F2895004664F5 /* CartTableViewCell.xib in Resources */,
 				175ACC412B06000400DC3522 /* CustomButton.xib in Resources */,
+				176316442B0DAAA5004664F5 /* StoreViewController.xib in Resources */,
 				1706B8E62B0C9C06004EA55E /* SprayViewController.xib in Resources */,
 				175ACC3D2B05F97F00DC3522 /* SplashScreenViewController.xib in Resources */,
 				173E9B7B2B0AF1A000C37C48 /* AuthViewController.xib in Resources */,
+				176316532B0EE552004664F5 /* SecondTableViewCell.xib in Resources */,
+				176316582B0EE57E004664F5 /* ThirdTableViewCell.xib in Resources */,
 				17D708552B0615410031C682 /* CustomTextField.xib in Resources */,
 				17D7089C2B074AAA0031C682 /* AgentViewController.xib in Resources */,
 				17B6A73C2B0CAA380033C67A /* PopUpViewController.xib in Resources */,
@@ -739,8 +952,13 @@
 				173E9B952B0B149800C37C48 /* DescTableViewCell.xib in Resources */,
 				1706B8C02B0C52B2004EA55E /* TiersViewController.xib in Resources */,
 				173E9BA52B0C4AE400C37C48 /* MapTableViewCell.xib in Resources */,
+				1763165D2B0EEAC9004664F5 /* ItemCollectionViewCell.xib in Resources */,
 				1706B8C92B0C5745004EA55E /* TiersCollectionViewCell.xib in Resources */,
+				176316842B0F31CB004664F5 /* GameViewController.xib in Resources */,
 				173E9B982B0B44C500C37C48 /* ClassView.xib in Resources */,
+				1763166D2B0F26CB004664F5 /* TopUpViewController.xib in Resources */,
+				176316882B0F38D7004664F5 /* CartViewController.xib in Resources */,
+				176316722B0F281D004664F5 /* CustomSlider.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -752,6 +970,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				17D7089B2B074AAA0031C682 /* AgentViewController.swift in Sources */,
+				176316712B0F281D004664F5 /* CustomSlider.swift in Sources */,
+				176316872B0F38D7004664F5 /* CartViewController.swift in Sources */,
+				176316472B0EE2B5004664F5 /* StoreContents.swift in Sources */,
 				17D708892B0741D10031C682 /* SideTableViewCell.swift in Sources */,
 				1706B8E92B0C9C21004EA55E /* SprayContents.swift in Sources */,
 				175ACC1B2B05E0B900DC3522 /* ViewController.swift in Sources */,
@@ -759,20 +980,29 @@
 				173E9B9F2B0C44FC00C37C48 /* MapCollectionViewCell.swift in Sources */,
 				17D708982B0749D70031C682 /* MainContents.swift in Sources */,
 				17B6A73B2B0CAA380033C67A /* PopUpViewController.swift in Sources */,
+				176316522B0EE552004664F5 /* SecondTableViewCell.swift in Sources */,
+				176316432B0DAAA5004664F5 /* StoreViewController.swift in Sources */,
+				1763167A2B0F2895004664F5 /* CartTableViewCell.swift in Sources */,
 				17D708572B0615510031C682 /* CustomTextField.swift in Sources */,
 				173E9BA42B0C4AE400C37C48 /* MapTableViewCell.swift in Sources */,
 				17D708912B0746C20031C682 /* SideViewController.swift in Sources */,
 				175ACC212B05E0B900DC3522 /* NBAApp.xcdatamodeld in Sources */,
 				1706B8DC2B0C8BE4004EA55E /* WeaponCollectionViewCell.swift in Sources */,
+				1763165C2B0EEAC9004664F5 /* ItemCollectionViewCell.swift in Sources */,
 				17D7088D2B07433A0031C682 /* AgentsContents.swift in Sources */,
+				1763163E2B0D9C81004664F5 /* AuthContents.swift in Sources */,
+				1763166C2B0F26CB004664F5 /* TopUpViewController.swift in Sources */,
 				1706B8BF2B0C52B2004EA55E /* TiersViewController.swift in Sources */,
 				17D708512B0614E20031C682 /* AuthViewController.swift in Sources */,
+				1763168A2B0F3E6E004664F5 /* CatchScene.swift in Sources */,
 				175ACC3C2B05F97F00DC3522 /* SplashScreenViewController.swift in Sources */,
 				1706B8C82B0C5745004EA55E /* TiersCollectionViewCell.swift in Sources */,
 				173E9B9A2B0B44D400C37C48 /* ClassView.swift in Sources */,
+				1763164E2B0EE518004664F5 /* FirstTableViewCell.swift in Sources */,
+				176316832B0F31CB004664F5 /* GameViewController.swift in Sources */,
 				175ACC362B05F29C00DC3522 /* NetworkManager.swift in Sources */,
-				17D708A92B0AEB990031C682 /* BuddiesViewController.swift in Sources */,
 				173E9B942B0B149800C37C48 /* DescTableViewCell.swift in Sources */,
+				176316612B0EEC37004664F5 /* Item2CollectionViewCell.swift in Sources */,
 				1706B8E52B0C9C06004EA55E /* SprayViewController.swift in Sources */,
 				175ACC452B06011B00DC3522 /* CodeHelper.swift in Sources */,
 				1706B8CE2B0C6B0E004EA55E /* WeaponViewController.swift in Sources */,
@@ -781,12 +1011,14 @@
 				173E9B8E2B0B04ED00C37C48 /* AgentDescViewController.swift in Sources */,
 				175ACC432B0600CD00DC3522 /* CustomButton.swift in Sources */,
 				17D7085E2B061A710031C682 /* CheckBox.swift in Sources */,
+				176316802B0F31AF004664F5 /* GameScene.swift in Sources */,
 				175ACC172B05E0B900DC3522 /* AppDelegate.swift in Sources */,
 				175ACC382B05F2A500DC3522 /* Endpoints.swift in Sources */,
 				1706B8E02B0C8FBE004EA55E /* TooltipView.swift in Sources */,
 				1706B8D72B0C8B6F004EA55E /* GearCollectionViewCell.swift in Sources */,
 				17D708A12B074DBE0031C682 /* MainMenuViewController.swift in Sources */,
 				175ACC192B05E0B900DC3522 /* SceneDelegate.swift in Sources */,
+				176316572B0EE57E004664F5 /* ThirdTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

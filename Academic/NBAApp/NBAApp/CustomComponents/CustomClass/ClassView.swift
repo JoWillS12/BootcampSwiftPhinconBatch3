@@ -14,7 +14,11 @@ class ClassView: UIView {
     @IBOutlet weak var sentinelSec: UIImageView!
     @IBOutlet weak var initiatorSec: UIImageView!
     
-    var tapAction: (() -> Void)?
+    var duelAction: (() -> Void)?
+    var sentiAction: (() -> Void)?
+    var controlAction: (() -> Void)?
+    var initAction: (() -> Void)?
+    var roleSelectionAction: ((String) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,26 +31,30 @@ class ClassView: UIView {
     }
     
     @IBAction func duelClicked(_ sender: Any) {
-        tapAction?()
+        duelAction?()
+        roleSelectionAction?("duelist")
         print("duelist")
         updateLineColors(duelLine: .red, controlLine: .white, sentiLine: .white, initLine: .white)
     }
     
     @IBAction func controlClicked(_ sender: Any) {
-        tapAction?()
+        controlAction?()
         print("controller")
+        roleSelectionAction?("controller")
         updateLineColors(duelLine: .white, controlLine: .red, sentiLine: .white, initLine: .white)
     }
 
     @IBAction func sentinelClicked(_ sender: Any) {
-        tapAction?()
+        sentiAction?()
         print("sentinel")
+        roleSelectionAction?("sentinel")
         updateLineColors(duelLine: .white, controlLine: .white, sentiLine: .red, initLine: .white)
     }
     
     @IBAction func initiatorClicked(_ sender: Any) {
-        tapAction?()
+        initAction?()
         print("initiator")
+        roleSelectionAction?("initiator")
         updateLineColors(duelLine: .white, controlLine: .white, sentiLine: .white, initLine: .red)
     }
     

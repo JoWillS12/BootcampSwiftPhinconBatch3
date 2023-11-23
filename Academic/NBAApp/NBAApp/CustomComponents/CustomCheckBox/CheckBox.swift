@@ -15,8 +15,9 @@ class CheckBox: UIView {
     @IBOutlet weak var forgotButton: UIButton!
     
     var tapAction: (() -> Void)?
+    var forgetAction: (() -> Void)?
     private let disposeBag = DisposeBag()
-    private var isRectangleFilled = false
+    var isRectangleFilled = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,15 +33,15 @@ class CheckBox: UIView {
     func configureButton() {
         rememberButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.tapAction?()
                 self?.toggleButtonImage()
+                self?.tapAction?()
             })
             .disposed(by: disposeBag)
         updateButtonImage()
         forgotButton.rx.tap
             .subscribe(onNext: {
                 [weak self] in
-                self?.tapAction?()
+                self?.forgetAction?()
             })
             .disposed(by: disposeBag)
     }

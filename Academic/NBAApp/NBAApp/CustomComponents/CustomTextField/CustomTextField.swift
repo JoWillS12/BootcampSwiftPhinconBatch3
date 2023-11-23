@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class CustomTextField: UIView {
-
+    
     @IBOutlet weak var textTypeImage: UIImageView!
     @IBOutlet weak var eyeImage: UIImageView!
     @IBOutlet weak var authType: UITextField!
@@ -18,6 +20,12 @@ class CustomTextField: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         configureView()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(eyeImageTapped))
+        eyeImage.isUserInteractionEnabled = true
+        eyeImage.addGestureRecognizer(tapGesture)
+        
+        authType.becomeFirstResponder()
     }
     
     required init?(coder: NSCoder) {
@@ -32,5 +40,10 @@ class CustomTextField: UIView {
         view.layer.masksToBounds = false
         
         addSubview(view)
+    }
+    
+    @objc func eyeImageTapped() {
+        // Handle the tap action when the eye image is clicked
+        tapAction?()
     }
 }

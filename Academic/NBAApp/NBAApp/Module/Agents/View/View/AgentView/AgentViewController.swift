@@ -17,6 +17,7 @@ class AgentViewController: UIViewController, SideViewControllerDelegate {
     private var sidebarMenu: SideViewController!
     var datumData: Valorant?
     var playableCharacters: [ValorantData] = []
+    var selectedRole: String = "duelist"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,11 @@ class AgentViewController: UIViewController, SideViewControllerDelegate {
         
         registerTableCell()
         fetchData()
+        
+        classRole.roleSelectionAction = { [weak self] role in
+            self?.selectedRole = role
+            self?.filterPlayableCharactersByRole()
+        }
     }
     
     @IBAction func menuClicked(_ sender: Any) {
@@ -107,6 +113,7 @@ extension AgentViewController: UITableViewDelegate, UITableViewDataSource {
             cell.agentRole.text = "Unknown Role"
         }
         cell.selectionStyle = .none
+        
         return cell
     }
     
@@ -124,28 +131,18 @@ extension AgentViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension AgentViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filterPlayableCharacters(with: searchText)
-        tableView.reloadData()
-    }
+extension AgentViewController {
     
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text = nil
-        searchBar.resignFirstResponder()
-        filterPlayableCharacters(with: "")
-        tableView.reloadData()
-    }
-    
-    private func filterPlayableCharacters(with searchText: String) {
-        if searchText.isEmpty {
-            playableCharacters = datumData?.data.filter { $0.isPlayableCharacter } ?? []
-        } else {
-            playableCharacters = (datumData?.data ?? []).filter { character in
-                let nameMatch = character.displayName.lowercased().contains(searchText.lowercased())
-                let roleMatch = String("\(character.role?.displayName)").lowercased().contains(searchText.lowercased())
-                return nameMatch || roleMatch
+    private func filterPlayableCharactersByRole() {
+        playableCharacters = datumData?.data.filter { character in
+            if let characterRoleName = character.role?.displayName.rawValue.lowercased(),
+               selectedRole.lowercased() == characterRoleName {
+                return true
             }
-        }
+            return false
+        } ?? []
+        
+        tableView.reloadData()
     }
+    
 }

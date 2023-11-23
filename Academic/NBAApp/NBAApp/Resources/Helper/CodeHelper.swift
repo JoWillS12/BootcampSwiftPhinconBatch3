@@ -100,11 +100,16 @@ class NavigationHelper {
         case 2:
             selectedViewController = TiersViewController()
         case 3:
-            selectedViewController = MainMenuViewController()
+            selectedViewController = StoreViewController()
         case 4:
             selectedViewController = WeaponViewController()
         case 5:
             selectedViewController = SprayViewController()
+        case 6:
+            selectedViewController = GameViewController()
+        case 7:
+            logout()
+            selectedViewController = SplashScreenViewController()
         default:
             selectedViewController = MainMenuViewController()
         }
@@ -132,6 +137,19 @@ class NavigationHelper {
                 sidebarMenu.view.removeFromSuperview()
                 sidebarMenu.removeFromParent()
             }
+        }
+    }
+    
+    static func logout() {
+        UserDefaults.standard.removeObject(forKey: "currentUserEmail")
+        // Add any other necessary cleanup
+
+        // Optionally, you can present a login screen or perform additional actions
+        // For example, presenting AuthViewController
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let topViewController = windowScene.windows.first?.rootViewController {
+            let splashViewController = SplashScreenViewController()
+            topViewController.navigationController?.setViewControllers([splashViewController], animated: false)
         }
     }
 }

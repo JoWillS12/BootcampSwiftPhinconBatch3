@@ -24,6 +24,7 @@ class SideViewController: UIViewController {
         SideMenuModel(icon: UIImage(systemName: "shippingbox.fill")!, title: "Stores"),
         SideMenuModel(icon: UIImage(systemName: "bolt.fill")!, title: "Weaponary"),
         SideMenuModel(icon: UIImage(systemName: "paintbrush.fill")!, title: "Spray"),
+        SideMenuModel(icon: UIImage(systemName: "gamecontroller.fill")!, title: "Mini Game"),
         SideMenuModel(icon: UIImage(systemName: "x.circle.fill")!, title: "Log Out")
     ]
     
