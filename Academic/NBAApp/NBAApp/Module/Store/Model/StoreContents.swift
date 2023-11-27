@@ -56,3 +56,27 @@ struct BuddiesLevel: Codable {
     let displayIcon: String
     let assetPath: String
 }
+
+// MARK: - Cart Items
+struct CartItem: Codable {
+    var itemType: ItemType
+    var itemId: String
+    var itemImage: String?
+    var itemName: String
+
+    enum ItemType: String, Codable {
+        case bundle
+        case buddies
+    }
+
+    // You can add more properties as needed, such as price, name, etc., based on your requirements.
+
+    init(itemType: ItemType, itemId: String, itemImage: String, itemName: String) {
+        self.itemType = itemType
+        self.itemId = itemId
+        self.itemImage = itemImage
+        self.itemName = itemName
+    }
+}
+
+

@@ -13,11 +13,13 @@ class ThirdTableViewCell: UITableViewCell {
     
     var bundleData: [BundleData] = []
     var buddieData: [BuddiesData] = []
+    var shoppingCart: [CartItem] = []
     var selectedButtonType: String?{
         didSet{
             collectionView.reloadData()
         }
     }
+    var moveToCart: (()->Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -71,6 +73,40 @@ class ThirdTableViewCell: UITableViewCell {
             }
         }
     }
+    
+    func saveItem(item: CartItem) {
+        if !shoppingCart.contains(where: { $0.itemId == item.itemId }) {
+            // Item is not in the cart, add it
+            shoppingCart.append(item)
+
+            // Update UserDefaults or any other storage mechanism if needed
+            AppSetting.shared.selectedItem = shoppingCart
+            print(shoppingCart)
+        }
+    }
+    
+    func buttonAddItem(indexPath: IndexPath) {
+        guard let selectedType = selectedButtonType else { return }
+
+        switch selectedType {
+        case "bundle":
+            guard bundleData.indices.contains(indexPath.row) else { return }
+            let selectedBundle = bundleData[indexPath.row]
+            let cartItem = CartItem(itemType: .bundle, itemId: selectedBundle.uuid, itemImage: selectedBundle.displayIcon, itemName: selectedBundle.displayName)
+            saveItem(item: cartItem)
+            print(cartItem)
+            moveToCart?()
+        case "buddie":
+            guard buddieData.indices.contains(indexPath.row) else { return }
+            let selectedBuddie = buddieData[indexPath.row]
+            let cartItem = CartItem(itemType: .buddies, itemId: selectedBuddie.uuid, itemImage: selectedBuddie.displayIcon, itemName: selectedBuddie.displayName)
+            saveItem(item: cartItem)
+            print(cartItem)
+            moveToCart?()
+        default:
+            break
+        }
+    }
 }
 extension ThirdTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -98,6 +134,11 @@ extension ThirdTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
                 if let imageURL = URL(string: datas.displayIcon) {
                     cell.bundleImage.kf.setImage(with: imageURL)
                 }
+                cell.tapAction = { [weak self] in
+                    guard let indexPath = self?.collectionView.indexPath(for: cell) else { return }
+                    self?.buttonAddItem(indexPath: indexPath)
+                    cell.cartButton.isHidden = true
+                }
                 return cell
             case "buddie":
                 // Configure cell for buddie data
@@ -106,6 +147,11 @@ extension ThirdTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
                 cell.buddieName.text = datas.displayName
                 if let imageURL = URL(string: datas.displayIcon) {
                     cell.buddieImage.kf.setImage(with: imageURL)
+                }
+                cell.tapAction = { [weak self] in
+                    guard let indexPath = self?.collectionView.indexPath(for: cell) else { return }
+                    self?.buttonAddItem(indexPath: indexPath)
+                    cell.cartButton.isHidden = true
                 }
                 return cell
             default:

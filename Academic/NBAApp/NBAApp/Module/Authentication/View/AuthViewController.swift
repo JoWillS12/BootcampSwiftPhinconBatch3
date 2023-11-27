@@ -163,7 +163,7 @@ class AuthViewController: UIViewController {
     }
     
     // Function to save user to UserDefaults
-    private func saveUser(user: User) {
+    func saveUser(user: User) {
         // In a real application, you would want to securely store user data.
         // For simplicity, we are using UserDefaults here.
         let userEncoded = try? JSONEncoder().encode(user)
@@ -171,7 +171,7 @@ class AuthViewController: UIViewController {
     }
     
     // Function to get user from UserDefaults
-    private func getUser(email: String) -> User? {
+    func getUser(email: String) -> User? {
         if let userData = UserDefaults.standard.data(forKey: email),
            let user = try? JSONDecoder().decode(User.self, from: userData) {
             return user

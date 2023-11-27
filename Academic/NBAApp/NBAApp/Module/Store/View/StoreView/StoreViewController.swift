@@ -16,8 +16,19 @@ class StoreViewController: UIViewController, SideViewControllerDelegate {
     private var sidebarMenu: SideViewController!
     var bundleData: [BundleData] = []
     var buddieData: [BuddiesData] = []
+    var shoppingCart: [CartItem] = []
     var timer: Timer?
     var selectedButtonType: String?
+    var totalVPAmount: Int = 0
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:
+                                    #selector(StoreViewController.handleRefresh(_:)),
+                                 for: UIControl.Event.valueChanged)
+        refreshControl.tintColor = UIColor.white
+        
+        return refreshControl
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,19 +45,36 @@ class StoreViewController: UIViewController, SideViewControllerDelegate {
         registrationTableCell()
         fetchData()
         selectedButtonType = "bundle"
+        
+        if let lastPaymentAmount = UserDefaults.standard.value(forKey: "LastPaymentAmount") as? Int {
+            totalVPAmount += lastPaymentAmount
+            UserDefaults.standard.removeObject(forKey: "LastPaymentAmount") // Remove the stored value
+        }
+        
+        vpAmount.text = "\(totalVPAmount)"
     }
     
     @IBAction func addVP(_ sender: Any) {
+        self.navigationController?.pushViewController(TopUpViewController(), animated: false)
     }
     
     @IBAction func menuClicked(_ sender: Any) {
         NavigationHelper.handleButtonCondition(for: sidebarMenu, in: self)
     }
     
+    @IBAction func toCart(_ sender: Any) {
+        self.navigationController?.pushViewController(CartViewController(), animated: false)
+    }
+    
     @objc func updateData() {
         // Shuffle the array and reload the table view
         bundleData.shuffle()
         tableView.reloadData()
+    }
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        self.tableView.reloadData()
+        refreshControl.endRefreshing()
     }
     
     // Implement the SidebarMenuDelegate method
@@ -71,9 +99,10 @@ class StoreViewController: UIViewController, SideViewControllerDelegate {
             tableView.register(UINib(nibName: String(describing: FirstTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: FirstTableViewCell.self))
             tableView.register(UINib(nibName: String(describing: SecondTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: SecondTableViewCell.self))
             tableView.register(UINib(nibName: String(describing: ThirdTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: ThirdTableViewCell.self))
+            self.tableView.addSubview(self.refreshControl)
         }
     }
-    
+         
     func fetchData(){
         NetworkManager.shared.makeAPICall(endpoint: .getBundles) { [weak self] (response: Result<(Bundles), Error>) in
             guard let self = self else { return }
@@ -145,6 +174,9 @@ extension StoreViewController: UITableViewDelegate, UITableViewDataSource{
         case 2:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "ThirdTableViewCell", for: indexPath) as? ThirdTableViewCell {
                 cell.selectedButtonType = selectedButtonType
+                cell.moveToCart = {[weak self] in
+                    
+                }
                 return cell
             }
         default:

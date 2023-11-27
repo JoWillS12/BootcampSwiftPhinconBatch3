@@ -153,3 +153,25 @@ class NavigationHelper {
         }
     }
 }
+
+class SectionHeaderView: UITableViewHeaderFooterView {
+    var tapHandler: (() -> Void)?
+
+    override init(reuseIdentifier: String?) {
+        super.init(reuseIdentifier: reuseIdentifier)
+        setupView()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupView()
+    }
+
+    private func setupView() {
+        contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+    }
+
+    @objc private func handleTap() {
+        tapHandler?()
+    }
+}

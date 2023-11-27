@@ -70,6 +70,7 @@
             <connections>
                 <outlet property="buddieImage" destination="bx7-7A-yAK" id="sC7-Z4-AZl"/>
                 <outlet property="buddieName" destination="D6e-jh-N5y" id="tfz-0Z-6Rj"/>
+                <outlet property="cartButton" destination="KKY-Ve-6kR" id="nhE-8B-ZB0"/>
                 <outlet property="viewBuddies" destination="2C9-Q5-upS" id="SGg-lG-Q6o"/>
             </connections>
             <point key="canvasLocation" x="37.404580152671755" y="19.718309859154932"/>

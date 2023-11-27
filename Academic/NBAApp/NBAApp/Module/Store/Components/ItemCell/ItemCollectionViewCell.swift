@@ -11,6 +11,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var bundleImage: UIImageView!
     @IBOutlet weak var bundleName: UILabel!
     @IBOutlet weak var viewBundle: UIView!
+    @IBOutlet weak var cartButton: UIButton!
     
     var tapAction: (()->Void)?
     override func awakeFromNib() {

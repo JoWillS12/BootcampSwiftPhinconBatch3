@@ -76,6 +76,9 @@
 		176316872B0F38D7004664F5 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176316852B0F38D7004664F5 /* CartViewController.swift */; };
 		176316882B0F38D7004664F5 /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176316862B0F38D7004664F5 /* CartViewController.xib */; };
 		1763168A2B0F3E6E004664F5 /* CatchScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176316892B0F3E6E004664F5 /* CatchScene.swift */; };
+		1763168D2B103958004664F5 /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 1763168C2B103958004664F5 /* RxGesture */; };
+		176316912B103D92004664F5 /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1763168F2B103D92004664F5 /* PaymentTableViewCell.swift */; };
+		176316922B103D92004664F5 /* PaymentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176316902B103D92004664F5 /* PaymentTableViewCell.xib */; };
 		17B6A73B2B0CAA380033C67A /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B6A7392B0CAA380033C67A /* PopUpViewController.swift */; };
 		17B6A73C2B0CAA380033C67A /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17B6A73A2B0CAA380033C67A /* PopUpViewController.xib */; };
 		17D708512B0614E20031C682 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D7084F2B0614E20031C682 /* AuthViewController.swift */; };
@@ -171,6 +174,8 @@
 		176316852B0F38D7004664F5 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		176316862B0F38D7004664F5 /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
 		176316892B0F3E6E004664F5 /* CatchScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchScene.swift; sourceTree = "<group>"; };
+		1763168F2B103D92004664F5 /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
+		176316902B103D92004664F5 /* PaymentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentTableViewCell.xib; sourceTree = "<group>"; };
 		17B6A7392B0CAA380033C67A /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		17B6A73A2B0CAA380033C67A /* PopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
 		17D7084F2B0614E20031C682 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +206,7 @@
 				17D708642B06ECD70031C682 /* RxCocoa in Frameworks */,
 				17D708682B06ECD70031C682 /* RxSwift in Frameworks */,
 				17D708612B061D460031C682 /* FloatingPanel in Frameworks */,
+				1763168D2B103958004664F5 /* RxGesture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +591,7 @@
 		176316482B0EE492004664F5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1763168E2B103D7B004664F5 /* PaymentCell */,
 				176316772B0F2874004664F5 /* CartCell */,
 				1763165E2B0EEC22004664F5 /* Item2Cell */,
 				176316592B0EEAB2004664F5 /* ItemCell */,
@@ -710,6 +717,15 @@
 				176316892B0F3E6E004664F5 /* CatchScene.swift */,
 			);
 			path = File;
+			sourceTree = "<group>";
+		};
+		1763168E2B103D7B004664F5 /* PaymentCell */ = {
+			isa = PBXGroup;
+			children = (
+				1763168F2B103D92004664F5 /* PaymentTableViewCell.swift */,
+				176316902B103D92004664F5 /* PaymentTableViewCell.xib */,
+			);
+			path = PaymentCell;
 			sourceTree = "<group>";
 		};
 		17B6A7382B0CAA170033C67A /* SprayPop */ = {
@@ -875,6 +891,7 @@
 				17D708672B06ECD70031C682 /* RxSwift */,
 				17D7086A2B07304E0031C682 /* Alamofire */,
 				173E9B882B0B011C00C37C48 /* Kingfisher */,
+				1763168C2B103958004664F5 /* RxGesture */,
 			);
 			productName = NBAApp;
 			productReference = 175ACC132B05E0B900DC3522 /* NBAApp.app */;
@@ -909,6 +926,7 @@
 				17D708622B06ECD70031C682 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				17D708692B07304E0031C682 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				173E9B872B0B011C00C37C48 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				1763168B2B103958004664F5 /* XCRemoteSwiftPackageReference "RxGesture" */,
 			);
 			productRefGroup = 175ACC142B05E0B900DC3522 /* Products */;
 			projectDirPath = "";
@@ -942,6 +960,7 @@
 				17D7089C2B074AAA0031C682 /* AgentViewController.xib in Resources */,
 				17B6A73C2B0CAA380033C67A /* PopUpViewController.xib in Resources */,
 				17D708922B0746C20031C682 /* SideViewController.xib in Resources */,
+				176316922B103D92004664F5 /* PaymentTableViewCell.xib in Resources */,
 				1706B8DD2B0C8BE4004EA55E /* WeaponCollectionViewCell.xib in Resources */,
 				1706B8D82B0C8B6F004EA55E /* GearCollectionViewCell.xib in Resources */,
 				175ACC312B05F12C00DC3522 /* Secret.plist in Resources */,
@@ -1001,6 +1020,7 @@
 				1763164E2B0EE518004664F5 /* FirstTableViewCell.swift in Sources */,
 				176316832B0F31CB004664F5 /* GameViewController.swift in Sources */,
 				175ACC362B05F29C00DC3522 /* NetworkManager.swift in Sources */,
+				176316912B103D92004664F5 /* PaymentTableViewCell.swift in Sources */,
 				173E9B942B0B149800C37C48 /* DescTableViewCell.swift in Sources */,
 				176316612B0EEC37004664F5 /* Item2CollectionViewCell.swift in Sources */,
 				1706B8E52B0C9C06004EA55E /* SprayViewController.swift in Sources */,
@@ -1225,6 +1245,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		1763168B2B103958004664F5 /* XCRemoteSwiftPackageReference "RxGesture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxGesture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		17D7085F2B061D460031C682 /* XCRemoteSwiftPackageReference "FloatingPanel" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/scenee/FloatingPanel";
@@ -1256,6 +1284,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 173E9B872B0B011C00C37C48 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		1763168C2B103958004664F5 /* RxGesture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1763168B2B103958004664F5 /* XCRemoteSwiftPackageReference "RxGesture" */;
+			productName = RxGesture;
 		};
 		17D708602B061D460031C682 /* FloatingPanel */ = {
 			isa = XCSwiftPackageProductDependency;

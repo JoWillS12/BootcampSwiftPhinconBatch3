@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FieldView" customModule="PetWalk" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FieldView" customModule="CloverApp" customModuleProvider="target">
             <connections>
                 <outlet property="fieldName" destination="q4u-kt-qRc" id="ezU-3F-cXk"/>
                 <outlet property="inputType" destination="kTm-Qm-4sZ" id="qde-Bd-xjB"/>
@@ -20,10 +20,12 @@
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kTm-Qm-4sZ">
                     <rect key="frame" x="0.0" y="29" width="327" height="34"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="327" id="rxv-rP-LhB"/>
                         <constraint firstAttribute="height" constant="34" id="sui-yI-Bal"/>
                     </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>

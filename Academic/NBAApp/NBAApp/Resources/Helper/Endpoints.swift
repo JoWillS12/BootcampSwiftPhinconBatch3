@@ -69,4 +69,26 @@ enum Endpoint {
 
 class BaseConstant {
     static var host = "https://valorant-api.com/v1/"
+    static var userDef = UserDefaults.standard
+}
+
+class AppSetting {
+    static let shared = AppSetting()
+    
+    var selectedItem: [CartItem] {
+        get {
+            if let data = BaseConstant.userDef.data(forKey: "Items"),
+               let items = try? JSONDecoder().decode([CartItem].self, from: data) {
+                return items
+            } else {
+                return []
+            }
+        }
+        set(newItems) {
+            if let data = try? JSONEncoder().encode(newItems) {
+                BaseConstant.userDef.set(data, forKey: "Items")
+                BaseConstant.userDef.synchronize()
+            }
+        }
+    }
 }

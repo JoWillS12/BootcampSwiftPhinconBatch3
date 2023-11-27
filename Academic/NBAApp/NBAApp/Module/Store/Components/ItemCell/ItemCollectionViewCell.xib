@@ -71,6 +71,7 @@
             <connections>
                 <outlet property="bundleImage" destination="een-4u-d74" id="USw-jb-5v4"/>
                 <outlet property="bundleName" destination="aFT-3r-mgJ" id="ekd-xq-vR8"/>
+                <outlet property="cartButton" destination="r6E-kH-BiV" id="cqJ-yQ-L3J"/>
                 <outlet property="viewBundle" destination="TnX-jt-i2H" id="VCd-xL-oQx"/>
             </connections>
             <point key="canvasLocation" x="142.74809160305344" y="19.366197183098592"/>
