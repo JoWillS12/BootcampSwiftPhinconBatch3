@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1753EFAB2B1573E8004084F3 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753EFA92B1573E8004084F3 /* CircleView.swift */; };
+		1753EFAC2B1573E8004084F3 /* CircleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1753EFAA2B1573E8004084F3 /* CircleView.xib */; };
+		1753EFAF2B1573FA004084F3 /* FieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1753EFAD2B1573FA004084F3 /* FieldView.xib */; };
+		1753EFB02B1573FA004084F3 /* FieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753EFAE2B1573FA004084F3 /* FieldView.swift */; };
 		176D727E2B01F02700835916 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D727D2B01F02700835916 /* AppDelegate.swift */; };
 		176D72802B01F02700835916 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D727F2B01F02700835916 /* SceneDelegate.swift */; };
 		176D72822B01F02700835916 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72812B01F02700835916 /* ViewController.swift */; };
@@ -20,13 +24,9 @@
 		176D72A72B01F11B00835916 /* BlueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72A52B01F11B00835916 /* BlueView.xib */; };
 		176D72B02B01F19600835916 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72AE2B01F19600835916 /* CircleButtonView.swift */; };
 		176D72B12B01F19600835916 /* CircleButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72AF2B01F19600835916 /* CircleButtonView.xib */; };
-		176D72B42B01F19F00835916 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72B22B01F19E00835916 /* CircleView.swift */; };
-		176D72B52B01F19F00835916 /* CircleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72B32B01F19F00835916 /* CircleView.xib */; };
 		176D72B72B01F1A700835916 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72B62B01F1A700835916 /* CircularProgressView.swift */; };
 		176D72BA2B01F1AF00835916 /* CustomButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72B82B01F1AF00835916 /* CustomButton.xib */; };
 		176D72BB2B01F1AF00835916 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72B92B01F1AF00835916 /* CustomButton.swift */; };
-		176D72BE2B01F1B600835916 /* FieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72BC2B01F1B600835916 /* FieldView.swift */; };
-		176D72BF2B01F1B600835916 /* FieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72BD2B01F1B600835916 /* FieldView.xib */; };
 		176D72C22B01F1BD00835916 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D72C02B01F1BD00835916 /* ProfileView.swift */; };
 		176D72C32B01F1BD00835916 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72C12B01F1BD00835916 /* ProfileView.xib */; };
 		176D72CB2B01F20F00835916 /* HomePetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176D72C92B01F20F00835916 /* HomePetCollectionViewCell.xib */; };
@@ -98,6 +98,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1753EFA92B1573E8004084F3 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		1753EFAA2B1573E8004084F3 /* CircleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleView.xib; sourceTree = "<group>"; };
+		1753EFAD2B1573FA004084F3 /* FieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FieldView.xib; sourceTree = "<group>"; };
+		1753EFAE2B1573FA004084F3 /* FieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldView.swift; sourceTree = "<group>"; };
 		176D727A2B01F02600835916 /* DogApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		176D727D2B01F02700835916 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		176D727F2B01F02700835916 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,13 +117,9 @@
 		176D72A52B01F11B00835916 /* BlueView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BlueView.xib; path = ../../../../PetApp/PetApp/CustomComponents/BlueButton/BlueView.xib; sourceTree = "<group>"; };
 		176D72AE2B01F19600835916 /* CircleButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleButtonView.swift; path = ../../../../PetApp/PetApp/CustomComponents/CircleButton/CircleButtonView.swift; sourceTree = "<group>"; };
 		176D72AF2B01F19600835916 /* CircleButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CircleButtonView.xib; path = ../../../../PetApp/PetApp/CustomComponents/CircleButton/CircleButtonView.xib; sourceTree = "<group>"; };
-		176D72B22B01F19E00835916 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleView.swift; path = ../../../../PetApp/PetApp/CustomComponents/CircleProfile/CircleView.swift; sourceTree = "<group>"; };
-		176D72B32B01F19F00835916 /* CircleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CircleView.xib; path = ../../../../PetApp/PetApp/CustomComponents/CircleProfile/CircleView.xib; sourceTree = "<group>"; };
 		176D72B62B01F1A700835916 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularProgressView.swift; path = ../../../../PetApp/PetApp/CustomComponents/CircularProgressView/CircularProgressView.swift; sourceTree = "<group>"; };
 		176D72B82B01F1AF00835916 /* CustomButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomButton.xib; path = ../../../../PetApp/PetApp/CustomComponents/CustomButton/CustomButton.xib; sourceTree = "<group>"; };
 		176D72B92B01F1AF00835916 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomButton.swift; path = ../../../../PetApp/PetApp/CustomComponents/CustomButton/CustomButton.swift; sourceTree = "<group>"; };
-		176D72BC2B01F1B600835916 /* FieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FieldView.swift; path = ../../../../PetApp/PetApp/CustomComponents/CustomTextfield/FieldView.swift; sourceTree = "<group>"; };
-		176D72BD2B01F1B600835916 /* FieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FieldView.xib; path = ../../../../PetApp/PetApp/CustomComponents/CustomTextfield/FieldView.xib; sourceTree = "<group>"; };
 		176D72C02B01F1BD00835916 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = ../../../../PetApp/PetApp/CustomComponents/ProfileBox/ProfileView.swift; sourceTree = "<group>"; };
 		176D72C12B01F1BD00835916 /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileView.xib; path = ../../../../PetApp/PetApp/CustomComponents/ProfileBox/ProfileView.xib; sourceTree = "<group>"; };
 		176D72C92B01F20F00835916 /* HomePetCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomePetCollectionViewCell.xib; path = ../../../../../../PetApp/PetApp/HomePage/Components/HomePetCell/HomePetCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -332,8 +332,8 @@
 		176D72A92B01F15E00835916 /* CircleProfile */ = {
 			isa = PBXGroup;
 			children = (
-				176D72B22B01F19E00835916 /* CircleView.swift */,
-				176D72B32B01F19F00835916 /* CircleView.xib */,
+				1753EFA92B1573E8004084F3 /* CircleView.swift */,
+				1753EFAA2B1573E8004084F3 /* CircleView.xib */,
 			);
 			path = CircleProfile;
 			sourceTree = "<group>";
@@ -358,8 +358,8 @@
 		176D72AC2B01F17B00835916 /* CustomTextField */ = {
 			isa = PBXGroup;
 			children = (
-				176D72BC2B01F1B600835916 /* FieldView.swift */,
-				176D72BD2B01F1B600835916 /* FieldView.xib */,
+				1753EFAE2B1573FA004084F3 /* FieldView.swift */,
+				1753EFAD2B1573FA004084F3 /* FieldView.xib */,
 			);
 			path = CustomTextField;
 			sourceTree = "<group>";
@@ -858,16 +858,15 @@
 				176D73102B021B9E00835916 /* checkMark.json in Resources */,
 				176D73772B04A35D00835916 /* FindTableViewCell.xib in Resources */,
 				176D729B2B01F0BC00835916 /* Proxima Nova Font.otf in Resources */,
+				1753EFAC2B1573E8004084F3 /* CircleView.xib in Resources */,
 				176D72BA2B01F1AF00835916 /* CustomButton.xib in Resources */,
 				176D73252B0320DA00835916 /* CommunityTableViewCell.xib in Resources */,
 				176D72C32B01F1BD00835916 /* ProfileView.xib in Resources */,
-				176D72BF2B01F1B600835916 /* FieldView.xib in Resources */,
 				176D72EE2B01F2DE00835916 /* SplashScreenViewController.xib in Resources */,
 				176D733B2B03586100835916 /* ProfileCollectionViewCell.xib in Resources */,
 				176D72DA2B01F26400835916 /* PetViewController.xib in Resources */,
 				176D72E52B01F2A900835916 /* CommunityViewController.xib in Resources */,
 				176D72CB2B01F20F00835916 /* HomePetCollectionViewCell.xib in Resources */,
-				176D72B52B01F19F00835916 /* CircleView.xib in Resources */,
 				176D732E2B032BBF00835916 /* PetSelectionViewController.xib in Resources */,
 				176D73512B0462E100835916 /* EndViewController.xib in Resources */,
 				176D72F72B01F37F00835916 /* AuthViewController.xib in Resources */,
@@ -876,6 +875,7 @@
 				176D73162B0301A700835916 /* AddPetViewController.xib in Resources */,
 				176D735C2B04715300835916 /* SearchTableViewCell.xib in Resources */,
 				176D73492B04502E00835916 /* StartViewController.xib in Resources */,
+				1753EFAF2B1573FA004084F3 /* FieldView.xib in Resources */,
 				176D73572B046EA500835916 /* SearchProfileViewController.xib in Resources */,
 				176D73702B049EBB00835916 /* FindFriendViewController.xib in Resources */,
 			);
@@ -894,16 +894,15 @@
 				176D73092B01FE8600835916 /* AuthContents.swift in Sources */,
 				176D72F62B01F37F00835916 /* AuthViewController.swift in Sources */,
 				176D737D2B04B07900835916 /* NotificationViewController.swift in Sources */,
-				176D72B42B01F19F00835916 /* CircleView.swift in Sources */,
 				176D72CF2B01F21600835916 /* StatsTableViewCell.swift in Sources */,
 				176D72ED2B01F2DE00835916 /* SplashScreenViewController.swift in Sources */,
 				176D73332B032E6D00835916 /* MethodView.swift in Sources */,
 				176D73482B04502E00835916 /* StartViewController.swift in Sources */,
 				176D72C22B01F1BD00835916 /* ProfileView.swift in Sources */,
-				176D72BE2B01F1B600835916 /* FieldView.swift in Sources */,
 				176D733E2B035FE300835916 /* ProfileContents.swift in Sources */,
 				176D734C2B04540800835916 /* CustomAnnotation.swift in Sources */,
 				176D733A2B03586100835916 /* ProfileCollectionViewCell.swift in Sources */,
+				1753EFAB2B1573E8004084F3 /* CircleView.swift in Sources */,
 				176D72A62B01F11B00835916 /* BlueView.swift in Sources */,
 				176D73762B04A35D00835916 /* FindTableViewCell.swift in Sources */,
 				176D72E62B01F2A900835916 /* CommunityViewController.swift in Sources */,
@@ -928,6 +927,7 @@
 				176D730E2B020F1700835916 /* AuthViewModel.swift in Sources */,
 				176D727E2B01F02700835916 /* AppDelegate.swift in Sources */,
 				176D72882B01F02700835916 /* DogApp.xcdatamodeld in Sources */,
+				1753EFB02B1573FA004084F3 /* FieldView.swift in Sources */,
 				176D72D42B01F22100835916 /* HomeViewController.swift in Sources */,
 				176D73032B01F8EC00835916 /* EndPoint.swift in Sources */,
 				176D72BB2B01F1AF00835916 /* CustomButton.swift in Sources */,

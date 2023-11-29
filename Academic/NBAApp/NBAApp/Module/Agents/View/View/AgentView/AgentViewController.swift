@@ -119,7 +119,6 @@ extension AgentViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.navigationToAgentDesc(index: indexPath.row)
-        
     }
     
     func navigationToAgentDesc(index: Int) {
