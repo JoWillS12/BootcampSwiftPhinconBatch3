@@ -35,8 +35,6 @@ class FirstTableViewCell: UITableViewCell {
         // Initialization code
         setUp()
         registerCollectionCell()
-        let padding: CGFloat = 10.0
-        contentView.frame = bounds.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: padding, right: 0))
         startTimer()
         configurePageControl()
     }
@@ -124,7 +122,7 @@ class FirstTableViewCell: UITableViewCell {
             return
         }
         
-        let nextPage = (pageControl.currentPage + 1) % nowPlayingData.count > 0 ? nowPlayingData[0].results.count : 0
+        let nextPage = (pageControl.currentPage + 1) % nowPlayingData[0].results.count
         let indexPath = IndexPath(item: nextPage, section: 0)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         pageControl.currentPage = nextPage

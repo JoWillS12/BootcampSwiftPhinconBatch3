@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import FirebaseDatabase
+import FirebaseAuth
 
 // MARK: - NowPlaying
 struct NowPlaying: Codable {
@@ -32,8 +34,7 @@ struct PlayingResult: Codable {
     let backdropPath: String
     let genreIDS: [Int]
     let id: Int
-    let originalLanguage: OriginalLanguage
-    let originalTitle, overview: String
+    let originalLanguage, originalTitle, overview: String
     let popularity: Double
     let posterPath, releaseDate, title: String
     let video: Bool
@@ -54,13 +55,6 @@ struct PlayingResult: Codable {
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
     }
-}
-
-enum OriginalLanguage: String, Codable {
-    case en = "en"
-    case fr = "fr"
-    case id = "id"
-    case uk = "uk"
 }
 
 // MARK: - Genre
@@ -90,13 +84,15 @@ struct Trending: Codable {
 // MARK: - Result
 struct TrendingResult: Codable {
     let adult: Bool
-    let backdropPath: String?
-    let genreIDS: [Int]
+    let backdropPath: String
     let id: Int
+    let title: String
     let originalLanguage: TrendingOriginalLanguage
-    let originalTitle, overview: String
+    let originalTitle, overview, posterPath: String
+    let mediaType: MediaType
+    let genreIDS: [Int]
     let popularity: Double
-    let posterPath, releaseDate, title: String
+    let releaseDate: String
     let video: Bool
     let voteAverage: Double
     let voteCount: Int
@@ -104,24 +100,28 @@ struct TrendingResult: Codable {
     enum CodingKeys: String, CodingKey {
         case adult
         case backdropPath = "backdrop_path"
-        case genreIDS = "genre_ids"
-        case id
+        case id, title
         case originalLanguage = "original_language"
         case originalTitle = "original_title"
-        case overview, popularity
+        case overview
         case posterPath = "poster_path"
+        case mediaType = "media_type"
+        case genreIDS = "genre_ids"
+        case popularity
         case releaseDate = "release_date"
-        case title, video
+        case video
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
     }
 }
 
+enum MediaType: String, Codable {
+    case movie = "movie"
+}
+
 enum TrendingOriginalLanguage: String, Codable {
     case en = "en"
-    case hi = "hi"
     case ja = "ja"
-    case ko = "ko"
 }
 
 // MARK: - TopRated
@@ -217,11 +217,61 @@ enum TvOriginalLanguage: String, Codable {
     case ko = "ko"
 }
 
+// MARK: - Popular
+struct Popular: Codable {
+    let page: Int
+    let results: [PopularResult]
+    let totalPages, totalResults: Int
+
+    enum CodingKeys: String, CodingKey {
+        case page, results
+        case totalPages = "total_pages"
+        case totalResults = "total_results"
+    }
+}
+
+// MARK: - Result
+struct PopularResult: Codable {
+    let adult: Bool
+    let backdropPath: String?
+    let genreIDS: [Int]
+    let id: Int
+    let originalLanguage, originalTitle, overview: String
+    let popularity: Double
+    let posterPath, releaseDate, title: String
+    let video: Bool
+    let voteAverage: Double
+    let voteCount: Int
+
+    enum CodingKeys: String, CodingKey {
+        case adult
+        case backdropPath = "backdrop_path"
+        case genreIDS = "genre_ids"
+        case id
+        case originalLanguage = "original_language"
+        case originalTitle = "original_title"
+        case overview, popularity
+        case posterPath = "poster_path"
+        case releaseDate = "release_date"
+        case title, video
+        case voteAverage = "vote_average"
+        case voteCount = "vote_count"
+    }
+}
+
 // MARK: - Comment
 struct Comment {
-    let id: String
     let userId: String
-    let userName: String
-    let commentText: String
-    let commentDate: String
+    let username: String
+    let text: String
+    let timestamp: TimeInterval
+
+    init(snapshot: DataSnapshot) {
+        let snapshotValue = snapshot.value as! [String: Any]
+        userId = snapshotValue["userId"] as! String
+        username = snapshotValue["username"] as! String
+        text = snapshotValue["text"] as! String
+        timestamp = snapshotValue["timestamp"] as! TimeInterval
+    }
 }
+

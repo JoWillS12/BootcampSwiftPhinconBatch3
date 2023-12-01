@@ -6,13 +6,23 @@
 //
 
 import UIKit
+import Parchment
 
 class SuggestViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var topData: [TopRated] = []
-    var tvTopData: [TvTopRated] = []
+    var popularData: [Popular] = []
+    let index: Int
+    
+    init(index: Int) {
+        self.index = index
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +33,7 @@ class SuggestViewController: UIViewController {
         registerCollectionCell()
         fetchData()
     }
-        
+    
     
     func registerCollectionCell(){
         collectionView.register(UINib.init(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MovieCollectionViewCell")
@@ -33,68 +43,40 @@ class SuggestViewController: UIViewController {
     }
     
     func fetchData() {
-        let group = DispatchGroup()
-        
-        group.enter()
-        NetworkManager.shared.makeAPICall(endpoint: .tvTopRated) { [weak self] (response: Result<(TvTopRated), Error>) in
+        NetworkManager.shared.makeAPICall(endpoint: .popular) { [weak self] (response: Result<(Popular), Error>) in
             guard let self = self else { return }
-            defer { group.leave() }
             switch response {
-            case .success(let tvTop):
-                self.tvTopData = [tvTop]
+            case .success(let pop):
+                self.popularData = [pop]
+                self.collectionView.reloadData()
             case .failure(let error):
                 print("Genre API Request Error: \(error.localizedDescription)")
             }
-        }
-        
-        group.enter()
-        NetworkManager.shared.makeAPICall(endpoint: .topRated) { [weak self] (response: Result<(TopRated), Error>) in
-            guard let self = self else { return }
-            defer { group.leave() }
-            switch response {
-            case .success(let rated):
-                self.topData = [rated]
-            case .failure(let error):
-                print("Genre API Request Error: \(error.localizedDescription)")
-            }
-        }
-        
-        group.notify(queue: .main) {
-            self.collectionView.reloadData()
         }
     }
 }
 
-extension SuggestViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+extension SuggestViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return topData.count + tvTopData.count
+        return popularData.count > 0 ? popularData[0].results.count : 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath) as! MovieCollectionViewCell
-        guard topData.count > 0, tvTopData.count > 0  else {
+        guard popularData.count > 0 else {
             return cell
         }
-        let datas = topData[0].results[indexPath.row]
-        let data = tvTopData[0].results[indexPath.row]
-        // Check if the current cell is at an even or odd index
-        if indexPath.item % 2 == 0 {
-            // Even index, display data from tvTopData
-            let tvTopIndex = indexPath.item / 2
-            if tvTopIndex < tvTopData.count {
-                if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath)) {
-                    cell.movieImage.kf.setImage(with: imageURL)
-                }
-            }
-        } else {
-            // Odd index, display data from topData
-            let topIndex = (indexPath.item - 1) / 2
-            if topIndex < topData.count {
-                if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (data.posterPath)) {
-                    cell.movieImage.kf.setImage(with: imageURL)
-                }
-            }
+        let datas = popularData[0].results[indexPath.row]
+        if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath)) {
+            cell.movieImage.kf.setImage(with: imageURL)
         }
+        
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        // Set the section inset (adjust as needed)
+        return UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
     }
 }

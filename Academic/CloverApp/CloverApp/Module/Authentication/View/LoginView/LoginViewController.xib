@@ -52,8 +52,8 @@
                                 <constraint firstItem="lTg-FQ-KM2" firstAttribute="width" secondItem="Qkv-Zf-oZU" secondAttribute="width" id="tBw-6R-pPq"/>
                             </constraints>
                         </stackView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oQr-iN-uVT" customClass="ButtonView" customModule="C" customModuleProvider="target">
-                            <rect key="frame" x="52" y="264" width="289" height="52"/>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oQr-iN-uVT" customClass="ButtonView" customModule="C" customModuleProvider="target">
+                            <rect key="frame" x="52" y="264" width="289" height="50"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3zD-4X-IFe" customClass="CheckBox" customModule="C" customModuleProvider="target">
@@ -90,8 +90,8 @@
                     </subviews>
                     <color key="backgroundColor" name="Background"/>
                     <constraints>
-                        <constraint firstItem="azt-3U-xXm" firstAttribute="top" secondItem="oQr-iN-uVT" secondAttribute="bottom" constant="16" id="8Ur-3M-mTh"/>
-                        <constraint firstItem="1kg-Tf-vB5" firstAttribute="top" secondItem="oQr-iN-uVT" secondAttribute="bottom" constant="74" id="AKw-A7-cD4"/>
+                        <constraint firstItem="azt-3U-xXm" firstAttribute="top" secondItem="oQr-iN-uVT" secondAttribute="bottom" constant="14" id="8Ur-3M-mTh"/>
+                        <constraint firstItem="1kg-Tf-vB5" firstAttribute="top" secondItem="oQr-iN-uVT" secondAttribute="bottom" constant="72" id="AKw-A7-cD4"/>
                         <constraint firstAttribute="trailing" secondItem="azt-3U-xXm" secondAttribute="trailing" constant="129" id="AfN-KV-9uR"/>
                         <constraint firstItem="oQr-iN-uVT" firstAttribute="centerX" secondItem="1kg-Tf-vB5" secondAttribute="centerX" id="H11-Qn-xjG"/>
                         <constraint firstAttribute="trailing" secondItem="oQr-iN-uVT" secondAttribute="trailing" constant="52" id="ObW-SW-FR3"/>
@@ -100,11 +100,11 @@
                         <constraint firstItem="oQr-iN-uVT" firstAttribute="leading" secondItem="5Ku-bN-soM" secondAttribute="leading" constant="52" id="VtU-vO-dfc"/>
                         <constraint firstItem="oQr-iN-uVT" firstAttribute="centerX" secondItem="5Ku-bN-soM" secondAttribute="centerX" id="VxF-Hh-sHE"/>
                         <constraint firstItem="mfw-dI-ejc" firstAttribute="centerX" secondItem="5Ku-bN-soM" secondAttribute="centerX" id="YLI-Tx-Atw"/>
-                        <constraint firstItem="1kg-Tf-vB5" firstAttribute="top" secondItem="oQr-iN-uVT" secondAttribute="bottom" constant="74" id="ZkU-V1-UoL"/>
+                        <constraint firstItem="1kg-Tf-vB5" firstAttribute="top" secondItem="oQr-iN-uVT" secondAttribute="bottom" constant="72" id="ZkU-V1-UoL"/>
                         <constraint firstItem="3zD-4X-IFe" firstAttribute="leading" secondItem="5Ku-bN-soM" secondAttribute="leading" id="chI-9o-UbA"/>
                         <constraint firstItem="mfw-dI-ejc" firstAttribute="leading" secondItem="5Ku-bN-soM" secondAttribute="leading" constant="33" id="hFY-NU-aEz"/>
                         <constraint firstAttribute="trailing" secondItem="mfw-dI-ejc" secondAttribute="trailing" constant="33" id="hPo-Jq-EXV"/>
-                        <constraint firstAttribute="bottom" secondItem="oQr-iN-uVT" secondAttribute="bottom" constant="151" id="k7A-ZH-hTN"/>
+                        <constraint firstAttribute="bottom" secondItem="oQr-iN-uVT" secondAttribute="bottom" constant="149" id="k7A-ZH-hTN"/>
                         <constraint firstItem="1kg-Tf-vB5" firstAttribute="top" secondItem="azt-3U-xXm" secondAttribute="bottom" constant="8" symbolic="YES" id="nJq-Ra-9SE"/>
                         <constraint firstItem="3zD-4X-IFe" firstAttribute="centerX" secondItem="5Ku-bN-soM" secondAttribute="centerX" id="nmW-k5-ecR"/>
                         <constraint firstItem="mfw-dI-ejc" firstAttribute="top" secondItem="5Ku-bN-soM" secondAttribute="top" constant="32" id="p8b-bh-MWN"/>

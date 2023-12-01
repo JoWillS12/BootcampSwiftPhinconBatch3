@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol TrendingCellDelegate: AnyObject {
-    func didSelectItem<T: Codable>(data: T)
-}
-
 class TrendingTableViewCell: UITableViewCell {
     
     @IBOutlet weak var sectionTitle: UILabel!
@@ -38,6 +34,7 @@ class TrendingTableViewCell: UITableViewCell {
             collectionView.reloadData()
         }
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -124,8 +121,4 @@ extension TrendingTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
     }
 }
 
-enum DataType {
-    case trending
-    case topRated
-    case nowPlaying
-}
+

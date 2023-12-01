@@ -66,7 +66,3 @@ class AuthViewModel {
         return UserDefaults.standard.bool(forKey: "RememberMe")
     }
 }
-
-enum AuthError: Error {
-    case validationError
-}

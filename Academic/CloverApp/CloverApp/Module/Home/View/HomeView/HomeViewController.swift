@@ -11,10 +11,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var nowPlayingData: [NowPlaying] = []
-    var genreData: [Genre] = []
-    var trendingData: [Trending] = []
-    var topData: [TopRated] = []
+    var vm = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,57 +30,13 @@ class HomeViewController: UIViewController {
     }
     
     func fetchData() {
-        let group = DispatchGroup()
         
-        group.enter()
-        NetworkManager.shared.makeAPICall(endpoint: .nowPlaying) { [weak self] (response: Result<(NowPlaying), Error>) in
+        vm.onDataUpdate = { [weak self] in
             guard let self = self else { return }
-            defer { group.leave() }
-            switch response {
-            case .success(let nowPlaying):
-                self.nowPlayingData = [nowPlaying]
-            case .failure(let error):
-                print("Now Playing API Request Error: \(error.localizedDescription)")
-            }
+            self.tableView.reloadData()
         }
-        
-        group.enter()
-        NetworkManager.shared.makeAPICall(endpoint: .genre) { [weak self] (response: Result<(Genre), Error>) in
+        vm.fetchData { [weak self] in
             guard let self = self else { return }
-            defer { group.leave() }
-            switch response {
-            case .success(let genre):
-                self.genreData = [genre]
-            case .failure(let error):
-                print("Genre API Request Error: \(error.localizedDescription)")
-            }
-        }
-        
-        group.enter()
-        NetworkManager.shared.makeAPICall(endpoint: .trending) { [weak self] (response: Result<(Trending), Error>) in
-            guard let self = self else { return }
-            defer { group.leave() }
-            switch response {
-            case .success(let trending):
-                self.trendingData = [trending]
-            case .failure(let error):
-                print("Genre API Request Error: \(error.localizedDescription)")
-            }
-        }
-        
-        group.enter()
-        NetworkManager.shared.makeAPICall(endpoint: .topRated) { [weak self] (response: Result<(TopRated), Error>) in
-            guard let self = self else { return }
-            defer { group.leave() }
-            switch response {
-            case .success(let rated):
-                self.topData = [rated]
-            case .failure(let error):
-                print("Genre API Request Error: \(error.localizedDescription)")
-            }
-        }
-        
-        group.notify(queue: .main) {
             self.tableView.reloadData()
         }
     }
@@ -95,16 +48,19 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource, Trendi
             let vc = DescViewController()
             vc.selectedNowPlaying = data as? PlayingResult
             vc.typeData = .nowPlaying
+            vc.selectedGenre = vm.genreData
             navigationController?.pushViewController(vc, animated: true)
         } else if data is TopResult {
             let vc = DescViewController()
             vc.typeData = .topRated
             vc.selectedTopRated = data as? TopResult
+            vc.selectedGenre = vm.genreData
             navigationController?.pushViewController(vc, animated: true)
         } else if data is TrendingResult {
             let vc = DescViewController()
             vc.typeData = .trending
             vc.selectedTrending = data as? TrendingResult
+            vc.selectedGenre = vm.genreData
             navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -122,8 +78,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource, Trendi
         switch section {
         case .recomendation:
             let cell = tableView.dequeueReusableCell(withIdentifier: "FirstTableViewCell", for: indexPath) as! FirstTableViewCell
-            cell.nowPlayingData = nowPlayingData
-            cell.genreData = genreData
+            cell.nowPlayingData = vm.nowPlayingData
+            cell.genreData = vm.genreData
             cell.contentView.clipsToBounds = false
             cell.selectionStyle = .none
             return cell
@@ -131,7 +87,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource, Trendi
             let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingTableViewCell", for: indexPath) as! TrendingTableViewCell
             cell.contentView.clipsToBounds = false
             cell.delegate = self
-            cell.trendingData = trendingData
+            cell.trendingData = vm.trendingData
             cell.currentDataType = .trending
             cell.selectionStyle = .none
             return cell
@@ -139,7 +95,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource, Trendi
             let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingTableViewCell", for: indexPath) as! TrendingTableViewCell
             cell.contentView.clipsToBounds = false
             cell.delegate = self
-            cell.topData = topData
+            cell.topData = vm.topData
             cell.currentDataType = .topRated
             cell.selectionStyle = .none
             return cell
@@ -147,7 +103,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource, Trendi
             let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingTableViewCell", for: indexPath) as! TrendingTableViewCell
             cell.contentView.clipsToBounds = false
             cell.delegate = self
-            cell.nowData = nowPlayingData
+            cell.nowData = vm.nowPlayingData
             cell.currentDataType = .nowPlaying
             cell.selectionStyle = .none
             return cell
@@ -167,9 +123,4 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource, Trendi
     }
 }
 
-enum FilmType: Int, CaseIterable {
-    case recomendation
-    case trending
-    case topRated
-    case nowPlaying
-}
+

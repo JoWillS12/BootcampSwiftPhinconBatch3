@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BigRoundedView" customModule="C" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonImage" destination="wl0-Pd-8iX" id="XMt-jO-f6S"/>
+                <outlet property="buttonName" destination="l3S-5T-Q3H" id="iqz-w8-9gu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="162" height="55"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="P7C-t2-Nyc">
+                    <rect key="frame" x="8" y="7" width="146" height="41"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wl0-Pd-8iX">
+                            <rect key="frame" x="0.0" y="0.0" width="41" height="41"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="41" id="3wG-B8-cQr"/>
+                                <constraint firstAttribute="width" constant="41" id="HKW-Nn-52U"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3S-5T-Q3H">
+                            <rect key="frame" x="44" y="0.0" width="102" height="41"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="102" id="yEz-KU-iMT"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4e-mR-QdO">
+                    <rect key="frame" x="0.0" y="0.0" width="162" height="55"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                    <connections>
+                        <action selector="buttonClicked:" destination="-1" eventType="touchUpInside" id="uoH-Ib-UV2"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="p4e-mR-QdO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5X0-yh-M8x"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="p4e-mR-QdO" secondAttribute="bottom" id="GM2-V1-ae3"/>
+                <constraint firstItem="p4e-mR-QdO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IYG-a5-yy3"/>
+                <constraint firstItem="P7C-t2-Nyc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="kj4-9o-MHm"/>
+                <constraint firstAttribute="trailing" secondItem="p4e-mR-QdO" secondAttribute="trailing" id="mH9-WO-y7m"/>
+                <constraint firstItem="P7C-t2-Nyc" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qzj-Y6-Z3k"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="32.061068702290072" y="-210.91549295774649"/>
+        </view>
+    </objects>
+</document>

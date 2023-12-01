@@ -49,6 +49,11 @@
 		1753EFDD2B15C7AD004084F3 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1753EFDB2B15C7AD004084F3 /* MovieCollectionViewCell.xib */; };
 		1753EFE72B16DF1A004084F3 /* DescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753EFE52B16DF1A004084F3 /* DescViewController.swift */; };
 		1753EFE82B16DF1A004084F3 /* DescViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1753EFE62B16DF1A004084F3 /* DescViewController.xib */; };
+		175D0C972B1826AB00766805 /* BigRoundedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175D0C962B1826AB00766805 /* BigRoundedView.xib */; };
+		175D0C992B1826BC00766805 /* BigRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D0C982B1826BC00766805 /* BigRoundedView.swift */; };
+		175D0C9D2B196E6400766805 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D0C9C2B196E6400766805 /* HomeProtocols.swift */; };
+		175D0C9F2B196E7100766805 /* HomeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D0C9E2B196E7100766805 /* HomeEnum.swift */; };
+		175D0CA22B196F2500766805 /* AuthEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D0CA12B196F2500766805 /* AuthEnum.swift */; };
 		17BD7BA72B143552008AAA3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BD7BA62B143552008AAA3E /* AppDelegate.swift */; };
 		17BD7BA92B143552008AAA3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BD7BA82B143552008AAA3E /* SceneDelegate.swift */; };
 		17BD7BAB2B143552008AAA3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BD7BAA2B143552008AAA3E /* ViewController.swift */; };
@@ -120,6 +125,11 @@
 		1753EFDB2B15C7AD004084F3 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
 		1753EFE52B16DF1A004084F3 /* DescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescViewController.swift; sourceTree = "<group>"; };
 		1753EFE62B16DF1A004084F3 /* DescViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescViewController.xib; sourceTree = "<group>"; };
+		175D0C962B1826AB00766805 /* BigRoundedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BigRoundedView.xib; sourceTree = "<group>"; };
+		175D0C982B1826BC00766805 /* BigRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigRoundedView.swift; sourceTree = "<group>"; };
+		175D0C9C2B196E6400766805 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		175D0C9E2B196E7100766805 /* HomeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEnum.swift; sourceTree = "<group>"; };
+		175D0CA12B196F2500766805 /* AuthEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEnum.swift; sourceTree = "<group>"; };
 		17BD7BA32B143552008AAA3E /* C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17BD7BA62B143552008AAA3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17BD7BA82B143552008AAA3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +213,8 @@
 		1753EF792B148C8F004084F3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				175D0C9B2B196E5900766805 /* Protocols */,
+				175D0C9A2B196E5100766805 /* Enum */,
 				1753EFCA2B1583AA004084F3 /* Model */,
 				1753EF862B156F4B004084F3 /* Components */,
 				1753EF7A2B148C9E004084F3 /* View */,
@@ -321,6 +333,39 @@
 			path = DescView;
 			sourceTree = "<group>";
 		};
+		175D0C952B18269800766805 /* BigRoundedButton */ = {
+			isa = PBXGroup;
+			children = (
+				175D0C982B1826BC00766805 /* BigRoundedView.swift */,
+				175D0C962B1826AB00766805 /* BigRoundedView.xib */,
+			);
+			path = BigRoundedButton;
+			sourceTree = "<group>";
+		};
+		175D0C9A2B196E5100766805 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				175D0C9E2B196E7100766805 /* HomeEnum.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		175D0C9B2B196E5900766805 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				175D0C9C2B196E6400766805 /* HomeProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		175D0CA02B196F1800766805 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				175D0CA12B196F2500766805 /* AuthEnum.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		17BD7B9A2B143552008AAA3E = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +434,7 @@
 		17BD7BC02B143591008AAA3E /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				175D0CA02B196F1800766805 /* Enum */,
 				17BD7BC42B1435B3008AAA3E /* View */,
 			);
 			path = Authentication;
@@ -397,6 +443,7 @@
 		17BD7BC12B143599008AAA3E /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
+				175D0C952B18269800766805 /* BigRoundedButton */,
 				1753EFC52B157749004084F3 /* RoundedButton */,
 				17BD7C1C2B148465008AAA3E /* CircleProfile */,
 				17BD7BE82B1447BB008AAA3E /* CheckBox */,
@@ -618,6 +665,7 @@
 				17BD7BD42B1435FE008AAA3E /* AuthViewController.xib in Resources */,
 				1753EF9D2B1572D4004084F3 /* WelcomeView.xib in Resources */,
 				1753EFA82B15738F004084F3 /* SplashScreenViewController.xib in Resources */,
+				175D0C972B1826AB00766805 /* BigRoundedView.xib in Resources */,
 				1732C91C2B1717B600F4B23D /* CommentsViewController.xib in Resources */,
 				1753EFDD2B15C7AD004084F3 /* MovieCollectionViewCell.xib in Resources */,
 				1753EFB82B157440004084F3 /* TrendingTableViewCell.xib in Resources */,
@@ -647,6 +695,7 @@
 				17BD7BAB2B143552008AAA3E /* ViewController.swift in Sources */,
 				1753EFA72B15738F004084F3 /* SplashScreenViewController.swift in Sources */,
 				1753EF8E2B156FAA004084F3 /* TabBarViewController.swift in Sources */,
+				175D0C9F2B196E7100766805 /* HomeEnum.swift in Sources */,
 				17BD7BA72B143552008AAA3E /* AppDelegate.swift in Sources */,
 				1753EF7D2B148CA9004084F3 /* HomeViewController.swift in Sources */,
 				17BD7BD32B1435FE008AAA3E /* AuthViewController.swift in Sources */,
@@ -656,6 +705,7 @@
 				1732C9242B1721F700F4B23D /* CommentTableViewCell.swift in Sources */,
 				1753EFDC2B15C7AD004084F3 /* MovieCollectionViewCell.swift in Sources */,
 				1753EF912B157234004084F3 /* CircleView.swift in Sources */,
+				175D0C992B1826BC00766805 /* BigRoundedView.swift in Sources */,
 				1753EFD62B15A5D7004084F3 /* HomeViewModel.swift in Sources */,
 				1753EF962B15726C004084F3 /* FieldView.swift in Sources */,
 				17BD7BB12B143552008AAA3E /* CloverApp.xcdatamodeld in Sources */,
@@ -664,6 +714,7 @@
 				1753EF852B149C70004084F3 /* Endpoint.swift in Sources */,
 				17BD7C152B1473BB008AAA3E /* AuthViewModel.swift in Sources */,
 				1753EFD22B15896D004084F3 /* ContentCollectionViewCell.swift in Sources */,
+				175D0CA22B196F2500766805 /* AuthEnum.swift in Sources */,
 				17BD7C112B14597B008AAA3E /* RegisterViewController.swift in Sources */,
 				1753EF992B1572A4004084F3 /* CheckBox.swift in Sources */,
 				1753EFA42B157341004084F3 /* CodeHelper.swift in Sources */,
@@ -673,6 +724,7 @@
 				1753EFA12B1572F8004084F3 /* ButtonView.swift in Sources */,
 				1753EFC92B157766004084F3 /* RoundView.swift in Sources */,
 				1753EFB72B157440004084F3 /* TrendingTableViewCell.swift in Sources */,
+				175D0C9D2B196E6400766805 /* HomeProtocols.swift in Sources */,
 				1732C91F2B1717C500F4B23D /* SuggestViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

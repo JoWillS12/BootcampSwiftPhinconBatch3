@@ -5,13 +5,13 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommentsViewController" customModule="C" customModuleProvider="target">
             <connections>
                 <outlet property="commentField" destination="0Ec-WG-SNr" id="2kg-mW-QgX"/>
+                <outlet property="sendButton" destination="kl2-cr-hF9" id="Sz5-g9-l69"/>
                 <outlet property="tableView" destination="OZ4-GT-WLy" id="joS-nR-DO2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,9 +23,11 @@
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OZ4-GT-WLy">
                     <rect key="frame" x="0.0" y="59" width="393" height="679"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="separatorColor" name="ButtonColor"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
-                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5wV-un-meX">
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5wV-un-meX">
                     <rect key="frame" x="16" y="746" width="361" height="35"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Ec-WG-SNr">
@@ -56,9 +58,12 @@
             <color key="backgroundColor" name="Background"/>
             <constraints>
                 <constraint firstItem="OZ4-GT-WLy" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="61u-aq-C4h"/>
+                <constraint firstItem="5wV-un-meX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="8Kd-Me-c59"/>
                 <constraint firstItem="OZ4-GT-WLy" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-27.5" id="Gnf-Qd-OMU"/>
                 <constraint firstItem="OZ4-GT-WLy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="H6v-CX-WHd"/>
+                <constraint firstItem="5wV-un-meX" firstAttribute="top" secondItem="OZ4-GT-WLy" secondAttribute="bottom" constant="8" symbolic="YES" id="UrA-SZ-pDd"/>
                 <constraint firstItem="OZ4-GT-WLy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hoV-Kc-may"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5wV-un-meX" secondAttribute="trailing" constant="16" id="pj4-oc-rUz"/>
                 <constraint firstItem="OZ4-GT-WLy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ql5-Jn-gDI"/>
             </constraints>
             <point key="canvasLocation" x="26.717557251908396" y="19.718309859154932"/>
@@ -69,8 +74,8 @@
         <namedColor name="Background">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="ButtonColor">
+            <color red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
