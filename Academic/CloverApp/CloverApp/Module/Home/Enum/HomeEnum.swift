@@ -11,7 +11,7 @@ enum FilmType: Int, CaseIterable {
     case recomendation
     case trending
     case topRated
-    case nowPlaying
+    case upcoming
 }
 
 enum ParchmentTabs: Int, CaseIterable{
@@ -22,5 +22,5 @@ enum ParchmentTabs: Int, CaseIterable{
 enum DataType {
     case trending
     case topRated
-    case nowPlaying
+    case upcoming
 }

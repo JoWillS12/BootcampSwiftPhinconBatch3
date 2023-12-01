@@ -12,7 +12,7 @@ class SuggestViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var popularData: [Popular] = []
+    var vm = SuggestViewModel()
     let index: Int
     
     init(index: Int) {
@@ -43,15 +43,13 @@ class SuggestViewController: UIViewController {
     }
     
     func fetchData() {
-        NetworkManager.shared.makeAPICall(endpoint: .popular) { [weak self] (response: Result<(Popular), Error>) in
+        vm.onDataUpdate = { [weak self] in
             guard let self = self else { return }
-            switch response {
-            case .success(let pop):
-                self.popularData = [pop]
-                self.collectionView.reloadData()
-            case .failure(let error):
-                print("Genre API Request Error: \(error.localizedDescription)")
-            }
+            self.collectionView.reloadData()
+        }
+        vm.fetchData { [weak self] in
+            guard let self = self else { return }
+            self.collectionView.reloadData()
         }
     }
 }
@@ -59,15 +57,15 @@ class SuggestViewController: UIViewController {
 extension SuggestViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return popularData.count > 0 ? popularData[0].results.count : 0
+        return vm.popularData.count > 0 ? vm.popularData[0].results.count : 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath) as! MovieCollectionViewCell
-        guard popularData.count > 0 else {
+        guard vm.popularData.count > 0 else {
             return cell
         }
-        let datas = popularData[0].results[indexPath.row]
+        let datas = vm.popularData[0].results[indexPath.row]
         if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath)) {
             cell.movieImage.kf.setImage(with: imageURL)
         }

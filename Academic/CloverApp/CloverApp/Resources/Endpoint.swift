@@ -15,6 +15,7 @@ enum Endpoint {
     case trending
     case topRated
     case popular
+    case upcoming
     
     func path() -> String {
         switch self {
@@ -28,19 +29,21 @@ enum Endpoint {
             return "movie/top_rated"
         case .popular:
             return "movie/popular"
+        case .upcoming:
+            return "movie/upcoming"
         }
     }
     
     func method() -> HTTPMethod {
         switch self {
-        case .nowPlaying, .genre, .trending, .topRated, .popular:
+        case .nowPlaying, .genre, .trending, .topRated, .popular, .upcoming:
             return .get
         }
     }
     
     var parameters: [String: Any]? {
         switch self {
-        case .nowPlaying, .genre, .trending, .topRated, .popular:
+        case .nowPlaying, .genre, .trending, .topRated, .popular, .upcoming:
             return nil
         }
     }

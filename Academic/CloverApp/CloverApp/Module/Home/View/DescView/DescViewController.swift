@@ -7,6 +7,8 @@
 
 import UIKit
 import Parchment
+import Firebase
+import AVKit
 
 class DescViewController: UIViewController {
     
@@ -23,8 +25,7 @@ class DescViewController: UIViewController {
     
     var selectedTrending: TrendingResult?
     var selectedTopRated: TopResult?
-    var selectedTvTopRated: TvResult?
-    var selectedNowPlaying: PlayingResult?
+    var selectedUpcoming: UpcomingResult?
     var selectedGenre: [Genre] = []
     var typeData: DataType = .trending
     let maximumNumberOfLines: Int = 3
@@ -48,7 +49,7 @@ class DescViewController: UIViewController {
                     filmImage.kf.setImage(with: imageURL)
                 }
                 filmName.text = item.title
-                filmRating.text = "\(item.popularity) > \(getYear(from: item.releaseDate ?? ""))"
+                filmRating.text = "\(item.popularity) > \(getYear(from: item.releaseDate))"
                 filmSynopsis.text = item.overview
                 let movieGenres = mapGenreIDsToNames(genreIDs: item.genreIDS, genreData: selectedGenre.first?.genres ?? [])
                 filmGenre.text = "Genre : \(movieGenres.joined(separator: ", "))"
@@ -65,8 +66,8 @@ class DescViewController: UIViewController {
                 let movieGenres = mapGenreIDsToNames(genreIDs: item.genreIDS, genreData: selectedGenre.first?.genres ?? [])
                 filmGenre.text = "Genre : \(movieGenres.joined(separator: ", "))"
             }
-        case .nowPlaying:
-            if let item = selectedNowPlaying {
+        case .upcoming:
+            if let item = selectedUpcoming {
                 if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (item.posterPath)) {
                     filmImage.kf.setImage(with: imageURL)
                 }
@@ -105,6 +106,10 @@ class DescViewController: UIViewController {
         playButton.buttonImage.image = UIImage(systemName: "play.fill")
         playButton.tintColor = UIColor.white
         playButton.buttonName.text = "Play"
+        playButton.tapAction = {[weak self] in
+            self?.showVideo()
+            print("tapped!")
+        }
         
         downloadButton.borderColor = UIColor.gray
         downloadButton.backgroundColor = UIColor.clear
@@ -121,6 +126,22 @@ class DescViewController: UIViewController {
             filmSynopsis.numberOfLines = 0 // Show all lines
         } else {
             filmSynopsis.numberOfLines = maximumNumberOfLines
+        }
+    }
+    
+    func showVideo(){
+        guard let videoURL = URL(string: "https://firebasestorage.googleapis.com/v0/b/movie-eead1.appspot.com/o/jump%20scare%20videos%20-%20jumpscare%20-%20scare%20videos%20%23shorts.mp4?alt=media&token=817a2ff6-7589-43fc-a462-c2340edd4a90") else {
+            // Handle invalid URL
+            print("Not this link!")
+            return
+        }
+        
+        let player = AVPlayer(url: videoURL)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        
+        present(playerViewController, animated: true) {
+            player.play()
         }
     }
     
@@ -213,7 +234,7 @@ extension DescViewController: PagingViewControllerDelegate, PagingViewController
                 index: index,
                 selectedTrendingID: selectedTrending?.id,
                 selectedTopRatedID: selectedTopRated?.id,
-                selectedNowPlayingID: selectedNowPlaying?.id
+                selectedUpcomingID: selectedUpcoming?.id
             )
         }
     }

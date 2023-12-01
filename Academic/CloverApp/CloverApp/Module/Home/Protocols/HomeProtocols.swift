@@ -9,4 +9,5 @@ import Foundation
 
 protocol TrendingCellDelegate: AnyObject {
     func didSelectItem<T: Codable>(data: T)
+    func seeDescTapped(dataType: DataType)
 }

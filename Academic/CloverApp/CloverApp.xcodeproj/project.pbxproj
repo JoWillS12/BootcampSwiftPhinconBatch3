@@ -43,7 +43,6 @@
 		1753EFC92B157766004084F3 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753EFC82B157766004084F3 /* RoundView.swift */; };
 		1753EFCC2B1583B6004084F3 /* HomeContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753EFCB2B1583B6004084F3 /* HomeContents.swift */; };
 		1753EFD22B15896D004084F3 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753EFD02B15896D004084F3 /* ContentCollectionViewCell.swift */; };
-		1753EFD32B15896D004084F3 /* ContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1753EFD12B15896D004084F3 /* ContentCollectionViewCell.xib */; };
 		1753EFD62B15A5D7004084F3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753EFD52B15A5D7004084F3 /* HomeViewModel.swift */; };
 		1753EFDC2B15C7AD004084F3 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753EFDA2B15C7AD004084F3 /* MovieCollectionViewCell.swift */; };
 		1753EFDD2B15C7AD004084F3 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1753EFDB2B15C7AD004084F3 /* MovieCollectionViewCell.xib */; };
@@ -82,6 +81,13 @@
 		17BD7C152B1473BB008AAA3E /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BD7C142B1473BB008AAA3E /* AuthViewModel.swift */; };
 		17BD7C1A2B148440008AAA3E /* FillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BD7C182B148440008AAA3E /* FillViewController.swift */; };
 		17BD7C1B2B148440008AAA3E /* FillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17BD7C192B148440008AAA3E /* FillViewController.xib */; };
+		17C71E4E2B19AC80008E41E4 /* ContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C71E4D2B19AC80008E41E4 /* ContentCollectionViewCell.xib */; };
+		17C71E502B19B80A008E41E4 /* SuggestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E4F2B19B80A008E41E4 /* SuggestViewModel.swift */; };
+		17C71E532B19BFF6008E41E4 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E522B19BFF6008E41E4 /* CommentViewModel.swift */; };
+		17C71E572B19C1B6008E41E4 /* GroupDescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E552B19C1B6008E41E4 /* GroupDescViewController.swift */; };
+		17C71E582B19C1B6008E41E4 /* GroupDescViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C71E562B19C1B6008E41E4 /* GroupDescViewController.xib */; };
+		17C71E5C2B19CF5F008E41E4 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E5A2B19CF5F008E41E4 /* GroupTableViewCell.swift */; };
+		17C71E5D2B19CF5F008E41E4 /* GroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C71E5B2B19CF5F008E41E4 /* GroupTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,7 +125,6 @@
 		1753EFC82B157766004084F3 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		1753EFCB2B1583B6004084F3 /* HomeContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContents.swift; sourceTree = "<group>"; };
 		1753EFD02B15896D004084F3 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
-		1753EFD12B15896D004084F3 /* ContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCollectionViewCell.xib; sourceTree = "<group>"; };
 		1753EFD52B15A5D7004084F3 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = CloverApp/Module/Home/Components/FirstCell/ContentCell/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
 		1753EFDA2B15C7AD004084F3 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		1753EFDB2B15C7AD004084F3 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -149,6 +154,13 @@
 		17BD7C142B1473BB008AAA3E /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		17BD7C182B148440008AAA3E /* FillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillViewController.swift; sourceTree = "<group>"; };
 		17BD7C192B148440008AAA3E /* FillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FillViewController.xib; sourceTree = "<group>"; };
+		17C71E4D2B19AC80008E41E4 /* ContentCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentCollectionViewCell.xib; sourceTree = "<group>"; };
+		17C71E4F2B19B80A008E41E4 /* SuggestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestViewModel.swift; sourceTree = "<group>"; };
+		17C71E522B19BFF6008E41E4 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
+		17C71E552B19C1B6008E41E4 /* GroupDescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDescViewController.swift; sourceTree = "<group>"; };
+		17C71E562B19C1B6008E41E4 /* GroupDescViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupDescViewController.xib; sourceTree = "<group>"; };
+		17C71E5A2B19CF5F008E41E4 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		17C71E5B2B19CF5F008E41E4 /* GroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +237,7 @@
 		1753EF7A2B148C9E004084F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				17C71E542B19C1A2008E41E4 /* GroupDescView */,
 				1732C9182B17172900F4B23D /* CommentsView */,
 				1732C9172B17172200F4B23D /* SuggestView */,
 				1753EFE42B16D9A2004084F3 /* DescView */,
@@ -237,6 +250,7 @@
 		1753EF862B156F4B004084F3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				17C71E592B19CE45008E41E4 /* GroupCell */,
 				1732C9212B1721DD00F4B23D /* CommentCell */,
 				1753EF882B156F6A004084F3 /* TrendingCell */,
 				1753EF872B156F52004084F3 /* FirstCell */,
@@ -293,7 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				1753EFD02B15896D004084F3 /* ContentCollectionViewCell.swift */,
-				1753EFD12B15896D004084F3 /* ContentCollectionViewCell.xib */,
+				17C71E4D2B19AC80008E41E4 /* ContentCollectionViewCell.xib */,
 			);
 			path = ContentCell;
 			sourceTree = "<group>";
@@ -302,6 +316,8 @@
 			isa = PBXGroup;
 			children = (
 				1753EFD52B15A5D7004084F3 /* HomeViewModel.swift */,
+				17C71E4F2B19B80A008E41E4 /* SuggestViewModel.swift */,
+				17C71E522B19BFF6008E41E4 /* CommentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -573,6 +589,24 @@
 			path = CircleProfile;
 			sourceTree = "<group>";
 		};
+		17C71E542B19C1A2008E41E4 /* GroupDescView */ = {
+			isa = PBXGroup;
+			children = (
+				17C71E552B19C1B6008E41E4 /* GroupDescViewController.swift */,
+				17C71E562B19C1B6008E41E4 /* GroupDescViewController.xib */,
+			);
+			path = GroupDescView;
+			sourceTree = "<group>";
+		};
+		17C71E592B19CE45008E41E4 /* GroupCell */ = {
+			isa = PBXGroup;
+			children = (
+				17C71E5A2B19CF5F008E41E4 /* GroupTableViewCell.swift */,
+				17C71E5B2B19CF5F008E41E4 /* GroupTableViewCell.xib */,
+			);
+			path = GroupCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -658,10 +692,12 @@
 				1753EF7E2B148CA9004084F3 /* HomeViewController.xib in Resources */,
 				17BD7BE22B1441BF008AAA3E /* LoginViewController.xib in Resources */,
 				17BD7BB62B143554008AAA3E /* LaunchScreen.storyboard in Resources */,
+				17C71E4E2B19AC80008E41E4 /* ContentCollectionViewCell.xib in Resources */,
 				1753EF9A2B1572A4004084F3 /* CheckBox.xib in Resources */,
 				17BD7BB32B143554008AAA3E /* Assets.xcassets in Resources */,
 				1753EFA22B1572F8004084F3 /* ButtonView.xib in Resources */,
 				1753EFE82B16DF1A004084F3 /* DescViewController.xib in Resources */,
+				17C71E582B19C1B6008E41E4 /* GroupDescViewController.xib in Resources */,
 				17BD7BD42B1435FE008AAA3E /* AuthViewController.xib in Resources */,
 				1753EF9D2B1572D4004084F3 /* WelcomeView.xib in Resources */,
 				1753EFA82B15738F004084F3 /* SplashScreenViewController.xib in Resources */,
@@ -671,9 +707,9 @@
 				1753EFB82B157440004084F3 /* TrendingTableViewCell.xib in Resources */,
 				1753EF802B148E30004084F3 /* Secret.plist in Resources */,
 				1753EFB42B157436004084F3 /* FirstTableViewCell.xib in Resources */,
+				17C71E5D2B19CF5F008E41E4 /* GroupTableViewCell.xib in Resources */,
 				1753EF922B157234004084F3 /* CircleView.xib in Resources */,
 				17BD7C1B2B148440008AAA3E /* FillViewController.xib in Resources */,
-				1753EFD32B15896D004084F3 /* ContentCollectionViewCell.xib in Resources */,
 				1732C9252B1721F700F4B23D /* CommentTableViewCell.xib in Resources */,
 				1732C9202B1717C500F4B23D /* SuggestViewController.xib in Resources */,
 				1753EF952B15726C004084F3 /* FieldView.xib in Resources */,
@@ -696,6 +732,7 @@
 				1753EFA72B15738F004084F3 /* SplashScreenViewController.swift in Sources */,
 				1753EF8E2B156FAA004084F3 /* TabBarViewController.swift in Sources */,
 				175D0C9F2B196E7100766805 /* HomeEnum.swift in Sources */,
+				17C71E572B19C1B6008E41E4 /* GroupDescViewController.swift in Sources */,
 				17BD7BA72B143552008AAA3E /* AppDelegate.swift in Sources */,
 				1753EF7D2B148CA9004084F3 /* HomeViewController.swift in Sources */,
 				17BD7BD32B1435FE008AAA3E /* AuthViewController.swift in Sources */,
@@ -708,6 +745,7 @@
 				175D0C992B1826BC00766805 /* BigRoundedView.swift in Sources */,
 				1753EFD62B15A5D7004084F3 /* HomeViewModel.swift in Sources */,
 				1753EF962B15726C004084F3 /* FieldView.swift in Sources */,
+				17C71E5C2B19CF5F008E41E4 /* GroupTableViewCell.swift in Sources */,
 				17BD7BB12B143552008AAA3E /* CloverApp.xcdatamodeld in Sources */,
 				1753EFE72B16DF1A004084F3 /* DescViewController.swift in Sources */,
 				1753EF9E2B1572D4004084F3 /* WelcomeView.swift in Sources */,
@@ -718,6 +756,7 @@
 				17BD7C112B14597B008AAA3E /* RegisterViewController.swift in Sources */,
 				1753EF992B1572A4004084F3 /* CheckBox.swift in Sources */,
 				1753EFA42B157341004084F3 /* CodeHelper.swift in Sources */,
+				17C71E532B19BFF6008E41E4 /* CommentViewModel.swift in Sources */,
 				17BD7BE12B1441BF008AAA3E /* LoginViewController.swift in Sources */,
 				17BD7BA92B143552008AAA3E /* SceneDelegate.swift in Sources */,
 				1753EF782B148ACC004084F3 /* FillViewModel.swift in Sources */,
@@ -725,6 +764,7 @@
 				1753EFC92B157766004084F3 /* RoundView.swift in Sources */,
 				1753EFB72B157440004084F3 /* TrendingTableViewCell.swift in Sources */,
 				175D0C9D2B196E6400766805 /* HomeProtocols.swift in Sources */,
+				17C71E502B19B80A008E41E4 /* SuggestViewModel.swift in Sources */,
 				1732C91F2B1717C500F4B23D /* SuggestViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

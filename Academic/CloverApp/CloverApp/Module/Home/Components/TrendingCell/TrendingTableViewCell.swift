@@ -24,7 +24,7 @@ class TrendingTableViewCell: UITableViewCell {
             collectionView.reloadData()
         }
     }
-    var nowData: [NowPlaying] = [] {
+    var upData: [Upcoming] = [] {
         didSet {
             collectionView.reloadData()
         }
@@ -41,12 +41,21 @@ class TrendingTableViewCell: UITableViewCell {
         registerCollectionCell()
         let padding: CGFloat = 10.0
         contentView.frame = bounds.inset(by: UIEdgeInsets(top: 20, left: 0, bottom: padding, right: 0))
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(seeDescTapped))
+        seeDesc.isUserInteractionEnabled = true
+        seeDesc.addGestureRecognizer(tapGesture)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
         // Configure the view for the selected state
+    }
+    
+    @objc func seeDescTapped() {
+        // Handle tap on seeDesc label
+        delegate?.seeDescTapped(dataType: currentDataType)
     }
     
     func registerCollectionCell(){
@@ -63,8 +72,8 @@ extension TrendingTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
             return trendingData.count > 0 ? trendingData[0].results.count : 0
         case .topRated:
             return topData.count > 0 ? topData[0].results.count : 0
-        case .nowPlaying:
-            return nowData.count > 0 ? nowData[0].results.count : 0
+        case .upcoming:
+            return upData.count > 0 ? upData[0].results.count : 0
         }
     }
     
@@ -91,15 +100,15 @@ extension TrendingTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
             }
             sectionTitle.text = "Top Rated"
             break
-        case .nowPlaying:
-            guard nowData.count > 0 else {
+        case .upcoming:
+            guard upData.count > 0 else {
                 return cell
             }
-            let datas = nowData[0].results[indexPath.row]
+            let datas = upData[0].results[indexPath.row]
             if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath)) {
                 cell.movieImage.kf.setImage(with: imageURL)
             }
-            sectionTitle.text = "Now Playing"
+            sectionTitle.text = "Upcoming"
             break
         }
         
@@ -114,8 +123,8 @@ extension TrendingTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
         case .topRated:
             guard let data = topData.first?.results[indexPath.row] as? TopResult else { return }
             delegate?.didSelectItem(data: data)
-        case .nowPlaying:
-            guard let data = nowData.first?.results[indexPath.row] as? PlayingResult else { return }
+        case .upcoming:
+            guard let data = upData.first?.results[indexPath.row] as? UpcomingResult else { return }
             delegate?.didSelectItem(data: data)
         }
     }

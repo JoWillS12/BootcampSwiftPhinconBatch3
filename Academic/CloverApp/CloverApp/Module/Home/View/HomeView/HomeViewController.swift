@@ -44,10 +44,10 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource, TrendingCellDelegate{
     
     func didSelectItem<T>(data: T) where T : Codable {
-        if data is PlayingResult {
+        if data is UpcomingResult {
             let vc = DescViewController()
-            vc.selectedNowPlaying = data as? PlayingResult
-            vc.typeData = .nowPlaying
+            vc.selectedUpcoming = data as? UpcomingResult
+            vc.typeData = .upcoming
             vc.selectedGenre = vm.genreData
             navigationController?.pushViewController(vc, animated: true)
         } else if data is TopResult {
@@ -63,6 +63,23 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource, Trendi
             vc.selectedGenre = vm.genreData
             navigationController?.pushViewController(vc, animated: true)
         }
+    }
+    
+    func seeDescTapped(dataType: DataType) {
+        let groupDescVC = GroupDescViewController()
+        groupDescVC.currentDataType = dataType
+        
+        switch dataType {
+        case .trending:
+            groupDescVC.trendingData = vm.trendingData.flatMap { $0.results }
+        case .topRated:
+            groupDescVC.topData = vm.topData.flatMap { $0.results }
+        case .upcoming:
+            groupDescVC.upData = vm.upcomingData.flatMap { $0.results }
+        }
+        
+        groupDescVC.selectedGenre = vm.genreData
+        navigationController?.pushViewController(groupDescVC, animated: true)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -99,12 +116,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource, Trendi
             cell.currentDataType = .topRated
             cell.selectionStyle = .none
             return cell
-        case .nowPlaying:
+        case .upcoming:
             let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingTableViewCell", for: indexPath) as! TrendingTableViewCell
             cell.contentView.clipsToBounds = false
             cell.delegate = self
-            cell.nowData = vm.nowPlayingData
-            cell.currentDataType = .nowPlaying
+            cell.upData = vm.upcomingData
+            cell.currentDataType = .upcoming
             cell.selectionStyle = .none
             return cell
         default:

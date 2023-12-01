@@ -17,21 +17,20 @@ class CommentsViewController: UIViewController {
     @IBOutlet weak var commentField: UITextField!
     
     let index: Int
-    var comments: [Comment] = []
-    let commentsRef = Database.database().reference().child("comments")
-    let usersRef = Database.database().reference().child("users")
     var currentUser: User?
     // Add selected movie IDs
     var selectedTrendingID: Int?
     var selectedTopRatedID: Int?
     var selectedNowPlayingID: Int?
+    var selectedUpcomingID: Int?
     var typeData: DataType = .trending
+    var vm = CommentsViewModel()
     
-    init(index: Int, selectedTrendingID: Int?, selectedTopRatedID: Int?, selectedNowPlayingID: Int?) {
+    init(index: Int, selectedTrendingID: Int?, selectedTopRatedID: Int?, selectedUpcomingID: Int?) {
         self.index = index
         self.selectedTrendingID = selectedTrendingID
         self.selectedTopRatedID = selectedTopRatedID
-        self.selectedNowPlayingID = selectedNowPlayingID
+        self.selectedUpcomingID = selectedUpcomingID
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -75,8 +74,8 @@ class CommentsViewController: UIViewController {
             selectedMovieID = selectedTrendingID
         case .topRated:
             selectedMovieID = selectedTopRatedID
-        case .nowPlaying:
-            selectedMovieID = selectedNowPlayingID
+        case .upcoming:
+            selectedMovieID = selectedUpcomingID
         }
         
         guard let movieID = selectedMovieID else {
@@ -84,32 +83,13 @@ class CommentsViewController: UIViewController {
             return
         }
         
-        // Fetch the nickname from the user's data
-        let userRef = usersRef.child(currentUser.uid)
-        userRef.observeSingleEvent(of: .value) { snapshot in
-            guard let userData = snapshot.value as? [String: Any],
-                  let nickname = userData["nickname"] as? String else {
-                // Handle missing or invalid user data
-                return
-            }
-            
-            let commentKey = self.commentsRef.childByAutoId().key
-            
-            let commentData: [String: Any] = [
-                "userId": currentUser.uid,
-                "movieId": movieID,
-                "username": nickname,
-                "text": commentText,
-                "timestamp": ServerValue.timestamp()
-            ]
-            
-            self.commentsRef.child(commentKey!).setValue(commentData) { (error, ref) in
-                if let error = error {
-                    print("Error saving comment: \(error.localizedDescription)")
-                } else {
-                    print("Comment saved successfully!")
-                    self.commentField.text = ""
-                }
+        vm.addComment(movieID: movieID, commentText: commentText, currentUser: currentUser) { error in
+            if let error = error {
+                print("Error saving comment: \(error.localizedDescription)")
+            } else {
+                print("Comment saved successfully!")
+                self.commentField.text = ""
+                self.fetchComments()
             }
         }
     }
@@ -129,20 +109,7 @@ class CommentsViewController: UIViewController {
             return
         }
         
-        // Use queryOrdered(byChild:) to filter comments based on movieId
-        let commentsQuery = commentsRef.queryOrdered(byChild: "movieId").queryEqual(toValue: selectedMovieID)
-        
-        commentsQuery.observe(.value) { (snapshot) in
-            var newComments: [Comment] = []
-            
-            for child in snapshot.children {
-                if let snapshot = child as? DataSnapshot {
-                    let comment = Comment(snapshot: snapshot)
-                    newComments.append(comment)
-                }
-            }
-            
-            self.comments = newComments
+        vm.fetchComments(forMovieID: selectedMovieID) {
             self.tableView.reloadData()
         }
     }
@@ -153,8 +120,8 @@ class CommentsViewController: UIViewController {
             return selectedTrendingID
         case .topRated:
             return selectedTopRatedID
-        case .nowPlaying:
-            return selectedNowPlayingID
+        case .upcoming:
+            return selectedUpcomingID
         }
     }
     
@@ -166,12 +133,12 @@ class CommentsViewController: UIViewController {
 }
 extension CommentsViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return comments.count
+        return vm.comments.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentTableViewCell", for: indexPath) as! CommentTableViewCell
-        let comment = comments[indexPath.row]
+        let comment = vm.comments[indexPath.row]
         
         // Configure the cell with the comment data
         cell.comment.text = comment.text

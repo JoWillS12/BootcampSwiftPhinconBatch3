@@ -13,12 +13,25 @@ class HomeViewModel {
     var genreData: [Genre] = []
     var trendingData: [Trending] = []
     var topData: [TopRated] = []
+    var upcomingData: [Upcoming] = []
     
     var onDataUpdate: (() -> Void)?
     var onError: ((Error) -> Void)?
     
     func fetchData(completion: @escaping () -> Void) {
         let group = DispatchGroup()
+        
+        group.enter()
+        NetworkManager.shared.makeAPICall(endpoint: .upcoming) { [weak self] (response: Result<(Upcoming), Error>) in
+            guard let self = self else { return }
+            defer { group.leave() }
+            switch response {
+            case .success(let upcome):
+                self.upcomingData = [upcome]
+            case .failure(let error):
+                self.onError?(error)
+            }
+        }
         
         group.enter()
         NetworkManager.shared.makeAPICall(endpoint: .nowPlaying) { [weak self] (response: Result<(NowPlaying), Error>) in

@@ -46,166 +46,10 @@
             filePath = "CloverApp/Module/Home/View/DescView/DescViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "DescViewController"
             landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "79C2EE27-265C-4F24-8450-10DB99FBB2F1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Home/View/DescView/DescViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9AD732B5-ACD1-4949-B123-957E53B49D13"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Home/View/DescView/DescViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "36DBAECC-C750-47B0-BD0B-BDC3A1773EA7"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Home/View/DescView/DescViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "99167737-3324-4B18-8803-BD047309607E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Home/View/DescView/DescViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "DescViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "99167737-3324-4B18-8803-BD047309607E - 958e781148cf21a0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "C.DescViewController.selectedTvTopRated.getter : Swift.Optional&lt;C.TvResult&gt;"
-                  moduleName = "C"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Home/View/DescView/DescViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "372">
-               </Location>
-               <Location
-                  uuid = "99167737-3324-4B18-8803-BD047309607E - b3bb75e643fd29b4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "C.DescViewController.selectedTvTopRated.setter : Swift.Optional&lt;C.TvResult&gt;"
-                  moduleName = "C"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Home/View/DescView/DescViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "384">
-               </Location>
-               <Location
-                  uuid = "99167737-3324-4B18-8803-BD047309607E - e204ed2b96a793a5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "C.DescViewController.selectedTvTopRated.modify : Swift.Optional&lt;C.TvResult&gt;"
-                  moduleName = "C"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Home/View/DescView/DescViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  uuid = "99167737-3324-4B18-8803-BD047309607E - f20a38e9915a55ac"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "C.DescViewController.selectedTvTopRated.modify : Swift.Optional&lt;C.TvResult&gt; with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "C"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Home/View/DescView/DescViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  uuid = "99167737-3324-4B18-8803-BD047309607E - 157313fa0c774a1d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "C.DescViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; C.DescViewController"
-                  moduleName = "C"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Home/View/DescView/DescViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "824">
-               </Location>
-               <Location
-                  uuid = "99167737-3324-4B18-8803-BD047309607E - 7ae815bc6e62c856"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "C.DescViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;C.DescViewController&gt;"
-                  moduleName = "C"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Home/View/DescView/DescViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "800">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -218,8 +62,8 @@
             filePath = "CloverApp/Module/Home/View/DescView/DescViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "DescViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -234,74 +78,10 @@
             filePath = "CloverApp/Module/Home/View/DescView/DescViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "DescViewController"
             landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EEF28366-C782-4167-89E1-728AC6EE3588"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Home/View/DescView/DescViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9E0B5F18-E30F-462E-8709-DD6491765ECA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Home/View/DescView/DescViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "332BF023-5970-4685-9B8B-C6AA50618868"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Home/View/DescView/DescViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CAD10FD1-D493-4743-9CB1-DD8D448A2BC1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Home/View/SuggestView/SuggestViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "fetchData()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -314,8 +94,8 @@
             filePath = "CloverApp/Module/Home/Components/FirstCell/ContentCell/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "fetchData(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -330,8 +110,8 @@
             filePath = "CloverApp/Module/Home/Components/FirstCell/ContentCell/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "fetchData(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -346,8 +126,8 @@
             filePath = "CloverApp/Module/Home/Components/FirstCell/ContentCell/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "fetchData(completion:)"
             landmarkType = "7">
          </BreakpointContent>
