@@ -80,6 +80,35 @@ class DescViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        listenedNotification()
+    }
+    
+    func listenedNotification(){
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleDataNotification(_:)),
+            name: NSNotification.Name("DataNotification"),
+            object: nil
+        )
+    }
+    
+    @objc func handleDataNotification(_ notification: Notification) {
+        // Retrieve data from the notification
+        if let data = notification.userInfo?["data"] as? Bool, data {
+            print("Received data: \(data)")
+            
+            navigationController?.dismiss(animated: true, completion: {
+                let vc = PopUpViewController()
+                self.navigationController?.present(vc, animated: true)
+            })
+        }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     @IBAction func backButton(_ sender: Any) {
         self.navigationController?.setViewControllers([TabBarViewController()], animated: false)
     }
@@ -117,6 +146,15 @@ class DescViewController: UIViewController {
         downloadButton.buttonImage.image = UIImage(systemName: "square.and.arrow.down")
         downloadButton.tintColor = UIColor.gray
         downloadButton.buttonName.text = "Download"
+        downloadButton.tapAction = {[weak self] in
+            let contentVc = HalfViewController()
+            // Pass data to HalfViewController
+            contentVc.movieNameText = self?.filmName.text
+            contentVc.movieImagePic = self?.filmImage.image
+            contentVc.modalPresentationStyle = .custom
+            contentVc.transitioningDelegate = self
+            self?.showHalfModal(contentVc)
+        }
     }
     
     @objc func labelTapped() {
@@ -127,6 +165,20 @@ class DescViewController: UIViewController {
         } else {
             filmSynopsis.numberOfLines = maximumNumberOfLines
         }
+    }
+    
+    func showHalfModal(_ contentVc: UIViewController) {
+        
+        present(contentVc, animated: true, completion: nil)
+        
+        // Add swipe down gesture for dismissal
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(dismissHalfModal))
+        swipeDown.direction = .down
+        contentVc.view.addGestureRecognizer(swipeDown)
+    }
+    
+    @objc func dismissHalfModal()  {
+        dismiss(animated: true, completion: nil)
     }
     
     func showVideo(){
@@ -253,4 +305,8 @@ extension DescViewController: PagingViewControllerDelegate, PagingViewController
     }
 }
 
-
+extension DescViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return HalfModalPresentationController(presentedViewController: presented, presenting: presenting)
+    }
+}

@@ -14,9 +14,9 @@ class TabBarViewController: UITabBarController {
         
         // Create view controllers for each tab
         let homeViewController = HomeViewController()
-        
+        let searchViewController = SearchViewController()
         // Set view controllers for the tab bar
-        self.setViewControllers([homeViewController], animated: false)
+        self.setViewControllers([homeViewController, searchViewController], animated: false)
         
         // Set tab bar item images
         setTabBarImages()
@@ -31,7 +31,7 @@ class TabBarViewController: UITabBarController {
     private func setTabBarImages() {
         guard let items = self.tabBar.items else { return }
         
-        let images = ["house"]
+        let images = ["house", "magnifyingglass"]
         for (index, imageName) in images.enumerated() {
             items[index].image = UIImage(systemName: imageName)
         }

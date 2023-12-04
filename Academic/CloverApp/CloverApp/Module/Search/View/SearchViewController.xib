@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="C" customModuleProvider="target">
+            <connections>
+                <outlet property="searchField" destination="4Up-43-AzI" id="CQZ-aG-SBJ"/>
+                <outlet property="searchView" destination="TvI-AJ-OZG" id="fgs-Om-kUV"/>
+                <outlet property="tableView" destination="si7-RS-9br" id="COY-rb-cGu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="si7-RS-9br">
+                    <rect key="frame" x="16" y="181" width="361" height="637"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ht-d8-dvA">
+                    <rect key="frame" x="16" y="127" width="288" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="62N-zO-ua5"/>
+                        <constraint firstAttribute="width" constant="288" id="QzF-Tk-gKb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                    <color key="textColor" name="PopColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TvI-AJ-OZG">
+                    <rect key="frame" x="36" y="59" width="320" height="60"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Jvq-i9-D5X">
+                            <rect key="frame" x="8" y="11" width="304" height="37.333333333333336"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sparkle.magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="F8l-Pn-0jd">
+                                    <rect key="frame" x="0.0" y="1" width="36" height="35.666666666666671"/>
+                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="36" id="EYi-gY-BTz"/>
+                                    </constraints>
+                                </imageView>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Up-43-AzI">
+                                    <rect key="frame" x="48" y="0.0" width="256" height="37.333333333333336"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="37.333333333333336" id="WVL-LG-vmy"/>
+                                        <constraint firstAttribute="width" constant="256" id="rmO-u4-QG0"/>
+                                    </constraints>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="Background"/>
+                    <constraints>
+                        <constraint firstItem="Jvq-i9-D5X" firstAttribute="leading" secondItem="TvI-AJ-OZG" secondAttribute="leading" constant="8" id="0rR-WV-tuM"/>
+                        <constraint firstAttribute="bottom" secondItem="Jvq-i9-D5X" secondAttribute="bottom" constant="11.67" id="PeO-y8-qzW"/>
+                        <constraint firstAttribute="trailing" secondItem="Jvq-i9-D5X" secondAttribute="trailing" constant="8" id="VGc-sr-uQI"/>
+                        <constraint firstItem="Jvq-i9-D5X" firstAttribute="top" secondItem="TvI-AJ-OZG" secondAttribute="top" constant="11" id="jRe-QB-Ryy"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="Background"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TvI-AJ-OZG" secondAttribute="trailing" constant="43" id="7tN-bR-hXT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2Ht-d8-dvA" secondAttribute="trailing" constant="89" id="FFL-Cm-a7g"/>
+                <constraint firstItem="si7-RS-9br" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Ohd-OY-l1W"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="si7-RS-9br" secondAttribute="trailing" constant="16" id="RmE-wE-sFx"/>
+                <constraint firstItem="si7-RS-9br" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="TZ7-t7-sNT"/>
+                <constraint firstItem="2Ht-d8-dvA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="XKL-vh-qtg"/>
+                <constraint firstItem="TvI-AJ-OZG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="d5o-1G-Jrb"/>
+                <constraint firstItem="si7-RS-9br" firstAttribute="top" secondItem="2Ht-d8-dvA" secondAttribute="bottom" constant="6" id="jLG-wq-PjL"/>
+                <constraint firstItem="2Ht-d8-dvA" firstAttribute="top" secondItem="TvI-AJ-OZG" secondAttribute="bottom" constant="8" symbolic="YES" id="z1D-Sl-MmG"/>
+            </constraints>
+            <point key="canvasLocation" x="26.717557251908396" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="sparkle.magnifyingglass" catalog="system" width="128" height="117"/>
+        <namedColor name="Background">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PopColor">
+            <color red="0.87099999189376831" green="0.90600001811981201" blue="0.90600001811981201" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

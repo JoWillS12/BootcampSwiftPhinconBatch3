@@ -32,6 +32,9 @@ class FillViewController: UIViewController {
     
     @IBAction func skipButton(_ sender: Any) {
         self.navigationController?.pushViewController(HomeViewController(), animated: false)
+        let randomUsername = generateRandomName()
+        nameLabel.text = randomUsername
+        saveUsernameToFirebase(username: randomUsername)
     }
     
     func setUp(){
@@ -81,6 +84,27 @@ class FillViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func saveUsernameToFirebase(username: String) {
+        guard let currentUserUID = Auth.auth().currentUser?.uid else {
+            showAlert(message: "User not authenticated.")
+            return
+        }
+        
+        let userRef = viewModel.usersRef.child(currentUserUID)
+        userRef.child("nameLabel").setValue(username) { error, _ in
+            if let error = error {
+                self.showAlert(message: "Failed to save username to Firebase. Error: \(error.localizedDescription)")
+            } else {
+                print("Username saved to Firebase: \(username)")
+            }
+        }
+    }
+    
+    func generateRandomName() -> String {
+        let randomNumber = Int.random(in: 100000000..<1000000000)
+        return "user\(randomNumber)"
     }
     
     func showAlert(message: String) {

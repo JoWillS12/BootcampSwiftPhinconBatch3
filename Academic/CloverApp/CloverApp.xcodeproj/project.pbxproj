@@ -88,6 +88,16 @@
 		17C71E582B19C1B6008E41E4 /* GroupDescViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C71E562B19C1B6008E41E4 /* GroupDescViewController.xib */; };
 		17C71E5C2B19CF5F008E41E4 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E5A2B19CF5F008E41E4 /* GroupTableViewCell.swift */; };
 		17C71E5D2B19CF5F008E41E4 /* GroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C71E5B2B19CF5F008E41E4 /* GroupTableViewCell.xib */; };
+		17C71E612B1D55B9008E41E4 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E5F2B1D55B9008E41E4 /* PopUpViewController.swift */; };
+		17C71E622B1D55B9008E41E4 /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C71E602B1D55B9008E41E4 /* PopUpViewController.xib */; };
+		17C71E662B1D63B4008E41E4 /* HalfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E642B1D63B4008E41E4 /* HalfViewController.swift */; };
+		17C71E672B1D63B4008E41E4 /* HalfViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C71E652B1D63B4008E41E4 /* HalfViewController.xib */; };
+		17C71E6C2B1D933B008E41E4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E6A2B1D933B008E41E4 /* SearchViewController.swift */; };
+		17C71E6D2B1D933B008E41E4 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C71E6B2B1D933B008E41E4 /* SearchViewController.xib */; };
+		17C71E702B1DAA78008E41E4 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E6F2B1DAA78008E41E4 /* SearchViewModel.swift */; };
+		17C71E732B1DAADB008E41E4 /* SearchContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E722B1DAADB008E41E4 /* SearchContents.swift */; };
+		17C71E7A2B1DC200008E41E4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E782B1DC200008E41E4 /* ProfileViewController.swift */; };
+		17C71E7B2B1DC200008E41E4 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C71E792B1DC200008E41E4 /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -161,6 +171,16 @@
 		17C71E562B19C1B6008E41E4 /* GroupDescViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupDescViewController.xib; sourceTree = "<group>"; };
 		17C71E5A2B19CF5F008E41E4 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		17C71E5B2B19CF5F008E41E4 /* GroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupTableViewCell.xib; sourceTree = "<group>"; };
+		17C71E5F2B1D55B9008E41E4 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		17C71E602B1D55B9008E41E4 /* PopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
+		17C71E642B1D63B4008E41E4 /* HalfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfViewController.swift; sourceTree = "<group>"; };
+		17C71E652B1D63B4008E41E4 /* HalfViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HalfViewController.xib; sourceTree = "<group>"; };
+		17C71E6A2B1D933B008E41E4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		17C71E6B2B1D933B008E41E4 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		17C71E6F2B1DAA78008E41E4 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		17C71E722B1DAADB008E41E4 /* SearchContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContents.swift; sourceTree = "<group>"; };
+		17C71E782B1DC200008E41E4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		17C71E792B1DC200008E41E4 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +257,7 @@
 		1753EF7A2B148C9E004084F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				17C71E632B1D63A4008E41E4 /* HalfModalView */,
 				17C71E542B19C1A2008E41E4 /* GroupDescView */,
 				1732C9182B17172900F4B23D /* CommentsView */,
 				1732C9172B17172200F4B23D /* SuggestView */,
@@ -429,6 +450,10 @@
 		17BD7BBE2B143583008AAA3E /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				17C71E762B1DBF2F008E41E4 /* Profile */,
+				17C71E752B1DBF2A008E41E4 /* Download */,
+				17C71E742B1DBF24008E41E4 /* Bookmark */,
+				17C71E682B1D9327008E41E4 /* Search */,
 				1753EF792B148C8F004084F3 /* Home */,
 				1753EF8C2B156F98004084F3 /* TabBar */,
 				17BD7C162B148412008AAA3E /* FillProfile */,
@@ -459,6 +484,7 @@
 		17BD7BC12B143599008AAA3E /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
+				17C71E5E2B1D55A1008E41E4 /* PopUp */,
 				175D0C952B18269800766805 /* BigRoundedButton */,
 				1753EFC52B157749004084F3 /* RoundedButton */,
 				17BD7C1C2B148465008AAA3E /* CircleProfile */,
@@ -607,6 +633,90 @@
 			path = GroupCell;
 			sourceTree = "<group>";
 		};
+		17C71E5E2B1D55A1008E41E4 /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				17C71E5F2B1D55B9008E41E4 /* PopUpViewController.swift */,
+				17C71E602B1D55B9008E41E4 /* PopUpViewController.xib */,
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
+		17C71E632B1D63A4008E41E4 /* HalfModalView */ = {
+			isa = PBXGroup;
+			children = (
+				17C71E642B1D63B4008E41E4 /* HalfViewController.swift */,
+				17C71E652B1D63B4008E41E4 /* HalfViewController.xib */,
+			);
+			path = HalfModalView;
+			sourceTree = "<group>";
+		};
+		17C71E682B1D9327008E41E4 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				17C71E712B1DAACE008E41E4 /* Model */,
+				17C71E692B1D932F008E41E4 /* View */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		17C71E692B1D932F008E41E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				17C71E6E2B1DAA6D008E41E4 /* ViewModel */,
+				17C71E6A2B1D933B008E41E4 /* SearchViewController.swift */,
+				17C71E6B2B1D933B008E41E4 /* SearchViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		17C71E6E2B1DAA6D008E41E4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				17C71E6F2B1DAA78008E41E4 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		17C71E712B1DAACE008E41E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				17C71E722B1DAADB008E41E4 /* SearchContents.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		17C71E742B1DBF24008E41E4 /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Bookmark;
+			sourceTree = "<group>";
+		};
+		17C71E752B1DBF2A008E41E4 /* Download */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Download;
+			sourceTree = "<group>";
+		};
+		17C71E762B1DBF2F008E41E4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				17C71E772B1DC1F3008E41E4 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		17C71E772B1DC1F3008E41E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				17C71E782B1DC200008E41E4 /* ProfileViewController.swift */,
+				17C71E792B1DC200008E41E4 /* ProfileViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -695,8 +805,10 @@
 				17C71E4E2B19AC80008E41E4 /* ContentCollectionViewCell.xib in Resources */,
 				1753EF9A2B1572A4004084F3 /* CheckBox.xib in Resources */,
 				17BD7BB32B143554008AAA3E /* Assets.xcassets in Resources */,
+				17C71E672B1D63B4008E41E4 /* HalfViewController.xib in Resources */,
 				1753EFA22B1572F8004084F3 /* ButtonView.xib in Resources */,
 				1753EFE82B16DF1A004084F3 /* DescViewController.xib in Resources */,
+				17C71E622B1D55B9008E41E4 /* PopUpViewController.xib in Resources */,
 				17C71E582B19C1B6008E41E4 /* GroupDescViewController.xib in Resources */,
 				17BD7BD42B1435FE008AAA3E /* AuthViewController.xib in Resources */,
 				1753EF9D2B1572D4004084F3 /* WelcomeView.xib in Resources */,
@@ -712,10 +824,12 @@
 				17BD7C1B2B148440008AAA3E /* FillViewController.xib in Resources */,
 				1732C9252B1721F700F4B23D /* CommentTableViewCell.xib in Resources */,
 				1732C9202B1717C500F4B23D /* SuggestViewController.xib in Resources */,
+				17C71E7B2B1DC200008E41E4 /* ProfileViewController.xib in Resources */,
 				1753EF952B15726C004084F3 /* FieldView.xib in Resources */,
 				1753EFC72B157756004084F3 /* RoundView.xib in Resources */,
 				17BD7BAE2B143552008AAA3E /* Main.storyboard in Resources */,
 				17BD7C122B14597B008AAA3E /* RegisterViewController.xib in Resources */,
+				17C71E6D2B1D933B008E41E4 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +840,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17C71E612B1D55B9008E41E4 /* PopUpViewController.swift in Sources */,
 				1753EFCC2B1583B6004084F3 /* HomeContents.swift in Sources */,
 				1753EF832B149C46004084F3 /* NetworkManager.swift in Sources */,
 				17BD7BAB2B143552008AAA3E /* ViewController.swift in Sources */,
@@ -740,12 +855,14 @@
 				17BD7C1A2B148440008AAA3E /* FillViewController.swift in Sources */,
 				1753EFB32B157436004084F3 /* FirstTableViewCell.swift in Sources */,
 				1732C9242B1721F700F4B23D /* CommentTableViewCell.swift in Sources */,
+				17C71E6C2B1D933B008E41E4 /* SearchViewController.swift in Sources */,
 				1753EFDC2B15C7AD004084F3 /* MovieCollectionViewCell.swift in Sources */,
 				1753EF912B157234004084F3 /* CircleView.swift in Sources */,
 				175D0C992B1826BC00766805 /* BigRoundedView.swift in Sources */,
 				1753EFD62B15A5D7004084F3 /* HomeViewModel.swift in Sources */,
 				1753EF962B15726C004084F3 /* FieldView.swift in Sources */,
 				17C71E5C2B19CF5F008E41E4 /* GroupTableViewCell.swift in Sources */,
+				17C71E702B1DAA78008E41E4 /* SearchViewModel.swift in Sources */,
 				17BD7BB12B143552008AAA3E /* CloverApp.xcdatamodeld in Sources */,
 				1753EFE72B16DF1A004084F3 /* DescViewController.swift in Sources */,
 				1753EF9E2B1572D4004084F3 /* WelcomeView.swift in Sources */,
@@ -754,11 +871,14 @@
 				1753EFD22B15896D004084F3 /* ContentCollectionViewCell.swift in Sources */,
 				175D0CA22B196F2500766805 /* AuthEnum.swift in Sources */,
 				17BD7C112B14597B008AAA3E /* RegisterViewController.swift in Sources */,
+				17C71E732B1DAADB008E41E4 /* SearchContents.swift in Sources */,
 				1753EF992B1572A4004084F3 /* CheckBox.swift in Sources */,
 				1753EFA42B157341004084F3 /* CodeHelper.swift in Sources */,
 				17C71E532B19BFF6008E41E4 /* CommentViewModel.swift in Sources */,
 				17BD7BE12B1441BF008AAA3E /* LoginViewController.swift in Sources */,
+				17C71E662B1D63B4008E41E4 /* HalfViewController.swift in Sources */,
 				17BD7BA92B143552008AAA3E /* SceneDelegate.swift in Sources */,
+				17C71E7A2B1DC200008E41E4 /* ProfileViewController.swift in Sources */,
 				1753EF782B148ACC004084F3 /* FillViewModel.swift in Sources */,
 				1753EFA12B1572F8004084F3 /* ButtonView.swift in Sources */,
 				1753EFC92B157766004084F3 /* RoundView.swift in Sources */,
