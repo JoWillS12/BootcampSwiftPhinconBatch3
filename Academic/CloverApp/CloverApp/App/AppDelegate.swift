@@ -9,9 +9,10 @@ import UIKit
 import CoreData
 import FirebaseCore
 import GoogleSignIn
+import UserNotifications
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -23,7 +24,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 // if not
             }
         }
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            if granted {
+                print("Notification authorization granted")
+            } else {
+                print("Notification authorization denied")
+            }
+        }
+        
+        // Set the delegate to self
+        UNUserNotificationCenter.current().delegate = self
+        
         return true
+    }
+    
+    // Handle notification when the app is in the foreground
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // Customize how the notification is presented when the app is in the foreground
+        completionHandler([.banner, .sound, .badge])
+    }
+    
+    // Handle notification actions
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        // Handle the action based on the response
+        // For example, open a specific view controller
+        if response.actionIdentifier == UNNotificationDefaultActionIdentifier {
+            // Handle default action
+        } else if response.actionIdentifier == "yourCustomActionIdentifier" {
+            // Handle custom action
+        }
+        
+        completionHandler()
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {

@@ -121,6 +121,7 @@ enum MediaType: String, Codable {
 
 enum TrendingOriginalLanguage: String, Codable {
     case en = "en"
+    case hi = "hi"
     case ja = "ja"
 }
 

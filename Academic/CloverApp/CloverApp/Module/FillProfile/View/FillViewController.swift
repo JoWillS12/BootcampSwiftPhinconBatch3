@@ -69,15 +69,18 @@ class FillViewController: UIViewController {
             let favoriteMovie = self.favoriteMovie.text ?? ""
             let nickname = self.Nickname.text ?? ""
             let nameLabel = self.nameLabel.text ?? ""
+            let profilePic = self.profileImage.profileImage.image ?? UIImage(systemName: "profile")
             
-            self.viewModel.updateUserData(favoriteMovie: favoriteMovie, nickname: nickname, nameLabel: nameLabel) { result in
+            self.viewModel.updateUserData(favoriteMovie: favoriteMovie, nickname: nickname, nameLabel: nameLabel, profilePic: (profilePic ?? UIImage(systemName: "profile"))!) { result in
                 switch result {
                 case .success:
                     // Update successful
                     print("User data updated successfully")
                     self.navigationController?.pushViewController(TabBarViewController(), animated: false)
                     // Perform any additional actions after updating data
-                    
+                    if let profileImageData = profilePic?.pngData() {
+                        UserDefaults.standard.set(profileImageData, forKey: "userPic")
+                    }
                 case .failure(let error):
                     // Show an alert indicating update failure
                     self.showAlert(message: "Update failed. Error: \(error.localizedDescription)")

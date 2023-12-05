@@ -9,6 +9,7 @@ import UIKit
 
 class CircleView: UIView, UINavigationControllerDelegate {
     
+    @IBOutlet weak var viewToHidden: UIView!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var galleryButton: UIButton!
     

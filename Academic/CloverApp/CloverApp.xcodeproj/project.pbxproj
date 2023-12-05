@@ -53,6 +53,14 @@
 		175D0C9D2B196E6400766805 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D0C9C2B196E6400766805 /* HomeProtocols.swift */; };
 		175D0C9F2B196E7100766805 /* HomeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D0C9E2B196E7100766805 /* HomeEnum.swift */; };
 		175D0CA22B196F2500766805 /* AuthEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D0CA12B196F2500766805 /* AuthEnum.swift */; };
+		17733E4D2B1F0932009D450F /* NotifTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17733E4B2B1F0932009D450F /* NotifTableViewCell.swift */; };
+		17733E4E2B1F0932009D450F /* NotifTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17733E4C2B1F0932009D450F /* NotifTableViewCell.xib */; };
+		17733E522B1F1070009D450F /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17733E502B1F1070009D450F /* BookmarkViewController.swift */; };
+		17733E532B1F1070009D450F /* BookmarkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17733E512B1F1070009D450F /* BookmarkViewController.xib */; };
+		17733E582B1F248A009D450F /* DownloadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17733E562B1F248A009D450F /* DownloadTableViewCell.swift */; };
+		17733E592B1F248A009D450F /* DownloadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17733E572B1F248A009D450F /* DownloadTableViewCell.xib */; };
+		17733E5C2B1F2498009D450F /* QualityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17733E5A2B1F2498009D450F /* QualityTableViewCell.swift */; };
+		17733E5D2B1F2498009D450F /* QualityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17733E5B2B1F2498009D450F /* QualityTableViewCell.xib */; };
 		17BD7BA72B143552008AAA3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BD7BA62B143552008AAA3E /* AppDelegate.swift */; };
 		17BD7BA92B143552008AAA3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BD7BA82B143552008AAA3E /* SceneDelegate.swift */; };
 		17BD7BAB2B143552008AAA3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BD7BAA2B143552008AAA3E /* ViewController.swift */; };
@@ -98,6 +106,17 @@
 		17C71E732B1DAADB008E41E4 /* SearchContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E722B1DAADB008E41E4 /* SearchContents.swift */; };
 		17C71E7A2B1DC200008E41E4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E782B1DC200008E41E4 /* ProfileViewController.swift */; };
 		17C71E7B2B1DC200008E41E4 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C71E792B1DC200008E41E4 /* ProfileViewController.xib */; };
+		17C71E802B1EB96C008E41E4 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E7E2B1EB96C008E41E4 /* ProfileTableViewCell.swift */; };
+		17C71E812B1EB96C008E41E4 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C71E7F2B1EB96C008E41E4 /* ProfileTableViewCell.xib */; };
+		17C71E842B1EC024008E41E4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E832B1EC024008E41E4 /* ProfileViewModel.swift */; };
+		17C71E872B1EC489008E41E4 /* ProfileContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E862B1EC489008E41E4 /* ProfileContents.swift */; };
+		17C71E8A2B1ECD5B008E41E4 /* ProfileEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E892B1ECD5B008E41E4 /* ProfileEnum.swift */; };
+		17C71E8F2B1EDA4F008E41E4 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E8D2B1EDA4F008E41E4 /* EditViewController.swift */; };
+		17C71E902B1EDA4F008E41E4 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C71E8E2B1EDA4F008E41E4 /* EditViewController.xib */; };
+		17C71E942B1EDA67008E41E4 /* NotifViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E922B1EDA67008E41E4 /* NotifViewController.swift */; };
+		17C71E952B1EDA67008E41E4 /* NotifViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C71E932B1EDA67008E41E4 /* NotifViewController.xib */; };
+		17C71E992B1EDA91008E41E4 /* DownloadSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E972B1EDA91008E41E4 /* DownloadSetViewController.swift */; };
+		17C71E9A2B1EDA91008E41E4 /* DownloadSetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C71E982B1EDA91008E41E4 /* DownloadSetViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +164,14 @@
 		175D0C9C2B196E6400766805 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		175D0C9E2B196E7100766805 /* HomeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEnum.swift; sourceTree = "<group>"; };
 		175D0CA12B196F2500766805 /* AuthEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEnum.swift; sourceTree = "<group>"; };
+		17733E4B2B1F0932009D450F /* NotifTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifTableViewCell.swift; sourceTree = "<group>"; };
+		17733E4C2B1F0932009D450F /* NotifTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotifTableViewCell.xib; sourceTree = "<group>"; };
+		17733E502B1F1070009D450F /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		17733E512B1F1070009D450F /* BookmarkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkViewController.xib; sourceTree = "<group>"; };
+		17733E562B1F248A009D450F /* DownloadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadTableViewCell.swift; sourceTree = "<group>"; };
+		17733E572B1F248A009D450F /* DownloadTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadTableViewCell.xib; sourceTree = "<group>"; };
+		17733E5A2B1F2498009D450F /* QualityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualityTableViewCell.swift; sourceTree = "<group>"; };
+		17733E5B2B1F2498009D450F /* QualityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QualityTableViewCell.xib; sourceTree = "<group>"; };
 		17BD7BA32B143552008AAA3E /* C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17BD7BA62B143552008AAA3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17BD7BA82B143552008AAA3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +208,17 @@
 		17C71E722B1DAADB008E41E4 /* SearchContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContents.swift; sourceTree = "<group>"; };
 		17C71E782B1DC200008E41E4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		17C71E792B1DC200008E41E4 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		17C71E7E2B1EB96C008E41E4 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		17C71E7F2B1EB96C008E41E4 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		17C71E832B1EC024008E41E4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		17C71E862B1EC489008E41E4 /* ProfileContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContents.swift; sourceTree = "<group>"; };
+		17C71E892B1ECD5B008E41E4 /* ProfileEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEnum.swift; sourceTree = "<group>"; };
+		17C71E8D2B1EDA4F008E41E4 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		17C71E8E2B1EDA4F008E41E4 /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
+		17C71E922B1EDA67008E41E4 /* NotifViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifViewController.swift; sourceTree = "<group>"; };
+		17C71E932B1EDA67008E41E4 /* NotifViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotifViewController.xib; sourceTree = "<group>"; };
+		17C71E972B1EDA91008E41E4 /* DownloadSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadSetViewController.swift; sourceTree = "<group>"; };
+		17C71E982B1EDA91008E41E4 /* DownloadSetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadSetViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,9 +283,9 @@
 		1753EF792B148C8F004084F3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1753EFCA2B1583AA004084F3 /* Model */,
 				175D0C9B2B196E5900766805 /* Protocols */,
 				175D0C9A2B196E5100766805 /* Enum */,
-				1753EFCA2B1583AA004084F3 /* Model */,
 				1753EF862B156F4B004084F3 /* Components */,
 				1753EF7A2B148C9E004084F3 /* View */,
 			);
@@ -401,6 +439,42 @@
 				175D0CA12B196F2500766805 /* AuthEnum.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		17733E4A2B1F091C009D450F /* NotifCell */ = {
+			isa = PBXGroup;
+			children = (
+				17733E4B2B1F0932009D450F /* NotifTableViewCell.swift */,
+				17733E4C2B1F0932009D450F /* NotifTableViewCell.xib */,
+			);
+			path = NotifCell;
+			sourceTree = "<group>";
+		};
+		17733E4F2B1F1060009D450F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				17733E502B1F1070009D450F /* BookmarkViewController.swift */,
+				17733E512B1F1070009D450F /* BookmarkViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		17733E542B1F2423009D450F /* DownloadCell */ = {
+			isa = PBXGroup;
+			children = (
+				17733E562B1F248A009D450F /* DownloadTableViewCell.swift */,
+				17733E572B1F248A009D450F /* DownloadTableViewCell.xib */,
+			);
+			path = DownloadCell;
+			sourceTree = "<group>";
+		};
+		17733E552B1F2435009D450F /* QualityCell */ = {
+			isa = PBXGroup;
+			children = (
+				17733E5A2B1F2498009D450F /* QualityTableViewCell.swift */,
+				17733E5B2B1F2498009D450F /* QualityTableViewCell.xib */,
+			);
+			path = QualityCell;
 			sourceTree = "<group>";
 		};
 		17BD7B9A2B143552008AAA3E = {
@@ -689,6 +763,7 @@
 		17C71E742B1DBF24008E41E4 /* Bookmark */ = {
 			isa = PBXGroup;
 			children = (
+				17733E4F2B1F1060009D450F /* View */,
 			);
 			path = Bookmark;
 			sourceTree = "<group>";
@@ -703,6 +778,9 @@
 		17C71E762B1DBF2F008E41E4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				17C71E852B1EC478008E41E4 /* Model */,
+				17C71E882B1ECD4A008E41E4 /* Enum */,
+				17C71E7C2B1EB954008E41E4 /* Components */,
 				17C71E772B1DC1F3008E41E4 /* View */,
 			);
 			path = Profile;
@@ -711,10 +789,93 @@
 		17C71E772B1DC1F3008E41E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				17C71E962B1EDA6C008E41E4 /* DownloadSetView */,
+				17C71E912B1EDA52008E41E4 /* NotifView */,
+				17C71E8C2B1EDA34008E41E4 /* EditView */,
+				17C71E8B2B1EDA23008E41E4 /* ProfileView */,
+				17C71E822B1EC01A008E41E4 /* ViewModel */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		17C71E7C2B1EB954008E41E4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				17733E552B1F2435009D450F /* QualityCell */,
+				17733E542B1F2423009D450F /* DownloadCell */,
+				17733E4A2B1F091C009D450F /* NotifCell */,
+				17C71E7D2B1EB959008E41E4 /* ProfileCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		17C71E7D2B1EB959008E41E4 /* ProfileCell */ = {
+			isa = PBXGroup;
+			children = (
+				17C71E7E2B1EB96C008E41E4 /* ProfileTableViewCell.swift */,
+				17C71E7F2B1EB96C008E41E4 /* ProfileTableViewCell.xib */,
+			);
+			path = ProfileCell;
+			sourceTree = "<group>";
+		};
+		17C71E822B1EC01A008E41E4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				17C71E832B1EC024008E41E4 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		17C71E852B1EC478008E41E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				17C71E862B1EC489008E41E4 /* ProfileContents.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		17C71E882B1ECD4A008E41E4 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				17C71E892B1ECD5B008E41E4 /* ProfileEnum.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		17C71E8B2B1EDA23008E41E4 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
 				17C71E782B1DC200008E41E4 /* ProfileViewController.swift */,
 				17C71E792B1DC200008E41E4 /* ProfileViewController.xib */,
 			);
-			path = View;
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		17C71E8C2B1EDA34008E41E4 /* EditView */ = {
+			isa = PBXGroup;
+			children = (
+				17C71E8D2B1EDA4F008E41E4 /* EditViewController.swift */,
+				17C71E8E2B1EDA4F008E41E4 /* EditViewController.xib */,
+			);
+			path = EditView;
+			sourceTree = "<group>";
+		};
+		17C71E912B1EDA52008E41E4 /* NotifView */ = {
+			isa = PBXGroup;
+			children = (
+				17C71E922B1EDA67008E41E4 /* NotifViewController.swift */,
+				17C71E932B1EDA67008E41E4 /* NotifViewController.xib */,
+			);
+			path = NotifView;
+			sourceTree = "<group>";
+		};
+		17C71E962B1EDA6C008E41E4 /* DownloadSetView */ = {
+			isa = PBXGroup;
+			children = (
+				17C71E972B1EDA91008E41E4 /* DownloadSetViewController.swift */,
+				17C71E982B1EDA91008E41E4 /* DownloadSetViewController.xib */,
+			);
+			path = DownloadSetView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -803,9 +964,13 @@
 				17BD7BE22B1441BF008AAA3E /* LoginViewController.xib in Resources */,
 				17BD7BB62B143554008AAA3E /* LaunchScreen.storyboard in Resources */,
 				17C71E4E2B19AC80008E41E4 /* ContentCollectionViewCell.xib in Resources */,
+				17733E5D2B1F2498009D450F /* QualityTableViewCell.xib in Resources */,
+				17C71E9A2B1EDA91008E41E4 /* DownloadSetViewController.xib in Resources */,
+				17733E532B1F1070009D450F /* BookmarkViewController.xib in Resources */,
 				1753EF9A2B1572A4004084F3 /* CheckBox.xib in Resources */,
 				17BD7BB32B143554008AAA3E /* Assets.xcassets in Resources */,
 				17C71E672B1D63B4008E41E4 /* HalfViewController.xib in Resources */,
+				17C71E902B1EDA4F008E41E4 /* EditViewController.xib in Resources */,
 				1753EFA22B1572F8004084F3 /* ButtonView.xib in Resources */,
 				1753EFE82B16DF1A004084F3 /* DescViewController.xib in Resources */,
 				17C71E622B1D55B9008E41E4 /* PopUpViewController.xib in Resources */,
@@ -818,12 +983,16 @@
 				1753EFDD2B15C7AD004084F3 /* MovieCollectionViewCell.xib in Resources */,
 				1753EFB82B157440004084F3 /* TrendingTableViewCell.xib in Resources */,
 				1753EF802B148E30004084F3 /* Secret.plist in Resources */,
+				17C71E812B1EB96C008E41E4 /* ProfileTableViewCell.xib in Resources */,
 				1753EFB42B157436004084F3 /* FirstTableViewCell.xib in Resources */,
 				17C71E5D2B19CF5F008E41E4 /* GroupTableViewCell.xib in Resources */,
 				1753EF922B157234004084F3 /* CircleView.xib in Resources */,
 				17BD7C1B2B148440008AAA3E /* FillViewController.xib in Resources */,
 				1732C9252B1721F700F4B23D /* CommentTableViewCell.xib in Resources */,
+				17C71E952B1EDA67008E41E4 /* NotifViewController.xib in Resources */,
 				1732C9202B1717C500F4B23D /* SuggestViewController.xib in Resources */,
+				17733E4E2B1F0932009D450F /* NotifTableViewCell.xib in Resources */,
+				17733E592B1F248A009D450F /* DownloadTableViewCell.xib in Resources */,
 				17C71E7B2B1DC200008E41E4 /* ProfileViewController.xib in Resources */,
 				1753EF952B15726C004084F3 /* FieldView.xib in Resources */,
 				1753EFC72B157756004084F3 /* RoundView.xib in Resources */,
@@ -843,11 +1012,13 @@
 				17C71E612B1D55B9008E41E4 /* PopUpViewController.swift in Sources */,
 				1753EFCC2B1583B6004084F3 /* HomeContents.swift in Sources */,
 				1753EF832B149C46004084F3 /* NetworkManager.swift in Sources */,
+				17C71E942B1EDA67008E41E4 /* NotifViewController.swift in Sources */,
 				17BD7BAB2B143552008AAA3E /* ViewController.swift in Sources */,
 				1753EFA72B15738F004084F3 /* SplashScreenViewController.swift in Sources */,
 				1753EF8E2B156FAA004084F3 /* TabBarViewController.swift in Sources */,
 				175D0C9F2B196E7100766805 /* HomeEnum.swift in Sources */,
 				17C71E572B19C1B6008E41E4 /* GroupDescViewController.swift in Sources */,
+				17733E5C2B1F2498009D450F /* QualityTableViewCell.swift in Sources */,
 				17BD7BA72B143552008AAA3E /* AppDelegate.swift in Sources */,
 				1753EF7D2B148CA9004084F3 /* HomeViewController.swift in Sources */,
 				17BD7BD32B1435FE008AAA3E /* AuthViewController.swift in Sources */,
@@ -867,9 +1038,13 @@
 				1753EFE72B16DF1A004084F3 /* DescViewController.swift in Sources */,
 				1753EF9E2B1572D4004084F3 /* WelcomeView.swift in Sources */,
 				1753EF852B149C70004084F3 /* Endpoint.swift in Sources */,
+				17C71E992B1EDA91008E41E4 /* DownloadSetViewController.swift in Sources */,
 				17BD7C152B1473BB008AAA3E /* AuthViewModel.swift in Sources */,
+				17733E4D2B1F0932009D450F /* NotifTableViewCell.swift in Sources */,
 				1753EFD22B15896D004084F3 /* ContentCollectionViewCell.swift in Sources */,
 				175D0CA22B196F2500766805 /* AuthEnum.swift in Sources */,
+				17C71E872B1EC489008E41E4 /* ProfileContents.swift in Sources */,
+				17C71E842B1EC024008E41E4 /* ProfileViewModel.swift in Sources */,
 				17BD7C112B14597B008AAA3E /* RegisterViewController.swift in Sources */,
 				17C71E732B1DAADB008E41E4 /* SearchContents.swift in Sources */,
 				1753EF992B1572A4004084F3 /* CheckBox.swift in Sources */,
@@ -879,9 +1054,14 @@
 				17C71E662B1D63B4008E41E4 /* HalfViewController.swift in Sources */,
 				17BD7BA92B143552008AAA3E /* SceneDelegate.swift in Sources */,
 				17C71E7A2B1DC200008E41E4 /* ProfileViewController.swift in Sources */,
+				17733E522B1F1070009D450F /* BookmarkViewController.swift in Sources */,
+				17C71E8F2B1EDA4F008E41E4 /* EditViewController.swift in Sources */,
 				1753EF782B148ACC004084F3 /* FillViewModel.swift in Sources */,
+				17C71E8A2B1ECD5B008E41E4 /* ProfileEnum.swift in Sources */,
 				1753EFA12B1572F8004084F3 /* ButtonView.swift in Sources */,
+				17733E582B1F248A009D450F /* DownloadTableViewCell.swift in Sources */,
 				1753EFC92B157766004084F3 /* RoundView.swift in Sources */,
+				17C71E802B1EB96C008E41E4 /* ProfileTableViewCell.swift in Sources */,
 				1753EFB72B157440004084F3 /* TrendingTableViewCell.swift in Sources */,
 				175D0C9D2B196E6400766805 /* HomeProtocols.swift in Sources */,
 				17C71E502B19B80A008E41E4 /* SuggestViewModel.swift in Sources */,

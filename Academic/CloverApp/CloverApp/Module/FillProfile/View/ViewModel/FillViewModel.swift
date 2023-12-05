@@ -13,7 +13,7 @@ class FillViewModel{
     
     let usersRef = Database.database().reference().child("users")
 
-    func updateUserData(favoriteMovie: String, nickname: String, nameLabel: String, completion: @escaping (Result<Void, Error>) -> Void) {
+    func updateUserData(favoriteMovie: String, nickname: String, nameLabel: String, profilePic: UIImage, completion: @escaping (Result<Void, Error>) -> Void) {
         if let userUID = Auth.auth().currentUser?.uid {
             let user = [
                 "favoriteMovie": favoriteMovie,
@@ -28,6 +28,7 @@ class FillViewModel{
                     completion(.failure(error))
                 } else {
                     completion(.success(()))
+                    UserDefaults.standard.set(profilePic, forKey: "userPic")
                 }
             }
         }

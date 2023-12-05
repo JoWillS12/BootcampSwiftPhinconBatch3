@@ -168,3 +168,12 @@ class HalfModalPresentationController: UIPresentationController {
         }
     }
 }
+
+extension UIImage {
+    static func fromBase64(_ base64String: String) -> UIImage? {
+        guard let data = Data(base64Encoded: base64String) else {
+            return nil
+        }
+        return UIImage(data: data)
+    }
+}
