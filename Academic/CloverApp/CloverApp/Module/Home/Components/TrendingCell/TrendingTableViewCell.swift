@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class TrendingTableViewCell: UITableViewCell {
     
@@ -13,7 +14,7 @@ class TrendingTableViewCell: UITableViewCell {
     @IBOutlet weak var seeDesc: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    weak var delegate: TrendingCellDelegate?
+    weak var delegate: MovieCellDelegate?
     var trendingData: [Trending] = [] {
         didSet {
             collectionView.reloadData()
@@ -45,6 +46,7 @@ class TrendingTableViewCell: UITableViewCell {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(seeDescTapped))
         seeDesc.isUserInteractionEnabled = true
         seeDesc.addGestureRecognizer(tapGesture)
+        sectionTitle.showAnimatedGradientSkeleton()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -63,6 +65,7 @@ class TrendingTableViewCell: UITableViewCell {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.showAnimatedGradientSkeleton()
     }
 }
 extension TrendingTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource{

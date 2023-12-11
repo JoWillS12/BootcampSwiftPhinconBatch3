@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="296" id="KGk-i7-Jjw" customClass="ImageTableViewCell" customModule="C" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="296"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="296"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mLL-44-2ui">
+                        <rect key="frame" x="16" y="4" width="288" height="37"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="A4p-d5-Bcz">
+                                <rect key="frame" x="0.0" y="1" width="37" height="35.666666666666671"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="O3d-eR-Zsa"/>
+                                    <constraint firstAttribute="height" constant="37" id="w1a-ua-S2d"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNf-jH-e6f">
+                                <rect key="frame" x="45" y="0.0" width="243" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="243" id="D5Z-NX-hrQ"/>
+                                    <constraint firstAttribute="height" constant="37" id="rG8-Qs-z0I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Zf-7m-Zj8">
+                        <rect key="frame" x="64" y="49" width="240" height="240"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="240" id="Fdl-ie-bUS"/>
+                            <constraint firstAttribute="height" constant="240" id="xMC-ke-omN"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="7Zf-7m-Zj8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="64" id="8tI-p7-lUo"/>
+                    <constraint firstItem="7Zf-7m-Zj8" firstAttribute="top" secondItem="mLL-44-2ui" secondAttribute="bottom" constant="8" symbolic="YES" id="Wzn-6C-Xov"/>
+                    <constraint firstItem="mLL-44-2ui" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="e4K-sE-7uf"/>
+                    <constraint firstAttribute="trailing" secondItem="7Zf-7m-Zj8" secondAttribute="trailing" constant="16" id="hTH-AP-KFS"/>
+                    <constraint firstAttribute="trailing" secondItem="mLL-44-2ui" secondAttribute="trailing" constant="16" id="lpS-Fn-sXb"/>
+                    <constraint firstItem="mLL-44-2ui" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="neh-PU-dNz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="userAttachment" destination="7Zf-7m-Zj8" id="zsl-Xj-L1I"/>
+                <outlet property="userName" destination="uNf-jH-e6f" id="kgN-eC-gku"/>
+                <outlet property="userProfile" destination="A4p-d5-Bcz" id="ayx-bM-Svq"/>
+            </connections>
+            <point key="canvasLocation" x="68.702290076335871" y="108.45070422535211"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
+    </resources>
+</document>

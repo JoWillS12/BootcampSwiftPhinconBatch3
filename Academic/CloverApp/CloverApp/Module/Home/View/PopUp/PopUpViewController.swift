@@ -31,6 +31,12 @@ class PopUpViewController: UIViewController {
         dismiss(animated: false)
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             self.scheduleNotification()
+            let downloaded = true
+            NotificationCenter.default.post(
+                name: NSNotification.Name("DownloadNotification"),
+                object: nil,
+                userInfo: ["data": downloaded]
+            )
         }
     }
     

@@ -10,6 +10,7 @@ import CoreData
 import FirebaseCore
 import GoogleSignIn
 import UserNotifications
+import AVFoundation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
@@ -35,6 +36,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         // Set the delegate to self
         UNUserNotificationCenter.current().delegate = self
+        
+        AVCaptureDevice.requestAccess(for: .audio) { audioGranted in
+            if audioGranted {
+                // Audio access granted
+                // You can perform any setup or navigation logic here
+            } else {
+                // Audio access denied
+                // Handle the denial case
+            }
+        }
         
         return true
     }

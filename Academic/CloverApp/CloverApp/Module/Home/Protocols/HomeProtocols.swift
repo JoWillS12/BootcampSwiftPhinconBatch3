@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol TrendingCellDelegate: AnyObject {
+protocol MovieCellDelegate: AnyObject {
     func didSelectItem<T: Codable>(data: T)
     func seeDescTapped(dataType: DataType)
 }

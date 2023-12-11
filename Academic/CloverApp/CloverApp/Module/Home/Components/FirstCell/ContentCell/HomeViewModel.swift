@@ -9,6 +9,7 @@ import Foundation
 
 class HomeViewModel {
     
+    static let shared = HomeViewModel()
     var nowPlayingData: [NowPlaying] = []
     var genreData: [Genre] = []
     var trendingData: [Trending] = []

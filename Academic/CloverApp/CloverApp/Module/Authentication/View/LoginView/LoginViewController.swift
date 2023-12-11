@@ -85,17 +85,38 @@ class LoginViewController: UIViewController {
     
     @objc func googleSignInPressed(_ sender: UITapGestureRecognizer) {
         GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] result, error in
-            guard error == nil else { return }
+            guard error == nil else {
+                // Handle the error
+                return
+            }
             guard let user = result?.user,
                   let idToken = user.idToken?.tokenString
-            else { return }
-            
+            else {
+                // Handle missing user or ID token
+                return
+            }
             let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
-            
-            print("Google Sign-In Success")
-            self.navigationController?.pushViewController(SplashScreenViewController(), animated: true)
+            Auth.auth().signIn(with: credential) { authResult, error in
+                if let error = error {
+                    // Handle sign-in error
+                    print("Google Sign-In Error: \(error.localizedDescription)")
+                    return
+                }
+                if let currentUser = Auth.auth().currentUser {
+                    currentUser.link(with: credential) { authResult, error in
+                        if let error = error {
+                            // Handle linking error
+                            print("Error linking Google credential: \(error.localizedDescription)")
+                            return
+                        }
+                        print("Google credential linked successfully")
+                        self.navigationController?.pushViewController(TabBarViewController(), animated: true)
+                    }
+                }
+            }
         }
     }
+    
     
     func showAlert(message: String) {
         let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)

@@ -51,8 +51,5 @@ struct MovieResult: Codable {
 }
 
 enum MovieOriginalLanguage: String, Codable {
-    case ar = "ar"
     case en = "en"
-    case hi = "hi"
-    case mn = "mn"
 }

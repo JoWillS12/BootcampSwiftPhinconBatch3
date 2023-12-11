@@ -177,3 +177,20 @@ extension UIImage {
         return UIImage(data: data)
     }
 }
+
+class BaseTableViewCell : UITableViewCell {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
+    func updateHeight() {
+        if let tableView = self.superview as? UITableView{
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        }
+    }
+}

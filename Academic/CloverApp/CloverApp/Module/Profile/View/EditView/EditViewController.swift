@@ -40,6 +40,10 @@ class EditViewController: UIViewController {
     func setUp(){
         updateButton.roundCornersWithDifferentRadii(topLeft: 60, topRight: 10, bottomLeft: 10, bottomRight: 60)
         updateButton.buttonLabel.text = "Update"
+        nameField.placeholder = "Your Name"
+        phoneNumberField.placeholder = "Your Phone Number"
+        nicknameField.placeholder = "Your Nickname"
+        favoriteMovieField.placeholder = "Your Favorite Movie"
     }
     
     func loadData(){

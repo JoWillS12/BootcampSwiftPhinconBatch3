@@ -18,6 +18,8 @@ class GroupDescViewController: UIViewController {
     var selectedGenre: [Genre] = []
     var currentDataType: DataType = .trending
     
+    var vm = GroupViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -61,6 +63,12 @@ class GroupDescViewController: UIViewController {
         }
         return genreNames
     }
+    
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "Success", message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertController, animated: true, completion: nil)
+    }
 }
 extension GroupDescViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -89,6 +97,16 @@ extension GroupDescViewController: UITableViewDelegate, UITableViewDataSource{
             let movieGenres = mapGenreIDsToNames(genreIDs: datas.genreIDS, genreData: selectedGenre.first?.genres ?? [])
             cell.movieGenre.text = "Genre : \(movieGenres.joined(separator: ", "))"
             cell.movieDate.text = "\(getYear(from: datas.releaseDate))"
+            cell.customButton.tapAction = {[weak self] in
+                self?.vm.addBookmark(movieId: datas.id, movieName: datas.title, moviePic: datas.posterPath){ error in
+                    if let error = error {
+                        print("Error saving movie: \(error.localizedDescription)")
+                    } else {
+                        print("Movie saved successfully!")
+                        self?.showAlert(message: "Added to bookmark.")
+                    }
+                }
+            }
             groupTitle.text = "Trending"
             break
         case .topRated:
@@ -103,6 +121,16 @@ extension GroupDescViewController: UITableViewDelegate, UITableViewDataSource{
             let movieGenres = mapGenreIDsToNames(genreIDs: datas.genreIDS, genreData: selectedGenre.first?.genres ?? [])
             cell.movieGenre.text = "Genre : \(movieGenres.joined(separator: ", "))"
             cell.movieDate.text = "\(getYear(from: datas.releaseDate))"
+            cell.customButton.tapAction = {[weak self] in
+                self?.vm.addBookmark(movieId: datas.id, movieName: datas.title, moviePic: datas.posterPath){ error in
+                    if let error = error {
+                        print("Error saving movie: \(error.localizedDescription)")
+                    } else {
+                        print("Movie saved successfully!")
+                        self?.showAlert(message: "Added to bookmark.")
+                    }
+                }
+            }
             groupTitle.text = "Top Rated"
             break
         case .upcoming:
@@ -117,6 +145,16 @@ extension GroupDescViewController: UITableViewDelegate, UITableViewDataSource{
             let movieGenres = mapGenreIDsToNames(genreIDs: datas.genreIDS, genreData: selectedGenre.first?.genres ?? [])
             cell.movieGenre.text = "Genre : \(movieGenres.joined(separator: ", "))"
             cell.movieDate.text = "\(getYear(from: datas.releaseDate))"
+            cell.customButton.tapAction = {[weak self] in
+                self?.vm.addBookmark(movieId: datas.id, movieName: datas.title, moviePic: datas.posterPath){ error in
+                    if let error = error {
+                        print("Error saving movie: \(error.localizedDescription)")
+                    } else {
+                        print("Movie saved successfully!")
+                        self?.showAlert(message: "Added to bookmark.")
+                    }
+                }
+            }
             groupTitle.text = "Upcoming"
             break
         }

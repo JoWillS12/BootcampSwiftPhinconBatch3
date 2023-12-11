@@ -30,6 +30,10 @@ class DescViewController: UIViewController {
     var typeData: DataType = .trending
     let maximumNumberOfLines: Int = 3
     var isExpanded: Bool = false
+    var selectedMovieId: Int = 0
+    var selectedDate: String = ""
+    var selectedPosterPath: String = ""
+    var vm = HalfViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +51,10 @@ class DescViewController: UIViewController {
             if let item = selectedTrending {
                 if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (item.posterPath)) {
                     filmImage.kf.setImage(with: imageURL)
+                    selectedPosterPath = "\(imageURL)"
                 }
+                selectedMovieId = item.id
+                selectedDate = getYear(from: item.releaseDate)
                 filmName.text = item.title
                 filmRating.text = "\(item.popularity) > \(getYear(from: item.releaseDate))"
                 filmSynopsis.text = item.overview
@@ -59,7 +66,10 @@ class DescViewController: UIViewController {
             if let item = selectedTopRated {
                 if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (item.posterPath)) {
                     filmImage.kf.setImage(with: imageURL)
+                    selectedPosterPath = "\(imageURL)"
                 }
+                selectedMovieId = item.id
+                selectedDate = getYear(from: item.releaseDate)
                 filmName.text = item.title
                 filmRating.text = "\(item.popularity) > \(getYear(from: item.releaseDate))"
                 filmSynopsis.text = item.overview
@@ -70,7 +80,10 @@ class DescViewController: UIViewController {
             if let item = selectedUpcoming {
                 if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (item.posterPath)) {
                     filmImage.kf.setImage(with: imageURL)
+                    selectedPosterPath = "\(imageURL)"
                 }
+                selectedMovieId = item.id
+                selectedDate = "\(getYear(from: item.releaseDate))"
                 filmName.text = item.title
                 filmRating.text = "\(item.popularity) > \(getYear(from: item.releaseDate))"
                 filmSynopsis.text = item.overview
@@ -91,6 +104,13 @@ class DescViewController: UIViewController {
             name: NSNotification.Name("DataNotification"),
             object: nil
         )
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleDownloadNotification(_:)),
+            name: NSNotification.Name("DownloadNotification"),
+            object: nil
+        )
     }
     
     @objc func handleDataNotification(_ notification: Notification) {
@@ -102,6 +122,21 @@ class DescViewController: UIViewController {
                 let vc = PopUpViewController()
                 self.navigationController?.present(vc, animated: true)
             })
+        }
+    }
+    
+    @objc func handleDownloadNotification(_ notification: Notification) {
+        // Retrieve data from the notification
+        if let data = notification.userInfo?["data"] as? Bool, data {
+            print("Received data: \(data)")
+            vm.downloadMovie(movieId: selectedMovieId, movieName: filmName.text ?? "", moviePic: selectedPosterPath, movieGenre: filmGenre.text ?? "", movieYear: selectedDate) { error in
+                if let error = error {
+                    print("Error download movie: \(error.localizedDescription)")
+                } else {
+                    print("Movie download successfully!")
+                    self.showAlert(message: "Movie Downloaded.")
+                }
+            }
         }
     }
     
@@ -235,6 +270,12 @@ class DescViewController: UIViewController {
             }
         }
         return genreNames
+    }
+    
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "Success", message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertController, animated: true, completion: nil)
     }
     
     func setUpPagingVC(){

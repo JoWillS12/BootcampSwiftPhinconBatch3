@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SkeletonView
+import AVKit
 
 class HomeViewController: UIViewController {
     
@@ -19,7 +21,30 @@ class HomeViewController: UIViewController {
         fetchData()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        listenedNotification()
+    }
+    
+    func listenedNotification(){
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleButtonNotification(_:)),
+            name: NSNotification.Name("ButtonNotification"),
+            object: nil
+        )
+    }
+    
+    @objc func handleButtonNotification(_ notification: Notification) {
+        // Retrieve data from the notification
+        if let data = notification.userInfo?["data"] as? Bool, data {
+            print("Received data: \(data)")
+            
+            self.showAlert(message: "Added to bookmark.")
+        }
+    }
+    
     func registerTableCell(){
+        tableView.showAnimatedGradientSkeleton()
         tableView.contentInsetAdjustmentBehavior = .never
         tableView.showsVerticalScrollIndicator = false
         tableView.dataSource = self
@@ -40,8 +65,30 @@ class HomeViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
+    
+    func showVideo(){
+        guard let videoURL = URL(string: "https://firebasestorage.googleapis.com/v0/b/movie-eead1.appspot.com/o/jump%20scare%20videos%20-%20jumpscare%20-%20scare%20videos%20%23shorts.mp4?alt=media&token=817a2ff6-7589-43fc-a462-c2340edd4a90") else {
+            // Handle invalid URL
+            print("Not this link!")
+            return
+        }
+        
+        let player = AVPlayer(url: videoURL)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        
+        present(playerViewController, animated: true) {
+            player.play()
+        }
+    }
+    
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "Success", message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertController, animated: true, completion: nil)
+    }
 }
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource, TrendingCellDelegate{
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource, MovieCellDelegate{
     
     func didSelectItem<T>(data: T) where T : Codable {
         if data is UpcomingResult {
@@ -95,10 +142,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource, Trendi
         switch section {
         case .recomendation:
             let cell = tableView.dequeueReusableCell(withIdentifier: "FirstTableViewCell", for: indexPath) as! FirstTableViewCell
+            
             cell.nowPlayingData = vm.nowPlayingData
             cell.genreData = vm.genreData
             cell.contentView.clipsToBounds = false
             cell.selectionStyle = .none
+            cell.buttonPlay.tapAction = {[weak self] in
+                self?.showVideo()
+            }
             return cell
         case .trending:
             let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingTableViewCell", for: indexPath) as! TrendingTableViewCell

@@ -113,11 +113,15 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         case .editProfile:
             let vc = EditViewController()
             navigationController?.pushViewController(vc, animated: true)
-        case .notification: 
+        case .notification:
             let vc = NotifViewController()
             navigationController?.pushViewController(vc, animated: true)
-        case .download: break
-            
+        case .download: 
+            let vc = DownloadSetViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case .community:
+            let vc = CommunityViewController()
+            navigationController?.pushViewController(vc, animated: true)
         case .none:
             break
         }

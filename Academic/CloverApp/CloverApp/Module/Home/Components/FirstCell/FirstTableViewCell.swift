@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import SkeletonView
 
 class FirstTableViewCell: UITableViewCell {
     
@@ -18,6 +19,7 @@ class FirstTableViewCell: UITableViewCell {
     @IBOutlet weak var descBox: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var vm = GroupViewModel()
     var nowPlayingData: [NowPlaying] = [] {
         didSet {
             collectionView.reloadData()
@@ -72,7 +74,7 @@ class FirstTableViewCell: UITableViewCell {
         buttonAddList.buttonImage.image = UIImage(systemName: "plus")
         buttonAddList.tintColor = UIColor.black
         buttonAddList.buttonName.text = "My List"
-        
+
         descBox.setDiagonalLinearGradientWithCornerRadius(colors: [UIColor.white, UIColor.gray, UIColor.black], startPoint: CGPoint(x: 0.0, y: 0.0), endPoint: CGPoint(x: 1.0, y: 1.0), cornerRadius: 20)
         descBox.layer.opacity = 0.9
         
@@ -93,6 +95,7 @@ class FirstTableViewCell: UITableViewCell {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.showAnimatedGradientSkeleton()
     }
     
     func mapGenreIDsToNames(genreIDs: [Int], genreData: [GenreElement]) -> [String] {
@@ -149,7 +152,21 @@ extension FirstTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
         if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath)) {
             cell.filmImage.kf.setImage(with: imageURL)
         }
-        
+        buttonAddList.tapAction = {[weak self] in
+            self?.vm.addBookmark(movieId: datas.id, movieName: datas.title, moviePic: datas.posterPath){ error in
+                if let error = error {
+                    print("Error saving movie: \(error.localizedDescription)")
+                } else {
+                    print("Movie saved successfully!")
+                    let data = true
+                    NotificationCenter.default.post(
+                        name: NSNotification.Name("ButtonNotification"),
+                        object: nil,
+                        userInfo: ["data": data]
+                    )
+                }
+            }
+        }
         return cell
     }
     

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class MovieCollectionViewCell: UICollectionViewCell {
 
@@ -15,6 +16,9 @@ class MovieCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         movieImage.layer.cornerRadius = 16
+        movieImage.showAnimatedGradientSkeleton()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.movieImage.hideSkeleton()
+        }
     }
-
 }

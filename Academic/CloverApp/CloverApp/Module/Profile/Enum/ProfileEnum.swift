@@ -11,20 +11,23 @@ enum ProfileTableViewSection: Int, CaseIterable {
     case editProfile = 0
     case notification
     case download
-
+    case community
+    
     var title: String {
         switch self {
         case .editProfile: return "Edit Profile"
         case .notification: return "Notification"
         case .download: return "Download"
+        case .community: return "Community"
         }
     }
-
+    
     var imageName: String {
         switch self {
         case .editProfile: return "person"
         case .notification: return "bell"
         case .download: return "square.and.arrow.down"
+        case .community: return "person.3"
         }
     }
 }
@@ -36,7 +39,7 @@ enum NotifTableViewSection: Int, CaseIterable {
     case service
     case release
     case update
-
+    
     var title: String {
         switch self {
         case .general: return "General Notification"
@@ -46,4 +49,18 @@ enum NotifTableViewSection: Int, CaseIterable {
         case .update: return "App Updates"
         }
     }
+}
+
+enum SectionIdentifier: String, CaseIterable {
+    case notification
+    case downloadQuality
+    case audioQuality
+    case delete
+}
+
+enum RowIdentifier: String {
+    case notification
+    case downloadOption
+    case audioOption
+    case delete
 }

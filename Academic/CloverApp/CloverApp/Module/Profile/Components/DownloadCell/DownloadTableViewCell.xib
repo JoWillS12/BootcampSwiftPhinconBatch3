@@ -45,13 +45,20 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="ReG-hY-A3V" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="oFG-Yv-ibs"/>
-                    <constraint firstItem="ReG-hY-A3V" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="oKF-k1-yfk"/>
+                    <constraint firstItem="ReG-hY-A3V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11.67" id="4SL-Iq-ALa"/>
+                    <constraint firstAttribute="bottom" secondItem="ReG-hY-A3V" secondAttribute="bottom" constant="6" id="ETA-5p-zou"/>
+                    <constraint firstAttribute="trailing" secondItem="ReG-hY-A3V" secondAttribute="trailing" constant="11.33" id="cQJ-JY-X9h"/>
+                    <constraint firstItem="ReG-hY-A3V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="gy2-gh-y40"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <point key="canvasLocation" x="128" y="20"/>
+            <connections>
+                <outlet property="setImage" destination="8Gv-0D-JqZ" id="jbv-dq-5h2"/>
+                <outlet property="setName" destination="3OW-tO-FwA" id="CQ5-uF-hNX"/>
+                <outlet property="switchButton" destination="DYh-yC-DFT" id="6rX-k5-VTv"/>
+            </connections>
+            <point key="canvasLocation" x="126.71755725190839" y="19.718309859154932"/>
         </tableViewCell>
     </objects>
 </document>
