@@ -2,10 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>We need access to the microphone for audio recording.</string>
-	<key>GIDClientID</key>
-	<string>794900609658-g64enolmk39iciigkramcbkldqaktb95.apps.googleusercontent.com</string>
+	<key>UIInterfaceOrientationPortraitUpsideDown</key>
+	<string></string>
+	<key>UIInterfaceOrientationPortrait</key>
+	<string></string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -17,6 +17,8 @@
 			</array>
 		</dict>
 	</array>
+	<key>GIDClientID</key>
+	<string>794900609658-g64enolmk39iciigkramcbkldqaktb95.apps.googleusercontent.com</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -26,12 +28,12 @@
 			<key>UIWindowSceneSessionRoleApplication</key>
 			<array>
 				<dict>
+					<key>UISceneClassName</key>
+					<string></string>
 					<key>UISceneConfigurationName</key>
 					<string>Default Configuration</string>
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
-					<key>UISceneClassName</key>
-					<string></string>
 				</dict>
 			</array>
 		</dict>

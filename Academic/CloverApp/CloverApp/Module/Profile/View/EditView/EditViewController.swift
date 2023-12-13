@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseAuth
 
-class EditViewController: UIViewController {
+class EditViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var profileImage: CircleView!
     @IBOutlet weak var favoriteMovieField: UITextField!
@@ -27,6 +27,14 @@ class EditViewController: UIViewController {
         setUp()
         loadData()
         updateData()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        
+        favoriteMovieField.delegate = self
+        nicknameField.delegate = self
+        nameField.delegate = self
+        phoneNumberField.delegate = self
     }
     
     @IBAction func cancelButton(_ sender: Any) {
@@ -35,6 +43,15 @@ class EditViewController: UIViewController {
     
     @IBAction func backButton(_ sender: Any) {
         navigationController?.popViewController(animated: false)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     func setUp(){

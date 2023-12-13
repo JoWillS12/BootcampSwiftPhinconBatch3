@@ -12,6 +12,8 @@ enum ProfileTableViewSection: Int, CaseIterable {
     case notification
     case download
     case community
+    case scan
+    case game
     
     var title: String {
         switch self {
@@ -19,6 +21,8 @@ enum ProfileTableViewSection: Int, CaseIterable {
         case .notification: return "Notification"
         case .download: return "Download"
         case .community: return "Community"
+        case .scan: return "Scan QR"
+        case .game: return "GAME"
         }
     }
     
@@ -28,6 +32,8 @@ enum ProfileTableViewSection: Int, CaseIterable {
         case .notification: return "bell"
         case .download: return "square.and.arrow.down"
         case .community: return "person.3"
+        case .scan: return "qrcode.viewfinder"
+        case .game: return "gamecontroller"
         }
     }
 }

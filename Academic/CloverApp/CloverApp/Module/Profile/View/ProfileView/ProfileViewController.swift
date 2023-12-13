@@ -10,6 +10,7 @@ import FirebaseAuth
 
 class ProfileViewController: UIViewController {
     
+    @IBOutlet weak var logoApp: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profileEmail: UILabel!
     @IBOutlet weak var profileName: UILabel!
@@ -25,6 +26,10 @@ class ProfileViewController: UIViewController {
         loadData()
         profilePic.galleryButton.isHidden = true
         profilePic.viewToHidden.isHidden = true
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(logoAppTapped))
+        logoApp.isUserInteractionEnabled = true
+        logoApp.addGestureRecognizer(tapGesture)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +45,11 @@ class ProfileViewController: UIViewController {
         } catch let error {
             print("Error signing out: \(error.localizedDescription)")
         }
+    }
+    
+    @objc func logoAppTapped() {
+        let vc = ARGameViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func registerTableCell(){
@@ -116,11 +126,18 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         case .notification:
             let vc = NotifViewController()
             navigationController?.pushViewController(vc, animated: true)
-        case .download: 
+        case .download:
             let vc = DownloadSetViewController()
             navigationController?.pushViewController(vc, animated: true)
         case .community:
             let vc = CommunityViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case .some(.scan):
+            let vc = ScanViewController()
+            navigationController?.pushViewController(vc, animated: true)
+            break
+        case .game:
+            let vc = SKViewController()
             navigationController?.pushViewController(vc, animated: true)
         case .none:
             break

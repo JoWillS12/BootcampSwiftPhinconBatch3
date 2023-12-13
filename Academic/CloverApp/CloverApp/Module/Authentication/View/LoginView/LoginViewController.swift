@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 import GoogleSignIn
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var googleButton: GIDSignInButton!
     @IBOutlet weak var checkBox: CheckBox!
@@ -27,10 +27,24 @@ class LoginViewController: UIViewController {
         setUp()
         performGSignIn()
         loadButton()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        
+        emailBox.inputType.delegate = self
+        passwordBox.inputType.delegate = self
     }
     
     @IBAction func signUpButton(_ sender: Any) {
         self.navigationController?.pushViewController(RegisterViewController(), animated: false)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     func setUp(){

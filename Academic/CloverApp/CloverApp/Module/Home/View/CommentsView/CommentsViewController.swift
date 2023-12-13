@@ -10,7 +10,7 @@ import Parchment
 import FirebaseDatabase
 import FirebaseAuth
 
-class CommentsViewController: UIViewController {
+class CommentsViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -46,6 +46,10 @@ class CommentsViewController: UIViewController {
         currentUser = Auth.auth().currentUser
         updateUI()
         fetchComments()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        
+        commentField.delegate = self
     }
     
     @IBAction func sendComment(_ sender: Any) {
@@ -92,6 +96,15 @@ class CommentsViewController: UIViewController {
                 self.fetchComments()
             }
         }
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     func registerTableCell(){

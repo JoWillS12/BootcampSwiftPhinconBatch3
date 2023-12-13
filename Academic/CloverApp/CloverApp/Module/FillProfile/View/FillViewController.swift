@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 import Firebase
 
-class FillViewController: UIViewController {
+class FillViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var userPhone: UILabel!
     @IBOutlet weak var userEmail: UILabel!
@@ -28,6 +28,12 @@ class FillViewController: UIViewController {
         loadButton()
         loadUserData()
         setUp()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        
+        favoriteMovie.delegate = self
+        Nickname.delegate = self
+        nameLabel.delegate = self
     }
     
     @IBAction func skipButton(_ sender: Any) {
@@ -35,6 +41,15 @@ class FillViewController: UIViewController {
         let randomUsername = generateRandomName()
         nameLabel.text = randomUsername
         saveUsernameToFirebase(username: randomUsername)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     func setUp(){

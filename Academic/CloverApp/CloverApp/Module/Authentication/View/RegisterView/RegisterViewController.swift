@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var regisButton: ButtonView!
     @IBOutlet weak var repasswordBox: FieldView!
@@ -24,6 +24,13 @@ class RegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
         setUp()
         loadButton()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        
+        emailBox.inputType.delegate = self
+        passwordBox.inputType.delegate = self
+        phoneBox.inputType.delegate = self
+        repasswordBox.inputType.delegate = self
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -32,6 +39,15 @@ class RegisterViewController: UIViewController {
     
     @IBAction func signInButton(_ sender: Any) {
         navigationController?.popViewController(animated: false)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     func setUp(){
