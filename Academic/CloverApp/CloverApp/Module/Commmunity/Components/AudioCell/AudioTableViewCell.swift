@@ -10,6 +10,7 @@ import AVFoundation
 
 class AudioTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var buttonImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var playButton: UIButton!
     
@@ -48,7 +49,7 @@ class AudioTableViewCell: UITableViewCell {
     @objc func playButtonTapped() {
         print("Play button tapped")
         if let player = player {
-            if player.rate == 0 {
+            if player.rate == 0{
                 // Player is paused, so play
                 player.play()
             } else {

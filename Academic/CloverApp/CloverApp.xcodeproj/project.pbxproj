@@ -15,6 +15,8 @@
 		1732C9202B1717C500F4B23D /* SuggestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1732C91E2B1717C500F4B23D /* SuggestViewController.xib */; };
 		1732C9242B1721F700F4B23D /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1732C9222B1721F700F4B23D /* CommentTableViewCell.swift */; };
 		1732C9252B1721F700F4B23D /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1732C9232B1721F700F4B23D /* CommentTableViewCell.xib */; };
+		1744C4C22B2AA4BB0033BC2C /* JarvisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1744C4C02B2AA4BB0033BC2C /* JarvisViewController.swift */; };
+		1744C4C32B2AA4BB0033BC2C /* JarvisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1744C4C12B2AA4BB0033BC2C /* JarvisViewController.xib */; };
 		1753EF782B148ACC004084F3 /* FillViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753EF772B148ACC004084F3 /* FillViewModel.swift */; };
 		1753EF7D2B148CA9004084F3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753EF7B2B148CA9004084F3 /* HomeViewController.swift */; };
 		1753EF7E2B148CA9004084F3 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1753EF7C2B148CA9004084F3 /* HomeViewController.xib */; };
@@ -191,6 +193,8 @@
 		1732C91E2B1717C500F4B23D /* SuggestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestViewController.xib; sourceTree = "<group>"; };
 		1732C9222B1721F700F4B23D /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		1732C9232B1721F700F4B23D /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		1744C4C02B2AA4BB0033BC2C /* JarvisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarvisViewController.swift; sourceTree = "<group>"; };
+		1744C4C12B2AA4BB0033BC2C /* JarvisViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JarvisViewController.xib; sourceTree = "<group>"; };
 		1753EF772B148ACC004084F3 /* FillViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillViewModel.swift; sourceTree = "<group>"; };
 		1753EF7B2B148CA9004084F3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1753EF7C2B148CA9004084F3 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -377,6 +381,23 @@
 				1732C9232B1721F700F4B23D /* CommentTableViewCell.xib */,
 			);
 			path = CommentCell;
+			sourceTree = "<group>";
+		};
+		1744C4BF2B2AA4AF0033BC2C /* Jarvis */ = {
+			isa = PBXGroup;
+			children = (
+				1744C4C52B2AA5C50033BC2C /* View */,
+			);
+			path = Jarvis;
+			sourceTree = "<group>";
+		};
+		1744C4C52B2AA5C50033BC2C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1744C4C02B2AA4BB0033BC2C /* JarvisViewController.swift */,
+				1744C4C12B2AA4BB0033BC2C /* JarvisViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		1753EF762B148ABE004084F3 /* ViewModel */ = {
@@ -795,8 +816,6 @@
 		17BD7BBE2B143583008AAA3E /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				17D9B9912B299FBB0041E23E /* SKGame */,
-				17D9B98C2B296CAC0041E23E /* ARGame */,
 				17733E872B22B275009D450F /* Commmunity */,
 				17C71E762B1DBF2F008E41E4 /* Profile */,
 				17C71E752B1DBF2A008E41E4 /* Download */,
@@ -1067,6 +1086,9 @@
 		17C71E772B1DC1F3008E41E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1744C4BF2B2AA4AF0033BC2C /* Jarvis */,
+				17D9B9912B299FBB0041E23E /* SKGame */,
+				17D9B98C2B296CAC0041E23E /* ARGame */,
 				17D9B9802B2945920041E23E /* ScanQRView */,
 				17C71E962B1EDA6C008E41E4 /* DownloadSetView */,
 				17C71E912B1EDA52008E41E4 /* NotifView */,
@@ -1323,6 +1345,7 @@
 				17C71E812B1EB96C008E41E4 /* ProfileTableViewCell.xib in Resources */,
 				17733E702B216630009D450F /* DownloadViewController.xib in Resources */,
 				1753EFB42B157436004084F3 /* FirstTableViewCell.xib in Resources */,
+				1744C4C32B2AA4BB0033BC2C /* JarvisViewController.xib in Resources */,
 				17C71E5D2B19CF5F008E41E4 /* GroupTableViewCell.xib in Resources */,
 				1753EF922B157234004084F3 /* CircleView.xib in Resources */,
 				17BD7C1B2B148440008AAA3E /* FillViewController.xib in Resources */,
@@ -1364,6 +1387,7 @@
 				1753EFA72B15738F004084F3 /* SplashScreenViewController.swift in Sources */,
 				1753EF8E2B156FAA004084F3 /* TabBarViewController.swift in Sources */,
 				175D0C9F2B196E7100766805 /* HomeEnum.swift in Sources */,
+				1744C4C22B2AA4BB0033BC2C /* JarvisViewController.swift in Sources */,
 				17C71E572B19C1B6008E41E4 /* GroupDescViewController.swift in Sources */,
 				17733E5C2B1F2498009D450F /* QualityTableViewCell.swift in Sources */,
 				17BD7BA72B143552008AAA3E /* AppDelegate.swift in Sources */,

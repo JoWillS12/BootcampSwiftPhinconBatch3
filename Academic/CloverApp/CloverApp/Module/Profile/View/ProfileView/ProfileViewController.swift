@@ -47,6 +47,11 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    @IBAction func FAQbutton(_ sender: Any) {
+        self.navigationController?.pushViewController(JarvisViewController(), animated: false)
+    }
+    
+    
     @objc func logoAppTapped() {
         let vc = ARGameViewController()
         navigationController?.pushViewController(vc, animated: true)

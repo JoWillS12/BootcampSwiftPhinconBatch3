@@ -325,10 +325,7 @@ extension DescViewController: PagingViewControllerDelegate, PagingViewController
         case .Comments:
             return CommentsViewController(
                 index: index,
-                selectedTrendingID: selectedTrending?.id,
-                selectedTopRatedID: selectedTopRated?.id,
-                selectedUpcomingID: selectedUpcoming?.id
-            )
+                selectedMovieID: getSelectedMovieID())
         }
     }
     
@@ -344,6 +341,17 @@ extension DescViewController: PagingViewControllerDelegate, PagingViewController
             return PagingIndexItem(index: index, title: "Comments")
         }
     }
+    
+    private func getSelectedMovieID() -> Int? {
+            switch typeData {
+            case .trending:
+                return selectedTrending?.id
+            case .topRated:
+                return selectedTopRated?.id
+            case .upcoming:
+                return selectedUpcoming?.id
+            }
+        }
 }
 
 extension DescViewController: UIViewControllerTransitioningDelegate {

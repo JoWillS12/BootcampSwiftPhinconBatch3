@@ -9,8 +9,9 @@ import UIKit
 import FirebaseAuth
 import AVFoundation
 
-class CommunityViewController: UIViewController, UINavigationControllerDelegate {
+class CommunityViewController: UIViewController, UINavigationControllerDelegate, UITextFieldDelegate {
     
+    @IBOutlet weak var audioButton: UIButton!
     @IBOutlet weak var chatField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,6 +27,10 @@ class CommunityViewController: UIViewController, UINavigationControllerDelegate 
         // Do any additional setup after loading the view.
         registerTableCell()
         setupAudioRecorder()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        
+        chatField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,20 +39,40 @@ class CommunityViewController: UIViewController, UINavigationControllerDelegate 
         fetchUserData()
     }
     
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     @IBAction func recordAudio(_ sender: Any) {
-        if audioRecorder.isRecording {
+        if audioButton.currentImage == UIImage(systemName: "pause") {
             // Stop recording
             audioRecorder.stop()
+            audioButton.setImage(UIImage(systemName: "mic"), for: .normal)
+            print("Recording stopped")
+            
+            do {
+                try AVAudioSession.sharedInstance().setActive(false)
+            } catch {
+                print("Failed to deactivate audio session: \(error.localizedDescription)")
+            }
         } else {
             // Start recording
             do {
                 try AVAudioSession.sharedInstance().setActive(true)
                 audioRecorder.record()
+                audioButton.setImage(UIImage(systemName: "pause"), for: .normal)
                 print("Recording started")
             } catch {
                 print("Failed to start recording: \(error.localizedDescription)")
             }
         }
+        let indexPath = IndexPath(row: chatData.count - 1, section: 0)
+        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
     }
     
     @IBAction func sendImage(_ sender: Any) {
@@ -55,6 +80,8 @@ class CommunityViewController: UIViewController, UINavigationControllerDelegate 
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
+        let indexPath = IndexPath(row: chatData.count - 1, section: 0)
+        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
     }
     
     @IBAction func sendChat(_ sender: Any) {
@@ -64,6 +91,9 @@ class CommunityViewController: UIViewController, UINavigationControllerDelegate 
         }
         vm.sendTextMessage(userPicture: "UserPictureURL", text: text)
         chatField.text = ""
+        
+        let indexPath = IndexPath(row: chatData.count - 1, section: 0)
+        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -106,6 +136,8 @@ class CommunityViewController: UIViewController, UINavigationControllerDelegate 
             DispatchQueue.main.async {
                 self?.chatData = sortedMessages
                 self?.tableView.reloadData()
+                let indexPath = IndexPath(row: (self?.chatData.count ?? 0) - 1, section: 0)
+                self?.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
             }
         }
     }

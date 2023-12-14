@@ -18,21 +18,15 @@ class CommentsViewController: UIViewController, UITextFieldDelegate {
     
     let index: Int
     var currentUser: User?
-    // Add selected movie IDs
-    var selectedTrendingID: Int?
-    var selectedTopRatedID: Int?
-    var selectedNowPlayingID: Int?
-    var selectedUpcomingID: Int?
+    var selectedMovieID: Int?
     var typeData: DataType = .trending
     var vm = CommentsViewModel()
     
-    init(index: Int, selectedTrendingID: Int?, selectedTopRatedID: Int?, selectedUpcomingID: Int?) {
-        self.index = index
-        self.selectedTrendingID = selectedTrendingID
-        self.selectedTopRatedID = selectedTopRatedID
-        self.selectedUpcomingID = selectedUpcomingID
-        super.init(nibName: nil, bundle: nil)
-    }
+    init(index: Int, selectedMovieID: Int?) {
+            self.index = index
+            self.selectedMovieID = selectedMovieID
+            super.init(nibName: nil, bundle: nil)
+        }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -69,19 +63,7 @@ class CommentsViewController: UIViewController, UITextFieldDelegate {
             // Handle empty comment text or missing user information
             return
         }
-        
-        // Determine the selected movie ID based on the current view type
-        var selectedMovieID: Int?
-        
-        switch typeData {
-        case .trending:
-            selectedMovieID = selectedTrendingID
-        case .topRated:
-            selectedMovieID = selectedTopRatedID
-        case .upcoming:
-            selectedMovieID = selectedUpcomingID
-        }
-        
+     
         guard let movieID = selectedMovieID else {
             // Handle the case where the movie ID is nil
             return
@@ -117,7 +99,7 @@ class CommentsViewController: UIViewController, UITextFieldDelegate {
     }
     
     func fetchComments() {
-        guard let selectedMovieID = getCurrentSelectedMovieID() else {
+        guard let selectedMovieID = selectedMovieID else {
             // Handle the case where the movie ID is nil
             return
         }
@@ -126,19 +108,7 @@ class CommentsViewController: UIViewController, UITextFieldDelegate {
             self.tableView.reloadData()
         }
     }
-    
-    func getCurrentSelectedMovieID() -> Int? {
-        switch typeData {
-        case .trending:
-            return selectedTrendingID
-        case .topRated:
-            return selectedTopRatedID
-        case .upcoming:
-            return selectedUpcomingID
-        }
-    }
-    
-    
+ 
     func updateUI() {
         // Update UI based on the comments array or any other relevant logic
         tableView.reloadData()

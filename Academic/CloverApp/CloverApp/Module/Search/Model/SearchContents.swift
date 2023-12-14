@@ -23,10 +23,10 @@ struct Movie: Codable {
 // MARK: - Result
 struct MovieResult: Codable {
     let adult: Bool
-    let backdropPath: String
+    let backdropPath: String?
     let genreIDS: [Int]
     let id: Int
-    let originalLanguage: MovieOriginalLanguage
+    let originalLanguage: MovieOriginalLanguage?
     let originalTitle, overview: String
     let popularity: Double
     let posterPath, releaseDate, title: String
@@ -52,4 +52,12 @@ struct MovieResult: Codable {
 
 enum MovieOriginalLanguage: String, Codable {
     case en = "en"
+    case ja = "ja"
+    case uk = "uk"
+    case de = "de"
+    case fr = "fr"
+    case no = "no"
+    case es = "es"
+    case hi = "hi"
+    case ko = "ko"
 }

@@ -123,12 +123,27 @@
                         <action selector="logoutClicked:" destination="-1" eventType="touchUpInside" id="XMY-TJ-455"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtp-EZ-8A6">
+                    <rect key="frame" x="346" y="60" width="31" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="U6t-lv-eq3"/>
+                        <constraint firstAttribute="width" constant="31" id="XN8-8a-oUa"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="questionmark.circle" catalog="system"/>
+                    <connections>
+                        <action selector="FAQbutton:" destination="-1" eventType="touchUpInside" id="G7s-6r-irV"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="Background"/>
             <constraints>
                 <constraint firstItem="qQD-Xe-AwK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="7Zu-re-D2K"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dtp-EZ-8A6" secondAttribute="trailing" constant="16" id="DQp-p4-9ZQ"/>
                 <constraint firstItem="dSP-GU-PDh" firstAttribute="top" secondItem="u5v-vU-mLX" secondAttribute="bottom" constant="20" id="KTO-ov-iuk"/>
+                <constraint firstItem="dtp-EZ-8A6" firstAttribute="leading" secondItem="qQD-Xe-AwK" secondAttribute="trailing" constant="145" id="NMB-Va-j0s"/>
                 <constraint firstItem="jnl-X3-y8V" firstAttribute="top" secondItem="dSP-GU-PDh" secondAttribute="bottom" constant="18" id="RZp-EG-7YU"/>
                 <constraint firstItem="dSP-GU-PDh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ZFM-4c-7dO"/>
                 <constraint firstItem="u5v-vU-mLX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="fNV-ru-4NV"/>
@@ -136,6 +151,7 @@
                 <constraint firstItem="u5v-vU-mLX" firstAttribute="top" secondItem="qQD-Xe-AwK" secondAttribute="bottom" constant="8" symbolic="YES" id="ghC-8r-KMd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jnl-X3-y8V" secondAttribute="trailing" constant="214" id="lSr-oo-w8l"/>
                 <constraint firstItem="jnl-X3-y8V" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="19" id="lrK-zz-MWh"/>
+                <constraint firstItem="dtp-EZ-8A6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="1" id="m5Y-cg-JII"/>
                 <constraint firstItem="qQD-Xe-AwK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="1" id="nOs-mp-qi2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="u5v-vU-mLX" secondAttribute="trailing" constant="16" id="oup-Sl-acV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dSP-GU-PDh" secondAttribute="trailing" constant="16" id="yP6-4B-3Mu"/>
@@ -146,6 +162,7 @@
     <resources>
         <image name="LOGOMovie" width="316" height="318"/>
         <image name="door.left.hand.open" catalog="system" width="108" height="128"/>
+        <image name="questionmark.circle" catalog="system" width="128" height="123"/>
         <namedColor name="Background">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -153,7 +170,7 @@
             <color red="0.87099999189376831" green="0.90600001811981201" blue="0.90600001811981201" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
