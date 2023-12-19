@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,18 +28,35 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
                     </userDefinedRuntimeAttributes>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vtv-hZ-r0O">
+                    <rect key="frame" x="345" y="59" width="32" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="e4z-dw-U4e"/>
+                        <constraint firstAttribute="width" constant="32" id="nVW-R9-c7T"/>
+                    </constraints>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                    <connections>
+                        <action selector="searchButton:" destination="-1" eventType="touchUpInside" id="yZO-uS-6JP"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" name="Background"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="ugm-65-bTW" secondAttribute="bottom" constant="83" id="2Tf-w1-bNR"/>
+                <constraint firstItem="Vtv-hZ-r0O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="345" id="6Dd-ZG-gAM"/>
                 <constraint firstItem="ugm-65-bTW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ARz-3I-gsF"/>
+                <constraint firstItem="Vtv-hZ-r0O" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="59" id="E8g-HQ-Txo"/>
                 <constraint firstItem="ugm-65-bTW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Gow-gU-jcL"/>
+                <constraint firstAttribute="trailing" secondItem="Vtv-hZ-r0O" secondAttribute="trailing" constant="16" id="dwd-wU-cFJ"/>
                 <constraint firstAttribute="trailing" secondItem="ugm-65-bTW" secondAttribute="trailing" id="qPr-Zr-94X"/>
             </constraints>
             <point key="canvasLocation" x="3.8167938931297707" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <namedColor name="Background">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

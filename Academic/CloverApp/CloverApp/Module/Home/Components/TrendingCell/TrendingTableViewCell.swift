@@ -88,7 +88,7 @@ extension TrendingTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
                 return cell
             }
             let datas = trendingData[0].results[indexPath.row]
-            if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath)) {
+            if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath ?? "")) {
                 cell.movieImage.kf.setImage(with: imageURL)
             }
             sectionTitle.text = "Trending"
@@ -98,7 +98,7 @@ extension TrendingTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
                 return cell
             }
             let datas = topData[0].results[indexPath.row]
-            if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath)) {
+            if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath ?? "")) {
                 cell.movieImage.kf.setImage(with: imageURL)
             }
             sectionTitle.text = "Top Rated"
@@ -108,7 +108,7 @@ extension TrendingTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
                 return cell
             }
             let datas = upData[0].results[indexPath.row]
-            if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath)) {
+            if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath ?? "")) {
                 cell.movieImage.kf.setImage(with: imageURL)
             }
             sectionTitle.text = "Upcoming"

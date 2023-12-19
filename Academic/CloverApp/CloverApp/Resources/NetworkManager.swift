@@ -30,6 +30,30 @@ class NetworkManager: NSObject {
     }
 }
 
+class MusicNetworkManager: NSObject {
+    static let shared = MusicNetworkManager()
+    
+    private override init() {}
+    
+    func fetchTracks(completion: @escaping (Result<[Datum], Error>) -> Void) {
+        let url = "https://api.deezer.com/album/418645/tracks"
+        
+        AF.request(url).responseData { response in
+            switch response.result {
+            case .success(let data):
+                do {
+                    let tracksData = try JSONDecoder().decode(Tracks.self, from: data)
+                    completion(.success(tracksData.data))
+                } catch let error {
+                    completion(.failure(error))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+}
+
 class OpenAIAPIManager {
     static let shared = OpenAIAPIManager()
     

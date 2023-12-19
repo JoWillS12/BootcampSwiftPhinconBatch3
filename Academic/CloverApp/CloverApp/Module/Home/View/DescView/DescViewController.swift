@@ -49,7 +49,7 @@ class DescViewController: UIViewController {
         switch typeData {
         case .trending:
             if let item = selectedTrending {
-                if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (item.posterPath)) {
+                if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (item.posterPath ?? "")) {
                     filmImage.kf.setImage(with: imageURL)
                     selectedPosterPath = "\(imageURL)"
                 }
@@ -64,7 +64,7 @@ class DescViewController: UIViewController {
             break
         case .topRated:
             if let item = selectedTopRated {
-                if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (item.posterPath)) {
+                if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (item.posterPath ?? "")) {
                     filmImage.kf.setImage(with: imageURL)
                     selectedPosterPath = "\(imageURL)"
                 }
@@ -78,14 +78,14 @@ class DescViewController: UIViewController {
             }
         case .upcoming:
             if let item = selectedUpcoming {
-                if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (item.posterPath)) {
+                if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (item.posterPath ?? "")) {
                     filmImage.kf.setImage(with: imageURL)
                     selectedPosterPath = "\(imageURL)"
                 }
                 selectedMovieId = item.id
-                selectedDate = "\(getYear(from: item.releaseDate))"
+                selectedDate = "\(getYear(from: item.releaseDate ))"
                 filmName.text = item.title
-                filmRating.text = "\(item.popularity) > \(getYear(from: item.releaseDate))"
+                filmRating.text = "\(item.popularity) > \(getYear(from: item.releaseDate ))"
                 filmSynopsis.text = item.overview
                 let movieGenres = mapGenreIDsToNames(genreIDs: item.genreIDS, genreData: selectedGenre.first?.genres ?? [])
                 filmGenre.text = "Genre : \(movieGenres.joined(separator: ", "))"

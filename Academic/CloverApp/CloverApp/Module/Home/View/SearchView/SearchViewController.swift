@@ -31,6 +31,10 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         searchField.delegate = self
     }
     
+    @IBAction func backButton(_ sender: Any) {
+        navigationController?.popViewController(animated: false)
+    }
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
@@ -121,13 +125,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
             datas = vm.movieData[0].results[indexPath.row]
         }
         
-        if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + datas.posterPath) {
+        if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath ?? "")) {
             cell.movieImage.kf.setImage(with: imageURL)
         }
         cell.movieName.text = datas.title
         let movieGenres = mapGenreIDsToNames(genreIDs: datas.genreIDS, genreData: vm.genre.first?.genres ?? [])
         cell.movieGenre.text = "\(movieGenres.joined(separator: ", "))"
-        cell.movieDate.text = "\(getYear(from: datas.releaseDate))"
+        cell.movieDate.text = "\(getYear(from: datas.releaseDate ))"
         cell.selectionStyle = .none
         return cell
     }

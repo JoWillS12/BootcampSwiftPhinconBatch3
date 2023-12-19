@@ -90,7 +90,7 @@ extension GroupDescViewController: UITableViewDelegate, UITableViewDataSource{
                 return cell
             }
             let datas = trendingData[indexPath.row]
-            if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath)) {
+            if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath ?? "")) {
                 cell.movieImage.kf.setImage(with: imageURL)
             }
             cell.movieName.text = datas.title
@@ -98,7 +98,7 @@ extension GroupDescViewController: UITableViewDelegate, UITableViewDataSource{
             cell.movieGenre.text = "Genre : \(movieGenres.joined(separator: ", "))"
             cell.movieDate.text = "\(getYear(from: datas.releaseDate))"
             cell.customButton.tapAction = {[weak self] in
-                self?.vm.addBookmark(movieId: datas.id, movieName: datas.title, moviePic: datas.posterPath){ error in
+                self?.vm.addBookmark(movieId: datas.id, movieName: datas.title, moviePic: datas.posterPath ?? ""){ error in
                     if let error = error {
                         print("Error saving movie: \(error.localizedDescription)")
                     } else {
@@ -114,7 +114,7 @@ extension GroupDescViewController: UITableViewDelegate, UITableViewDataSource{
                 return cell
             }
             let datas = topData[indexPath.row]
-            if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath)) {
+            if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath ?? "")) {
                 cell.movieImage.kf.setImage(with: imageURL)
             }
             cell.movieName.text = datas.title
@@ -122,7 +122,7 @@ extension GroupDescViewController: UITableViewDelegate, UITableViewDataSource{
             cell.movieGenre.text = "Genre : \(movieGenres.joined(separator: ", "))"
             cell.movieDate.text = "\(getYear(from: datas.releaseDate))"
             cell.customButton.tapAction = {[weak self] in
-                self?.vm.addBookmark(movieId: datas.id, movieName: datas.title, moviePic: datas.posterPath){ error in
+                self?.vm.addBookmark(movieId: datas.id, movieName: datas.title, moviePic: datas.posterPath ?? ""){ error in
                     if let error = error {
                         print("Error saving movie: \(error.localizedDescription)")
                     } else {
@@ -138,15 +138,15 @@ extension GroupDescViewController: UITableViewDelegate, UITableViewDataSource{
                 return cell
             }
             let datas = upData[indexPath.row]
-            if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath)) {
+            if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath ?? "")) {
                 cell.movieImage.kf.setImage(with: imageURL)
             }
             cell.movieName.text = datas.title
             let movieGenres = mapGenreIDsToNames(genreIDs: datas.genreIDS, genreData: selectedGenre.first?.genres ?? [])
             cell.movieGenre.text = "Genre : \(movieGenres.joined(separator: ", "))"
-            cell.movieDate.text = "\(getYear(from: datas.releaseDate))"
+            cell.movieDate.text = "\(getYear(from: datas.releaseDate ))"
             cell.customButton.tapAction = {[weak self] in
-                self?.vm.addBookmark(movieId: datas.id, movieName: datas.title, moviePic: datas.posterPath){ error in
+                self?.vm.addBookmark(movieId: datas.id, movieName: datas.title , moviePic: datas.posterPath ?? ""){ error in
                     if let error = error {
                         print("Error saving movie: \(error.localizedDescription)")
                     } else {

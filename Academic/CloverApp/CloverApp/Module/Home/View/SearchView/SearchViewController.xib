@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,26 +23,26 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="si7-RS-9br">
-                    <rect key="frame" x="16" y="181" width="361" height="637"/>
+                    <rect key="frame" x="16" y="209.66666666666669" width="361" height="608.33333333333326"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ht-d8-dvA">
-                    <rect key="frame" x="16" y="127" width="288" height="48"/>
+                    <rect key="frame" x="16" y="155.66666666666666" width="288" height="48"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="62N-zO-ua5"/>
                         <constraint firstAttribute="width" constant="288" id="QzF-Tk-gKb"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                     <color key="textColor" name="PopColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TvI-AJ-OZG">
-                    <rect key="frame" x="36" y="59" width="320" height="60"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TvI-AJ-OZG">
+                    <rect key="frame" x="30" y="87" width="320" height="60.666666666666657"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Jvq-i9-D5X">
-                            <rect key="frame" x="8" y="11" width="304" height="37.333333333333336"/>
+                            <rect key="frame" x="8" y="11.666666666666671" width="304" height="37.333333333333336"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sparkle.magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="F8l-Pn-0jd">
                                     <rect key="frame" x="0.0" y="1" width="36" height="35.666666666666671"/>
@@ -68,27 +69,44 @@
                         <constraint firstItem="Jvq-i9-D5X" firstAttribute="leading" secondItem="TvI-AJ-OZG" secondAttribute="leading" constant="8" id="0rR-WV-tuM"/>
                         <constraint firstAttribute="bottom" secondItem="Jvq-i9-D5X" secondAttribute="bottom" constant="11.67" id="PeO-y8-qzW"/>
                         <constraint firstAttribute="trailing" secondItem="Jvq-i9-D5X" secondAttribute="trailing" constant="8" id="VGc-sr-uQI"/>
-                        <constraint firstItem="Jvq-i9-D5X" firstAttribute="top" secondItem="TvI-AJ-OZG" secondAttribute="top" constant="11" id="jRe-QB-Ryy"/>
+                        <constraint firstItem="Jvq-i9-D5X" firstAttribute="centerY" secondItem="TvI-AJ-OZG" secondAttribute="centerY" id="tK3-Mb-itG"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MP5-ah-x3h">
+                    <rect key="frame" x="16" y="59" width="27" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="27" id="03e-yQ-xAZ"/>
+                        <constraint firstAttribute="height" constant="23" id="iop-gp-G5E"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                    <connections>
+                        <action selector="backButton:" destination="-1" eventType="touchUpInside" id="1o1-PD-pad"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="Background"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TvI-AJ-OZG" secondAttribute="trailing" constant="43" id="7tN-bR-hXT"/>
+                <constraint firstItem="MP5-ah-x3h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="CfR-z4-c1T"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2Ht-d8-dvA" secondAttribute="trailing" constant="89" id="FFL-Cm-a7g"/>
                 <constraint firstItem="si7-RS-9br" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Ohd-OY-l1W"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="si7-RS-9br" secondAttribute="trailing" constant="16" id="RmE-wE-sFx"/>
                 <constraint firstItem="si7-RS-9br" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="TZ7-t7-sNT"/>
                 <constraint firstItem="2Ht-d8-dvA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="XKL-vh-qtg"/>
-                <constraint firstItem="TvI-AJ-OZG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="d5o-1G-Jrb"/>
+                <constraint firstItem="MP5-ah-x3h" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ehg-F9-jHx"/>
                 <constraint firstItem="si7-RS-9br" firstAttribute="top" secondItem="2Ht-d8-dvA" secondAttribute="bottom" constant="6" id="jLG-wq-PjL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MP5-ah-x3h" secondAttribute="trailing" constant="350" id="qIt-fC-RIw"/>
+                <constraint firstItem="TvI-AJ-OZG" firstAttribute="top" secondItem="MP5-ah-x3h" secondAttribute="bottom" constant="5" id="vt7-FW-lML"/>
                 <constraint firstItem="2Ht-d8-dvA" firstAttribute="top" secondItem="TvI-AJ-OZG" secondAttribute="bottom" constant="8" symbolic="YES" id="z1D-Sl-MmG"/>
             </constraints>
             <point key="canvasLocation" x="26.717557251908396" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <image name="arrow.left" catalog="system" width="128" height="95"/>
         <image name="sparkle.magnifyingglass" catalog="system" width="128" height="117"/>
         <namedColor name="Background">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

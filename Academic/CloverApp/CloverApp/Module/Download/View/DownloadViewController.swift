@@ -34,6 +34,9 @@ class DownloadViewController: UIViewController {
         tableView.showsVerticalScrollIndicator = false
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.dragInteractionEnabled = true
+        tableView.dragDelegate = self
+        tableView.dropDelegate = self
         tableView.register(UINib(nibName: String(describing: DownloadedTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: DownloadedTableViewCell.self))
     }
     
@@ -109,5 +112,34 @@ extension DownloadViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         showVideo()
+    }
+}
+
+extension DownloadViewController: UITableViewDragDelegate, UITableViewDropDelegate {
+    func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        let data = downloadedData[indexPath.row]
+        let itemProvider = NSItemProvider(object: data.movieName as NSItemProviderWriting)
+        let dragItem = UIDragItem(itemProvider: itemProvider)
+        dragItem.localObject = data
+        return [dragItem]
+    }
+    
+    func tableView(_ tableView: UITableView, performDropWith coordinator: UITableViewDropCoordinator) {
+        guard let destinationIndexPath = coordinator.destinationIndexPath else {
+            return
+        }
+        
+        coordinator.session.loadObjects(ofClass: NSString.self) { [weak self] items in
+            guard let self = self, let movieNames = items as? [String] else { return }
+            
+            if let draggedMovieName = movieNames.first, let index = self.downloadedData.firstIndex(where: { $0.movieName == draggedMovieName }) {
+                self.downloadedData.remove(at: index)
+                self.downloadedData.insert(self.downloadedData[index], at: destinationIndexPath.row)
+                tableView.reloadData()
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, dropSessionDidEnd session: UIDropSession) {
     }
 }

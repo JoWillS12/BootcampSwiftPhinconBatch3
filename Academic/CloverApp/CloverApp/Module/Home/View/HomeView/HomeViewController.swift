@@ -19,10 +19,17 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         registerTableCell()
         fetchData()
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         listenedNotification()
+    }
+    
+    @IBAction func searchButton(_ sender: Any) {
+        let vc = SearchViewController()
+        self.navigationController?.pushViewController(vc, animated: false)
+        print("tapped")
     }
     
     func listenedNotification(){

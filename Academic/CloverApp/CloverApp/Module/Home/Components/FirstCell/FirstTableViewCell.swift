@@ -149,11 +149,11 @@ extension FirstTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
             return cell
         }
         let datas = nowPlayingData[0].results[indexPath.row]
-        if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath)) {
+        if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath ?? "")) {
             cell.filmImage.kf.setImage(with: imageURL)
         }
         buttonAddList.tapAction = {[weak self] in
-            self?.vm.addBookmark(movieId: datas.id, movieName: datas.title, moviePic: datas.posterPath){ error in
+            self?.vm.addBookmark(movieId: datas.id, movieName: datas.title, moviePic: datas.posterPath ?? ""){ error in
                 if let error = error {
                     print("Error saving movie: \(error.localizedDescription)")
                 } else {

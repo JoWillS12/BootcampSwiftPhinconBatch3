@@ -15,7 +15,7 @@ class ProfileViewModel {
     func fetchUserData(for userId: String, completion: @escaping (Result<ProfileData, Error>) -> Void) {
         let userRef = Database.database().reference().child("users").child(userId)
         userRef.observeSingleEvent(of: .value) { snapshot, _  in
-            print("Snapshot value:", snapshot.value)
+            print("Snapshot value:", snapshot.value as Any)
             if let userData = snapshot.value as? [String: Any],
                let nameLabel = userData["nameLabel"] as? String,
                let nickname = userData["nickname"] as? String,
