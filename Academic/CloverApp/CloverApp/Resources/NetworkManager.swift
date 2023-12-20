@@ -15,10 +15,12 @@ class NetworkManager: NSObject {
     
     func makeAPICall<T: Codable>(endpoint: Endpoint,
                                  completion: @escaping(Result<T, Error>) -> Void) {
+        let encoding: ParameterEncoding = (endpoint.method() == .get) ? URLEncoding.default : JSONEncoding.default
+        
         AF.request(endpoint.urlString(),
                    method: endpoint.method(),
                    parameters: endpoint.parameters,
-                   encoding: JSONEncoding.default,
+                   encoding: encoding,
                    headers: endpoint.headers).validate().responseDecodable(of: T.self) { response in
             switch response.result {
             case .success(let value):

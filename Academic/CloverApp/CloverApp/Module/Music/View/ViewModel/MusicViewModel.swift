@@ -14,6 +14,8 @@ class MusicViewModel{
     var onDataUpdate: (() -> Void)?
     var players: [AVPlayer?] = []
     var currentlyPlayingIndex: Int?
+    var isPlaying: Bool = false
+    
     
     func fetchData() {
         MusicNetworkManager.shared.fetchTracks { [weak self] result in
@@ -61,29 +63,5 @@ class MusicViewModel{
         players[index]?.pause()
         currentlyPlayingIndex = nil
         onDataUpdate?()
-    }
-    
-    func playAllTracks() {
-        // Pause the current track if playing
-        if let playingIndex = currentlyPlayingIndex {
-            pausePreview(at: playingIndex)
-        }
-
-        // Play all tracks sequentially
-        var currentTimeOffset: Double = 0.0
-        for index in 0..<tracks.count {
-            DispatchQueue.main.asyncAfter(deadline: .now() + currentTimeOffset) {
-                self.playPreview(at: index)
-            }
-            currentTimeOffset += Double(tracks[index].duration)
-        }
-
-        // Schedule the next track to play after the total duration of all tracks
-        let totalDuration = currentTimeOffset
-        let delayInSeconds = DispatchTimeInterval.seconds(2)
-        DispatchQueue.main.asyncAfter(deadline: .now() + delayInSeconds) {
-            // All tracks have been played
-            self.currentlyPlayingIndex = nil
-        }
     }
 }

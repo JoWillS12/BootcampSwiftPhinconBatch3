@@ -27,6 +27,23 @@ class MusicViewController: UIViewController {
     }
     
     @IBAction func playButton(_ sender: Any) {
+        vm.isPlaying.toggle()
+        updatePlayPauseButtonImage()
+        tableView.reloadData()
+        
+        if vm.isPlaying {
+            if let currentIndex = vm.currentlyPlayingIndex {
+                vm.playPreview(at: currentIndex)
+            }
+            tableView.reloadData()
+
+        } else {
+            if let currentIndex = vm.currentlyPlayingIndex {
+                vm.pausePreview(at: currentIndex)
+            }
+            tableView.reloadData()
+
+        }
     }
     
     @IBAction func forwardButton(_ sender: Any) {
@@ -38,7 +55,6 @@ class MusicViewController: UIViewController {
         playerView.layer.shadowOpacity = 0.8
         playerView.layer.shadowOffset = CGSize(width: 0, height: 4)
         playerView.layer.shadowRadius = 3
-        //        playerView.layer.shouldRasterize = true
     }
     
     func registerTableCell(){
@@ -48,6 +64,12 @@ class MusicViewController: UIViewController {
         tableView.delegate = self
         tableView.register(UINib(nibName: String(describing: MusicTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MusicTableViewCell.self))
         tableView.register(UINib(nibName: String(describing: AlbumTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: AlbumTableViewCell.self))
+    }
+    
+    func updatePlayPauseButtonImage() {
+        let imageName = vm.isPlaying ? "pause.fill" : "play.fill"
+        let image = UIImage(systemName: imageName)
+        playPauseButton.setImage(image, for: .normal)
     }
     
     func fetchData(){
@@ -66,13 +88,8 @@ extension MusicViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumTableViewCell", for: indexPath) as! AlbumTableViewCell
-            cell.tapAction = {[weak self] in
-                cell.startAnimation()
-                self?.vm.playAllTracks()
-                if let currentSong = self?.vm.currentlyPlayingIndex{
-                    self?.playedMusic.text = self?.vm.tracks[currentSong].titleShort
-                }else{}
-            }
+            cell.isPlaying = vm.isPlaying
+            cell.isPlayMusic()
             return cell
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "MusicTableViewCell", for: indexPath) as! MusicTableViewCell
@@ -88,30 +105,19 @@ extension MusicViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            // Handle tap on AlbumTableViewCell if needed
-        } else {
-            // Pause the current track if playing
-            if let currentIndex = vm.currentlyPlayingIndex {
-                vm.pausePreview(at: currentIndex)
-                if let cell = tableView.cellForRow(at: IndexPath(row: currentIndex + 1, section: indexPath.section)) as? AlbumTableViewCell {
-                    cell.stopAnimation()
-                }
-            }
-            
+        if indexPath.row != 0 {
             // Play or resume the selected track
             vm.playPreview(at: indexPath.row - 1)
+            vm.isPlaying = true
+            updatePlayPauseButtonImage()
             currentlyPlayingTrack = vm.tracks[indexPath.row - 1]
             playedMusic.text = currentlyPlayingTrack?.titleShort
-            if let cell = tableView.cellForRow(at: indexPath) as? AlbumTableViewCell {
-                cell.startAnimation()
-            }
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0{
-            return 324
+            return 300
         }else{
             return UITableView.automaticDimension
         }

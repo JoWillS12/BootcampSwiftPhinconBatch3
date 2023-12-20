@@ -34,11 +34,10 @@ struct PlayingResult: Codable {
     let backdropPath: String?
     let genreIDS: [Int]
     let id: Int
-    let originalLanguage: OriginalLanguage?
+    let originalLanguage: OriginalLanguage
     let originalTitle, overview: String
     let popularity: Double
-    let posterPath: String?
-    let releaseDate, title: String
+    let posterPath, releaseDate, title: String
     let video: Bool
     let voteAverage: Double
     let voteCount: Int
@@ -292,7 +291,7 @@ struct Movie: Codable {
     let page: Int
     let results: [MovieResult]
     let totalPages, totalResults: Int
-
+    
     enum CodingKeys: String, CodingKey {
         case page, results
         case totalPages = "total_pages"
@@ -314,7 +313,7 @@ struct MovieResult: Codable {
     let video: Bool
     let voteAverage: Double
     let voteCount: Int
-
+    
     enum CodingKeys: String, CodingKey {
         case adult
         case backdropPath = "backdrop_path"

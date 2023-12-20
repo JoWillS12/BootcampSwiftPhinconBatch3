@@ -11,7 +11,6 @@ import AVFoundation
 
 class AlbumTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var buttonPlay: UIButton!
     @IBOutlet weak var albumImage: UIImageView!
     @IBOutlet weak var playerImage: UIImageView!
     
@@ -29,8 +28,6 @@ class AlbumTableViewCell: UITableViewCell {
         albumImage.layer.masksToBounds = false
         albumImage.layer.cornerRadius = albumImage.frame.size.height / 2
         albumImage.clipsToBounds = true
-        buttonPlay.setTitle(" Play", for: .normal)
-        buttonPlay.setImage(UIImage(systemName: "play"), for: .normal)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -39,9 +36,6 @@ class AlbumTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBAction func playButton(_ sender: Any) {
-        tapAction?()
-    }
     
     func startAnimation() {
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
@@ -65,5 +59,13 @@ class AlbumTableViewCell: UITableViewCell {
     func pauseAudioPreview() {
         stopAnimation()
         isPlaying = false
+    }
+    
+    func isPlayMusic() {
+        if isPlaying {
+            startAnimation()
+        } else {
+            stopAnimation()
+        }
     }
 }

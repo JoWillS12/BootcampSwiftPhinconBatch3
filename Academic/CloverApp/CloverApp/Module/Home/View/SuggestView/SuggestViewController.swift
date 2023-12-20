@@ -77,4 +77,8 @@ extension SuggestViewController: UICollectionViewDelegate, UICollectionViewDataS
         // Set the section inset (adjust as needed)
         return UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+      
+    }
 }

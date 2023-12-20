@@ -31,6 +31,19 @@ class CodeHelper {
 }
 
 extension UIView {
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let maskPath = UIBezierPath(
+            roundedRect: bounds,
+            byRoundingCorners: corners,
+            cornerRadii: CGSize(width: radius, height: radius)
+        )
+        
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.frame = bounds
+        shapeLayer.path = maskPath.cgPath
+        layer.mask = shapeLayer
+    }
+    
     func roundCornersWithDifferentRadii(topLeft: CGFloat, topRight: CGFloat, bottomLeft: CGFloat, bottomRight: CGFloat) {
         let maskPath = UIBezierPath()
         

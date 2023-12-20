@@ -15,3 +15,12 @@ struct ProfileData: Codable {
     }
 }
 
+struct Message {
+    enum Sender {
+        case user
+        case ai
+    }
+    
+    let sender: Sender
+    let content: String
+}

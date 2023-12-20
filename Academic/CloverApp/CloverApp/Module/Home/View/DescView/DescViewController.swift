@@ -26,6 +26,7 @@ class DescViewController: UIViewController {
     var selectedTrending: TrendingResult?
     var selectedTopRated: TopResult?
     var selectedUpcoming: UpcomingResult?
+    var selectedPopular: PopularResult?
     var selectedGenre: [Genre] = []
     var typeData: DataType = .trending
     let maximumNumberOfLines: Int = 3

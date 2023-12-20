@@ -1,0 +1,66 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "dtp-EZ-8A6.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Button\"; ObjectID = \"dtp-EZ-8A6\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Button"
+          }
+        }
+      }
+    },
+    "Igf-55-O0m.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"User9999999999999\"; ObjectID = \"Igf-55-O0m\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "User9999999999999"
+          }
+        }
+      }
+    },
+    "jnl-X3-y8V.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Button\"; ObjectID = \"jnl-X3-y8V\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Button"
+          }
+        }
+      }
+    },
+    "k1x-js-ssA.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Profile\"; ObjectID = \"k1x-js-ssA\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Profile"
+          }
+        }
+      }
+    },
+    "Z2M-vp-SZZ.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"User9999999999999\"; ObjectID = \"Z2M-vp-SZZ\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "User9999999999999"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

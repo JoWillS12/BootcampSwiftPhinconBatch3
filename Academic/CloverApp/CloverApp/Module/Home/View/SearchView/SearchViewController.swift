@@ -58,7 +58,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         tableView.register(UINib(nibName: String(describing: GroupTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: GroupTableViewCell.self))
     }
     
-    func fetchData(){
+    func fetchData() {
         vm.onDataUpdate = { [weak self] in
             guard let self = self else { return }
             self.tableView.reloadData()
@@ -67,7 +67,6 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
             guard let self = self else { return }
             self.tableView.reloadData()
         }
-        
     }
     
     @objc func searchFieldDidChange(_ textField: UITextField) {
@@ -82,6 +81,12 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         }
         
         filteredData = vm.movieData.flatMap { $0.results.filter { $0.title.lowercased().contains(searchText.lowercased()) } }
+        
+        for page in vm.movieData.dropFirst() {
+            let results = page.results.filter { $0.title.lowercased().contains(searchText.lowercased()) }
+            filteredData.append(contentsOf: results)
+        }
+        
         tableView.reloadData()
     }
     
@@ -110,7 +115,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchField.text?.isEmpty == false ? filteredData.count : vm.movieData.count > 0 ? vm.movieData[0].results.count : 0
     }
@@ -138,5 +143,20 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 192
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.size.height
+        
+        if offsetY > contentHeight - height {
+            guard !vm.isFetchingData else {
+                return
+            }
+            vm.fetchData { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
     }
 }

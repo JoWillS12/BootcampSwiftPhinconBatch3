@@ -11,6 +11,7 @@ import FirebaseCore
 import GoogleSignIn
 import UserNotifications
 import AVFoundation
+import netfox
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
@@ -47,6 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             }
         }
         
+        NFX.sharedInstance().start()
+
         return true
     }
     

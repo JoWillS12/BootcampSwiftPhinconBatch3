@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17069DD42B328E1F005D47D6 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 17069DD32B328E1F005D47D6 /* GoogleGenerativeAI */; };
+		17069DD82B329432005D47D6 /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17069DD72B329432005D47D6 /* GenerativeAI-Info.plist */; };
+		17069DDC2B329935005D47D6 /* JarvisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17069DDA2B329935005D47D6 /* JarvisTableViewCell.swift */; };
+		17069DDD2B329935005D47D6 /* JarvisTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17069DDB2B329935005D47D6 /* JarvisTableViewCell.xib */; };
 		1732C9132B170EAD00F4B23D /* Parchment in Frameworks */ = {isa = PBXBuildFile; productRef = 1732C9122B170EAD00F4B23D /* Parchment */; };
 		1732C9162B170FEE00F4B23D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1732C9152B170FEE00F4B23D /* Kingfisher */; };
 		1732C91B2B1717B600F4B23D /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1732C9192B1717B600F4B23D /* CommentsViewController.swift */; };
@@ -23,6 +27,8 @@
 		173B247D2B2BE936002A6E07 /* MusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173B247C2B2BE936002A6E07 /* MusicViewModel.swift */; };
 		173B24812B2C0F8F002A6E07 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173B247F2B2C0F8F002A6E07 /* AlbumTableViewCell.swift */; };
 		173B24822B2C0F8F002A6E07 /* AlbumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 173B24802B2C0F8F002A6E07 /* AlbumTableViewCell.xib */; };
+		173B24852B314471002A6E07 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = 173B24842B314471002A6E07 /* netfox */; };
+		173B24862B3184AE002A6E07 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 173B24882B3184AE002A6E07 /* ProfileViewController.xib */; };
 		1744C4C22B2AA4BB0033BC2C /* JarvisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1744C4C02B2AA4BB0033BC2C /* JarvisViewController.swift */; };
 		1744C4C32B2AA4BB0033BC2C /* JarvisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1744C4C12B2AA4BB0033BC2C /* JarvisViewController.xib */; };
 		1753EF782B148ACC004084F3 /* FillViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753EF772B148ACC004084F3 /* FillViewModel.swift */; };
@@ -134,7 +140,6 @@
 		17C71E6D2B1D933B008E41E4 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C71E6B2B1D933B008E41E4 /* SearchViewController.xib */; };
 		17C71E702B1DAA78008E41E4 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E6F2B1DAA78008E41E4 /* SearchViewModel.swift */; };
 		17C71E7A2B1DC200008E41E4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E782B1DC200008E41E4 /* ProfileViewController.swift */; };
-		17C71E7B2B1DC200008E41E4 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C71E792B1DC200008E41E4 /* ProfileViewController.xib */; };
 		17C71E802B1EB96C008E41E4 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E7E2B1EB96C008E41E4 /* ProfileTableViewCell.swift */; };
 		17C71E812B1EB96C008E41E4 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C71E7F2B1EB96C008E41E4 /* ProfileTableViewCell.xib */; };
 		17C71E842B1EC024008E41E4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C71E832B1EC024008E41E4 /* ProfileViewModel.swift */; };
@@ -194,6 +199,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		17069DD72B329432005D47D6 /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
+		17069DDA2B329935005D47D6 /* JarvisTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarvisTableViewCell.swift; sourceTree = "<group>"; };
+		17069DDB2B329935005D47D6 /* JarvisTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JarvisTableViewCell.xib; sourceTree = "<group>"; };
 		1732C9192B1717B600F4B23D /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		1732C91A2B1717B600F4B23D /* CommentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsViewController.xib; sourceTree = "<group>"; };
 		1732C91D2B1717C500F4B23D /* SuggestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +216,8 @@
 		173B247C2B2BE936002A6E07 /* MusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewModel.swift; sourceTree = "<group>"; };
 		173B247F2B2C0F8F002A6E07 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		173B24802B2C0F8F002A6E07 /* AlbumTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumTableViewCell.xib; sourceTree = "<group>"; };
+		173B24872B3184AE002A6E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileViewController.xib; sourceTree = "<group>"; };
+		173B24892B3184AE002A6E07 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/ProfileViewController.xcstrings; sourceTree = "<group>"; };
 		1744C4C02B2AA4BB0033BC2C /* JarvisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarvisViewController.swift; sourceTree = "<group>"; };
 		1744C4C12B2AA4BB0033BC2C /* JarvisViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JarvisViewController.xib; sourceTree = "<group>"; };
 		1753EF772B148ACC004084F3 /* FillViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillViewModel.swift; sourceTree = "<group>"; };
@@ -314,7 +324,6 @@
 		17C71E6B2B1D933B008E41E4 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		17C71E6F2B1DAA78008E41E4 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		17C71E782B1DC200008E41E4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		17C71E792B1DC200008E41E4 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		17C71E7E2B1EB96C008E41E4 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		17C71E7F2B1EB96C008E41E4 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		17C71E832B1EC024008E41E4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -339,6 +348,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				173B24852B314471002A6E07 /* netfox in Frameworks */,
 				17D9B9762B284EA30041E23E /* FirebaseDatabaseSwift in Frameworks */,
 				17D9B9682B284EA30041E23E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				17D9B9662B284EA30041E23E /* FirebaseAnalyticsSwift in Frameworks */,
@@ -362,6 +372,7 @@
 				17D9B9722B284EA30041E23E /* FirebaseCrashlytics in Frameworks */,
 				17D9B9742B284EA30041E23E /* FirebaseDatabase in Frameworks */,
 				17BD7C052B1453DA008AAA3E /* GoogleSignIn in Frameworks */,
+				17069DD42B328E1F005D47D6 /* GoogleGenerativeAI in Frameworks */,
 				17D9B9872B2956FF0041E23E /* SwiftQRCodeScanner in Frameworks */,
 				17D9B96E2B284EA30041E23E /* FirebaseAuth in Frameworks */,
 			);
@@ -370,6 +381,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17069DD92B329924005D47D6 /* JarvisCell */ = {
+			isa = PBXGroup;
+			children = (
+				17069DDA2B329935005D47D6 /* JarvisTableViewCell.swift */,
+				17069DDB2B329935005D47D6 /* JarvisTableViewCell.xib */,
+			);
+			path = JarvisCell;
+			sourceTree = "<group>";
+		};
 		1732C9172B17172200F4B23D /* SuggestView */ = {
 			isa = PBXGroup;
 			children = (
@@ -877,6 +897,7 @@
 				17BD7BB42B143554008AAA3E /* LaunchScreen.storyboard */,
 				17BD7BB72B143554008AAA3E /* Info.plist */,
 				1753EF7F2B148E30004084F3 /* Secret.plist */,
+				17069DD72B329432005D47D6 /* GenerativeAI-Info.plist */,
 				17BD7C012B145079008AAA3E /* GoogleService-Info.plist */,
 				17BD7BAF2B143552008AAA3E /* CloverApp.xcdatamodeld */,
 			);
@@ -1155,6 +1176,7 @@
 		17C71E7C2B1EB954008E41E4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				17069DD92B329924005D47D6 /* JarvisCell */,
 				17733E552B1F2435009D450F /* QualityCell */,
 				17733E542B1F2423009D450F /* DownloadCell */,
 				17733E4A2B1F091C009D450F /* NotifCell */,
@@ -1200,7 +1222,7 @@
 			isa = PBXGroup;
 			children = (
 				17C71E782B1DC200008E41E4 /* ProfileViewController.swift */,
-				17C71E792B1DC200008E41E4 /* ProfileViewController.xib */,
+				173B24882B3184AE002A6E07 /* ProfileViewController.xib */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -1310,6 +1332,8 @@
 				17D9B97B2B284EA30041E23E /* FirebaseFirestoreCombine-Community */,
 				17D9B97E2B284EF70041E23E /* FirebaseStorage */,
 				17D9B9862B2956FF0041E23E /* SwiftQRCodeScanner */,
+				173B24842B314471002A6E07 /* netfox */,
+				17069DD32B328E1F005D47D6 /* GoogleGenerativeAI */,
 			);
 			productName = CloverApp;
 			productReference = 17BD7BA32B143552008AAA3E /* C.app */;
@@ -1348,6 +1372,8 @@
 				17733E842B22A64A009D450F /* XCRemoteSwiftPackageReference "SkeletonView" */,
 				17D9B9602B284EA30041E23E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				17D9B9852B2956FF0041E23E /* XCRemoteSwiftPackageReference "SwiftQRCodeScanner" */,
+				173B24832B314471002A6E07 /* XCRemoteSwiftPackageReference "netfox" */,
+				17069DD22B328E1F005D47D6 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
 			);
 			productRefGroup = 17BD7BA42B143552008AAA3E /* Products */;
 			projectDirPath = "";
@@ -1378,6 +1404,7 @@
 				1753EF9A2B1572A4004084F3 /* CheckBox.xib in Resources */,
 				17BD7BB32B143554008AAA3E /* Assets.xcassets in Resources */,
 				17D9B9952B299FCE0041E23E /* SKViewController.xib in Resources */,
+				17069DDD2B329935005D47D6 /* JarvisTableViewCell.xib in Resources */,
 				17C71E672B1D63B4008E41E4 /* HalfViewController.xib in Resources */,
 				17C71E902B1EDA4F008E41E4 /* EditViewController.xib in Resources */,
 				1753EFA22B1572F8004084F3 /* ButtonView.xib in Resources */,
@@ -1393,6 +1420,7 @@
 				1732C91C2B1717B600F4B23D /* CommentsViewController.xib in Resources */,
 				1753EFDD2B15C7AD004084F3 /* MovieCollectionViewCell.xib in Resources */,
 				17D9B98B2B2957110041E23E /* ScanViewController.xib in Resources */,
+				17069DD82B329432005D47D6 /* GenerativeAI-Info.plist in Resources */,
 				17733E7B2B2166C0009D450F /* DownloadedTableViewCell.xib in Resources */,
 				1753EFB82B157440004084F3 /* TrendingTableViewCell.xib in Resources */,
 				1753EF802B148E30004084F3 /* Secret.plist in Resources */,
@@ -1411,7 +1439,7 @@
 				17733EA22B22BD60009D450F /* AudioTableViewCell.xib in Resources */,
 				17733E4E2B1F0932009D450F /* NotifTableViewCell.xib in Resources */,
 				17733E592B1F248A009D450F /* DownloadTableViewCell.xib in Resources */,
-				17C71E7B2B1DC200008E41E4 /* ProfileViewController.xib in Resources */,
+				173B24862B3184AE002A6E07 /* ProfileViewController.xib in Resources */,
 				17733E952B22B7C0009D450F /* CommunityTableViewCell.xib in Resources */,
 				1753EF952B15726C004084F3 /* FieldView.xib in Resources */,
 				1753EFC72B157756004084F3 /* RoundView.xib in Resources */,
@@ -1507,6 +1535,7 @@
 				175D0C9D2B196E6400766805 /* HomeProtocols.swift in Sources */,
 				17733E942B22B7C0009D450F /* CommunityTableViewCell.swift in Sources */,
 				17C71E502B19B80A008E41E4 /* SuggestViewModel.swift in Sources */,
+				17069DDC2B329935005D47D6 /* JarvisTableViewCell.swift in Sources */,
 				1732C91F2B1717C500F4B23D /* SuggestViewController.swift in Sources */,
 				17D9B98F2B296CBC0041E23E /* ARGameViewController.swift in Sources */,
 			);
@@ -1515,6 +1544,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		173B24882B3184AE002A6E07 /* ProfileViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				173B24872B3184AE002A6E07 /* Base */,
+				173B24892B3184AE002A6E07 /* mul */,
+			);
+			name = ProfileViewController.xib;
+			sourceTree = "<group>";
+		};
 		17BD7BAC2B143552008AAA3E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1730,6 +1768,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		17069DD22B328E1F005D47D6 /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/generative-ai-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.4;
+			};
+		};
 		1732C9112B170EAC00F4B23D /* XCRemoteSwiftPackageReference "Parchment" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rechsteiner/Parchment.git";
@@ -1743,6 +1789,14 @@
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
 				branch = master;
+				kind = branch;
+			};
+		};
+		173B24832B314471002A6E07 /* XCRemoteSwiftPackageReference "netfox" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kasketis/netfox";
+			requirement = {
+				branch = develop;
 				kind = branch;
 			};
 		};
@@ -1797,6 +1851,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		17069DD32B328E1F005D47D6 /* GoogleGenerativeAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17069DD22B328E1F005D47D6 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
+			productName = GoogleGenerativeAI;
+		};
 		1732C9122B170EAD00F4B23D /* Parchment */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1732C9112B170EAC00F4B23D /* XCRemoteSwiftPackageReference "Parchment" */;
@@ -1806,6 +1865,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1732C9142B170FEE00F4B23D /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		173B24842B314471002A6E07 /* netfox */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 173B24832B314471002A6E07 /* XCRemoteSwiftPackageReference "netfox" */;
+			productName = netfox;
 		};
 		17733E852B22A64A009D450F /* SkeletonView */ = {
 			isa = XCSwiftPackageProductDependency;
