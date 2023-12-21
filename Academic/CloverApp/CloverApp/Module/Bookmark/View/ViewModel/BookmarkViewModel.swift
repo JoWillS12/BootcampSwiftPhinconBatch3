@@ -36,4 +36,24 @@ class BookmarkViewModel{
             }
         }
     }
+    
+    func deleteBookmark(movieId: Int, completion: @escaping (Error?) -> Void) {
+        if let userUID = Auth.auth().currentUser?.uid {
+            let userBookmarkRef = bookmarkRef.child(userUID)
+            
+            // Remove the data at the specified reference
+            userBookmarkRef.queryOrdered(byChild: "movieId").queryEqual(toValue: movieId).observeSingleEvent(of: .value) { (snapshot) in
+                if let childSnapshot = snapshot.children.allObjects.first as? DataSnapshot {
+                    userBookmarkRef.child(childSnapshot.key).removeValue { (error, _) in
+                        completion(error)
+                    }
+                } else {
+                    // Handle the case where the movieId is not found
+                    completion(nil)
+                }
+            } withCancel: { (error) in
+                completion(error)
+            }
+        }
+    }
 }

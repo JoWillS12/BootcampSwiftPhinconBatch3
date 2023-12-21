@@ -9,6 +9,7 @@ import UIKit
 
 class SearchViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var toTopButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var searchField: UITextField!
@@ -35,6 +36,11 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         navigationController?.popViewController(animated: false)
     }
     
+    @IBAction func backToTop(_ sender: Any) {
+        let indexPath = IndexPath(row: 0, section: 0)
+        tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+    }
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
@@ -45,6 +51,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setUp(){
+        toTopButton.isHidden = true
         searchView.layer.borderWidth = 1
         searchView.layer.borderColor = UIColor.gray.cgColor
         searchView.layer.cornerRadius = 20
@@ -60,12 +67,17 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     
     func fetchData() {
         vm.onDataUpdate = { [weak self] in
-            guard let self = self else { return }
-            self.tableView.reloadData()
+            self?.filteredData = self?.vm.movies ?? []
+            self?.filterContentForSearchText(self?.searchField.text)
+            self?.tableView.reloadData()
         }
-        vm.fetchData { [weak self] in
-            guard let self = self else { return }
-            self.tableView.reloadData()
+        vm.onError = { [weak self] error in
+            // Handle error
+            print("Error fetching movies: \(error)")
+        }
+        vm.fetchGenreData { [weak self] in
+            // Fetch movie data after genre data is fetched
+            self?.vm.fetchMovies()
         }
     }
     
@@ -75,18 +87,12 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     
     func filterContentForSearchText(_ searchText: String?) {
         guard let searchText = searchText, !searchText.isEmpty else {
-            filteredData = []
+            filteredData = vm.movies
             tableView.reloadData()
             return
         }
         
-        filteredData = vm.movieData.flatMap { $0.results.filter { $0.title.lowercased().contains(searchText.lowercased()) } }
-        
-        for page in vm.movieData.dropFirst() {
-            let results = page.results.filter { $0.title.lowercased().contains(searchText.lowercased()) }
-            filteredData.append(contentsOf: results)
-        }
-        
+        filteredData = vm.movies.filter { $0.title.lowercased().contains(searchText.lowercased()) }
         tableView.reloadData()
     }
     
@@ -115,29 +121,39 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate{
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchField.text?.isEmpty == false ? filteredData.count : vm.movieData.count > 0 ? vm.movieData[0].results.count : 0
+        if let searchText = searchField.text, !searchText.isEmpty {
+            return filteredData.count
+        } else {
+            return vm.numberOfMovies()
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupTableViewCell", for: indexPath) as! GroupTableViewCell
-        let datas: MovieResult
-        if searchField.text?.isEmpty == false {
+        
+        var datas: MovieResult
+        
+        if searchField.text?.isEmpty == false, indexPath.row < filteredData.count {
             datas = filteredData[indexPath.row]
+        } else if indexPath.row < vm.movies.count {
+            datas = vm.movies[indexPath.row]
         } else {
-            guard vm.movieData.count > 0 else { return cell }
-            datas = vm.movieData[0].results[indexPath.row]
+            // Handle the case where both filteredData is empty and vm.movies is out of bounds
+            return cell
         }
         
         if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath ?? "")) {
             cell.movieImage.kf.setImage(with: imageURL)
         }
+        
         cell.movieName.text = datas.title
         let movieGenres = mapGenreIDsToNames(genreIDs: datas.genreIDS, genreData: vm.genre.first?.genres ?? [])
         cell.movieGenre.text = "\(movieGenres.joined(separator: ", "))"
-        cell.movieDate.text = "\(getYear(from: datas.releaseDate ))"
+        cell.movieDate.text = "\(getYear(from: datas.releaseDate))"
         cell.selectionStyle = .none
+        
         return cell
     }
     
@@ -145,18 +161,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISc
         return 192
     }
     
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        let offsetY = scrollView.contentOffset.y
-        let contentHeight = scrollView.contentSize.height
-        let height = scrollView.frame.size.height
-        
-        if offsetY > contentHeight - height {
-            guard !vm.isFetchingData else {
-                return
-            }
-            vm.fetchData { [weak self] in
-                self?.tableView.reloadData()
-            }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        // Fetch the next page when the user scrolls to the last cell
+        if indexPath.row == vm.numberOfMovies() - 1 {
+            vm.fetchNextPage()
         }
     }
 }

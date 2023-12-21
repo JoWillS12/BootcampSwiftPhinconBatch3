@@ -8,44 +8,65 @@
 import Foundation
 
 class SearchViewModel {
-    var movieData: [Movie] = []
     var genre: [Genre] = []
-    var onDataUpdate: (() -> Void)?
-    var isFetchingData = false
+    var movies: [MovieResult] = []
     var currentPage = 1
+    var totalPages = 1
+    var isFetching = false
     
-    func fetchData(completion: @escaping () -> Void) {
-        fetchMovieData {
-            self.fetchGenreData {
-                self.onDataUpdate?()
-                completion()
+    // Callbacks for UI updates
+    var onDataUpdate: (() -> Void)?
+    var onError: ((Error) -> Void)?
+    
+    func fetchMovies() {
+        guard currentPage <= totalPages else { return }
+
+        NetworkManager.shared.makeAPICall(endpoint: .movieList(page: currentPage)) { [weak self] (result: Result<Movie, Error>) in
+            guard let self = self else { return }
+
+            self.isFetching = false
+            switch result {
+            case .success(let movieResponse):
+                self.movies.append(contentsOf: movieResponse.results)
+                self.currentPage += 1
+
+                // Check if there are more pages to fetch
+                if self.currentPage <= self.totalPages {
+                    // Fetch movies for the next page
+                    self.fetchMovies()
+                } else {
+                    // Notify UI that all movies are fetched
+                    self.onDataUpdate?()
+                }
+            case .failure(let error):
+                self.onError?(error)
             }
         }
     }
     
-    func fetchMovieData(completion: @escaping () -> Void) {
-        guard !isFetchingData else { return }
-        isFetchingData = true
-        
-        fetchPage(page: currentPage) { [weak self] in
-            self?.onDataUpdate?()
-            completion()
-            self?.isFetchingData = false
-        }
+    func numberOfMovies() -> Int {
+        return movies.count
     }
     
-    func fetchPage(page: Int, completion: @escaping () -> Void) {
-        NetworkManager.shared.makeAPICall(endpoint: .movieList(page: page)) { [weak self] (response: Result<(Movie), Error>) in
+    func movie(at index: Int) -> MovieResult {
+        return movies[index]
+    }
+    
+    func fetchNextPage() {
+        guard !isFetching else { return }
+        
+        isFetching = true
+        NetworkManager.shared.makeAPICall(endpoint: .movieList(page: currentPage)) { [weak self] (result: Result<Movie, Error>) in
             guard let self = self else { return }
-            switch response {
-            case .success(let movie):
-                print("Movie API Response: \(movie)")
-                self.movieData.append(movie)
+
+            self.isFetching = false
+            switch result {
+            case .success(let movieResponse):
+                self.movies.append(contentsOf: movieResponse.results)
                 self.currentPage += 1
-                completion()
+                self.onDataUpdate?()
             case .failure(let error):
-                print("Movie API Request Error: \(error.localizedDescription)")
-                completion()
+                self.onError?(error)
             }
         }
     }

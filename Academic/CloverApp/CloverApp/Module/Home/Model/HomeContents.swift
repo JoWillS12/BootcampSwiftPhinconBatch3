@@ -246,7 +246,7 @@ struct UpcomingResult: Codable {
     let backdropPath: String?
     let genreIDS: [Int]
     let id: Int
-    let originalLanguage, originalTitle, overview: String?
+    let originalLanguage, originalTitle, overview: String
     let popularity: Double
     let releaseDate, title: String
     let posterPath: String?
@@ -340,4 +340,9 @@ enum MovieOriginalLanguage: String, Codable {
     case es = "es"
     case hi = "hi"
     case ko = "ko"
+    
+    init(from decoder: Decoder) throws {
+            let rawValue = try decoder.singleValueContainer().decode(String.self)
+            self = MovieOriginalLanguage(rawValue: rawValue) ?? .en
+        }
 }

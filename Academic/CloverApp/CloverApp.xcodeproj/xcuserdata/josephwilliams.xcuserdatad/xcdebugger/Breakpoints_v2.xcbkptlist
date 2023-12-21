@@ -711,64 +711,223 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "99585096-E626-46AF-897E-D82B65B2D574"
+            uuid = "0E4F6138-277F-4663-AB42-7651D3851152"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CloverApp/Module/Home/View/SearchView/SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
-            landmarkName = "scrollViewDidEndDragging(_:willDecelerate:)"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0E4F6138-277F-4663-AB42-7651D3851152 - 412658795505d2d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "C.SearchViewController.tableView(_: __C.UITableView, numberOfRowsInSection: Swift.Int) -&gt; Swift.Int"
+                  moduleName = "C"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Home/View/SearchView/SearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "0E4F6138-277F-4663-AB42-7651D3851152 - 412658795505d2f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "C.SearchViewController.tableView(_: __C.UITableView, numberOfRowsInSection: Swift.Int) -&gt; Swift.Int"
+                  moduleName = "C"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Home/View/SearchView/SearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "0E4F6138-277F-4663-AB42-7651D3851152 - 412658795505d2f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "C.SearchViewController.tableView(_: __C.UITableView, numberOfRowsInSection: Swift.Int) -&gt; Swift.Int"
+                  moduleName = "C"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Home/View/SearchView/SearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "468">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11C55978-BAF9-4EC6-A577-47FC3AD48686"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CloverApp/Module/Home/View/ViewModel/SearchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "SearchViewModel"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CE15AC10-6105-4486-83C0-D0120B03CB3A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CloverApp/Module/Home/View/ViewModel/SearchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "fetchMovies()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CE15AC10-6105-4486-83C0-D0120B03CB3A - 85d9f88987cf29e4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; () in C.SearchViewModel.fetchData(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "C"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Home/View/ViewModel/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "172">
+               </Location>
+               <Location
+                  uuid = "CE15AC10-6105-4486-83C0-D0120B03CB3A - e5dc79fea015f387"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "C.SearchViewModel.fetchMovies() -&gt; ()"
+                  moduleName = "C"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Home/View/ViewModel/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A48B2C26-C8E2-49D9-A57A-B6DA1E18EF9B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CloverApp/Module/Home/View/SearchView/SearchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "fetchData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1A795239-DDD3-4541-A0C1-63AA54FC8AF3"
+            uuid = "841742F1-74EB-42E4-B3F3-78C7016A6819"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CloverApp/Module/Home/View/SearchView/SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "scrollViewDidEndDragging(_:willDecelerate:)"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "06A41547-904F-40DE-B317-5C5AA52C85A3"
+            uuid = "3AB4C772-71E9-458D-BA4F-05689EA3ED69"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CloverApp/Module/Home/View/SearchView/SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
-            landmarkName = "scrollViewDidEndDragging(_:willDecelerate:)"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B66C062B-B648-4920-BFB5-9153879E6ECA"
-            shouldBeEnabled = "No"
+            uuid = "787C5CF1-2FC0-4058-B6E3-CE7E2DE5BA48"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Home/View/SearchView/SearchViewController.swift"
+            filePath = "CloverApp/Module/Bookmark/View/BookmarkViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "scrollViewDidEndDragging(_:willDecelerate:)"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "deleteItemAtIndexPath(at:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "65FF08EF-2367-4EB6-AE55-DD3280401050"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CloverApp/Module/Bookmark/View/BookmarkViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "deleteItemAtIndexPath(at:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "421CE494-64EF-4D76-BDD7-474528B629F7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CloverApp/Module/Bookmark/View/BookmarkViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "collectionView(_:contextMenuConfigurationForItemAt:point:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
