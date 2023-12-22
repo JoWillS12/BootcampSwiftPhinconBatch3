@@ -102,6 +102,8 @@
 		17733EA22B22BD60009D450F /* AudioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17733EA02B22BD60009D450F /* AudioTableViewCell.xib */; };
 		17733EA62B22D059009D450F /* PreviewImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17733EA42B22D059009D450F /* PreviewImageViewController.swift */; };
 		17733EA72B22D059009D450F /* PreviewImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17733EA52B22D059009D450F /* PreviewImageViewController.xib */; };
+		1788B6002B352EE200EF775C /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1788B5FE2B352EE200EF775C /* FilterViewController.swift */; };
+		1788B6012B352EE200EF775C /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1788B5FF2B352EE200EF775C /* FilterViewController.xib */; };
 		17BD7BA72B143552008AAA3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BD7BA62B143552008AAA3E /* AppDelegate.swift */; };
 		17BD7BA92B143552008AAA3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BD7BA82B143552008AAA3E /* SceneDelegate.swift */; };
 		17BD7BAB2B143552008AAA3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BD7BAA2B143552008AAA3E /* ViewController.swift */; };
@@ -290,6 +292,8 @@
 		17733EA02B22BD60009D450F /* AudioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioTableViewCell.xib; sourceTree = "<group>"; };
 		17733EA42B22D059009D450F /* PreviewImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewImageViewController.swift; sourceTree = "<group>"; };
 		17733EA52B22D059009D450F /* PreviewImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewImageViewController.xib; sourceTree = "<group>"; };
+		1788B5FE2B352EE200EF775C /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		1788B5FF2B352EE200EF775C /* FilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
 		17BD7BA32B143552008AAA3E /* C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17BD7BA62B143552008AAA3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17BD7BA82B143552008AAA3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -536,6 +540,7 @@
 		1753EF862B156F4B004084F3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1788B5FD2B352EC700EF775C /* FilterMenu */,
 				17C71E592B19CE45008E41E4 /* GroupCell */,
 				1732C9212B1721DD00F4B23D /* CommentCell */,
 				1753EF882B156F6A004084F3 /* TrendingCell */,
@@ -865,6 +870,15 @@
 				17733EA52B22D059009D450F /* PreviewImageViewController.xib */,
 			);
 			path = PreviewImage;
+			sourceTree = "<group>";
+		};
+		1788B5FD2B352EC700EF775C /* FilterMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1788B5FE2B352EE200EF775C /* FilterViewController.swift */,
+				1788B5FF2B352EE200EF775C /* FilterViewController.xib */,
+			);
+			path = FilterMenu;
 			sourceTree = "<group>";
 		};
 		17BD7B9A2B143552008AAA3E = {
@@ -1403,6 +1417,7 @@
 				17733E532B1F1070009D450F /* BookmarkViewController.xib in Resources */,
 				1753EF9A2B1572A4004084F3 /* CheckBox.xib in Resources */,
 				17BD7BB32B143554008AAA3E /* Assets.xcassets in Resources */,
+				1788B6012B352EE200EF775C /* FilterViewController.xib in Resources */,
 				17D9B9952B299FCE0041E23E /* SKViewController.xib in Resources */,
 				17069DDD2B329935005D47D6 /* JarvisTableViewCell.xib in Resources */,
 				17C71E672B1D63B4008E41E4 /* HalfViewController.xib in Resources */,
@@ -1459,6 +1474,7 @@
 				17C71E612B1D55B9008E41E4 /* PopUpViewController.swift in Sources */,
 				173B24812B2C0F8F002A6E07 /* AlbumTableViewCell.swift in Sources */,
 				1753EFCC2B1583B6004084F3 /* HomeContents.swift in Sources */,
+				1788B6002B352EE200EF775C /* FilterViewController.swift in Sources */,
 				1753EF832B149C46004084F3 /* NetworkManager.swift in Sources */,
 				17733E9E2B22BCA9009D450F /* CommunityViewModel.swift in Sources */,
 				17733E7E2B216EDB009D450F /* DownloadContent.swift in Sources */,

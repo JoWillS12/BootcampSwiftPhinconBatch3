@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="289" height="52"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFz-1X-Fgg">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFz-1X-Fgg">
                     <rect key="frame" x="16" y="8" width="257" height="36"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <nil key="textColor"/>
@@ -37,13 +38,13 @@
             <color key="backgroundColor" name="ButtonColor"/>
             <constraints>
                 <constraint firstItem="bFz-1X-Fgg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="0Lv-6i-Hpn"/>
-                <constraint firstItem="1ja-mg-U8N" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0pa-va-ttJ"/>
                 <constraint firstItem="bFz-1X-Fgg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="5nu-d1-n56"/>
                 <constraint firstAttribute="trailing" secondItem="bFz-1X-Fgg" secondAttribute="trailing" constant="16" id="8Wp-r1-igX"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="bFz-1X-Fgg" secondAttribute="bottom" constant="22" id="MSx-fM-uuT"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1ja-mg-U8N" secondAttribute="bottom" id="PH0-xd-0DA"/>
-                <constraint firstAttribute="trailing" secondItem="1ja-mg-U8N" secondAttribute="trailing" id="Tcd-uN-eGO"/>
-                <constraint firstItem="1ja-mg-U8N" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="o3J-Sv-6Df"/>
+                <constraint firstAttribute="trailing" secondItem="1ja-mg-U8N" secondAttribute="trailing" id="TKq-eA-Voz"/>
+                <constraint firstItem="1ja-mg-U8N" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ybj-En-dWd"/>
+                <constraint firstAttribute="bottom" secondItem="1ja-mg-U8N" secondAttribute="bottom" id="faz-6Y-VML"/>
+                <constraint firstItem="1ja-mg-U8N" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jPN-mC-D7k"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="22.137404580152669" y="-273.23943661971833"/>
@@ -51,7 +52,7 @@
     </objects>
     <resources>
         <namedColor name="ButtonColor">
-            <color red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

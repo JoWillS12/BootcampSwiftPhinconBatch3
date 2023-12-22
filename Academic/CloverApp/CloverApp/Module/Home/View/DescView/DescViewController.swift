@@ -357,6 +357,6 @@ extension DescViewController: PagingViewControllerDelegate, PagingViewController
 
 extension DescViewController: UIViewControllerTransitioningDelegate {
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return HalfModalPresentationController(presentedViewController: presented, presenting: presenting)
+        return HalfModalPresentationController(presentedViewController: presented, presenting: presenting, slashBounds: 2)
     }
 }

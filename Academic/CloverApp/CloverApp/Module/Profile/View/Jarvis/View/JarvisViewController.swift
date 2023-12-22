@@ -46,8 +46,6 @@ class JarvisViewController: UIViewController, UITextFieldDelegate {
             await sendMessage(message, from: .user)
             messageInsert.text = ""
         }
-        let indexPath = IndexPath(row: chatMessages.count - 1, section: 0)
-        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
     }
     
     @IBAction func backButton(_ sender: Any) {

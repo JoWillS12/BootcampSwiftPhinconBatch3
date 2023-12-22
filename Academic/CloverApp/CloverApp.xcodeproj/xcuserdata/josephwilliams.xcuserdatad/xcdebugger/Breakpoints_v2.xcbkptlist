@@ -94,24 +94,8 @@
             filePath = "CloverApp/Module/Home/Components/FirstCell/ContentCell/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "fetchData(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9ED94D10-6D51-4818-8CD6-6245085761FB"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Home/Components/FirstCell/ContentCell/HomeViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "fetchData(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -128,22 +112,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
             endingLineNumber = "57"
-            landmarkName = "fetchData(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "19052FA2-8673-4E7C-AD9C-8FBF6591277A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Home/Components/FirstCell/ContentCell/HomeViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
             landmarkName = "fetchData(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -430,8 +398,8 @@
             filePath = "CloverApp/Module/Home/View/HomeView/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -718,8 +686,8 @@
             filePath = "CloverApp/Module/Home/View/SearchView/SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
             <Locations>
@@ -845,8 +813,8 @@
             filePath = "CloverApp/Module/Home/View/SearchView/SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "fetchData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -861,8 +829,8 @@
             filePath = "CloverApp/Module/Home/View/SearchView/SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -877,8 +845,8 @@
             filePath = "CloverApp/Module/Home/View/SearchView/SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -897,6 +865,38 @@
             endingLineNumber = "113"
             landmarkName = "deleteItemAtIndexPath(at:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "787C5CF1-2FC0-4058-B6E3-CE7E2DE5BA48 - aae9333b48eb18d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in C.BookmarkViewController.deleteItemAtIndexPath(at: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "C"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Bookmark/View/BookmarkViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "2700">
+               </Location>
+               <Location
+                  uuid = "787C5CF1-2FC0-4058-B6E3-CE7E2DE5BA48 - aae9333b48eb18d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in C.BookmarkViewController.deleteItemAtIndexPath(at: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "C"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Bookmark/View/BookmarkViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "2812">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -913,22 +913,38 @@
             endingLineNumber = "103"
             landmarkName = "deleteItemAtIndexPath(at:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "421CE494-64EF-4D76-BDD7-474528B629F7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Bookmark/View/BookmarkViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "collectionView(_:contextMenuConfigurationForItemAt:point:)"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "65FF08EF-2367-4EB6-AE55-DD3280401050 - aae9333b48eb1980"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in C.BookmarkViewController.deleteItemAtIndexPath(at: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "C"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Bookmark/View/BookmarkViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "1148">
+               </Location>
+               <Location
+                  uuid = "65FF08EF-2367-4EB6-AE55-DD3280401050 - aae9333b48eb1980"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in C.BookmarkViewController.deleteItemAtIndexPath(at: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "C"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Bookmark/View/BookmarkViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "1232">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

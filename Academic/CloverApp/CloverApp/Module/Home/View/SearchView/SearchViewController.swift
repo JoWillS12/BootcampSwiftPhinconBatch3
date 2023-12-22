@@ -9,13 +9,19 @@ import UIKit
 
 class SearchViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var searchTitle: UILabel!
+    @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var toTopButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var searchField: UITextField!
     
     var vm = SearchViewModel()
-    var filteredData: [MovieResult] = []
+    var filteredData: [MovieResult] = []{
+        didSet{
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +30,11 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         registerTableCell()
         fetchData()
         setUp()
-        searchField.addTarget(self, action: #selector(searchFieldDidChange(_:)), for: .editingChanged)
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tapGesture)
-        
-        searchField.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -39,6 +44,10 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     @IBAction func backToTop(_ sender: Any) {
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+    }
+    
+    @IBAction func filterButton(_ sender: Any) {
+        showHalfModal()
     }
     
     @objc func dismissKeyboard() {
@@ -51,7 +60,11 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setUp(){
-        toTopButton.isHidden = true
+        searchField.addTarget(self, action: #selector(searchFieldDidChange(_:)), for: .editingChanged)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        searchField.delegate = self
+        toTopButton.isHidden = false
         searchView.layer.borderWidth = 1
         searchView.layer.borderColor = UIColor.gray.cgColor
         searchView.layer.cornerRadius = 20
@@ -119,6 +132,51 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         }
         return genreNames
     }
+    
+    func showHalfModal() {
+        let contentVc = FilterViewController(nibName: "FilterViewController", bundle: nil)
+        contentVc.modalPresentationStyle = .custom
+        contentVc.transitioningDelegate = self
+        present(contentVc, animated: true, completion: nil)
+        
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(dismissHalfModal))
+        swipeDown.direction = .down
+        contentVc.view.addGestureRecognizer(swipeDown)
+        
+        contentVc.sortAz = {[weak self] in
+            self?.sortMoviesAlphabetically()
+            self?.searchTitle.text = "A - Z"
+            self?.dismissHalfModal()
+        }
+        
+        contentVc.sortYear = {[weak self] in
+            self?.sortMoviesByYear()
+            self?.searchTitle.text = "Year"
+            self?.dismissHalfModal()
+        }
+    }
+    
+    @objc func dismissHalfModal() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func sortMoviesAlphabetically() {
+        filteredData = filteredData.sorted(by: \.title)
+        print(filteredData)
+        tableView.reloadData()
+    }
+    
+    func sortMoviesByYear() {
+        filteredData.sort { (movie1, movie2) in
+            guard let year1 = Int(getYear(from: movie1.releaseDate)),
+                  let year2 = Int(getYear(from: movie2.releaseDate)) else {
+                return false
+            }
+            return year1 < year2
+        }
+        print(filteredData)
+        tableView.reloadData()
+    }
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
@@ -138,7 +196,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
         if searchField.text?.isEmpty == false, indexPath.row < filteredData.count {
             datas = filteredData[indexPath.row]
         } else if indexPath.row < vm.movies.count {
-            datas = vm.movies[indexPath.row]
+//            datas = vm.movies[indexPath.row]
+            datas = filteredData[indexPath.row]
         } else {
             // Handle the case where both filteredData is empty and vm.movies is out of bounds
             return cell
@@ -162,9 +221,14 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        // Fetch the next page when the user scrolls to the last cell
         if indexPath.row == vm.numberOfMovies() - 1 {
             vm.fetchNextPage()
         }
+    }
+}
+
+extension SearchViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return HalfModalPresentationController(presentedViewController: presented, presenting: presenting, slashBounds: 4)
     }
 }

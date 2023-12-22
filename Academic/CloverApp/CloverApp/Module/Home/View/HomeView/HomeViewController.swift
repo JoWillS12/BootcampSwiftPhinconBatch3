@@ -62,6 +62,9 @@ class HomeViewController: UIViewController {
     }
     
     func fetchData() {
+        vm.onError = {[weak self] error in
+            print("Error : \(error)")
+        }
         
         vm.onDataUpdate = { [weak self] in
             guard let self = self else { return }

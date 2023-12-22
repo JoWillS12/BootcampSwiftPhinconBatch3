@@ -11,10 +11,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="C" customModuleProvider="target">
             <connections>
+                <outlet property="filterButton" destination="PsC-qw-KQJ" id="oI6-qc-COw"/>
                 <outlet property="searchField" destination="4Up-43-AzI" id="CQZ-aG-SBJ"/>
+                <outlet property="searchTitle" destination="2Ht-d8-dvA" id="ItP-4j-bz5"/>
                 <outlet property="searchView" destination="TvI-AJ-OZG" id="fgs-Om-kUV"/>
                 <outlet property="tableView" destination="si7-RS-9br" id="COY-rb-cGu"/>
-                <outlet property="toTopButton" destination="QNO-cN-z4X" id="Ccb-cN-bRQ"/>
+                <outlet property="toTopButton" destination="pfY-Yp-9wk" id="JUI-DY-UeP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -86,37 +88,52 @@
                         <action selector="backButton:" destination="-1" eventType="touchUpInside" id="1o1-PD-pad"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNO-cN-z4X">
-                    <rect key="frame" x="350" y="750" width="27" height="27"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PsC-qw-KQJ">
+                    <rect key="frame" x="312" y="156" width="56" height="48"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="27" id="4Z4-R8-dol"/>
-                        <constraint firstAttribute="height" constant="27" id="sxc-aY-214"/>
+                        <constraint firstAttribute="height" constant="48" id="NGb-py-bpv"/>
+                        <constraint firstAttribute="width" constant="56" id="XOs-Co-PeF"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="line.3.horizontal.decrease.circle" catalog="system"/>
+                    <connections>
+                        <action selector="filterButton:" destination="-1" eventType="touchUpInside" id="7Dp-x8-cxI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfY-Yp-9wk">
+                    <rect key="frame" x="316" y="784" width="50" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="7Bh-BB-GsI"/>
+                        <constraint firstAttribute="height" constant="35" id="tVr-PO-boN"/>
                     </constraints>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="chevron.up.circle" catalog="system"/>
                     <connections>
-                        <action selector="backToTop:" destination="-1" eventType="touchUpInside" id="fEj-xD-W5m"/>
+                        <action selector="backToTop:" destination="-1" eventType="touchUpInside" id="fuE-xt-HH3"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="Background"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QNO-cN-z4X" secondAttribute="trailing" constant="31" id="0pI-MJ-4wF"/>
+                <constraint firstItem="PsC-qw-KQJ" firstAttribute="top" secondItem="TvI-AJ-OZG" secondAttribute="bottom" constant="8.3300000000000001" id="0T5-CS-f2D"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TvI-AJ-OZG" secondAttribute="trailing" constant="43" id="7tN-bR-hXT"/>
                 <constraint firstItem="MP5-ah-x3h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="CfR-z4-c1T"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2Ht-d8-dvA" secondAttribute="trailing" constant="89" id="FFL-Cm-a7g"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pfY-Yp-9wk" secondAttribute="trailing" constant="27" id="KoQ-pT-Q9X"/>
                 <constraint firstItem="si7-RS-9br" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Ohd-OY-l1W"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="si7-RS-9br" secondAttribute="trailing" constant="16" id="RmE-wE-sFx"/>
                 <constraint firstItem="si7-RS-9br" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="TZ7-t7-sNT"/>
+                <constraint firstItem="PsC-qw-KQJ" firstAttribute="leading" secondItem="2Ht-d8-dvA" secondAttribute="trailing" constant="8" symbolic="YES" id="UeB-xj-anz"/>
                 <constraint firstItem="2Ht-d8-dvA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="XKL-vh-qtg"/>
+                <constraint firstAttribute="bottom" secondItem="pfY-Yp-9wk" secondAttribute="bottom" constant="33" id="aww-cH-e7v"/>
                 <constraint firstItem="MP5-ah-x3h" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ehg-F9-jHx"/>
-                <constraint firstItem="QNO-cN-z4X" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="335" id="hEY-ub-Odc"/>
                 <constraint firstItem="si7-RS-9br" firstAttribute="top" secondItem="2Ht-d8-dvA" secondAttribute="bottom" constant="6" id="jLG-wq-PjL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PsC-qw-KQJ" secondAttribute="trailing" constant="25" id="mce-Ha-Muq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MP5-ah-x3h" secondAttribute="trailing" constant="350" id="qIt-fC-RIw"/>
-                <constraint firstItem="QNO-cN-z4X" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="sgh-ul-hxo"/>
+                <constraint firstItem="pfY-Yp-9wk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="316" id="t78-DL-E0D"/>
                 <constraint firstItem="TvI-AJ-OZG" firstAttribute="top" secondItem="MP5-ah-x3h" secondAttribute="bottom" constant="5" id="vt7-FW-lML"/>
                 <constraint firstItem="2Ht-d8-dvA" firstAttribute="top" secondItem="TvI-AJ-OZG" secondAttribute="bottom" constant="8" symbolic="YES" id="z1D-Sl-MmG"/>
             </constraints>
@@ -126,6 +143,7 @@
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="95"/>
         <image name="chevron.up.circle" catalog="system" width="128" height="123"/>
+        <image name="line.3.horizontal.decrease.circle" catalog="system" width="128" height="123"/>
         <image name="sparkle.magnifyingglass" catalog="system" width="128" height="117"/>
         <namedColor name="Background">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

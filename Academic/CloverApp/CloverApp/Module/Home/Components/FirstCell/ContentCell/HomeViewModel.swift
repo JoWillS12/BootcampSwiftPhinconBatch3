@@ -67,6 +67,7 @@ class HomeViewModel {
                 self.trendingData = [trending]
             case .failure(let error):
                 self.onError?(error)
+                print(error)
             }
         }
         

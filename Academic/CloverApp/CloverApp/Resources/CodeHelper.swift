@@ -126,10 +126,17 @@ extension UICollectionView {
 }
 
 class HalfModalPresentationController: UIPresentationController {
+    
+    var slashBounds: CGFloat = 2
+    init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?, slashBounds: CGFloat = 2) {
+        super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
+        self.slashBounds = slashBounds
+    }
+    
     override var frameOfPresentedViewInContainerView: CGRect {
         guard let containerView = containerView else { return CGRect.zero }
         
-        let height: CGFloat = containerView.bounds.height / 2 // Adjust the height as needed
+        let height: CGFloat = containerView.bounds.height / slashBounds // Adjust the height as needed
         return CGRect(x: 0, y: containerView.bounds.height - height, width: containerView.bounds.width, height: height)
     }
     
@@ -205,5 +212,24 @@ class BaseTableViewCell : UITableViewCell {
             tableView.beginUpdates()
             tableView.endUpdates()
         }
+    }
+}
+
+extension Sequence{
+    /// SwifterSwift: Return a sorted array based on a key path and a compare function.
+    ///
+    /// - Parameter keyPath: Key path to sort by.
+    /// - Parameter compare: Comparison function that will determine the ordering.
+    /// - Returns: The sorted array.
+    func sorted<T>(by keyPath: KeyPath<Element, T>, with compare: (T, T) -> Bool) -> [Element] {
+        return sorted { compare($0[keyPath: keyPath], $1[keyPath: keyPath]) }
+    }
+    
+    /// SwifterSwift: Return a sorted array based on a key path.
+    ///
+    /// - Parameter keyPath: Key path to sort by. The key path type must be Comparable.
+    /// - Returns: The sorted array.
+    func sorted<T: Comparable>(by keyPath: KeyPath<Element, T>) -> [Element] {
+        return sorted { $0[keyPath: keyPath] < $1[keyPath: keyPath] }
     }
 }
