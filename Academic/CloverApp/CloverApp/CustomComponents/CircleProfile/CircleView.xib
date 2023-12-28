@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,8 +25,7 @@
                     <rect key="frame" x="0.0" y="2" width="120" height="116.66666666666667"/>
                     <color key="tintColor" name="SearchColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="120" id="Nia-3o-deC"/>
-                        <constraint firstAttribute="width" constant="120" id="wdd-G5-zy3"/>
+                        <constraint firstAttribute="width" secondItem="0Lx-2V-hcy" secondAttribute="height" multiplier="1:1" id="CSc-Of-2GA"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vvr-N7-5OG">
@@ -52,8 +52,6 @@
                         <constraint firstAttribute="trailing" secondItem="amr-VH-pXO" secondAttribute="trailing" id="Dvc-BC-xU8"/>
                         <constraint firstItem="amr-VH-pXO" firstAttribute="leading" secondItem="vvr-N7-5OG" secondAttribute="leading" id="Rq6-3i-FeO"/>
                         <constraint firstItem="amr-VH-pXO" firstAttribute="top" secondItem="vvr-N7-5OG" secondAttribute="top" id="vQh-f7-6qh"/>
-                        <constraint firstAttribute="width" constant="120" id="xHE-BT-yCo"/>
-                        <constraint firstAttribute="bottom" secondItem="amr-VH-pXO" secondAttribute="bottom" id="xbm-bb-w2m"/>
                     </constraints>
                 </view>
             </subviews>
@@ -63,10 +61,10 @@
                 <constraint firstItem="0Lx-2V-hcy" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="0qk-sf-xnM"/>
                 <constraint firstItem="0Lx-2V-hcy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3Mv-k4-Bm4"/>
                 <constraint firstItem="vvr-N7-5OG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="8H5-Vv-Exx"/>
+                <constraint firstAttribute="bottom" secondItem="vvr-N7-5OG" secondAttribute="bottom" id="GjC-nC-ySJ"/>
                 <constraint firstItem="vvr-N7-5OG" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Gmt-3b-0lv"/>
                 <constraint firstItem="0Lx-2V-hcy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fap-Ca-ZsJ"/>
-                <constraint firstItem="vvr-N7-5OG" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="sGW-nM-QhZ"/>
-                <constraint firstItem="0Lx-2V-hcy" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="tnH-IK-3g0"/>
+                <constraint firstAttribute="bottom" secondItem="0Lx-2V-hcy" secondAttribute="bottom" id="mXQ-4c-3cw"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="45.801526717557252" y="-170.42253521126761"/>

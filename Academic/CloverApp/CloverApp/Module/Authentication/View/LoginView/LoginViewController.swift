@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 import GoogleSignIn
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: BaseViewController, UITextFieldDelegate {
     
     @IBOutlet weak var googleButton: GIDSignInButton!
     @IBOutlet weak var checkBox: CheckBox!
@@ -22,16 +22,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: false)
-        // Do any additional setup after loading the view.
         setUp()
-        performGSignIn()
-        loadButton()
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tapGesture)
-        
-        emailBox.inputType.delegate = self
-        passwordBox.inputType.delegate = self
     }
     
     @IBAction func signUpButton(_ sender: Any) {
@@ -48,6 +39,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setUp(){
+        navigationController?.setNavigationBarHidden(true, animated: false)
         backView.applyCommonBackgroundStyle()
         
         emailBox.configure(withFieldName: "Email", placeholder: "Enter your email")
@@ -61,6 +53,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         //        googleButton.clipsToBounds = true
         googleButton.layer.borderWidth = 1
         googleButton.layer.backgroundColor = UIColor.white.cgColor
+        
+        performGSignIn()
+        loadButton()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        
+        emailBox.inputType.delegate = self
+        passwordBox.inputType.delegate = self
     }
     
     func loadButton(){
@@ -86,7 +86,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     
                 case .failure(let error):
                     // Show an alert indicating login failure
-                    self.showAlert(message: "Login failed. Error: \(error.localizedDescription)")
+                    self.showAlertFailed(message: "Login failed. Error: \(error.localizedDescription)")
                 }
             }
         }
@@ -129,13 +129,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-    }
-    
-    
-    func showAlert(message: String) {
-        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alertController, animated: true, completion: nil)
     }
 }
 

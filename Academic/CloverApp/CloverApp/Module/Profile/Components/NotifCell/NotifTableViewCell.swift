@@ -14,7 +14,6 @@ class NotifTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     @IBAction func switchButton(_ sender: Any) {

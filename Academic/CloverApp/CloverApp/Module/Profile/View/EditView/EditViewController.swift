@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseAuth
 
-class EditViewController: UIViewController, UITextFieldDelegate {
+class EditViewController: BaseViewController, UITextFieldDelegate {
     
     @IBOutlet weak var profileImage: CircleView!
     @IBOutlet weak var favoriteMovieField: UITextField!
@@ -22,19 +22,7 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
         setUp()
-        loadData()
-        updateData()
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tapGesture)
-        
-        favoriteMovieField.delegate = self
-        nicknameField.delegate = self
-        nameField.delegate = self
-        phoneNumberField.delegate = self
     }
     
     @IBAction func cancelButton(_ sender: Any) {
@@ -55,12 +43,23 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setUp(){
+        loadData()
+        updateData()
+        
         updateButton.roundCornersWithDifferentRadii(topLeft: 60, topRight: 10, bottomLeft: 10, bottomRight: 60)
         updateButton.buttonLabel.text = "Update"
         nameField.placeholder = "Your Name"
         phoneNumberField.placeholder = "Your Phone Number"
         nicknameField.placeholder = "Your Nickname"
         favoriteMovieField.placeholder = "Your Favorite Movie"
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        
+        favoriteMovieField.delegate = self
+        nicknameField.delegate = self
+        nameField.delegate = self
+        phoneNumberField.delegate = self
     }
     
     func loadData(){
@@ -119,15 +118,9 @@ class EditViewController: UIViewController, UITextFieldDelegate {
                     
                 case .failure(let error):
                     // Show an alert indicating update failure
-                    self.showAlert(message: "Update failed. Error: \(error.localizedDescription)")
+                    self.showAlertFailed(message: "Update failed. Error: \(error.localizedDescription)")
                 }
             }
         }
-    }
-    
-    func showAlert(message: String) {
-        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alertController, animated: true, completion: nil)
     }
 }

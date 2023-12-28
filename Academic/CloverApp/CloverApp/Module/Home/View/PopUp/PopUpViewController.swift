@@ -21,10 +21,7 @@ class PopUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
         setUp()
-        simulateDownload()
     }
     
     @IBAction func hideButton(_ sender: Any) {
@@ -49,6 +46,8 @@ class PopUpViewController: UIViewController {
         viewBackground.layer.opacity = 0.1
         popView.layer.cornerRadius = 20
         buttonView.layer.cornerRadius = 20
+        
+        simulateDownload()
     }
     
     private func simulateDownload() {

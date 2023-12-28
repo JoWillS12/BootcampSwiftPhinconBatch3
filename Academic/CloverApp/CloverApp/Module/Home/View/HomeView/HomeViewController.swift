@@ -9,7 +9,7 @@ import UIKit
 import SkeletonView
 import AVKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,9 +17,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerTableCell()
-        fetchData()
-        navigationController?.setNavigationBarHidden(true, animated: false)
+        setUp()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -30,6 +28,12 @@ class HomeViewController: UIViewController {
         let vc = SearchViewController()
         self.navigationController?.pushViewController(vc, animated: false)
         print("tapped")
+    }
+    
+    func setUp(){
+        registerTableCell()
+        fetchData()
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     func listenedNotification(){
@@ -46,7 +50,7 @@ class HomeViewController: UIViewController {
         if let data = notification.userInfo?["data"] as? Bool, data {
             print("Received data: \(data)")
             
-            self.showAlert(message: "Added to bookmark.")
+            self.showAlertSuccess(message: "Added to bookmark.")
         }
     }
     
@@ -77,7 +81,7 @@ class HomeViewController: UIViewController {
     }
     
     func showVideo(){
-        guard let videoURL = URL(string: "https://firebasestorage.googleapis.com/v0/b/movie-eead1.appspot.com/o/jump%20scare%20videos%20-%20jumpscare%20-%20scare%20videos%20%23shorts.mp4?alt=media&token=817a2ff6-7589-43fc-a462-c2340edd4a90") else {
+        guard let videoURL = URLstore.videosURL else {
             // Handle invalid URL
             print("Not this link!")
             return
@@ -92,14 +96,71 @@ class HomeViewController: UIViewController {
         }
     }
     
-    func showAlert(message: String) {
-        let alertController = UIAlertController(title: "Success", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alertController, animated: true, completion: nil)
+}
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return FilmType.allCases.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let section = FilmType(rawValue: indexPath.section)
+        switch section {
+        case .recomendation:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FirstTableViewCell", for: indexPath) as! FirstTableViewCell
+            
+            cell.nowPlayingData = vm.nowPlayingData
+            cell.genreData = vm.genreData
+            cell.contentView.clipsToBounds = false
+            cell.selectionStyle = .none
+            cell.buttonPlay.tapAction = {[weak self] in
+                self?.showVideo()
+            }
+            return cell
+        case .trending, .topRated, .upcoming:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingTableViewCell", for: indexPath) as! TrendingTableViewCell
+            configureCellForSection(cell, section: section)
+            return cell
+        default:
+            return UITableViewCell()
+        }
+        
+        func configureCellForSection(_ cell: TrendingTableViewCell, section: FilmType?) {
+            cell.contentView.clipsToBounds = false
+            cell.selectionStyle = .none
+            cell.delegate = self
+            switch section {
+            case .trending:
+                cell.trendingData = vm.trendingData
+                cell.currentDataType = .trending
+            case .topRated:
+                cell.topData = vm.topData
+                cell.currentDataType = .topRated
+            case .upcoming:
+                cell.upData = vm.upcomingData
+                cell.currentDataType = .upcoming
+            default:
+                break
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let section = FilmType(rawValue: indexPath.section)
+        switch section {
+        case .recomendation:
+            return 430
+        default:
+            return 300
+        }
     }
 }
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource, MovieCellDelegate{
-    
+
+extension HomeViewController: MovieCellDelegate{
     func didSelectItem<T>(data: T) where T : Codable {
         if data is UpcomingResult {
             let vc = DescViewController()
@@ -138,67 +199,5 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource, MovieC
         groupDescVC.selectedGenre = vm.genreData
         navigationController?.pushViewController(groupDescVC, animated: true)
     }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return FilmType.allCases.count
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let section = FilmType(rawValue: indexPath.section)
-        switch section {
-        case .recomendation:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "FirstTableViewCell", for: indexPath) as! FirstTableViewCell
-            
-            cell.nowPlayingData = vm.nowPlayingData
-            cell.genreData = vm.genreData
-            cell.contentView.clipsToBounds = false
-            cell.selectionStyle = .none
-            cell.buttonPlay.tapAction = {[weak self] in
-                self?.showVideo()
-            }
-            return cell
-        case .trending:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingTableViewCell", for: indexPath) as! TrendingTableViewCell
-            cell.contentView.clipsToBounds = false
-            cell.delegate = self
-            cell.trendingData = vm.trendingData
-            cell.currentDataType = .trending
-            cell.selectionStyle = .none
-            return cell
-        case .topRated:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingTableViewCell", for: indexPath) as! TrendingTableViewCell
-            cell.contentView.clipsToBounds = false
-            cell.delegate = self
-            cell.topData = vm.topData
-            cell.currentDataType = .topRated
-            cell.selectionStyle = .none
-            return cell
-        case .upcoming:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingTableViewCell", for: indexPath) as! TrendingTableViewCell
-            cell.contentView.clipsToBounds = false
-            cell.delegate = self
-            cell.upData = vm.upcomingData
-            cell.currentDataType = .upcoming
-            cell.selectionStyle = .none
-            return cell
-        default:
-            return UITableViewCell()
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let section = FilmType(rawValue: indexPath.section)
-        switch section {
-        case .recomendation:
-            return 430
-        default:
-            return 300
-        }
-    }
 }
-
 

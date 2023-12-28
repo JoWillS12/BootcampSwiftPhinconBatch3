@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BookmarkViewController: UIViewController {
+class BookmarkViewController: BaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -18,8 +18,6 @@ class BookmarkViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
         registerCollectionCell()
         if traitCollection.forceTouchCapability == .available {
         }
@@ -48,12 +46,6 @@ class BookmarkViewController: UIViewController {
             }
         }
     }
-    
-    func showAlert(message: String) {
-        let alertController = UIAlertController(title: "Success", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alertController, animated: true, completion: nil)
-    }
 }
 
 extension BookmarkViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -65,7 +57,7 @@ extension BookmarkViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookmarkCollectionViewCell", for: indexPath) as! BookmarkCollectionViewCell
         let datas = book[indexPath.row]
-        if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.moviePic)) {
+        if let imageURL = URLstore.imagesURL?.appendingPathComponent(datas.moviePic){
             cell.movieImage.kf.setImage(with: imageURL)
         }
         
@@ -96,11 +88,6 @@ extension BookmarkViewController {
                 if let error = error {
                     print("Error deleting bookmark: \(error.localizedDescription)")
                 } else {
-                    print("Bookmark deleted successfully!")
-                    
-                    // Ensure the correct index path is used for deletion
-                    print("Deleted at indexPath: \(indexPath)")
-                    
                     self.book.remove(at: indexPath.row)
                     
                     // Perform collection view updates on the main thread
@@ -108,7 +95,7 @@ extension BookmarkViewController {
                         self.collectionView.deleteItems(at: [indexPath])
                     }
                     
-                    self.showAlert(message: "Deleted Successfully")
+                    self.showAlertSuccess(message: "Deleted Successfully")
                 }
             }
             selectedIndexPath = nil // Reset selectedIndexPath after deletion

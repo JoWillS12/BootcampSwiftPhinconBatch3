@@ -17,7 +17,6 @@ class GroupTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         movieName.numberOfLines = 0
         movieName.lineBreakMode = .byWordWrapping
         movieGenre.numberOfLines = 0
@@ -34,8 +33,17 @@ class GroupTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
+    func setupTrending(datas: TrendingResult){
+        
+    }
+    
+    func setupUpcoming(datas: TopResult){
+        
+    }
+    
+    func setupTopRated(datas: UpcomingResult){
+        
+    }
 }

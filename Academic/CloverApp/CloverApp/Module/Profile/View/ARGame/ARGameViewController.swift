@@ -45,7 +45,7 @@ class ARGameViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func showVideo() async {
-        guard let videoURL = URL(string: "https://firebasestorage.googleapis.com/v0/b/movie-eead1.appspot.com/o/jump%20scare%20videos%20-%20jumpscare%20-%20scare%20videos%20%23shorts.mp4?alt=media&token=817a2ff6-7589-43fc-a462-c2340edd4a90") else {
+        guard let videoURL = URLstore.videosURL else {
             // Handle invalid URL
             print("Not this link!")
             return

@@ -38,7 +38,6 @@ class TrendingTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         registerCollectionCell()
         let padding: CGFloat = 10.0
         contentView.frame = bounds.inset(by: UIEdgeInsets(top: 20, left: 0, bottom: padding, right: 0))
@@ -51,8 +50,6 @@ class TrendingTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
     @objc func seeDescTapped() {
@@ -88,7 +85,7 @@ extension TrendingTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
                 return cell
             }
             let datas = trendingData[0].results[indexPath.row]
-            if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath ?? "")) {
+            if let imageURL = URLstore.imagesURL?.appendingPathComponent(datas.posterPath ?? "") {
                 cell.movieImage.kf.setImage(with: imageURL)
             }
             sectionTitle.text = "Trending"
@@ -98,7 +95,7 @@ extension TrendingTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
                 return cell
             }
             let datas = topData[0].results[indexPath.row]
-            if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath ?? "")) {
+            if let imageURL = URLstore.imagesURL?.appendingPathComponent(datas.posterPath ?? "") {
                 cell.movieImage.kf.setImage(with: imageURL)
             }
             sectionTitle.text = "Top Rated"
@@ -108,7 +105,7 @@ extension TrendingTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
                 return cell
             }
             let datas = upData[0].results[indexPath.row]
-            if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath ?? "")) {
+            if let imageURL = URLstore.imagesURL?.appendingPathComponent(datas.posterPath ?? "") {
                 cell.movieImage.kf.setImage(with: imageURL)
             }
             sectionTitle.text = "Upcoming"

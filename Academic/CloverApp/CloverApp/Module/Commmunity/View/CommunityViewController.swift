@@ -23,29 +23,13 @@ class CommunityViewController: UIViewController, UINavigationControllerDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        registerTableCell()
-        setupAudioRecorder()
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tapGesture)
-        
-        chatField.delegate = self
+        setUp()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
         fetchUserData()
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
     }
     
     @IBAction func recordAudio(_ sender: Any) {
@@ -98,6 +82,24 @@ class CommunityViewController: UIViewController, UINavigationControllerDelegate,
     
     @IBAction func backButton(_ sender: Any) {
         navigationController?.popViewController(animated: false)
+    }
+    
+    func setUp(){
+        registerTableCell()
+        setupAudioRecorder()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        
+        chatField.delegate = self
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     func registerTableCell(){
@@ -175,31 +177,17 @@ extension CommunityViewController: UITableViewDelegate, UITableViewDataSource{
         switch message.contentType {
         case .text:
             let cell = tableView.dequeueReusableCell(withIdentifier: "CommunityTableViewCell", for: indexPath) as! CommunityTableViewCell
-            cell.userName.text = message.userName
-            cell.userChat.text = message.content.text
-            cell.selectionStyle = .none
+            cell.setupData(message: message)
             return cell
             
         case .image:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell", for: indexPath) as! ImageTableViewCell
-            cell.userName.text = message.userName
-            if let imageURL = message.content.imageURL {
-                cell.loadImageFromURL(imageURL)
-                cell.tapAction = {[weak self] in
-                    let vc = PreviewImageViewController()
-                    vc.clickedImage = imageURL
-                    self?.navigationController?.present(vc, animated: false)
-                }
-            }
-            cell.selectionStyle = .none
+            cell.delegate = self
+            cell.setupData(message: message)
             return cell
         case .audio:
             let cell = tableView.dequeueReusableCell(withIdentifier: "AudioTableViewCell", for: indexPath) as! AudioTableViewCell
-            cell.userName.text = message.userName
-            if let audioURL = message.content.audioURL {
-                cell.audioURL = URL(string: audioURL)
-            }
-            cell.selectionStyle = .none
+            cell.setupData(message: message)
             return cell
         }
     }
@@ -254,5 +242,16 @@ extension CommunityViewController: AVAudioRecorderDelegate {
         } else {
             print("Audio recording failed")
         }
+    }
+}
+
+extension CommunityViewController: ImageTableViewCellDelegate{
+    func imageCellDidTapPreview(_ cell: ImageTableViewCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        let imageURL = chatData[indexPath.row].content.imageURL
+        
+        let vc = PreviewImageViewController()
+        vc.clickedImage = imageURL ?? ""
+        navigationController?.present(vc, animated: false)
     }
 }

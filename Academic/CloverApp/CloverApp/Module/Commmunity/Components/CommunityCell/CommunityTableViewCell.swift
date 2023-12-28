@@ -15,14 +15,16 @@ class CommunityTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         userChat.numberOfLines = 0
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        selectionStyle = .none
     }
     
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
+    func setupData(message: ChatMessage) {
+        userName.text = message.userName
+        userChat.text = message.content.text
+    }
 }

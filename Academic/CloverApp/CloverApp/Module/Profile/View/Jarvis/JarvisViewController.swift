@@ -18,26 +18,11 @@ class JarvisViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        registerTableCell()
-        tableView.reloadData()
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tapGesture)
-        
-        messageInsert.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
     }
     
     @IBAction func sendButton(_ sender: Any) {
@@ -50,6 +35,24 @@ class JarvisViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func backButton(_ sender: Any) {
         navigationController?.popViewController(animated: false)
+    }
+    
+    func setUp(){
+        registerTableCell()
+        tableView.reloadData()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        
+        messageInsert.delegate = self
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     func registerTableCell(){
@@ -102,7 +105,7 @@ extension JarvisViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "JarvisTableViewCell", for: indexPath) as! JarvisTableViewCell
         let message = chatMessages[indexPath.row]
-        cell.textMessage.text = message.content
+        cell.setupData(message: message)
         switch message.sender {
         case .user:
             cell.updateCorners(isUserMessage: true)

@@ -13,7 +13,6 @@ class BookmarkCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         movieImage.layer.cornerRadius = 20
     }
 

@@ -21,8 +21,6 @@ class HalfViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
         setUp()
     }
     
@@ -53,9 +51,6 @@ class HalfViewController: UIViewController {
         cancelView.layer.cornerRadius = 20
         downloadView.layer.cornerRadius = 20
         movieImage.layer.cornerRadius = 20
-        mbView.layer.cornerRadius = 20
-        
-        mbView.layer.borderColor = UIColor.white.cgColor
-        mbView.layer.borderWidth = 1
+        mbView.addBorder(width: 1, color: .white, cornerRadius: 20)
     }
 }

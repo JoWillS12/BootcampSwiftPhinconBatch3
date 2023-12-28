@@ -25,14 +25,20 @@ class AudioTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        playButton.addTarget(self, action: #selector(playButtonTapped), for: .touchUpInside)
+        selectionStyle = .none
         configureAudioPlayer()
+        playButton.addTarget(self, action: #selector(playButtonTapped), for: .touchUpInside)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
+    }
+    
+    func setupData(message: ChatMessage) {
+        userName.text = message.userName
+        if let urlString = message.content.audioURL {
+            audioURL = URL(string: urlString)
+        }
     }
     
     func configureAudioPlayer() {
@@ -47,7 +53,6 @@ class AudioTableViewCell: UITableViewCell {
     }
     
     @objc func playButtonTapped() {
-        print("Play button tapped")
         if let player = player {
             if player.rate == 0{
                 // Player is paused, so play

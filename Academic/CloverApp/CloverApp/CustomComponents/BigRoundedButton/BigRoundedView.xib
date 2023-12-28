@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,7 +41,7 @@
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4e-mR-QdO">
-                    <rect key="frame" x="0.0" y="0.0" width="162" height="55"/>
+                    <rect key="frame" x="0.0" y="0.0" width="162" height="21"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain"/>
                     <connections>
@@ -51,11 +52,11 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="p4e-mR-QdO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5X0-yh-M8x"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="p4e-mR-QdO" secondAttribute="bottom" id="GM2-V1-ae3"/>
-                <constraint firstItem="p4e-mR-QdO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IYG-a5-yy3"/>
+                <constraint firstItem="p4e-mR-QdO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4nb-ic-Rvd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="p4e-mR-QdO" secondAttribute="bottom" id="AD3-W6-Buj"/>
+                <constraint firstItem="p4e-mR-QdO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="iwp-W2-zNG"/>
+                <constraint firstItem="p4e-mR-QdO" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="k3V-Be-ReC"/>
                 <constraint firstItem="P7C-t2-Nyc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="kj4-9o-MHm"/>
-                <constraint firstAttribute="trailing" secondItem="p4e-mR-QdO" secondAttribute="trailing" id="mH9-WO-y7m"/>
                 <constraint firstItem="P7C-t2-Nyc" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qzj-Y6-Z3k"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

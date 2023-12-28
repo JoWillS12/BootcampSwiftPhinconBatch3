@@ -69,6 +69,8 @@ enum OriginalLanguage: String, Codable {
     case hi = "hi"
     case ko = "ko"
     case pl = "pl"
+    case pt = "pt"
+    case sv = "sv"
 }
 
 // MARK: - Genre
@@ -342,6 +344,8 @@ enum MovieOriginalLanguage: String, Codable {
     case hi = "hi"
     case ko = "ko"
     case pl = "pl"
+    case pt = "pt"
+    case sv = "sv"
     
     init(from decoder: Decoder) throws {
             let rawValue = try decoder.singleValueContainer().decode(String.self)

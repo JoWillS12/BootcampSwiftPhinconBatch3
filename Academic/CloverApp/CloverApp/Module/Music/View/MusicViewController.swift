@@ -17,16 +17,15 @@ class MusicViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var vm = MusicViewModel()
-    var currentlyPlayingTrack: Datum?
+    var currentlyPlayingTrack: MusicResult?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerTableCell()
-        fetchData()
         setUp()
     }
     
     @IBAction func playButton(_ sender: Any) {
+        vm.restoreState()
         vm.isPlaying.toggle()
         updatePlayPauseButtonImage()
         tableView.reloadData()
@@ -36,20 +35,30 @@ class MusicViewController: UIViewController {
                 vm.playPreview(at: currentIndex)
             }
             tableView.reloadData()
-
+            
         } else {
             if let currentIndex = vm.currentlyPlayingIndex {
                 vm.pausePreview(at: currentIndex)
             }
             tableView.reloadData()
-
+            
         }
     }
     
     @IBAction func forwardButton(_ sender: Any) {
+        vm.playNextTrack()
+        if let currentIndex = vm.currentlyPlayingIndex, vm.isPlaying {
+            let currentTrackTitle = vm.tracks[currentIndex].titleShort
+            playedMusic.text = "\(currentTrackTitle)"
+        } else {
+            playedMusic.text = "No Track Playing"
+        }
     }
     
     func setUp(){
+        registerTableCell()
+        fetchData()
+        
         playerView.layer.cornerRadius = 16
         playerView.layer.shadowColor = UIColor.white.cgColor
         playerView.layer.shadowOpacity = 0.8

@@ -19,8 +19,7 @@ class AlbumTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        if let imageURL = URL(string: "https://e-cdns-images.dzcdn.net/images/cover/f7b774a90778e1e7915dd012cda5d7e0/120x120-000000-80-0-0.jpg") {
+        if let imageURL = URLstore.albumImageURL {
             albumImage.kf.setImage(with: imageURL)
         }
         playerImage.layer.cornerRadius = 10
@@ -32,8 +31,6 @@ class AlbumTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
     

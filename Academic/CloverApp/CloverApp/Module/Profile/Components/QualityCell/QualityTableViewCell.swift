@@ -30,7 +30,6 @@ class QualityTableViewCell: BaseTableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         setUp()
     }
     
@@ -42,11 +41,27 @@ class QualityTableViewCell: BaseTableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
+    }
+    
+    func setupVideoData(){
+        qualityName.text = "Video Quality"
+        qualityImage.image = UIImage(systemName: "arrowtriangle.right.circle")
+        optionOneName.text = "360p"
+        optionTwoName.text = "480p"
+        optionThreeName.text = "720p"
+    }
+    
+    func setupAudioData(){
+        qualityName.text = "Audio Quality"
+        qualityImage.image = UIImage(systemName: "doc.badge.gearshape")
+        optionOneName.text = "48kHz"
+        optionTwoName.text = "96kHz"
+        optionThreeName.text = "192kHz"
     }
     
     func setUp() {
+        selectionStyle = .none
+
         let chevronTapGesture = UITapGestureRecognizer(target: self, action: #selector(chevronTapped))
         chevronImage.isUserInteractionEnabled = true
         chevronImage.image = UIImage(systemName: "chevron.down")

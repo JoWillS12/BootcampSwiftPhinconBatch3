@@ -14,7 +14,6 @@ class MovieCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         movieImage.layer.cornerRadius = 16
         movieImage.showAnimatedGradientSkeleton()
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {

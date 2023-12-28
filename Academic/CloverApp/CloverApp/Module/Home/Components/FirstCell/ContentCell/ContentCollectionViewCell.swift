@@ -14,7 +14,6 @@ class ContentCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         filmImage.showAnimatedGradientSkeleton()
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.filmImage.hideSkeleton()

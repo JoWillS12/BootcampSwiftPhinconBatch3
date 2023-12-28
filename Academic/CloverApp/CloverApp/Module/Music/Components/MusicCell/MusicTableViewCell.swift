@@ -13,7 +13,6 @@ class MusicTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         musicName.numberOfLines = 0
     }
 

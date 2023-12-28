@@ -10,7 +10,7 @@ import Parchment
 import Firebase
 import AVKit
 
-class DescViewController: UIViewController {
+class DescViewController: BaseViewController {
     
     @IBOutlet weak var subLabel: UILabel!
     @IBOutlet weak var filmName: UILabel!
@@ -38,9 +38,6 @@ class DescViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        
         setUpPagingVC()
         setUp()
     }
@@ -50,7 +47,7 @@ class DescViewController: UIViewController {
         switch typeData {
         case .trending:
             if let item = selectedTrending {
-                if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (item.posterPath ?? "")) {
+                if let imageURL = URLstore.imagesURL?.appendingPathComponent(item.posterPath ?? ""){
                     filmImage.kf.setImage(with: imageURL)
                     selectedPosterPath = "\(imageURL)"
                 }
@@ -65,7 +62,7 @@ class DescViewController: UIViewController {
             break
         case .topRated:
             if let item = selectedTopRated {
-                if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (item.posterPath ?? "")) {
+                if let imageURL = URLstore.imagesURL?.appendingPathComponent(item.posterPath ?? "") {
                     filmImage.kf.setImage(with: imageURL)
                     selectedPosterPath = "\(imageURL)"
                 }
@@ -79,7 +76,7 @@ class DescViewController: UIViewController {
             }
         case .upcoming:
             if let item = selectedUpcoming {
-                if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (item.posterPath ?? "")) {
+                if let imageURL = URLstore.imagesURL?.appendingPathComponent(item.posterPath ?? "") {
                     filmImage.kf.setImage(with: imageURL)
                     selectedPosterPath = "\(imageURL)"
                 }
@@ -135,7 +132,7 @@ class DescViewController: UIViewController {
                     print("Error download movie: \(error.localizedDescription)")
                 } else {
                     print("Movie download successfully!")
-                    self.showAlert(message: "Movie Downloaded.")
+                    self.showAlertSuccess(message: "Movie Downloaded.")
                 }
             }
         }
@@ -218,7 +215,7 @@ class DescViewController: UIViewController {
     }
     
     func showVideo(){
-        guard let videoURL = URL(string: "https://firebasestorage.googleapis.com/v0/b/movie-eead1.appspot.com/o/jump%20scare%20videos%20-%20jumpscare%20-%20scare%20videos%20%23shorts.mp4?alt=media&token=817a2ff6-7589-43fc-a462-c2340edd4a90") else {
+        guard let videoURL = URLstore.videosURL else {
             // Handle invalid URL
             print("Not this link!")
             return
@@ -271,12 +268,6 @@ class DescViewController: UIViewController {
             }
         }
         return genreNames
-    }
-    
-    func showAlert(message: String) {
-        let alertController = UIAlertController(title: "Success", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alertController, animated: true, completion: nil)
     }
     
     func setUpPagingVC(){

@@ -34,7 +34,6 @@ class FirstTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         setUp()
         registerCollectionCell()
         startTimer()
@@ -43,15 +42,11 @@ class FirstTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        // Make contentView fill the cell's bounds
         contentView.frame = bounds
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
     @IBAction func pageClicked(_ sender: Any) {
@@ -149,11 +144,11 @@ extension FirstTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
             return cell
         }
         let datas = nowPlayingData[0].results[indexPath.row]
-        if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath ?? "")) {
+        if let imageURL = URLstore.imagesURL?.appendingPathComponent(datas.posterPath) {
             cell.filmImage.kf.setImage(with: imageURL)
         }
         buttonAddList.tapAction = {[weak self] in
-            self?.vm.addBookmark(movieId: datas.id, movieName: datas.title, moviePic: datas.posterPath ?? ""){ error in
+            self?.vm.addBookmark(movieId: datas.id, movieName: datas.title, moviePic: datas.posterPath){ error in
                 if let error = error {
                     print("Error saving movie: \(error.localizedDescription)")
                 } else {

@@ -19,7 +19,6 @@ class BigRoundedView: UIView {
         }
     }
     
-    // Text color property
     var textColor: UIColor = .black {
         didSet {
             buttonName.textColor = textColor
@@ -42,14 +41,7 @@ class BigRoundedView: UIView {
     
     func configureView() {
         let view = CodeHelper.loadNib(for: self)
-        // Apply border
-        layer.borderWidth = 2.0
-        layer.cornerRadius = 16.0 // Customize as needed
-        layer.masksToBounds = true
-        
-        // Apply border color
-        layer.borderColor = borderColor.cgColor
-        
+        layer.addBorder(width: 2.0, color: borderColor, cornerRadius: 16.0)
         // Apply text color
         buttonName.textColor = textColor
         addSubview(view)

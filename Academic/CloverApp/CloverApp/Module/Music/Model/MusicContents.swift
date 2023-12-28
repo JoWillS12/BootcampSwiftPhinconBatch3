@@ -9,12 +9,12 @@ import Foundation
 
 // MARK: - Tracks
 struct Tracks: Codable {
-    let data: [Datum]
+    let data: [MusicResult]
     let total: Int
 }
 
 // MARK: - Datum
-struct Datum: Codable {
+struct MusicResult: Codable {
     let id: Int
     let readable: Bool
     let title, titleShort, titleVersion, isrc: String

@@ -15,7 +15,7 @@ class DownloadTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        selectionStyle = .none
     }
 
     override func layoutSubviews() {
@@ -26,8 +26,16 @@ class DownloadTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
+    func setupWifiData(){
+        setName.text = "Wifi Only"
+        setImage.image = UIImage(systemName: "wifi")
+    }
+    
+    func setupDeleteData(){
+        setName.text = "Delete All Downloads"
+        setImage.image = UIImage(systemName: "trash")
+        switchButton.isHidden = true
+    }
 }

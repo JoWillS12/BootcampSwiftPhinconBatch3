@@ -16,7 +16,6 @@ class JarvisTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func updateCorners(isUserMessage: Bool) {
@@ -36,5 +35,9 @@ class JarvisTableViewCell: UITableViewCell {
         
         // Update chatBubble corners
         chatBubble.layer.cornerRadius = 10
+    }
+    
+    func setupData(message: Message){
+        textMessage.text = message.content
     }
 }

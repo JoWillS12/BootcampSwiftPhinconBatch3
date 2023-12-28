@@ -66,7 +66,7 @@ extension SuggestViewController: UICollectionViewDelegate, UICollectionViewDataS
             return cell
         }
         let datas = vm.popularData[0].results[indexPath.row]
-        if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath ?? "")) {
+        if let imageURL = URLstore.imagesURL?.appendingPathComponent(datas.posterPath ?? "") {
             cell.movieImage.kf.setImage(with: imageURL)
         }
         

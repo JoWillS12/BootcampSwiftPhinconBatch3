@@ -18,7 +18,6 @@ class DownloadedTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         movieName.numberOfLines = 0
         movieName.lineBreakMode = .byWordWrapping
         movieGenre.numberOfLines = 0

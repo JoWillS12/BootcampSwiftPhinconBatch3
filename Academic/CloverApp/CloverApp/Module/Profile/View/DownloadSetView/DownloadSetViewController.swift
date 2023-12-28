@@ -13,8 +13,6 @@ class DownloadSetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
         registerTableCell()
     }
     
@@ -39,34 +37,19 @@ extension DownloadSetViewController: UITableViewDelegate, UITableViewDataSource 
         switch indexPath.row{
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DownloadTableViewCell", for: indexPath) as! DownloadTableViewCell
-            cell.setName.text = "Wifi Only"
-            cell.setImage.image = UIImage(systemName: "wifi")
-            cell.selectionStyle = .none
+            cell.setupWifiData()
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "QualityTableViewCell", for: indexPath) as! QualityTableViewCell
-            cell.qualityName.text = "Video Quality"
-            cell.qualityImage.image = UIImage(systemName: "arrowtriangle.right.circle")
-            cell.selectionStyle = .none
-            cell.optionOneName.text = "360p"
-            cell.optionTwoName.text = "480p"
-            cell.optionThreeName.text = "720p"
+            cell.setupVideoData()
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "QualityTableViewCell", for: indexPath) as! QualityTableViewCell
-            cell.qualityName.text = "Audio Quality"
-            cell.qualityImage.image = UIImage(systemName: "doc.badge.gearshape")
-            cell.optionOneName.text = "48kHz"
-            cell.optionTwoName.text = "96kHz"
-            cell.optionThreeName.text = "192kHz"
-            cell.selectionStyle = .none
+            cell.setupAudioData()
             return cell
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DownloadTableViewCell", for: indexPath) as! DownloadTableViewCell
-            cell.setName.text = "Delete All Downloads"
-            cell.setImage.image = UIImage(systemName: "trash")
-            cell.switchButton.isHidden = true
-            cell.selectionStyle = .none
+            cell.setupDeleteData()
             return cell
         default:
             return UITableViewCell()

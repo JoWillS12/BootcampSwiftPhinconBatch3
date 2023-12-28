@@ -13,8 +13,6 @@ class NotifViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         registerTableCell()
     }
     
@@ -34,7 +32,7 @@ class NotifViewController: UIViewController {
 
 extension NotifViewController: UITableViewDelegate, UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1 // Assuming you have only one section
+        return 1 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,7 +43,6 @@ extension NotifViewController: UITableViewDelegate, UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "NotifTableViewCell", for: indexPath) as? NotifTableViewCell else {
             return UITableViewCell()
         }
-        
         let section = NotifTableViewSection(rawValue: indexPath.row)
         cell.settingName.text = section?.title
         cell.selectionStyle = .none

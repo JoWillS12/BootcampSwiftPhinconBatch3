@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 import AVKit
 
-class DownloadViewController: UIViewController {
+class DownloadViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,8 +18,6 @@ class DownloadViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
         registerTableCell()
     }
     
@@ -51,14 +49,8 @@ class DownloadViewController: UIViewController {
         }
     }
     
-    func showAlert(message: String) {
-        let alertController = UIAlertController(title: "Success", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alertController, animated: true, completion: nil)
-    }
-    
     func showVideo(){
-        guard let videoURL = URL(string: "https://firebasestorage.googleapis.com/v0/b/movie-eead1.appspot.com/o/jump%20scare%20videos%20-%20jumpscare%20-%20scare%20videos%20%23shorts.mp4?alt=media&token=817a2ff6-7589-43fc-a462-c2340edd4a90") else {
+        guard let videoURL = URLstore.videosURL else {
             // Handle invalid URL
             print("Not this link!")
             return
@@ -94,7 +86,7 @@ extension DownloadViewController: UITableViewDataSource, UITableViewDelegate{
                 } else {
                     print("Download deleted successfully!")
                     self.downloadedData.remove(at: indexPath.row)
-                    self.showAlert(message: "Deleted Successfully")
+                    self.showAlertSuccess(message: "Deleted Successfully")
                     tableView.reloadData()
                 }
             }

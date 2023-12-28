@@ -44,10 +44,6 @@ class ProfileViewModel {
                     completion(.failure(error))
                 } else {
                     completion(.success(()))
-                    if let profileImageData = profilePic.pngData() {
-                                        UserDefaults.standard.set(profileImageData, forKey: "userPic")
-                                    }
-                    UserDefaults.standard.set(phoneNum, forKey: "userPhoneNumber")
                 }
             }
         }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController, UITextFieldDelegate {
+class RegisterViewController: BaseViewController, UITextFieldDelegate {
     
     @IBOutlet weak var regisButton: ButtonView!
     @IBOutlet weak var repasswordBox: FieldView!
@@ -20,17 +20,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: false)
-        // Do any additional setup after loading the view.
         setUp()
-        loadButton()
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tapGesture)
-        
-        emailBox.inputType.delegate = self
-        passwordBox.inputType.delegate = self
-        phoneBox.inputType.delegate = self
-        repasswordBox.inputType.delegate = self
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -51,6 +41,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setUp(){
+        navigationController?.setNavigationBarHidden(true, animated: false)
         backView.applyCommonBackgroundStyle()
         
         emailBox.configure(withFieldName: "Email", placeholder: "Enter your email")
@@ -60,6 +51,15 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         
         regisButton.roundCornersWithDifferentRadii(topLeft: 60, topRight: 10, bottomLeft: 10, bottomRight: 60)
         regisButton.buttonLabel.text = "Sign in"
+        
+        loadButton()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        
+        emailBox.inputType.delegate = self
+        passwordBox.inputType.delegate = self
+        phoneBox.inputType.delegate = self
+        repasswordBox.inputType.delegate = self
     }
     
     func loadButton(){
@@ -68,7 +68,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                   let password = self?.passwordBox.inputType.text,
                   let phoneNum = self?.phoneBox.inputType.text,
                   let confirmPassword = self?.repasswordBox.inputType.text else {
-                self?.showAlert(message: "Please fill in all the fields.")
+                self?.showAlertFailed(message: "Please fill in all the fields.")
                 return
             }
             
@@ -87,15 +87,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                     
                 case .failure(let error):
                     // Show an alert indicating registration failure
-                    self?.showAlert(message: "Registration failed. Error: \(error.localizedDescription)")
+                    self?.showAlertFailed(message: "Registration failed. Error: \(error.localizedDescription)")
                 }
             }
         }
-    }
-    
-    func showAlert(message: String) {
-        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alertController, animated: true, completion: nil)
     }
 }

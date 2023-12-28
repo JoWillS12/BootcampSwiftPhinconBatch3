@@ -9,14 +9,14 @@ import Foundation
 import Alamofire
 import AVFoundation
 
-class MusicViewModel{
-    var tracks: [Datum] = []
+class MusicViewModel {
+    var tracks: [MusicResult] = []
     var onDataUpdate: (() -> Void)?
     var players: [AVPlayer?] = []
     var currentlyPlayingIndex: Int?
     var isPlaying: Bool = false
     
-    
+    // Function to fetch tracks from the network
     func fetchData() {
         MusicNetworkManager.shared.fetchTracks { [weak self] result in
             guard let self = self else { return }
@@ -31,37 +31,67 @@ class MusicViewModel{
         }
     }
     
+    // Function to play an audio preview at a specific index
     func playPreview(at index: Int) {
-        // Check if the index is within the bounds of the tracks array
         guard index >= 0 && index < tracks.count else { return }
         guard let previewURL = URL(string: tracks[index].preview) else { return }
         
-        // Pause the currently playing player
         if let currentIndex = currentlyPlayingIndex, currentIndex != index {
             players[currentIndex]?.pause()
         }
         
-        // Play the audio preview for the selected track
         let playerItem = AVPlayerItem(url: previewURL)
         let player = AVPlayer(playerItem: playerItem)
         player.play()
         
-        // Store the currently playing index and player
         currentlyPlayingIndex = index
         
-        // Make sure the players array has enough elements to store the player
         while players.count <= index {
             players.append(nil)
         }
         
         players[index] = player
+        isPlaying = true
         onDataUpdate?()
     }
     
-    
+    // Function to pause the currently playing audio preview
     func pausePreview(at index: Int) {
         players[index]?.pause()
         currentlyPlayingIndex = nil
+        isPlaying = false
         onDataUpdate?()
+    }
+    
+    // Function to save the currently playing track index
+    func saveState() {
+        UserDefaults.standard.set(currentlyPlayingIndex, forKey: "currentlyPlayingIndex")
+    }
+    
+    // Function to restore the previously playing track index
+    func restoreState() {
+        if let index = UserDefaults.standard.value(forKey: "currentlyPlayingIndex") as? Int {
+            currentlyPlayingIndex = index
+        }
+    }
+    
+    // Function to play the next audio preview
+    func playNextTrack() {
+        guard let currentIndex = currentlyPlayingIndex else { return }
+        let nextIndex = currentIndex + 1
+        
+        // Check if there is a next track
+        guard nextIndex < tracks.count else {
+            // If there is no next track, you can choose to loop back to the first track or stop playback.
+            // For simplicity, let's stop playback if there is no next track.
+            players[currentIndex]?.pause()
+            currentlyPlayingIndex = nil
+            isPlaying = false
+            onDataUpdate?()
+            return
+        }
+        
+        // Play the audio preview of the next track
+        playPreview(at: nextIndex)
     }
 }

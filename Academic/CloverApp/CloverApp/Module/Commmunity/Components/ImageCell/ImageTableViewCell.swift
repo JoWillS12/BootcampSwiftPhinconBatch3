@@ -13,20 +13,25 @@ class ImageTableViewCell: UITableViewCell {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userAttachment: UIImageView!
     
-    var tapAction: (()->Void)?
-    
+    weak var delegate: ImageTableViewCellDelegate?
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         userAttachment.isUserInteractionEnabled = true
         userAttachment.addGestureRecognizer(tapGesture)
+        selectionStyle = .none
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
+    }
+    
+    func setupData(message: ChatMessage) {
+        userName.text = message.userName
+        if let imageURL = message.content.imageURL {
+            loadImageFromURL(imageURL)
+        }
     }
     
     func loadImageFromURL(_ urlString: String) {
@@ -42,6 +47,6 @@ class ImageTableViewCell: UITableViewCell {
     }
     
     @objc private func handleTap() {
-        tapAction?()
+        delegate?.imageCellDidTapPreview(self)
     }
 }

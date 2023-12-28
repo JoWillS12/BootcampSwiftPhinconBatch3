@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GroupDescViewController: UIViewController {
+class GroupDescViewController: BaseViewController {
 
     @IBOutlet weak var groupTitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -22,11 +22,8 @@ class GroupDescViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         registerTableCell()
     }
-    
     
     @IBAction func backButton(_ sender: Any) {
         navigationController?.popViewController(animated: false)
@@ -63,12 +60,6 @@ class GroupDescViewController: UIViewController {
         }
         return genreNames
     }
-    
-    func showAlert(message: String) {
-        let alertController = UIAlertController(title: "Success", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alertController, animated: true, completion: nil)
-    }
 }
 extension GroupDescViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -86,81 +77,81 @@ extension GroupDescViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupTableViewCell", for: indexPath) as! GroupTableViewCell
         switch currentDataType {
         case .trending:
-            guard trendingData.count > 0 else {
-                return cell
-            }
-            let datas = trendingData[indexPath.row]
-            if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath ?? "")) {
-                cell.movieImage.kf.setImage(with: imageURL)
-            }
-            cell.movieName.text = datas.title
-            let movieGenres = mapGenreIDsToNames(genreIDs: datas.genreIDS, genreData: selectedGenre.first?.genres ?? [])
-            cell.movieGenre.text = "Genre : \(movieGenres.joined(separator: ", "))"
-            cell.movieDate.text = "\(getYear(from: datas.releaseDate))"
-            cell.customButton.tapAction = {[weak self] in
-                self?.vm.addBookmark(movieId: datas.id, movieName: datas.title, moviePic: datas.posterPath ?? ""){ error in
-                    if let error = error {
-                        print("Error saving movie: \(error.localizedDescription)")
-                    } else {
-                        print("Movie saved successfully!")
-                        self?.showAlert(message: "Added to bookmark.")
-                    }
-                }
-            }
-            groupTitle.text = "Trending"
-            break
+            configureCell(cell, with: trendingData, at: indexPath, title: "Trending")
         case .topRated:
-            guard topData.count > 0 else {
-                return cell
-            }
-            let datas = topData[indexPath.row]
-            if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath ?? "")) {
-                cell.movieImage.kf.setImage(with: imageURL)
-            }
-            cell.movieName.text = datas.title
-            let movieGenres = mapGenreIDsToNames(genreIDs: datas.genreIDS, genreData: selectedGenre.first?.genres ?? [])
-            cell.movieGenre.text = "Genre : \(movieGenres.joined(separator: ", "))"
-            cell.movieDate.text = "\(getYear(from: datas.releaseDate))"
-            cell.customButton.tapAction = {[weak self] in
-                self?.vm.addBookmark(movieId: datas.id, movieName: datas.title, moviePic: datas.posterPath ?? ""){ error in
-                    if let error = error {
-                        print("Error saving movie: \(error.localizedDescription)")
-                    } else {
-                        print("Movie saved successfully!")
-                        self?.showAlert(message: "Added to bookmark.")
-                    }
-                }
-            }
-            groupTitle.text = "Top Rated"
-            break
+            configureCell(cell, with: topData, at: indexPath, title: "Top Rated")
         case .upcoming:
-            guard upData.count > 0 else {
-                return cell
-            }
-            let datas = upData[indexPath.row]
-            if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath ?? "")) {
-                cell.movieImage.kf.setImage(with: imageURL)
-            }
-            cell.movieName.text = datas.title
-            let movieGenres = mapGenreIDsToNames(genreIDs: datas.genreIDS, genreData: selectedGenre.first?.genres ?? [])
-            cell.movieGenre.text = "Genre : \(movieGenres.joined(separator: ", "))"
-            cell.movieDate.text = "\(getYear(from: datas.releaseDate ))"
-            cell.customButton.tapAction = {[weak self] in
-                self?.vm.addBookmark(movieId: datas.id, movieName: datas.title , moviePic: datas.posterPath ?? ""){ error in
-                    if let error = error {
-                        print("Error saving movie: \(error.localizedDescription)")
-                    } else {
-                        print("Movie saved successfully!")
-                        self?.showAlert(message: "Added to bookmark.")
-                    }
-                }
-            }
-            groupTitle.text = "Upcoming"
-            break
+            configureCell(cell, with: upData, at: indexPath, title: "Upcoming")
         }
         cell.selectionStyle = .none
         return cell
     }
+    
+    func configureCell(_ cell: GroupTableViewCell, with data: [Any], at indexPath: IndexPath, title: String) {
+        guard data.count > 0 else {
+            return
+        }
+
+        if let datas = data[indexPath.row] as? TrendingResult {
+            // Handle TrendingResult
+            if let imageURL = URLstore.imagesURL?.appendingPathComponent(datas.posterPath ?? "") {
+                cell.movieImage.kf.setImage(with: imageURL)
+            }
+            cell.movieName.text = datas.title
+            let movieGenres = mapGenreIDsToNames(genreIDs: datas.genreIDS, genreData: selectedGenre.first?.genres ?? [])
+            cell.movieGenre.text = "Genre : \(movieGenres.joined(separator: ", "))"
+            cell.movieDate.text = "\(getYear(from: datas.releaseDate))"
+            cell.customButton.tapAction = { [weak self] in
+                self?.vm.addBookmark(movieId: datas.id, movieName: datas.title, moviePic: datas.posterPath ?? "") { error in
+                    if let error = error {
+                        print("Error saving movie: \(error.localizedDescription)")
+                    } else {
+                        print("Movie saved successfully!")
+                        self?.showAlertSuccess(message: "Added to bookmark.")
+                    }
+                }
+            }
+        } else if let datas = data[indexPath.row] as? TopResult {
+            if let imageURL = URLstore.imagesURL?.appendingPathComponent(datas.posterPath ?? "") {
+                cell.movieImage.kf.setImage(with: imageURL)
+            }
+            cell.movieName.text = datas.title
+            let movieGenres = mapGenreIDsToNames(genreIDs: datas.genreIDS, genreData: selectedGenre.first?.genres ?? [])
+            cell.movieGenre.text = "Genre : \(movieGenres.joined(separator: ", "))"
+            cell.movieDate.text = "\(getYear(from: datas.releaseDate))"
+            cell.customButton.tapAction = { [weak self] in
+                self?.vm.addBookmark(movieId: datas.id, movieName: datas.title, moviePic: datas.posterPath ?? "") { error in
+                    if let error = error {
+                        print("Error saving movie: \(error.localizedDescription)")
+                    } else {
+                        print("Movie saved successfully!")
+                        self?.showAlertSuccess(message: "Added to bookmark.")
+                    }
+                }
+            }
+        } else if let datas = data[indexPath.row] as? UpcomingResult {
+            if let imageURL = URLstore.imagesURL?.appendingPathComponent(datas.posterPath ?? "") {
+                cell.movieImage.kf.setImage(with: imageURL)
+            }
+            cell.movieName.text = datas.title
+            let movieGenres = mapGenreIDsToNames(genreIDs: datas.genreIDS, genreData: selectedGenre.first?.genres ?? [])
+            cell.movieGenre.text = "Genre : \(movieGenres.joined(separator: ", "))"
+            cell.movieDate.text = "\(getYear(from: datas.releaseDate))"
+            cell.customButton.tapAction = { [weak self] in
+                self?.vm.addBookmark(movieId: datas.id, movieName: datas.title, moviePic: datas.posterPath ?? "") { error in
+                    if let error = error {
+                        print("Error saving movie: \(error.localizedDescription)")
+                    } else {
+                        print("Movie saved successfully!")
+                        self?.showAlertSuccess(message: "Added to bookmark.")
+                    }
+                }
+            }
+        }
+
+        groupTitle.text = title
+    }
+
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 192

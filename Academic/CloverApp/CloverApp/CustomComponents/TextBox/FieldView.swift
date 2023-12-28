@@ -22,10 +22,6 @@ class FieldView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         arrangeView()
-        
-        if let customFont = CodeHelper.loadCustomFont(withName: "Proxima Nova Font", fontSize: 20) {
-            fieldName.font = customFont
-        }
         setupDatePicker()
     }
     
@@ -45,6 +41,7 @@ extension FieldView{
         inputType.layer.cornerRadius = 10
         inputType.layer.borderWidth = 1
         self.addSubview(view)
+        fieldName.font =  CodeHelper.loadCustomFont(withName: "Proxima Nova Font", fontSize: 20)
     }
     
     func setupDatePicker() {

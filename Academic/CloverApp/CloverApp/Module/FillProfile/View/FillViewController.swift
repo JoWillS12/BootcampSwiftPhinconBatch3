@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 import Firebase
 
-class FillViewController: UIViewController, UITextFieldDelegate {
+class FillViewController: BaseViewController, UITextFieldDelegate {
     
     @IBOutlet weak var userPhone: UILabel!
     @IBOutlet weak var userEmail: UILabel!
@@ -23,17 +23,7 @@ class FillViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        loadButton()
-        loadUserData()
         setUp()
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tapGesture)
-        
-        favoriteMovie.delegate = self
-        Nickname.delegate = self
-        nameLabel.delegate = self
     }
     
     @IBAction func skipButton(_ sender: Any) {
@@ -53,12 +43,22 @@ class FillViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setUp(){
+        loadButton()
+        loadUserData()
+        
         updateButton.roundCornersWithDifferentRadii(topLeft: 60, topRight: 10, bottomLeft: 10, bottomRight: 60)
         updateButton.buttonLabel.text = "Update"
         
         nameLabel.attributedPlaceholder = NSAttributedString(string: "Enter your Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         Nickname.attributedPlaceholder = NSAttributedString(string: "Enter your Nickname", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         favoriteMovie.attributedPlaceholder = NSAttributedString(string: "Enter your Favorite Movie", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        
+        favoriteMovie.delegate = self
+        Nickname.delegate = self
+        nameLabel.delegate = self
     }
     
     func loadUserData() {
@@ -98,7 +98,7 @@ class FillViewController: UIViewController, UITextFieldDelegate {
                     }
                 case .failure(let error):
                     // Show an alert indicating update failure
-                    self.showAlert(message: "Update failed. Error: \(error.localizedDescription)")
+                    self.showAlertFailed(message: "Update failed. Error: \(error.localizedDescription)")
                 }
             }
         }
@@ -106,14 +106,14 @@ class FillViewController: UIViewController, UITextFieldDelegate {
     
     func saveUsernameToFirebase(username: String) {
         guard let currentUserUID = Auth.auth().currentUser?.uid else {
-            showAlert(message: "User not authenticated.")
+            showAlertFailed(message: "User not authenticated.")
             return
         }
         
         let userRef = viewModel.usersRef.child(currentUserUID)
         userRef.child("nameLabel").setValue(username) { error, _ in
             if let error = error {
-                self.showAlert(message: "Failed to save username to Firebase. Error: \(error.localizedDescription)")
+                self.showAlertFailed(message: "Failed to save username to Firebase. Error: \(error.localizedDescription)")
             } else {
                 print("Username saved to Firebase: \(username)")
             }
@@ -123,11 +123,5 @@ class FillViewController: UIViewController, UITextFieldDelegate {
     func generateRandomName() -> String {
         let randomNumber = Int.random(in: 100000000..<1000000000)
         return "user\(randomNumber)"
-    }
-    
-    func showAlert(message: String) {
-        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alertController, animated: true, completion: nil)
     }
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 class FilterViewController: UIViewController {
-
+    
     @IBOutlet weak var azView: UIView!
     @IBOutlet weak var yearView: UIView!
     
@@ -17,8 +17,7 @@ class FilterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        azView.layer.cornerRadius = 16
-        yearView.layer.cornerRadius = 16
+        setUp()
     }
     
     @IBAction func azSort(_ sender: Any) {
@@ -33,4 +32,8 @@ class FilterViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
+    func setUp(){
+        azView.layer.cornerRadius = 16
+        yearView.layer.cornerRadius = 16
+    }
 }

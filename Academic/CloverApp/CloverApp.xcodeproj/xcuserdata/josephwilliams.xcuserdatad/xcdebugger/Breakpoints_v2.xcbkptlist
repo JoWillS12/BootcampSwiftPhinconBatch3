@@ -14,8 +14,8 @@
             filePath = "CloverApp/Module/Home/Components/FirstCell/FirstTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "scrollViewDidEndDecelerating(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "CloverApp/Module/Home/Components/FirstCell/FirstTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "scrollViewDidScroll(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -126,8 +126,8 @@
             filePath = "CloverApp/Module/Home/View/HalfModalView/HalfViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,8 +142,8 @@
             filePath = "CloverApp/Module/Profile/View/EditView/EditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "updateData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -158,8 +158,8 @@
             filePath = "CloverApp/Module/Home/View/CommentsView/CommentsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "sendComment(_:)"
             landmarkType = "7">
             <Locations>
@@ -206,8 +206,8 @@
             filePath = "CloverApp/Module/Home/View/CommentsView/CommentsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "sendComment(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -231,86 +231,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D04683A6-5109-484E-9AE6-DA6F47799C91"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Home/View/GroupDescView/GroupDescViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "29D48853-A552-4352-885B-312051D6B917"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Commmunity/View/CommunityViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "29D48853-A552-4352-885B-312051D6B917 - 661136f536376199"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "C.CommunityViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
-                  moduleName = "C"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Commmunity/View/CommunityViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "167"
-                  endingLineNumber = "167"
-                  offsetFromSymbolStart = "2788">
-               </Location>
-               <Location
-                  uuid = "29D48853-A552-4352-885B-312051D6B917 - 661136f536376199"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "C.CommunityViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
-                  moduleName = "C"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Commmunity/View/CommunityViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "167"
-                  endingLineNumber = "167"
-                  offsetFromSymbolStart = "2872">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "760CD044-B528-4019-A6E7-D464D7ABC310"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Commmunity/View/CommunityViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "BB21754C-7C07-4C17-85DF-C139706A5D55"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -318,8 +238,8 @@
             filePath = "CloverApp/Module/Commmunity/View/CommunityViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "recordAudio(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -334,8 +254,8 @@
             filePath = "CloverApp/Module/Commmunity/View/CommunityViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "recordAudio(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -350,8 +270,8 @@
             filePath = "CloverApp/Module/Home/View/CommentsView/CommentsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "sendComment(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -366,8 +286,8 @@
             filePath = "CloverApp/Module/Music/Components/AlbumCell/AlbumTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "startAnimation()"
             landmarkType = "7">
          </BreakpointContent>
@@ -391,22 +311,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F23B6105-8CFE-4CCF-9649-2DACA9F86D17"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Home/View/HomeView/HomeViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "18EB9BF6-EECC-44C7-A31F-F873E9C9C299"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -414,8 +318,8 @@
             filePath = "CloverApp/Module/Home/Components/FirstCell/FirstTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -430,8 +334,8 @@
             filePath = "CloverApp/Module/Home/Components/FirstCell/FirstTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
             <Locations>
@@ -471,102 +375,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2CC2E14D-80E5-4AF5-AD63-9EBF7AA8C78B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Music/View/ViewModel/MusicViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "playPreview(at:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2CC2E14D-80E5-4AF5-AD63-9EBF7AA8C78B - f27ddcd9b7f2672c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "C.MusicViewModel.playPreview(at: Swift.Int) -&gt; ()"
-                  moduleName = "C"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Music/View/ViewModel/MusicViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "972">
-               </Location>
-               <Location
-                  uuid = "2CC2E14D-80E5-4AF5-AD63-9EBF7AA8C78B - f27ddcd9b7f26762"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "C.MusicViewModel.playPreview(at: Swift.Int) -&gt; ()"
-                  moduleName = "C"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Music/View/ViewModel/MusicViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "972">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3750A40A-965D-4F93-8D8E-6084E0C76DA3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Music/View/ViewModel/MusicViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "playPreview(at:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "3750A40A-965D-4F93-8D8E-6084E0C76DA3 - f27ddcd9b7f26689"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "C.MusicViewModel.playPreview(at: Swift.Int) -&gt; ()"
-                  moduleName = "C"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Music/View/ViewModel/MusicViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "864">
-               </Location>
-               <Location
-                  uuid = "3750A40A-965D-4F93-8D8E-6084E0C76DA3 - f27ddcd9b7f2664b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "C.MusicViewModel.playPreview(at: Swift.Int) -&gt; ()"
-                  moduleName = "C"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Music/View/ViewModel/MusicViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "696">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "B11F73E8-F317-4B69-B547-DE61DC1DEB58"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -574,8 +382,8 @@
             filePath = "CloverApp/Module/Music/View/MusicViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "playButton(_:)"
             landmarkType = "7">
             <Locations>
@@ -615,70 +423,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "821FA117-3A60-4384-9CA3-DD1302411012"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Music/View/MusicViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "playButton(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8FBE2656-AF7E-4976-BCAD-DC18E269BA60"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Music/View/MusicViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "playButton(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "8FBE2656-AF7E-4976-BCAD-DC18E269BA60 - 660eb43decf9c6af"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "C.MusicViewController.playButton(Any) -&gt; ()"
-                  moduleName = "C"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Music/View/MusicViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "612">
-               </Location>
-               <Location
-                  uuid = "8FBE2656-AF7E-4976-BCAD-DC18E269BA60 - 660eb43decf9c6af"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "C.MusicViewController.playButton(Any) -&gt; ()"
-                  moduleName = "C"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Music/View/MusicViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "620">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "0E4F6138-277F-4663-AB42-7651D3851152"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -686,8 +430,8 @@
             filePath = "CloverApp/Module/Home/View/SearchView/SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
             <Locations>
@@ -813,8 +557,8 @@
             filePath = "CloverApp/Module/Home/View/SearchView/SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "fetchData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -829,8 +573,8 @@
             filePath = "CloverApp/Module/Home/View/SearchView/SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -845,8 +589,8 @@
             filePath = "CloverApp/Module/Home/View/SearchView/SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -855,14 +599,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "787C5CF1-2FC0-4058-B6E3-CE7E2DE5BA48"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CloverApp/Module/Bookmark/View/BookmarkViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "deleteItemAtIndexPath(at:)"
             landmarkType = "7">
             <Locations>
@@ -895,54 +639,6 @@
                   startingLineNumber = "113"
                   endingLineNumber = "113"
                   offsetFromSymbolStart = "2812">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "65FF08EF-2367-4EB6-AE55-DD3280401050"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloverApp/Module/Bookmark/View/BookmarkViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "deleteItemAtIndexPath(at:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "65FF08EF-2367-4EB6-AE55-DD3280401050 - aae9333b48eb1980"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in C.BookmarkViewController.deleteItemAtIndexPath(at: Foundation.IndexPath) -&gt; ()"
-                  moduleName = "C"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Bookmark/View/BookmarkViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "1148">
-               </Location>
-               <Location
-                  uuid = "65FF08EF-2367-4EB6-AE55-DD3280401050 - aae9333b48eb1980"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in C.BookmarkViewController.deleteItemAtIndexPath(at: Foundation.IndexPath) -&gt; ()"
-                  moduleName = "C"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/josephwilliams/Desktop/BootcampSwiftPhinconBatch3/Academic/CloverApp/CloverApp/Module/Bookmark/View/BookmarkViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "1232">
                </Location>
             </Locations>
          </BreakpointContent>

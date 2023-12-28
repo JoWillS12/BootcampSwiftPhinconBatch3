@@ -31,13 +31,14 @@ class CheckBox: UIView {
     }
     
     func configureButton() {
+        updateButtonImage()
+
         rememberButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 self?.toggleButtonImage()
                 self?.tapAction?()
             })
             .disposed(by: disposeBag)
-        updateButtonImage()
         forgotButton.rx.tap
             .subscribe(onNext: {
                 [weak self] in

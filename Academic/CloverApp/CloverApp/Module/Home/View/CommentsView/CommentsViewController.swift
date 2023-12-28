@@ -23,10 +23,10 @@ class CommentsViewController: UIViewController, UITextFieldDelegate {
     var vm = CommentsViewModel()
     
     init(index: Int, selectedMovieID: Int?) {
-            self.index = index
-            self.selectedMovieID = selectedMovieID
-            super.init(nibName: nil, bundle: nil)
-        }
+        self.index = index
+        self.selectedMovieID = selectedMovieID
+        super.init(nibName: nil, bundle: nil)
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -34,16 +34,7 @@ class CommentsViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        registerTableCell()
-        currentUser = Auth.auth().currentUser
-        updateUI()
-        fetchComments()
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tapGesture)
-        
-        commentField.delegate = self
+        setUp()
     }
     
     @IBAction func sendComment(_ sender: Any) {
@@ -63,7 +54,7 @@ class CommentsViewController: UIViewController, UITextFieldDelegate {
             // Handle empty comment text or missing user information
             return
         }
-     
+        
         guard let movieID = selectedMovieID else {
             // Handle the case where the movie ID is nil
             return
@@ -78,6 +69,17 @@ class CommentsViewController: UIViewController, UITextFieldDelegate {
                 self.fetchComments()
             }
         }
+    }
+    
+    func setUp(){
+        registerTableCell()
+        currentUser = Auth.auth().currentUser
+        updateUI()
+        fetchComments()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        
+        commentField.delegate = self
     }
     
     @objc func dismissKeyboard() {
@@ -108,7 +110,7 @@ class CommentsViewController: UIViewController, UITextFieldDelegate {
             self.tableView.reloadData()
         }
     }
- 
+    
     func updateUI() {
         // Update UI based on the comments array or any other relevant logic
         tableView.reloadData()

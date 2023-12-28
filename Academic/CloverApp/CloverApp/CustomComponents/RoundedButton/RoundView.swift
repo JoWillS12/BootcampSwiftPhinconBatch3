@@ -49,17 +49,9 @@ class RoundView: UIView {
     
     func configureView() {
         let view = CodeHelper.loadNib(for: self)
-        // Apply border
-        layer.borderWidth = 2.0
-        layer.cornerRadius = 16.0 // Customize as needed
-        layer.masksToBounds = true
-        
-        // Apply border color
-        layer.borderColor = borderColor.cgColor
+        layer.addBorder(width: 2.0, color: borderColor, cornerRadius: 16.0)
         // Apply background color
         buttonName.backgroundColor = backgroundColorOverride
-        
-        // Apply text color
         buttonName.textColor = textColor
         addSubview(view)
     }

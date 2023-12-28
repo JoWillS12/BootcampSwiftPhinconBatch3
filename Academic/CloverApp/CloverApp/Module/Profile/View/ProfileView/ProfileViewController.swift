@@ -20,16 +20,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        registerTableCell()
-        loadData()
-        profilePic.galleryButton.isHidden = true
-        profilePic.viewToHidden.isHidden = true
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(logoAppTapped))
-        logoApp.isUserInteractionEnabled = true
-        logoApp.addGestureRecognizer(tapGesture)
+        setUp()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,6 +42,16 @@ class ProfileViewController: UIViewController {
         self.navigationController?.pushViewController(JarvisViewController(), animated: false)
     }
     
+    func setUp(){
+        registerTableCell()
+        loadData()
+        profilePic.galleryButton.isHidden = true
+        profilePic.viewToHidden.isHidden = true
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(logoAppTapped))
+        logoApp.isUserInteractionEnabled = true
+        logoApp.addGestureRecognizer(tapGesture)
+    }
     
     @objc func logoAppTapped() {
         let vc = ARGameViewController()

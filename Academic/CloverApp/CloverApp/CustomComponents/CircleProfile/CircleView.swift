@@ -50,15 +50,11 @@ extension CircleView: UIImagePickerControllerDelegate{
     func configureView() {
         let view = CodeHelper.loadNib(for: self)
         view.frame = bounds
-        view.layer.cornerRadius = view.frame.size.width / 2
-        view.layer.masksToBounds = true
-        view.layer.borderWidth = 2
-        view.layer.borderColor = UIColor.white.cgColor
+        view.addBorder(width: 2, color: .white, cornerRadius: frame.size.width / 2)
         addSubview(view)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
         if let image = info[.originalImage] as? UIImage {
             profileImage.image = image
         }

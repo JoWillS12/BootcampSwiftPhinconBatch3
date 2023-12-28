@@ -37,7 +37,7 @@ class MusicNetworkManager: NSObject {
     
     private override init() {}
     
-    func fetchTracks(completion: @escaping (Result<[Datum], Error>) -> Void) {
+    func fetchTracks(completion: @escaping (Result<[MusicResult], Error>) -> Void) {
         let url = "https://api.deezer.com/album/418645/tracks"
         
         AF.request(url).responseData { response in

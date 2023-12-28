@@ -25,10 +25,6 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        registerTableCell()
-        fetchData()
         setUp()
     }
     
@@ -60,6 +56,9 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setUp(){
+        registerTableCell()
+        fetchData()
+        
         searchField.addTarget(self, action: #selector(searchFieldDidChange(_:)), for: .editingChanged)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
@@ -196,14 +195,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
         if searchField.text?.isEmpty == false, indexPath.row < filteredData.count {
             datas = filteredData[indexPath.row]
         } else if indexPath.row < vm.movies.count {
-//            datas = vm.movies[indexPath.row]
             datas = filteredData[indexPath.row]
         } else {
-            // Handle the case where both filteredData is empty and vm.movies is out of bounds
+            print("EMPTY!")
             return cell
         }
         
-        if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (datas.posterPath ?? "")) {
+        if let imageURL = URLstore.imagesURL?.appendingPathComponent(datas.posterPath ?? "") {
             cell.movieImage.kf.setImage(with: imageURL)
         }
         
