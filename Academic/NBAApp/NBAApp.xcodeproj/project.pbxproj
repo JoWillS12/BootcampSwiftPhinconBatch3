@@ -42,7 +42,6 @@
 		175ACC1B2B05E0B900DC3522 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175ACC1A2B05E0B900DC3522 /* ViewController.swift */; };
 		175ACC212B05E0B900DC3522 /* NBAApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 175ACC1F2B05E0B900DC3522 /* NBAApp.xcdatamodeld */; };
 		175ACC232B05E0BA00DC3522 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 175ACC222B05E0BA00DC3522 /* Assets.xcassets */; };
-		175ACC312B05F12C00DC3522 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = 175ACC302B05F12C00DC3522 /* Secret.plist */; };
 		175ACC362B05F29C00DC3522 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175ACC352B05F29C00DC3522 /* NetworkManager.swift */; };
 		175ACC382B05F2A500DC3522 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175ACC372B05F2A500DC3522 /* Endpoints.swift */; };
 		175ACC3C2B05F97F00DC3522 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175ACC3A2B05F97F00DC3522 /* SplashScreenViewController.swift */; };
@@ -140,7 +139,6 @@
 		175ACC202B05E0B900DC3522 /* NBAApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NBAApp.xcdatamodel; sourceTree = "<group>"; };
 		175ACC222B05E0BA00DC3522 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		175ACC272B05E0BA00DC3522 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		175ACC302B05F12C00DC3522 /* Secret.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secret.plist; sourceTree = "<group>"; };
 		175ACC352B05F29C00DC3522 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		175ACC372B05F2A500DC3522 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		175ACC3A2B05F97F00DC3522 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
@@ -462,7 +460,6 @@
 				175ACC1A2B05E0B900DC3522 /* ViewController.swift */,
 				175ACC222B05E0BA00DC3522 /* Assets.xcassets */,
 				175ACC272B05E0BA00DC3522 /* Info.plist */,
-				175ACC302B05F12C00DC3522 /* Secret.plist */,
 				175ACC1F2B05E0B900DC3522 /* NBAApp.xcdatamodeld */,
 			);
 			path = NBAApp;
@@ -963,7 +960,6 @@
 				176316922B103D92004664F5 /* PaymentTableViewCell.xib in Resources */,
 				1706B8DD2B0C8BE4004EA55E /* WeaponCollectionViewCell.xib in Resources */,
 				1706B8D82B0C8B6F004EA55E /* GearCollectionViewCell.xib in Resources */,
-				175ACC312B05F12C00DC3522 /* Secret.plist in Resources */,
 				17D708A22B074DBE0031C682 /* MainMenuViewController.xib in Resources */,
 				17D7085A2B06196D0031C682 /* CheckBox.xib in Resources */,
 				175ACC232B05E0BA00DC3522 /* Assets.xcassets in Resources */,

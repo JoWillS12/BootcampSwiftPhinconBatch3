@@ -41,7 +41,7 @@ extension FieldView{
         let view = CodeHelper.loadNib(for: self)
         view.frame = view.bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        inputType.layer.borderColor = UIColor.white.cgColor
+        inputType.layer.borderColor = UIColor.black.cgColor
         inputType.layer.cornerRadius = 10
         inputType.layer.borderWidth = 1
         self.addSubview(view)
